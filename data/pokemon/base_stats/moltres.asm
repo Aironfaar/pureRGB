@@ -36,6 +36,9 @@
 	PSYBEAM,\
 	GLARE,\
 	SUBSTITUTE,\
+	REST,\ ; Aironfaar mod
+	MIMIC,\ ; Aironfaar mod
+	WHIRLWIND,\ ; Aironfaar mod
 	CUT,\
 	FLY,\
 	FLASH

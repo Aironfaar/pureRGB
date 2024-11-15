@@ -17,19 +17,17 @@ EvolveTradeMon:
 
 ; This was fixed in Yellow.
 
-	ld a, [wInGameTradeReceiveMonName]
-
-	; GRAVELER
-	cp "G"
+;;;;;;;;;; Aironfaar mod START
+	ld a, [wInGameTradeReceiveMonSpecies]
+	cp GRAVELER
 	jr z, .ok
-
-	; "SPECTRE" (HAUNTER)
-	cp "S"
+	cp HAUNTER
+	jr z, .ok
+	cp KADABRA
+	jr z, .ok
+	cp MACHOKE
 	ret nz
-	ld a, [wInGameTradeReceiveMonName + 1]
-	cp "P"
-	ret nz
-
+;;;;;;;;;; Aironfaar mod END
 .ok
 	ld a, [wPartyCount]
 	dec a

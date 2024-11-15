@@ -10,7 +10,7 @@
 	INCBIN "gfx/pokemon/front/fearow.pic", 0, 1 ; sprite dimensions
 	dw FearowPicFront, FearowPicBackSW
 
-	db PECK, GROWL, LEER, NO_MOVE ; level 1 learnset
+	db PECK, GROWL, NO_MOVE, NO_MOVE ; level 1 learnset
 	db GROWTH_MEDIUM_FAST ; growth rate
 
 	; tm/hm learnset
@@ -18,6 +18,7 @@
 	RAZOR_WIND,\ ; ROOST
 	PIN_MISSILE,\
 	TOXIC,\
+	HORN_DRILL,\ ; Aironfaar mod
 	BODY_SLAM,\
 	SLASH,\
 	DOUBLE_EDGE,\
@@ -33,6 +34,10 @@
 	SKY_ATTACK,\
 	GLARE,\
 	SUBSTITUTE,\
+	REST,\ ; Aironfaar mod
+	MIMIC,\ ; Aironfaar mod
+	WHIRLWIND,\ ; Aironfaar mod
+	SUBMISSION,\ ; Aironfaar mod
 	CUT,\
 	FLY,\
 	STRENGTH

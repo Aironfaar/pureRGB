@@ -26,22 +26,12 @@ CeruleanRocketHouseB1F_TextPointers:
 	dw_const CeruleanRocketHouseB1FVendingMachineText,    TEXT_CERULEANROCKETHOUSEB1F_VENDING_MACHINE
 
 CeruleanRocketHouseB1FRocketText:
-	text_asm
-	ld a, [wCompletedInGameTradeFlags]
-	bit TRADE_FOR_CHIKUCHIKU, a
-	jr nz, .doneTrade
-	ld hl, CeruleanRocketHouseB1FBeforeTradeText
-	rst _PrintText
-	ld a, TRADE_FOR_CHIKUCHIKU
+    text_asm
+;;;;;;;;;; Aironfaar mod START
+	ld a, TRADE_FOR_SPROCKET
 	ld [wWhichTrade], a
 	predef DoInGameTradeDialogue
-	ld a, [wCompletedInGameTradeFlags]
-	bit TRADE_FOR_CHIKUCHIKU, a
-	jr nz, .doneTrade
-	rst TextScriptEnd
-.doneTrade
-	ld hl, CeruleanRocketHouseB1FAfterTradeText
-	rst _PrintText
+;;;;;;;;;; Aironfaar mod END
 	rst TextScriptEnd
 
 CeruleanRocketHouseMissingnoScript:

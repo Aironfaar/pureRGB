@@ -10,7 +10,7 @@
 	INCBIN "gfx/pokemon/front/missingno.pic", 0, 1 ; sprite dimensions
 	dw MissingnoPicFront, MissingnoPicBackSW
 
-	db SKY_ATTACK, WATER_GUN, WATER_GUN, NO_MOVE ; level 1 learnset
+	db WATER_GUN, WATER_GUN, SKY_ATTACK, NO_MOVE ; level 1 learnset ; Aironfaar mod
 	db GROWTH_SLOW ; growth rate
 
 	; tm/hm learnset
@@ -65,6 +65,26 @@
 	ROCK_SLIDE,\
 	GLARE,\
 	SUBSTITUTE,\
+	TELEPORT,\ ; Aironfaar mod
+	SOFTBOILED,\ ; Aironfaar mod
+	RECOVER,\ ; Aironfaar mod
+	REST,\ ; Aironfaar mod
+	MIMIC,\ ; Aironfaar mod
+	METRONOME,\ ; Aironfaar mod
+	FISSURE,\ ; Aironfaar mod
+	GUILLOTINE,\ ; Aironfaar mod
+	SELFDESTRUCT,\ ; Aironfaar mod
+	EXPLOSION,\ ; Aironfaar mod
+	WHIRLWIND,\ ; Aironfaar mod
+	TRI_ATTACK,\ ; Aironfaar mod
+	HEADBUTT,\ ; Aironfaar mod
+	PAY_DAY,\ ; Aironfaar mod
+	EGG_BOMB,\ ; Aironfaar mod
+	RAGE,\ ; Aironfaar mod
+	SUBMISSION,\ ; Aironfaar mod
+	DREAM_EATER,\ ; Aironfaar mod
+	LEECH_LIFE,\ ; Aironfaar mod
+	COUNTER,\ ; DRAIN PUNCH ; Aironfaar mod
 	CUT,\
 	FLY,\
 	SURF,\

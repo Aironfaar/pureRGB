@@ -37,6 +37,9 @@
 	SLUDGE,\
 	GLARE,\
 	SUBSTITUTE,\
+	REST,\ ; Aironfaar mod
+	MIMIC,\ ; Aironfaar mod
+	COUNTER,\ ; DRAIN PUNCH ; Aironfaar mod
 	CUT,\
 	FLASH
 	; end

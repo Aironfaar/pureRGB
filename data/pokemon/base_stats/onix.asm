@@ -38,6 +38,13 @@
 	ROCK_SLIDE,\
 	GLARE,\
 	SUBSTITUTE,\
+	REST,\ ; Aironfaar mod
+	MIMIC,\ ; Aironfaar mod
+	FISSURE,\ ; Aironfaar mod
+	SELFDESTRUCT,\ ; Aironfaar mod
+	EXPLOSION,\ ; Aironfaar mod
+	HEADBUTT,\ ; Aironfaar mod
+	RAGE,\ ; Aironfaar mod
 	CUT,\
 	STRENGTH
 	; end

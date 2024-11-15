@@ -39,6 +39,10 @@
 	LIGHT_SCREEN,\
 	GLARE,\
 	SUBSTITUTE,\
+	REST,\ ; Aironfaar mod
+	MIMIC,\ ; Aironfaar mod
+	HEADBUTT,\ ; Aironfaar mod
+	COUNTER,\ ; DRAIN PUNCH ; Aironfaar mod
 	CUT,\
 	SURF,\
 	STRENGTH,\

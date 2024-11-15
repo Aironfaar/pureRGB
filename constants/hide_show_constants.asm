@@ -109,6 +109,7 @@ DEF SHOW EQU $15
 	const HS_SILPH_CO_1F_TRAINER_3         ; NEW
 	const HS_SILPH_CO_1F_TRAINER_4         ; NEW
 	const HS_SILPH_CO_1F_RECEPTIONIST      ; 4C
+	const HS_SILPH_CO_1F_MISSINGNO         ; NEW ; Aironfaar mod
 	const HS_ROCK_TUNNEL_1F_ITEM           ; NEW X
 	const HS_ROCK_TUNNEL_B1F_ITEM_1        ; NEW X
 	const HS_ROCK_TUNNEL_B1F_ITEM_2        ; NEW X
@@ -138,6 +139,7 @@ DEF SHOW EQU $15
 	const HS_VIRIDIAN_FOREST_ITEM_1        ; 64 X
 	const HS_VIRIDIAN_FOREST_ITEM_2        ; 65 X
 	const HS_VIRIDIAN_FOREST_ITEM_3        ; 66 X
+	const HS_VIRIDIAN_FOREST_MISSINGNO     ; NEW ; Aironfaar mod
 	const HS_MT_MOON_1F_ITEM_1             ; 67 X
 	const HS_MT_MOON_1F_ITEM_2             ; 68 X
 	const HS_MT_MOON_1F_ITEM_3             ; 69 X
@@ -256,8 +258,8 @@ DEF SHOW EQU $15
 	const HS_MEW_VERMILION_DOCK            ; NEW X
 	const HS_CERULEAN_ROCKET_HOUSE_1F_GUY  ; NEW X
 	const HS_LAPRAS_GUY_CELADON  ; NEW X
-	; current length -> 245 (F5)
-	; 9 slots remain
+	; current length -> 247 (F7)
+	; 7 slots remain
 
 DEF NUM_HS_OBJECTS EQU const_value
 
@@ -341,6 +343,12 @@ DEF NUM_HS_OBJECTS EQU const_value
 	const HS_ERIK_HOUSE ; 4C
 	const HS_SARA_HOUSE ; 4D
 	const HS_ERIK_SARA_HOUSE_NOTE2 ; 4E
+;;;;;;;;;; Aironfaar mod START
+    const HS_CINNABARLABTRADEROOM_SCIENTIST1 ; 4F
+    const HS_CINNABARLABTRADEROOM_SCIENTIST2 ; 50
+    const HS_CINNABARLABTRADEROOM_SCIENTIST3 ; 51
+    const HS_CINNABARLABTRADEROOM_SCIENTIST4 ; 52
+;;;;;;;;;; Aironfaar mod END
 	; max allowed value = 98
 
 DEF NUM_EXTRA_HS_OBJECTS EQU const_value

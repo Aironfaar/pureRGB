@@ -1,4 +1,4 @@
 Route10WildPalettes:
 	db 0
-	db %10101000
-	db %00000011
+	db %11111100 ; Aironfaar mod
+	db %11111111 ; Aironfaar mod

@@ -6,7 +6,7 @@ SuperRodData:
 	dbw VIRIDIAN_CITY,       Group2 
 	dbw CERULEAN_CITY,       Group3
 	dbw VERMILION_CITY,      Group4 ; alt palette magikarp
-	dbw CELADON_CITY,        Group5
+	dbw CELADON_CITY,        OopsAllDitto ; alt palette ditto ; Aironfaar mod
 	dbw FUCHSIA_CITY,        Group10 ; alt palette goldeen/seaking
 	dbw CINNABAR_ISLAND,     Group8 ; alt palette horsea
 	dbw ROUTE_4,             Group3
@@ -28,10 +28,10 @@ SuperRodData:
 	dbw VERMILION_DOCK,      Group4 ; alt palette magikarp
 	dbw SEAFOAM_ISLANDS_B3F, Group8 ; alt palette shellder
 	dbw SEAFOAM_ISLANDS_B4F, Group8 ; alt palette shellder
-	dbw SAFARI_ZONE_EAST,    Group6 
-	dbw SAFARI_ZONE_NORTH,   Group6 
-	dbw SAFARI_ZONE_WEST,    Group6 
-	dbw SAFARI_ZONE_CENTER,  Group6 
+	dbw SAFARI_ZONE_EAST,    SafariFishEN ; alt palette dratini/dragonair ; Aironfaar mod
+	dbw SAFARI_ZONE_NORTH,   SafariFishEN ; alt palette dratini/dragonair ; Aironfaar mod
+	dbw SAFARI_ZONE_WEST,    SafariFishWC ; alt palette magikarp ; Aironfaar mod
+	dbw SAFARI_ZONE_CENTER,  SafariFishWC ; alt palette magikarp ; Aironfaar mod
 	dbw CERULEAN_CAVE_2F,    Group9 ; all alt palette
 	dbw CERULEAN_CAVE_B1F,   Group9 ; all alt palette
 	dbw CERULEAN_CAVE_1F,    Group9 ; all alt palette
@@ -106,7 +106,30 @@ Group10:
 	db 25, KRABBY
 	db 28, GOLDEEN
 	db 19, MAGIKARP
+
+;;;;;;;;;; Aironfaar mod ADDED: new tables for Celadon City and Safari Zone
+OopsAllDitto:
+	db 4
+	db 33, DITTO
+	db 34, DITTO
+	db 35, DITTO
+	db 36, DITTO
+
+SafariFishWC:
+	db 4
+	db 26, DRATINI
+	db 21, MAGIKARP
+	db 22, MAGIKARP
+	db 33, DRAGONAIR
+
+SafariFishEN:
+	db 4
+	db 26, DRATINI
+	db 21, KRABBY
+	db 22, KRABBY
+	db 33, DRAGONAIR
 	db -1
+;;;;;;;;;; Aironfaar mod END
 
 ; goes through all the super rod encounters and sets bit 3 in wTownMapAreaTypeFlags if the pokemon in wPokedexNum appears at all.
 CheckHasSuperRod:

@@ -39,6 +39,9 @@
 	SLUDGE,\
 	GLARE,\
 	SUBSTITUTE,\
+	REST,\ ; Aironfaar mod
+	MIMIC,\ ; Aironfaar mod
+	PAY_DAY,\ ; Aironfaar mod
 	SURF,\
 	FLASH
 	; end

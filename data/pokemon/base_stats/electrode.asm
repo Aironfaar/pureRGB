@@ -36,6 +36,13 @@
 	THUNDER_WAVE,\
 	GLARE,\
 	SUBSTITUTE,\
+	TELEPORT,\ ; Aironfaar mod
+	RECOVER,\ ; Aironfaar mod
+	REST,\ ; Aironfaar mod
+	MIMIC,\ ; Aironfaar mod
+	SELFDESTRUCT,\ ; Aironfaar mod
+	EXPLOSION,\ ; Aironfaar mod
+	EGG_BOMB,\ ; Aironfaar mod
 	FLASH
 	; end
 

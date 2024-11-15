@@ -38,6 +38,12 @@
 	PSYBEAM,\
 	SLUDGE,\
 	SUBSTITUTE,\
+	TELEPORT,\ ; Aironfaar mod
+	REST,\ ; Aironfaar mod
+	MIMIC,\ ; Aironfaar mod
+	WHIRLWIND,\ ; Aironfaar mod
+	DREAM_EATER,\ ; Aironfaar mod
+	LEECH_LIFE,\ ; Aironfaar mod
 	CUT,\
 	FLY,\
 	FLASH

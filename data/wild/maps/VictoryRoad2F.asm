@@ -6,10 +6,10 @@ VictoryRoad2FWildMons:
 	db 45, RHYDON
 	db 45, NIDOQUEEN
 	db 50, POLIWRATH
+	db 40, HITMONLEE
+	db 40, HITMONCHAN
 	db 41, GOLEM
-	db 40, DUGTRIO
-	db 40, DUGTRIO
-	db 43, DUGTRIO
+	db 43, GOLEM
 	end_grass_wildmons
 
 	def_water_wildmons 0 ; encounter rate

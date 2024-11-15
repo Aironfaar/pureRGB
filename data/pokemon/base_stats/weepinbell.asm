@@ -35,6 +35,12 @@
 	SLUDGE,\
 	GLARE,\
 	SUBSTITUTE,\
+	REST,\ ; Aironfaar mod
+	MIMIC,\ ; Aironfaar mod
+	SELFDESTRUCT,\ ; Aironfaar mod
+	EXPLOSION,\ ; Aironfaar mod
+	EGG_BOMB,\ ; Aironfaar mod
+	LEECH_LIFE,\ ; Aironfaar mod
 	CUT,\
 	FLASH
 	; end

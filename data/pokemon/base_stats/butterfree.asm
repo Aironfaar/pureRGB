@@ -10,7 +10,7 @@
 	INCBIN "gfx/pokemon/front/butterfree.pic", 0, 1 ; sprite dimensions
 	dw ButterfreePicFront, ButterfreePicBackSW
 
-	db HARDEN, TACKLE, STRING_SHOT, NO_MOVE ; level 1 learnset
+	db TACKLE, STRING_SHOT, NO_MOVE, NO_MOVE ; level 1 learnset
 	db GROWTH_MEDIUM_FAST ; growth rate
 
 	; tm/hm learnset
@@ -37,6 +37,12 @@
 	PSYBEAM,\
 	GLARE,\
 	SUBSTITUTE,\
+	TELEPORT,\ ; Aironfaar mod
+	REST,\ ; Aironfaar mod
+	MIMIC,\ ; Aironfaar mod
+	WHIRLWIND,\ ; Aironfaar mod
+	DREAM_EATER,\ ; Aironfaar mod
+	LEECH_LIFE,\ ; Aironfaar mod
 	CUT,\
 	FLY,\
 	FLASH

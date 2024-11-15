@@ -20,9 +20,9 @@ ELSE
 	db  2, PIDGEY
 	db  3, EEVEE
 	db  3, PIDGEY
-	db  4, RATTATA
-	db  4, EEVEE
-	db  5, PIDGEY
+	db  4, EEVEE ; Aironfaar mod
+	db  4, ABRA ; Aironfaar mod
+	db  5, ABRA ; Aironfaar mod
 ENDC
 	end_grass_wildmons
 

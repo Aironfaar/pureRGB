@@ -77,6 +77,25 @@ _CinnabarLabFossilRoomScientist1ComeAgainText::
 	line "again!"
 	done
 
+;;;;;;;;;; Aironfaar mod START
+_CinnabarLabFossilRoomScientist2Text::
+    text "I heard that the"
+	line "Game Corner in"
+	cont "Celadon City"
+	cont "offers fossils of"
+	cont "rare, prehistoric"
+	cont "#MON as"
+	cont "prizes."
+    para "This is"
+	line "outrageous!"
+	para "These fossils"
+	line "should be"
+	cont "studied, not"
+	cont "treated as a"
+	cont "commodity!"
+	done
+;;;;;;;;;; Aironfaar mod END
+
 _CinnabarLabFossilRoomDeskPapersText::
 	text "NEXT RESEARCH"
 	line "TARGET:"

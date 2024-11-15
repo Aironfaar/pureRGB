@@ -79,7 +79,7 @@ CinnabarLabFossilRoomScientist1Text:
 	ld a, [wFossilMon]
 	ld b, a
 	ld c, 30
-	call GivePokemon
+	call GivePokemonRandomPalette ; Aironfaar mod
 	jr nc, .done
 	ResetEvents EVENT_GAVE_FOSSIL_TO_LAB, EVENT_LAB_STILL_REVIVING_FOSSIL, EVENT_LAB_HANDING_OVER_FOSSIL_MON
 	jr .done
@@ -101,11 +101,10 @@ CinnabarLabFossilRoomScientist1Text:
 	text_end
 
 CinnabarLabFossilRoomScientist2Text:
-	text_asm
-	ld a, TRADE_FOR_SAILOR
-	ld [wWhichTrade], a
-	predef DoInGameTradeDialogue
-	rst TextScriptEnd
+;;;;;;;;;; Aironfaar mod START
+    text_far _CinnabarLabFossilRoomScientist2Text
+	text_end
+;;;;;;;;;; Aironfaar mod END
 
 LoadFossilItemAndMonNameBank1D:
 	farjp LoadFossilItemAndMonName

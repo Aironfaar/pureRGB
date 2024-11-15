@@ -29,17 +29,17 @@ PrizeMenuMon2Entries:
 PrizeMenuMon2Cost:
 	bcd2 2000
 	bcd2 1000
-	bcd2 5000
+	bcd2 3000 ; Aironfaar mod
 	db "@"
 
 PrizeMenuTMsEntries:
-	db TM_SWORDS_DANCE
-	db TM_HYPER_BEAM
-	db TM_SUBSTITUTE
+	db DOME_FOSSIL ; Aironfaar mod
+	db HELIX_FOSSIL ; Aironfaar mod
+	db OLD_AMBER ; Aironfaar mod
 	db "@"
 
 PrizeMenuTMsCost:
-	bcd2 1500
-	bcd2 3000
-	bcd2 4000
+	bcd2 5000 ; Aironfaar mod
+	bcd2 5000 ; Aironfaar mod
+	bcd2 5000 ; Aironfaar mod
 	db "@"

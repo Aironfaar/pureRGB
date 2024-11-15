@@ -1,6 +1,6 @@
 	db DEX_HAUNTER ; pokedex id
 
-	db  60,  65,  60, 110, 130
+	db  60, 110,  60, 135,  60 ; Aironfaar mod
 	;   hp  atk  def  spd  spc
 
 	db GHOST, POISON ; type
@@ -38,6 +38,10 @@
 	SLUDGE,\
 	GLARE,\
 	SUBSTITUTE,\
+	REST,\ ; Aironfaar mod
+	MIMIC,\ ; Aironfaar mod
+	METRONOME,\ ; Aironfaar mod
+	DREAM_EATER,\ ; Aironfaar mod
 	CUT,\
 	STRENGTH,\
 	FLASH

@@ -44,6 +44,15 @@
 	LIGHT_SCREEN,\
 	PSYBEAM,\
 	SUBSTITUTE,\
+	TELEPORT,\ ; Aironfaar mod
+	REST,\ ; Aironfaar mod
+	MIMIC,\ ; Aironfaar mod
+	METRONOME,\ ; Aironfaar mod
+	FISSURE,\ ; Aironfaar mod
+	TRI_ATTACK,\ ; Aironfaar mod
+	HEADBUTT,\ ; Aironfaar mod
+	PAY_DAY,\ ; Aironfaar mod
+	COUNTER,\ ; DRAIN PUNCH ; Aironfaar mod
 	CUT,\
 	SURF,\
 	STRENGTH,\

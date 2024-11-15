@@ -10,7 +10,7 @@
 	INCBIN "gfx/pokemon/front/beedrill.pic", 0, 1 ; sprite dimensions
 	dw BeedrillPicFront, BeedrillPicBackSW
 
-	db POISON_STING, STRING_SHOT, HARDEN, NO_MOVE ; level 1 learnset
+	db POISON_STING, STRING_SHOT, NO_MOVE, NO_MOVE ; level 1 learnset
 	db GROWTH_MEDIUM_FAST ; growth rate
 
 	tmhm \
@@ -40,6 +40,9 @@
 	SLUDGE,\
 	GLARE,\
 	SUBSTITUTE,\
+	REST,\ ; Aironfaar mod
+	MIMIC,\ ; Aironfaar mod
+	RAGE,\ ; Aironfaar mod
 	CUT,\
 	FLY,\
 	FLASH

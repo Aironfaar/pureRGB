@@ -1,6 +1,7 @@
 	object_const_def
 	const_export SSANNE1F_WAITER
 	const_export SSANNE1F_SAILOR
+	const_export SSANNE1F_LITTLE_BOY ; Aironfaar mod
 
 SSAnne1F_Object:
 	db $c ; border block
@@ -23,5 +24,6 @@ SSAnne1F_Object:
 	def_object_events
 	object_event 12,  6, SPRITE_WAITER, WALK, LEFT_RIGHT, TEXT_SSANNE1F_WAITER
 	object_event 27,  5, SPRITE_SAILOR, STAY, NONE, TEXT_SSANNE1F_SAILOR
+	object_event 37,  6, SPRITE_LITTLE_BOY, STAY, LEFT, TEXT_SSANNE1F_LITTLE_BOY ; Aironfaar mod
 
 	def_warps_to SS_ANNE_1F

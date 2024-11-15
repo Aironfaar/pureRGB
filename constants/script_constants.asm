@@ -22,30 +22,44 @@ DEF SLOTS_SOMEONESKEYS EQU $ff
 ; in game trades
 ; TradeMons indexes (see data/events/trades.asm)
 	const_def
-	const TRADE_FOR_TERRY
-	const TRADE_FOR_MARCEL
-	const TRADE_FOR_CHIKUCHIKU ; unused
-	const TRADE_FOR_SAILOR
-	const TRADE_FOR_DUX
-	const TRADE_FOR_MARC
+;;;;;;;;;; Aironfaar mod START
 	const TRADE_FOR_LOLA
-	const TRADE_FOR_DORIS
-	const TRADE_FOR_CRINKLES
-	const TRADE_FOR_SPOT
+	const TRADE_FOR_LIGHTYEAR
+	const TRADE_FOR_DISCOMBOB
+	const TRADE_FOR_BULBERT
+	const TRADE_FOR_MIRTLE
+	const TRADE_FOR_MANDY
+	const TRADE_FOR_SYLVESTER
+	const TRADE_FOR_BLAIR
+	const TRADE_FOR_ARNOLD
+	const TRADE_FOR_LIAM
+	const TRADE_FOR_SPROCKET
+	const TRADE_FOR_ROALD
+	const TRADE_FOR_LAWRENCE
+	const TRADE_FOR_NIKOLA
+    const TRADE_FOR_ENIGMA
+	const TRADE_FOR_MIRAGE
+;;;;;;;;;; Aironfaar mod END
 DEF NUM_NPC_TRADES EQU const_value
 
 ; in game trade dialog sets
 ; InGameTradeTextPointers indexes (see engine/events/in_game_trades.asm)
 	const_def
-	const TRADE_DIALOGSET_CASUAL
-	const TRADE_DIALOGSET_EVOLUTION
-	const TRADE_DIALOGSET_HAPPY
-;;;;;;;;;; PureRGBnote: ADDED: new trade dialog sets
+;;;;;;;;;; Aironfaar mod START
+	const TRADE_DIALOGSET_LOLA
+	const TRADE_DIALOGSET_LIGHTYEAR
+	const TRADE_DIALOGSET_DISCOMBOB
+	const TRADE_DIALOGSET_BULBERT
+	const TRADE_DIALOGSET_MIRTLE
+	const TRADE_DIALOGSET_MANDY
+	const TRADE_DIALOGSET_SYLVESTER
+	const TRADE_DIALOGSET_BLAIR
+	const TRADE_DIALOGSET_ARNOLD
+	const TRADE_DIALOGSET_LIAM
 	const TRADE_DIALOGSET_SPROCKET
-	const TRADE_DIALOGSET_CASUAL_COLOR
-	const TRADE_DIALOGSET_EVOLUTION_COLOR
-	const TRADE_DIALOGSET_HAPPY_COLOR
-;;;;;;;;;;
+	const TRADE_DIALOGSET_SCIENTIST
+	const TRADE_DIALOGSET_MISSINGNO
+;;;;;;;;;; Aironfaar mod END
 
 ; OaksAideScript results
 DEF OAKS_AIDE_BAG_FULL        EQU $00

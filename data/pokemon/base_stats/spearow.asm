@@ -31,6 +31,10 @@
 	SKY_ATTACK,\
 	GLARE,\
 	SUBSTITUTE,\
+	REST,\ ; Aironfaar mod
+	MIMIC,\ ; Aironfaar mod
+	WHIRLWIND,\ ; Aironfaar mod
+	SUBMISSION,\ ; Aironfaar mod
 	CUT,\
 	FLY
 	; end

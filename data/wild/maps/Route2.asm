@@ -3,13 +3,13 @@ Route2WildMons:
 	db  3, RATTATA
 	db  3, PIDGEY
 	db  4, EKANS
-	db  4, GROWLITHE
+	db  4, WEEDLE ; Aironfaar mod
 	db  5, SPEAROW
-	db  3, CATERPIE
-	db  2, GROWLITHE
-	db  5, EKANS
-	db  4, SPEAROW
-	db  5, PIDGEY
+	db  4, CATERPIE ; Aironfaar mod
+	db  5, GROWLITHE ; Aironfaar mod
+	db  4, GROWLITHE ; Aironfaar mod
+	db  3, GROWLITHE ; Aironfaar mod
+	db  2, GROWLITHE ; Aironfaar mod
 	end_grass_wildmons
 
 	def_water_wildmons 0 ; encounter rate

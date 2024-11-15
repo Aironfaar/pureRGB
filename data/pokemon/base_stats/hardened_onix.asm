@@ -11,7 +11,7 @@
 	INCBIN "gfx/pokemon/front/onix.pic", 0, 1 ; sprite dimensions
 	dw OnixPicFront, OnixPicBackSW
 
-	db TACKLE, HARDEN, GROWL, NO_MOVE ; level 1 learnset
+	db TACKLE, SCREECH, HARDEN, NO_MOVE ; level 1 learnset
 	db GROWTH_FAST ; growth rate
 
 	; tm/hm learnset
@@ -39,6 +39,13 @@
 	ROCK_SLIDE,\
 	GLARE,\
 	SUBSTITUTE,\
+	REST,\ ; Aironfaar mod
+	MIMIC,\ ; Aironfaar mod
+	FISSURE,\ ; Aironfaar mod
+	SELFDESTRUCT,\ ; Aironfaar mod
+	EXPLOSION,\ ; Aironfaar mod
+	HEADBUTT,\ ; Aironfaar mod
+	RAGE,\ ; Aironfaar mod
 	CUT,\
 	SURF,\
 	STRENGTH
