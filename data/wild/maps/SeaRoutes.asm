@@ -1,15 +1,17 @@
 SeaRoutesWildMons:
 	def_grass_wildmons 20 ; encounter rate
+;;;;;;;;;; Aironfaar mod CHANGED: Missingno. encounters at various levels
+	db 40, MISSINGNO
+	db 45, MISSINGNO
+	db 75, MISSINGNO
+	db 60, MISSINGNO
+	db 60, MISSINGNO
+	db 80, MISSINGNO
+	db 80, MISSINGNO
 	db 120, MISSINGNO
-	db 120, MISSINGNO
-	db 120, MISSINGNO
-	db 120, MISSINGNO
-	db 120, MISSINGNO
-	db 120, MISSINGNO
-	db 120, MISSINGNO
-	db 120, MISSINGNO
-	db 120, MISSINGNO
-	db 120, MISSINGNO
+	db 100, MISSINGNO
+	db 100, MISSINGNO
+;;;;;;;;;; Aironfaar mod END
 	end_grass_wildmons
 
 	def_water_wildmons 7 ; encounter rate

@@ -193,7 +193,7 @@ EvosMovesPointerTable:
 	dw CharmeleonEvosMoves
 	dw WartortleEvosMoves
 	dw CharizardEvosMoves
-	dw NothingEvosMoves ; real missingno
+	dw MissingnoEvosMoves ; Aironfaar mod
 	dw NothingEvosMoves ; Fossil Kabutops
 	dw NothingEvosMoves ; Fossil aerodactyl
 	dw NothingEvosMoves ; GHOST
@@ -204,6 +204,26 @@ EvosMovesPointerTable:
 	dw WeepinbellEvosMoves
 	dw VictreebelEvosMoves
 	assert_table_length NUM_POKEMON_INDEXES
+
+;;;;;;;;;; Aironfaar mod ADDED: Missingno now learns TM moves at certain levels
+MissingnoEvosMoves:
+; Evolutions
+	db 0
+; Learnset
+	db 40, GLARE
+	db 45, DOUBLE_EDGE
+	db 50, LEECH_SEED
+	db 55, TOXIC
+	db 60, SWORDS_DANCE
+	db 65, BODY_SLAM
+	db 70, ROCK_SLIDE
+	db 75, SLUDGE
+	db 80, EARTHQUAKE
+	db 85, BARRAGE
+	db 90, RAZOR_WIND ; ROOST
+	db 95, SUBSTITUTE
+	db 100, HYPER_BEAM
+;;;;;;;;;; Aironfaar mod END
 
 RhydonEvosMoves:
 ; Evolutions
@@ -432,7 +452,7 @@ GengarEvosMoves:
 	db 24, MEGA_DRAIN
 	db 29, BARRAGE
 	db 33, DREAM_EATER
-	db 41, SLAM ; FILTHY SLAM
+	db 41, POISON_GAS ; Aironfaar mod: was SLAM (Filthy Slam)
 	db 46, ICE_PUNCH
 	db 57, LOVELY_KISS
 	db 0
@@ -600,7 +620,7 @@ GastlyEvosMoves:
 	db 24, MEGA_DRAIN
 	db 29, BARRAGE
 	db 33, DREAM_EATER
-	db 41, SLAM ; FILTHY SLAM
+	db 41, POISON_GAS ; Aironfaar mod: was SLAM (Filthy Slam)
 	db 57, LOVELY_KISS
 	db 0
 
@@ -2099,7 +2119,7 @@ HaunterEvosMoves:
 	db 24, MEGA_DRAIN
 	db 29, BARRAGE
 	db 33, DREAM_EATER
-	db 41, SLAM ; FILTHY SLAM
+	db 41, POISON_GAS ; Aironfaar mod: was SLAM (Filthy Slam)
 	db 46, ICE_PUNCH
 	db 57, LOVELY_KISS
 	db 0
