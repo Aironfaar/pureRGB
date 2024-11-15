@@ -35,6 +35,7 @@
 	GLARE,\
 	SUBSTITUTE,\
 	CUT,\
+	SURF,\ ; Aironfaar mod
 	STRENGTH,\
 	FLASH
 	; end

@@ -41,6 +41,7 @@
 	ROCK_SLIDE,\
 	SUBSTITUTE,\
 	CUT,\
+	SURF,\ ; Aironfaar mod
 	STRENGTH,\
 	FLASH
 	; end

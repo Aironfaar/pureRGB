@@ -445,6 +445,14 @@ MoveMysticCrystalBallText:
 	cp BEEDRILL
 	ld hl, .beedrillInfoText
 	jr z, .printDone
+;;;;;;;;;; Aironfaar mod ADDED: handle Magikarp and Gyarados dialogue
+	cp MAGIKARP
+	ld hl, .magikarpInfoText
+	jr z, .printDone
+	cp GYARADOS
+	ld hl, .gyaradosInfoText
+	jr z, .printDone
+;;;;;;;;;; Aironfaar mod END
 	push de
 	cp JIGGLYPUFF
 	jr z, .forceSING
@@ -538,6 +546,14 @@ MoveMysticCrystalBallText:
 .beedrillInfoText
 	text_far _MoveMysticBeedrillText
 	text_end
+;;;;;;;;;; Aironfaar mod ADDED: info text for Magikarp and Gyarados
+.magikarpInfoText
+	text_far _MoveMysticMagikarpText
+	text_end
+.gyaradosInfoText
+	text_far _MoveMysticGyaradosText
+	text_end
+;;;;;;;;;; Aironfaar mod END
 .masterOfMove
 	text_far _MoveMysticMasterOfMoveText
 	text_end
@@ -670,6 +686,12 @@ MoveMysticMonsList:
 	dw ElectabuzzMoveMysticText
 	db MAGMAR, DEX_MAGMAR
 	dw MagmarMoveMysticText
+;;;;;;;;;; Aironfaar mod ADDED: add Magikarp and Gyarados to Move Mystic selection list
+	db MAGIKARP, DEX_MAGIKARP
+	dw MagikarpMoveMysticText
+	db GYARADOS, DEX_GYARADOS
+	dw GyaradosMoveMysticText
+;;;;;;;;;; Aironfaar mod END
 	db OMASTAR, DEX_OMASTAR
 	dw OmastarMoveMysticText
 	db DRAGONITE, DEX_DRAGONITE
@@ -743,3 +765,13 @@ JigglypuffMoveMysticText::
 WigglytuffMoveMysticText::
 	text_far _WigglytuffMoveMysticText
 	text_end
+
+;;;;;;;;;; Aironfaar mod ADDED: get Magikarp and Gyarados info text
+MagikarpMoveMysticText::
+	text_far _MagikarpMoveMysticText
+	text_end
+
+GyaradosMoveMysticText::
+	text_far _GyaradosMoveMysticText
+	text_end
+;;;;;;;;;; Aironfaar mod END
