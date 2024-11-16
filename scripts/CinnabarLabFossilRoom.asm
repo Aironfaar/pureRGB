@@ -79,7 +79,7 @@ CinnabarLabFossilRoomScientist1Text:
 	ld a, [wFossilMon]
 	ld b, a
 	ld c, 30
-	call GivePokemon
+	call GivePokemonRandomPalette ; Aironfaar mod
 	jr nc, .done
 	ResetEvents EVENT_GAVE_FOSSIL_TO_LAB, EVENT_LAB_STILL_REVIVING_FOSSIL, EVENT_LAB_HANDING_OVER_FOSSIL_MON
 	jr .done

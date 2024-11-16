@@ -98,7 +98,7 @@ FossilGuysHouseFossilGuyText:
 .finishGiveFossil
 	ld b, a
 	ld c, 24
-	call GivePokemon
+	call GivePokemonRandomPalette ; Aironfaar mod
 	jp nc, .done
 	SetEvent EVENT_RECEIVED_FOSSIL_PKMN_FROM_SUPER_NERD
 	ResetEvent EVENT_SKIP_FOSSIL_GUY_GREETING
@@ -132,33 +132,38 @@ FossilGuysHouseFossilGuyText:
 	ld hl, FossilGuyCameBackAmber
 	rst _PrintText
 	lb bc, AERODACTYL, 24
-	call GivePokemon
+	call GivePokemonRandomPalette ; Aironfaar mod
 	jr nc, .done
 	SetEvent EVENT_RECEIVED_AERODACTYL_FROM_SUPER_NERD
 	jr .done
 .stageThreeStart
-	CheckEvent EVENT_SEAFOAM_FOUND_OTHER_FOSSIL
+;;;;;;;;;; Aironfaar mod CHANGED: Since fossils and ambers are now available from the Game Corner, check independently of events for those items in the bag.
+    ld b, DOME_FOSSIL
+.checkItemLoop
+    push bc
+    predef GetIndexOfItemInBag
+	ld a, b
+	cp $FF ; not in bag
 	jr nz, .goToCinnabar
+	pop bc
+	ld a, DOME_FOSSIL
+	cp b
+	jr z, .checkAmber
+	jr c, .endText
+	ld b, HELIX_FOSSIL
+	jr .checkItemLoop
+.checkAmber
+	ld b, OLD_AMBER
+	jr .checkItemLoop
 .endText
 	ld hl, FossilGuyEndText
 	rst _PrintText
 	jr .done
 .goToCinnabar
-	CheckEvent EVENT_GOT_HELIX_FOSSIL
-	jr nz, .checkDome2
-.checkHelix2
-	ld b, HELIX_FOSSIL
-	jr .checkItemFossil2
-.checkDome2
-	ld b, DOME_FOSSIL
-.checkItemFossil2
-	predef GetIndexOfItemInBag
-	ld a, b
-	cp $FF ; not in bag
-	jr z, .endText
 	ld hl, FossilGuyGoToCinnabarText
 	rst _PrintText
 	jr .done
+;;;;;;;;;; Aironfaar mod END
 .greetingEnd
 	ld hl, FossilGuyGreetingEnd
 	rst _PrintText
