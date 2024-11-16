@@ -6,10 +6,10 @@ RockTunnelB1FWildMons:
 	db 20, MACHOP
 	db 21, GEODUDE
 	db 20, ONIX
-	db 19, MACHOP
+	db 20, HITMONCHAN ; Aironfaar mod
 	db 20, HITMONLEE
-	db 20, HITMONCHAN
-	db 22, HITMONCHAN
+	db 19, MACHOP ; Aironfaar mod
+	db 21, MACHOP ; Aironfaar mod
 	end_grass_wildmons
 
 	def_water_wildmons 0 ; encounter rate

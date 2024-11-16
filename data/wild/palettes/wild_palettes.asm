@@ -25,8 +25,8 @@ WildPalettePointers:
 	dw SeaRoutesWildPalettes   ; CINNABAR_ISLAND
 	dw DefaultPalettes         ; INDIGO_PLATEAU
 	dw DefaultPalettes         ; unused
-	dw DefaultPalettes         ; ROUTE_1
-	dw DefaultPalettes         ; ROUTE_2
+	dw Route1WildPalettes      ; Aironfaar mod
+	dw Route2WildPalettes      ; Aironfaar mod
 	dw DefaultPalettes         ; ROUTE_3
 	dw DefaultPalettes         ; ROUTE_4
 	dw Route5WildPalettes         ; ROUTE_5
@@ -46,7 +46,7 @@ WildPalettePointers:
 	dw SeaRoutesWildPalettes       ; ROUTE_19
 	dw SeaRoutesWildPalettes       ; ROUTE_20
 	dw Route21WildPalettes         ; ROUTE_21
-	dw DefaultPalettes             ; ROUTE_22
+	dw Route22WildPalettes         ; Aironfaar mod
 	dw Route23WildPalettes         ; ROUTE_23
 	dw DefaultPalettes             ; ROUTE_24
 	dw DefaultPalettes             ; ROUTE_25
@@ -64,7 +64,7 @@ WildPalettePointers:
 	dw DefaultPalettes
 	dw DefaultPalettes
 	dw DefaultPalettes
-	dw DefaultPalettes ; ViridianForest
+	dw ViridianForestWildPalettes ; Aironfaar mod
 	dw DefaultPalettes
 	dw DefaultPalettes
 	dw DefaultPalettes
@@ -73,7 +73,7 @@ WildPalettePointers:
 	dw DefaultPalettes
 	dw DefaultPalettes
 	dw DefaultPalettes ;mt moon 1f
-	dw DefaultPalettes ;mt moon b1f
+	dw MtMoonB1FWildPalettes ; Aironfaar mod
 	dw DefaultPalettes ; mt moon b2f
 	dw DefaultPalettes
 	dw DefaultPalettes
@@ -96,7 +96,7 @@ WildPalettePointers:
 	dw DefaultPalettes
 	dw DefaultPalettes
 	dw DefaultPalettes ;rock tunnel 1f
-	dw DefaultPalettes ;power plant
+	dw AllAltPalettes ;power plant ; Aironfaar mod
 	dw DefaultPalettes
 	dw DefaultPalettes
 	dw DefaultPalettes
@@ -157,11 +157,11 @@ WildPalettePointers:
 	dw DefaultPalettes
 	dw DefaultPalettes ;pkmn tower 1f
 	dw DefaultPalettes ;pkmn tower 2f
-	dw DefaultPalettes ;pkmn tower 3f
-	dw DefaultPalettes ;pkmn tower 4f
-	dw DefaultPalettes ;pkmn tower 5f
-	dw DefaultPalettes ;pkmn tower 6f
-	dw DefaultPalettes ;pkmn tower 7f
+	dw PokemonTower3FWildPalettes ; Aironfaar mod
+	dw PokemonTower4FWildPalettes ; Aironfaar mod
+	dw PokemonTower5FWildPalettes ; Aironfaar mod
+	dw PokemonTower6FWildPalettes ; Aironfaar mod
+	dw PokemonTower7FWildPalettes ; Aironfaar mod
 	dw DefaultPalettes
 	dw DefaultPalettes
 	dw DefaultPalettes
@@ -173,7 +173,7 @@ WildPalettePointers:
 	dw DefaultPalettes
 	dw DefaultPalettes
 	dw SeafoamIslandsB1FWildPalettes
-	dw DefaultPalettes
+	dw SeafoamIslandsB2FWildPalettes ; Aironfaar mod
 	dw SeafoamIslandsB3FWildPalettes
 	dw SeafoamIslandsB4FWildPalettes
 	dw DefaultPalettes
@@ -210,8 +210,8 @@ WildPalettePointers:
 	dw VictoryRoad2FWildPalettes
 	dw DefaultPalettes
 	dw DefaultPalettes
-	dw DefaultPalettes ;digletts cave
-	dw DefaultPalettes ; victory road 3f
+	dw DiglettsCaveWildPalettes ; Aironfaar mod
+	dw VictoryRoad3FWildPalettes ; Aironfaar mod
 	dw DefaultPalettes
 	dw DefaultPalettes
 	dw DefaultPalettes

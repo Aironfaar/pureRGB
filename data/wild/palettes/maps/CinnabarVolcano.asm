@@ -2,12 +2,12 @@ CinnabarVolcanoWildPalettes:
 	bit_array CinnabarVolcanoWildPalettes
 	dbit FALSE
 	dbit FALSE 
-	dbit FALSE 
+	dbit TRUE 
+	dbit TRUE 
+	dbit TRUE 
 	dbit TRUE 
 	dbit FALSE 
-	dbit TRUE 
 	dbit FALSE 
-	dbit TRUE 
 	dbit FALSE
 	dbit FALSE
 	; water encounters
@@ -17,10 +17,10 @@ CinnabarVolcanoWildPalettes:
 	dbit TRUE
 	dbit FALSE
 	dbit TRUE
-	dbit TRUE
+	dbit FALSE
 	dbit FALSE
 	dbit TRUE
-	dbit TRUE
+	dbit FALSE
 	; super rod encounters (none in this map)
 	dbit FALSE
 	dbit FALSE

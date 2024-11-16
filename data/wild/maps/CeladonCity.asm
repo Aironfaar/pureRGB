@@ -3,14 +3,16 @@ CeladonCityWildMons:
 	end_grass_wildmons
 
 	def_water_wildmons 8 ; encounter rate
-	db 28, GRIMER
-	db 30, GRIMER
-	db 28, GRIMER
-	db 30, GRIMER
-	db 31, GRIMER
-	db 30, GRIMER
-	db 32, GRIMER
-	db 25, GRIMER
-	db 33, MUK
-	db 36, MUK
+;;;;;;;;;; Aironfaar mod START
+	db 30, DITTO
+	db 31, DITTO
+	db 32, DITTO
+	db 33, DITTO
+	db 34, DITTO
+	db 35, DITTO
+	db 36, DITTO
+	db 37, DITTO
+	db 38, DITTO
+	db 39, DITTO
+;;;;;;;;;; Aironfaar mod END
 	end_water_wildmons

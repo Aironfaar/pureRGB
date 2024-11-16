@@ -1,11 +1,11 @@
 PowerPlantWildMons:
 	def_grass_wildmons 10 ; encounter rate
 	db 30, RAICHU
-	db 30, MAGNETON
-	db 33, RAICHU
+	db 33, MAGNETON
+	db 35, ELECTRODE ; Aironfaar mod
 	db 28, PIKACHU
-	db 30, MAGNETON
-	db 35, ELECTRODE
+	db 29, MAGNEMITE ; Aironfaar mod
+	db 27, VOLTORB ; Aironfaar mod
 	db 32, ELECTABUZZ
 	db 35, ELECTABUZZ
 	db 33, JOLTEON
