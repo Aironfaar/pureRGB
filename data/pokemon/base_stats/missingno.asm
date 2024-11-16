@@ -10,7 +10,7 @@
 	INCBIN "gfx/pokemon/front/missingno.pic", 0, 1 ; sprite dimensions
 	dw MissingnoPicFront, MissingnoPicBackSW
 
-	db SKY_ATTACK, WATER_GUN, WATER_GUN, NO_MOVE ; level 1 learnset
+	db WATER_GUN, WATER_GUN, SKY_ATTACK, NO_MOVE ; level 1 learnset ; Aironfaar mod
 	db GROWTH_SLOW ; growth rate
 
 	; tm/hm learnset
