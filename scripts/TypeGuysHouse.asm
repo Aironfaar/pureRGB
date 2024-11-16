@@ -263,7 +263,7 @@ TypeGuysHouseTypeGuyText:
 	text_end
 
 PokemonTypeGuyList::
-	db 23
+	db 24 ; Aironfaar mod: added Seel
 	db BUTTERFREE
 	db FEAROW
 	db SANDSHREW
@@ -275,6 +275,7 @@ PokemonTypeGuyList::
 	db RAPIDASH
 	db DODUO
 	db DODRIO
+	db SEEL ; Aironfaar mod
 	db KINGLER
 	db VOLTORB
 	db ELECTRODE

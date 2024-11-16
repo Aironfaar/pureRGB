@@ -15,6 +15,11 @@ GiveItem::
 	scf
 	ret
 
+; Aironfaar mod ADDED: give a pokemon with random palette.
+GivePokemonRandomPalette::
+    call Random
+	and 1
+	jr GivePokemonCommon
 ; PureRGBnote: ADDED: when giving a pokemon we can make it alternate palette by calling a different function
 GivePokemonAltPalette::
 	ld a, 1
