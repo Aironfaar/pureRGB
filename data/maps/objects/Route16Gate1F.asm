@@ -1,6 +1,7 @@
 	object_const_def
 	const_export ROUTE16GATE1F_GUARD
 	const_export ROUTE16GATE1F_GAMBLER
+	const_export ROUTE16GATE1F_ROCKER ; Aironfaar mod
 
 Route16Gate1F_Object:
 	db $a ; border block
@@ -21,5 +22,6 @@ Route16Gate1F_Object:
 	def_object_events
 	object_event  4,  5, SPRITE_GUARD, STAY, DOWN, TEXT_ROUTE16GATE1F_GUARD
 	object_event  4,  3, SPRITE_GAMBLER, STAY, NONE, TEXT_ROUTE16GATE1F_GAMBLER
+	object_event  2, 10, SPRITE_ROCKER, STAY, UP, TEXT_ROUTE16GATE1F_ROCKER ; Aironfaar mod
 
 	def_warps_to ROUTE_16_GATE_1F

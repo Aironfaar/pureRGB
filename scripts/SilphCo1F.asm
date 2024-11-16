@@ -90,6 +90,7 @@ SilphCo1F_TextPointers:
 	dw_const SaffronAbandonedBuildingRocket2Text, TEXT_SILPHCO1F_ROCKET2
 	dw_const SaffronAbandonedBuildingRocket3Text, TEXT_SILPHCO1F_ROCKET3
 	dw_const DoRet, TEXT_SILPHCO1F_WEEZING_PROXY
+	dw_const SaffronAbandonedBuildingMissingnoText, TEXT_SILPHCO1F_MISSINGNO ; Aironfaar mod
 	dw_const SaffronAbandonedBuildingBrokenStairs, TEXT_SILPHCO1F_BROKEN_STAIRS
 	dw_const SaffronAbandonedBuildingHeliumPipeText, TEXT_SILPHCO1F_HELIUM_PIPE
 	dw_const SaffronAbandonedBuildingWeezingText, TEXT_WEEZING_STARTED_FLOATING
@@ -406,3 +407,12 @@ SaffronAbandonedBuildingWeezingText:
 	sound_get_item_2
 	text_far _MagnetMagnetonText3
 	text_end
+
+;;;;;;;;;; Aironfaar mod START
+SaffronAbandonedBuildingMissingnoText:
+    text_asm
+	ld a, TRADE_FOR_ENIGMA
+	ld [wWhichTrade], a
+	predef DoInGameTradeDialogue
+	rst TextScriptEnd
+;;;;;;;;;; Aironfaar mod END

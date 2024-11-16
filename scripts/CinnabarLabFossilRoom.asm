@@ -101,11 +101,10 @@ CinnabarLabFossilRoomScientist1Text:
 	text_end
 
 CinnabarLabFossilRoomScientist2Text:
-	text_asm
-	ld a, TRADE_FOR_SAILOR
-	ld [wWhichTrade], a
-	predef DoInGameTradeDialogue
-	rst TextScriptEnd
+;;;;;;;;;; Aironfaar mod START
+    text_far _CinnabarLabFossilRoomScientist2Text
+	text_end
+;;;;;;;;;; Aironfaar mod END
 
 LoadFossilItemAndMonNameBank1D:
 	farjp LoadFossilItemAndMonName

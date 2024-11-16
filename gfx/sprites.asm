@@ -133,3 +133,4 @@ CaptainWalking:: INCBIN "gfx/sprites/captain_walking.2bpp"
 GhostSprite:: INCBIN "gfx/sprites/ghost.2bpp"
 MonsterCryingSprite:: INCBIN "gfx/sprites/monster_crying.2bpp"
 SnakeSprite:: INCBIN "gfx/sprites/snake.2bpp"
+MissingnoSprite:: INCBIN "gfx/sprites/missingno.2bpp" ; Aironfaar mod
