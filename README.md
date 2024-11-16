@@ -3,6 +3,7 @@
 A purist's enhancement of Pokémon Red, Green, and Blue based on the pokered disassembly, created by Vortyne. Please see the original github page for information about this hack: https://github.com/Vortyne/pureRGB
 
 ## Fork Changes
+First, a bit of a disclaimer: If you play my modded version, create a new save file for it. I didn't update the save import feature to my particular changes, so something might break if you try anyway. Also, as long as I play pureRGB myself, I'll try to keep things updated in a way that will avoid issues, but I started this project mostly to satisfy my curiosity whether I could learn to make the changes I wanted, so keeping it up-to-date isn't a high priority for me. With that out of the way…
 
 Some of the modifications are supposed to make certain mono type runs go a bit more smoothly:
 - Arcanine, Parasect and Venusaur can now learn Surf. With this change,  Flash, Cut, Strength, Fly or Dig, and Surf.
