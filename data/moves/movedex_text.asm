@@ -159,7 +159,7 @@ _CutDexEntry::
 	next "with a claw, barb"
 	next "tooth, wing, etc.@"
 
-	text_call _GenericNoAdditionalEffectText
+	text_call _GenericRaisesAttack1StageText ; Aironfaar mod
 
 	bage "Usable outside"
 	next "battle to cut down"
@@ -503,7 +503,8 @@ _AcidDexEntry::
 	text "A spray of acid"
 	next "is unleashed on"
 	next "the <opponent>."
-
+; fall through ; Aironfaar mod
+_Generic33PercentLowerDefenseText:: ; Aironfaar mod
 	bage "33% chance to"
 	next "lower DEFENSE."
 	next "(-1 DEFENSE)"
@@ -721,7 +722,7 @@ _StrengthDexEntry::
 	next "with a massive"
 	next "built up power.@"
 
-	text_call _GenericNoAdditionalEffectText
+	text_call _Generic33PercentLowerDefenseText ; Aironfaar mod
 
 	bage "Usable outside of"
 	next "battle to push"

@@ -27,7 +27,7 @@ Moves:
 	move GUILLOTINE,   OHKO_EFFECT,                  1, BUG,           30,  5
 	move RAZOR_WIND,   HEAL_EFFECT,                  0, FLYING,       100, 10 ; -> ROOST
 	move SWORDS_DANCE, ATTACK_UP2_EFFECT,            0, FIRE,         100, 30
-	move CUT,          NO_ADDITIONAL_EFFECT,        70, BUG,          100, 30
+	move CUT,          ATTACK_UP_SIDE_EFFECT,       60, BUG,          100, 10 ; Aironfaar mod
 	move GUST,         NO_ADDITIONAL_EFFECT,        40, FLYING,       100, 35
 	move WING_ATTACK,  NO_ADDITIONAL_EFFECT,        50, FLYING,       100, 35 ; priority move
 	move WHIRLWIND,    CONFUSION_BIG_SIDE_EFFECT,  110, FLYING,        85, 10
@@ -82,7 +82,7 @@ Moves:
 	move LOW_KICK,     FLINCH_SIDE_EFFECT2,         50, FIGHTING,     100, 20
 	move COUNTER,      DRAIN_HP_EFFECT,             75, FIGHTING,     100, 10 ; -> DRAIN PUNCH
 	move SEISMIC_TOSS, SPECIAL_DAMAGE_EFFECT,        1, FIGHTING,     100, 20
-	move STRENGTH,     NO_ADDITIONAL_EFFECT,        80, FIGHTING,     100, 15
+	move STRENGTH,     DEFENSE_DOWN_SIDE_EFFECT,    80, FIGHTING,     100, 15 ; Aironfaar mod
 	move ABSORB,       DRAIN_HP_EFFECT,             30, GRASS,        100, 20
 	move MEGA_DRAIN,   DRAIN_HP_EFFECT,             60, GRASS,        100, 10
 	move LEECH_SEED,   LEECH_SEED_EFFECT,            0, GRASS,        100, 10
@@ -103,7 +103,7 @@ Moves:
 	move ROCK_THROW,   NO_ADDITIONAL_EFFECT,        50, ROCK,         100, 15
 	move EARTHQUAKE,   NO_ADDITIONAL_EFFECT,       100, GROUND,       100, 10
 	move FISSURE,      OHKO_EFFECT,                  1, GROUND,        30,  5
-	move DIG,          CHARGE_EFFECT,               80, GROUND,       100, 10
+	move DIG,          CHARGE_EFFECT,               90, GROUND,       100, 15 ; Aironfaar mod
 	move TOXIC,        POISON_EFFECT,                0, POISON,        90, 10
 	move CONFUSION,    CONFUSION_SIDE_EFFECT,       50, PSYCHIC_TYPE, 100, 25
 	move PSYCHIC_M,    SPECIAL_DOWN_SIDE_EFFECT,    90, PSYCHIC_TYPE, 100, 10
