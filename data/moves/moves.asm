@@ -94,7 +94,7 @@ Moves:
 	move SLEEP_POWDER, SLEEP_EFFECT,                 0, GRASS,         75, 15
 	move PETAL_DANCE,  THRASH_PETAL_DANCE_EFFECT,  120, GRASS,        100, 20
 	move STRING_SHOT,  SPEED_DOWN1_EFFECT,           0, BUG,           95, 40
-	move DRAGON_RAGE,  NO_ADDITIONAL_EFFECT,        80, DRAGON,       100, 20
+	move DRAGON_RAGE,  FLINCH_SIDE_EFFECT1,         80, DRAGON,       100, 20 ; Aironfaar mod
 	move FIRE_SPIN,    TRAPPING_EFFECT,             25, FIRE,          85, 15
 	move THUNDERSHOCK, PARALYZE_SIDE_EFFECT1,       40, ELECTRIC,     100, 30
 	move THUNDERBOLT,  PARALYZE_SIDE_EFFECT1,       95, ELECTRIC,     100, 15

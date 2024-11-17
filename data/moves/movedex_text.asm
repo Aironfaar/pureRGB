@@ -850,7 +850,7 @@ _DragonRageDexEntry::
 	next "by a shockwave of"
 	next "draconic rage.@"
 
-	text_jump _GenericNoAdditionalEffectText
+	text_jump _Generic10PercentFlinchText ; Aironfaar mod
 
 _FireSpinDexEntry::
 	text "A swirling pillar"
