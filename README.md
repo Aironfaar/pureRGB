@@ -11,6 +11,7 @@ Some of the modifications are supposed to make certain mono type runs go a bit m
 - Seel is now Water/Ice instead of Ice. This was the only somewhat reasonable way to provide a proper Ice type pokémon before reaching Pewter City. You can disable this change at the usual Type Changer NPC.
 
 Others are simply modifications to my personal taste:
+- The Pokédex now uses meters and kilograms instead of feet and pounds.
 - Gyarados can now learn Fly.
 - Splash is now a signature move for Magikarps of level 20 or higher, as well as for Gyarados. The Move Mystic will tell you more. To make sure that Gyarados can be encountered in the wild with Splash, they now know Splash at level 1.
 - Cursed Gengar now has different stats. The Dark and Light Channeler that inflict and remove the curse will inform you of the exact stat changes. To emphasize the new stat spread of Cursed Gengar, Gastly, Haunter and Gengar now learn Poison Gas instead of Filthy Slam at level 41. They can still learn Filthy Slam via TM.
