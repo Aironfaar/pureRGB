@@ -219,7 +219,11 @@ _SlamDexEntry::
 	next "with a dirty tail"
 	next "leg, arm, etc.@"
 
-	text_jump _GenericNoAdditionalEffectText
+	bage "20% chance of"
+	next "badly poison-"
+	next "ing the foe"
+
+	text_jump _GenericBadlyPoisonedText
 
 
 _VineWhipDexEntry::
@@ -607,13 +611,10 @@ _PsybeamDexEntry::
 	text "Psychic power"
 	next "of the <user> is"
 	next "focused into a"
-
+	
 	bage "strange beam."
-	; fall through
-_Generic10PercentConfusionText::
-	bage "Causes confusion"
-	next "10% of the time"
-	dex
+	
+    text_jump _Generic30PercentConfusionText
 
 _BubblebeamDexEntry::
 	text "A jet of bubbles"
@@ -950,6 +951,8 @@ _ToxicDexEntry::
 	bage "Badly poisons the"
 	next "foe if it hits."
 
+    ; fall through
+_GenericBadlyPoisonedText::
 	bage "The damage poison"
 	next "does to the foe"
 	next "grows each turn"
@@ -959,8 +962,11 @@ _ConfusionDexEntry::
 	text "Uses psychic"
 	next "powers to confuse"
 	next "the foe's mind.@"
-
-	text_jump _Generic10PercentConfusionText
+	; fall through
+_Generic10PercentConfusionText::
+	bage "Causes confusion"
+	next "10% of the time"
+	dex
 
 _PsychicDexEntry::
 	text "Telekinetic power"

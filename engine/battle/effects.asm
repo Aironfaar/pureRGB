@@ -135,7 +135,12 @@ PoisonEffect:
 	ld de, wEnemyToxicCounter
 .ok
 	cp TOXIC
-	jr nz, .normalPoison ; done if move is not Toxic
+;;;;;;;;;; Aironfaar mod CHANGED: Filthy Slam now has a chance to badly poison the target, so handle it
+	jr z, .isToxic
+	cp SLAM
+	jr nz, .normalPoison ; done if move is not Toxic nor Filthy Slam
+.isToxic
+;;;;;;;;;; Aironfaar mod END
 	set BADLY_POISONED, [hl] ; else set Toxic battstatus
 	xor a
 	ld [de], a

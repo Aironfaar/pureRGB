@@ -1,12 +1,14 @@
 # Pokémon PureRGB (PureRed, PureGreen, PureBlue)
 
-A purist's enhancement of Pokémon Red, Green, and Blue based on the pokered disassembly, created by Vortyne. Please see the original github page for information about this hack: https://github.com/Vortyne/pureRGB
+A purist's enhancement of Pokémon Red, Green, and Blue based on the pokered disassembly, created by Vortyne. Please see the [original github page](https://github.com/Vortyne/pureRGB) for information about this hack. My own modifications are documented in this readme.
+
+I don't provide ips files for patching, but you can build this modified version the same way you can build [the disassembly of Pokémon RGB](https://github.com/pret/pokered) using make.
 
 ## Fork Changes
-First, a bit of a disclaimer: If you play my modded version, create a new save file for it. I didn't update the save import feature to my particular changes, so something might break if you try anyway. Also, as long as I play pureRGB myself, I'll try to keep things updated in a way that will avoid issues, but I started this project mostly to satisfy my curiosity whether I could learn to make the changes I wanted, so keeping it up-to-date isn't a high priority for me. With that out of the way…
+First, a bit of a disclaimer: If you play my modded version of pureRGB, create a new save file for it. I didn't update the save import feature to my particular changes, so something might break if you try anyway. Also, as long as I play pureRGB myself, I'll try to keep things updated in a way that will avoid issues, but I started this project mostly to satisfy my curiosity whether I could learn to make the changes I wanted, so keeping it up-to-date isn't a high priority for me. With that out of the way…
 
 Some of the modifications are supposed to make certain mono type runs go a bit more smoothly:
-- Arcanine, Parasect and Venusaur can now learn Surf. With this change,  Flash, Cut, Strength, Fly or Dig, and Surf.
+- Arcanine, Parasect and Venusaur can now learn Surf. With this change, it is possible to cover all of Flash, Cut, Strength, Fly or Dig, and Surf with mono type teams.
 - You can now find at least one pokémon of each type before reaching Pewter City. One of them requires interaction with a new NPC, the others are out there in the wild.
 - Seel is now Water/Ice instead of Ice. This was the only somewhat reasonable way to provide a proper Ice type pokémon before reaching Pewter City. You can disable this change at the usual Type Changer NPC.
 
@@ -25,3 +27,17 @@ Others are simply modifications to my personal taste:
   - Existing trade NPCs may ask for different pokémon and give you a different one in return.
   - The trades on Cinnabar Island are now only accessible once you become the champion of the Pokémon League. In turn, the pokémon you receive in these trades are much more interesting.
   - Six new trades have been introduced to the game, two of which require you to be the champion.
+- Learnsets have been touched: While you shouldn't have to worry anymore about missing moves by evolving at inopportune times, an evolved pokémon now always learns moves later than its previous form would. In turn, some evolved pokémon can learn moves that their previous form can't.
+- Some moves have been changed:
+  - Cut: BP 70 -> 60, gives +1 Attack
+  - Dig: BP 80 -> 130, ACC 100 -> 95, PP 10 -> 5
+  - Doubleslap: ACC 85 -> 100
+  - Dragon Rage: 10% chance to make target flinch
+  - Filthy Slam: 20% chance to badly poison the target
+  - Fly: BP 90 -> 130, ACC 100 -> 95, PP 15 -> 5
+  - Guillotine: Type BUG -> NORMAL
+  - Horn Drill: Type NORMAL -> FIGHTING
+  - Pin Missile: BP 18 -> 20
+  - Psybeam: BP 65 -> 75, confusion chance 10% -> 30%
+  - Splash: Type NORMAL -> FLYING, signature move of Gyarados and Level 20+ Magikarp (refer to Move Mystic in Saffron City for details)
+  - Strength: 33% chance for -1 Defense
