@@ -40,6 +40,9 @@
 	SLUDGE,\
 	GLARE,\
 	SUBSTITUTE,\
+	REST,\ ; Aironfaar mod
+	MIMIC,\ ; Aironfaar mod
+	RAGE,\ ; Aironfaar mod
 	CUT,\
 	FLY,\
 	FLASH

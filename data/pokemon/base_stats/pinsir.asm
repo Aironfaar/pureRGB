@@ -19,7 +19,6 @@
 	PIN_MISSILE,\
 	FIRE_PUNCH,\
 	TOXIC,\
-	HORN_DRILL,\
 	BODY_SLAM,\
 	SLASH,\
 	DOUBLE_EDGE,\
@@ -40,6 +39,10 @@
 	ROCK_SLIDE,\
 	GLARE,\
 	SUBSTITUTE,\
+	REST,\ ; Aironfaar mod
+	MIMIC,\ ; Aironfaar mod
+	GUILLOTINE, \ ; Aironfaar mod: replaced Horn Drill with Guillotine
+	SUBMISSION,\ ; Aironfaar mod
 	CUT,\
 	SURF,\
 	STRENGTH

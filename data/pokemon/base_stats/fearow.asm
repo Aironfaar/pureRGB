@@ -18,6 +18,7 @@
 	RAZOR_WIND,\ ; ROOST
 	PIN_MISSILE,\
 	TOXIC,\
+	HORN_DRILL,\ ; Aironfaar mod
 	BODY_SLAM,\
 	SLASH,\
 	DOUBLE_EDGE,\
@@ -33,6 +34,10 @@
 	SKY_ATTACK,\
 	GLARE,\
 	SUBSTITUTE,\
+	REST,\ ; Aironfaar mod
+	MIMIC,\ ; Aironfaar mod
+	WHIRLWIND,\ ; Aironfaar mod
+	SUBMISSION,\ ; Aironfaar mod
 	CUT,\
 	FLY,\
 	STRENGTH

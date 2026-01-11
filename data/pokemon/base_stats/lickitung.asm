@@ -55,6 +55,11 @@
 	ROCK_SLIDE,\
 	GLARE,\
 	SUBSTITUTE,\
+	REST,\ ; Aironfaar mod
+	MIMIC,\ ; Aironfaar mod
+	FISSURE,\ ; Aironfaar mod
+	HEADBUTT,\ ; Aironfaar mod
+	DREAM_EATER,\ ; Aironfaar mod
 	CUT,\
 	SURF,\
 	STRENGTH,\

@@ -23,4 +23,7 @@ CeladonMart2FClerk2Text::
 	TM_SWORDS_DANCE, \ ; Aironfaar mod
 	TM_REFLECT, \
 	TM_LIGHT_SCREEN, \ ; Aironfaar mod
-	TM_SUBSTITUTE ; Aironfaar mod
+	TM_SOFTBOILED, \ ; Aironfaar mod
+	TM_RECOVER, \ ; Aironfaar mod
+	TM_FISSURE, \ ; Aironfaar mod
+	TM_GUILLOTINE ; Aironfaar mod

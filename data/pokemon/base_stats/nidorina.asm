@@ -39,6 +39,9 @@
 	ROCK_SLIDE,\
 	GLARE,\
 	SUBSTITUTE,\
+	REST,\ ; Aironfaar mod
+	MIMIC,\ ; Aironfaar mod
+	SUBMISSION,\ ; Aironfaar mod
 	CUT,\
 	STRENGTH,\
 	FLASH

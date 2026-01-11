@@ -36,6 +36,10 @@
 	SLAM,\ ; FILTHY SLAM
 	GLARE,\
 	SUBSTITUTE,\
+	REST,\ ; Aironfaar mod
+	MIMIC,\ ; Aironfaar mod
+	WHIRLWIND,\ ; Aironfaar mod
+	RAGE,\ ; Aironfaar mod
 	FLY,\ ; Aironfaar mod
 	SURF,\
 	STRENGTH,\

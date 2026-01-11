@@ -39,6 +39,11 @@
 	PSYBEAM,\
 	GLARE,\
 	SUBSTITUTE,\
+	REST,\ ; Aironfaar mod
+	MIMIC,\ ; Aironfaar mod
+	METRONOME,\ ; Aironfaar mod
+	FISSURE,\ ; Aironfaar mod
+	COUNTER,\ ; DRAIN PUNCH ; Aironfaar mod
 	SURF,\
 	STRENGTH,\
 	FLASH

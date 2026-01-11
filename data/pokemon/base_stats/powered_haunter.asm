@@ -38,6 +38,10 @@
 	SLUDGE,\
 	GLARE,\
 	SUBSTITUTE,\
+	REST,\ ; Aironfaar mod
+	MIMIC,\ ; Aironfaar mod
+	METRONOME,\ ; Aironfaar mod
+	DREAM_EATER,\ ; Aironfaar mod
 	CUT,\
 	STRENGTH,\
 	FLASH

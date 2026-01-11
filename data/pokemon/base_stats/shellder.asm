@@ -32,6 +32,10 @@
 	SLUDGE,\
 	GLARE,\
 	SUBSTITUTE,\
+	TELEPORT,\ ; Aironfaar mod
+	REST,\ ; Aironfaar mod
+	MIMIC,\ ; Aironfaar mod
+	TRI_ATTACK,\ ; Aironfaar mod
 	SURF,\
 	FLASH
 	; end

@@ -16,4 +16,9 @@ CinnabarTMKidShop::
 	TM_AMNESIA, \
 	TM_BODY_SLAM, \
 	TM_BARRAGE, \
-	TM_SLAM ; FILTHY SLAM
+	TM_SLAM, \ ; FILTHY SLAM
+	TM_SELFDESTRUCT, \ ; Aironfaar mod
+	TM_EXPLOSION, \ ; Aironfaar mod
+	TM_WHIRLWIND, \ ; Aironfaar mod
+	TM_TRI_ATTACK, \ ; Aironfaar mod
+	TM_RAGE ; Aironfaar mod

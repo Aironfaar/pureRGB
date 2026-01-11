@@ -27,7 +27,7 @@ Others are simply modifications to my personal taste:
   - Existing trade NPCs may ask for different pokémon and give you a different one in return.
   - The trades on Cinnabar Island are now only accessible once you become the champion of the Pokémon League. In turn, the pokémon you receive in these trades are much more interesting.
   - Six new trades have been introduced to the game, two of which require you to be the champion.
-- Learnsets have been touched: While you shouldn't have to worry anymore about missing moves by evolving at inopportune times, an evolved pokémon now always learns moves later than its previous form would. In turn, some evolved pokémon can learn moves that their previous form can't.
+- Learnsets have been touched: While you shouldn't have to worry anymore about missing moves by evolving at inopportune times, an evolved pokémon now always learns moves later than its previous form would (specifically, at the level its previous evolution would learn it * 1.1, rounded down). In turn, some evolved pokémon can learn moves that their previous form can't.
 - Some moves have been changed:
   - Cut: BP 70 -> 60, gives +1 Attack
   - Dig: BP 80 -> 130, ACC 100 -> 95, PP 10 -> 5
@@ -41,3 +41,26 @@ Others are simply modifications to my personal taste:
   - Psybeam: BP 65 -> 75, confusion chance 10% -> 30%
   - Splash: Type NORMAL -> FLYING, signature move of Gyarados and Level 20+ Magikarp (refer to Move Mystic in Saffron City for details)
   - Strength: 33% chance for -1 Defense
+- 20 TMs have been added, most to reintroduce previously available TMs, some to add new moves to the TM pool.
+  - TM 51: Teleport
+  - TM 52: Softboiled
+  - TM 53: Recover
+  - TM 54: Rest (new)
+  - TM 55: Mimic
+  - TM 56: Metronome
+  - TM 57: Fissure
+  - TM 58: Guillotine (new)
+  - TM 59: Selfdestruct
+  - TM 60: Explosion
+  - TM 61: Whirlwind
+  - TM 62: Tri Attack
+  - TM 63: Headbutt (new)
+  - TM 64: Pay Day
+  - TM 65: Egg Bomb
+  - TM 66: Rage
+  - TM 67: Submission
+  - TM 68: Dream Eater
+  - TM 69: Leech Life (new)
+  - TM 70: Drain Punch (new)
+- Copycat now gives you Mimic again. Just felt too iconic to change that.
+- Caterpie, Metapod, Weedle, Kakuna and Magikarp are back to being unable to learn any TMs and HMs.

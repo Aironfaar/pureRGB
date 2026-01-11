@@ -45,6 +45,11 @@
 	THUNDER_WAVE,\
 	GLARE,\
 	SUBSTITUTE,\
+	TELEPORT,\ ; Aironfaar mod
+	REST,\ ; Aironfaar mod
+	MIMIC,\ ; Aironfaar mod
+	METRONOME,\ ; Aironfaar mod
+	COUNTER,\ ; DRAIN PUNCH ; Aironfaar mod
 	CUT,\
 	STRENGTH,\
 	FLASH

@@ -14,9 +14,7 @@
 	db GROWTH_MEDIUM_SLOW ; growth rate
 
 	; tm/hm learnset
-	tmhm \
-	BUBBLEBEAM,\
-	BIDE
+	tmhm ; Aironfaar mod: return to inability to learn TMs and HMs - this feels too iconic to change
 	; end
 
 

@@ -48,6 +48,16 @@
 	THUNDER_WAVE,\
 	PSYBEAM,\
 	SUBSTITUTE,\
+	TELEPORT,\ ; Aironfaar mod
+	RECOVER,\ ; Aironfaar mod
+	REST,\ ; Aironfaar mod
+	MIMIC,\ ; Aironfaar mod
+	METRONOME,\ ; Aironfaar mod
+	SELFDESTRUCT,\ ; Aironfaar mod
+	EXPLOSION,\ ; Aironfaar mod
+	TRI_ATTACK,\ ; Aironfaar mod
+	DREAM_EATER,\ ; Aironfaar mod
+	COUNTER,\ ; DRAIN PUNCH ; Aironfaar mod
 	CUT,\
 	STRENGTH,\
 	FLASH

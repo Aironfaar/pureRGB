@@ -36,6 +36,12 @@
 	SLUDGE,\
 	GLARE,\
 	SUBSTITUTE,\
+	REST,\ ; Aironfaar mod
+	MIMIC,\ ; Aironfaar mod
+	SELFDESTRUCT,\ ; Aironfaar mod
+	EXPLOSION,\ ; Aironfaar mod
+	DREAM_EATER,\ ; Aironfaar mod
+	LEECH_LIFE,\ ; Aironfaar mod
 	CUT,\
 	FLASH
 	; end

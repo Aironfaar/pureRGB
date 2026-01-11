@@ -33,6 +33,10 @@
 	LIGHT_SCREEN,\
 	GLARE,\
 	SUBSTITUTE,\
+	REST,\ ; Aironfaar mod
+	MIMIC,\ ; Aironfaar mod
+	HEADBUTT,\ ; Aironfaar mod
+	PAY_DAY,\ ; Aironfaar mod
 	SURF,\
 	STRENGTH,\
 	FLASH

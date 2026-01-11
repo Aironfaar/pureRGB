@@ -14,19 +14,7 @@
 	db GROWTH_MEDIUM_FAST ; growth rate
 
 	; tm/hm learnset
-	tmhm \
-	TOXIC,\
-	DOUBLE_EDGE,\
-	BARRIER,\
-	MEGA_DRAIN,\
-	SWORDS_DANCE,\
-	REFLECT,\
-	BIDE,\
-	LIGHT_SCREEN,\
-	GLARE,\
-	SUBSTITUTE,\
-	CUT,\
-	FLASH
+	tmhm ; Aironfaar mod: return to inability to learn TMs and HMs - this feels too iconic to change
 	;end
 
 	db BANK(MetapodPicFront)

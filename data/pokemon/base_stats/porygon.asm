@@ -41,6 +41,13 @@
 	THUNDER_WAVE,\
 	PSYBEAM,\
 	SUBSTITUTE,\
+	TELEPORT,\ ; Aironfaar mod
+	RECOVER,\ ; Aironfaar mod
+	REST,\ ; Aironfaar mod
+	MIMIC,\ ; Aironfaar mod
+	SELFDESTRUCT,\ ; Aironfaar mod
+	EXPLOSION,\ ; Aironfaar mod
+	TRI_ATTACK,\ ; Aironfaar mod
 	FLASH
 	; end
 

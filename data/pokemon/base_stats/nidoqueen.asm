@@ -50,6 +50,11 @@
 	ROCK_SLIDE,\
 	GLARE,\
 	SUBSTITUTE,\
+	REST,\ ; Aironfaar mod
+	MIMIC,\ ; Aironfaar mod
+	FISSURE,\ ; Aironfaar mod
+	PAY_DAY,\ ; Aironfaar mod
+	SUBMISSION,\ ; Aironfaar mod
 	CUT,\
 	SURF,\
 	STRENGTH,\

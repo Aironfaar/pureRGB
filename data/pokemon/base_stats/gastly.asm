@@ -31,6 +31,9 @@
 	SLUDGE,\
 	GLARE,\
 	SUBSTITUTE,\
+	REST,\ ; Aironfaar mod
+	MIMIC,\ ; Aironfaar mod
+	DREAM_EATER,\ ; Aironfaar mod
 	FLASH
 	; end
 

@@ -42,6 +42,11 @@
 	LIGHT_SCREEN,\
 	GLARE,\
 	SUBSTITUTE,\
+	REST,\ ; Aironfaar mod
+	MIMIC,\ ; Aironfaar mod
+	GUILLOTINE,\ ; Aironfaar mod
+	WHIRLWIND,\ ; Aironfaar mod
+	PAY_DAY,\ ; Aironfaar mod
 	CUT,\
 	FLY,\
 	SURF,\
