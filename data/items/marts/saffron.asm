@@ -13,5 +13,8 @@ SaffronTMKidShop::
 	TM_KARATE_CHOP, \
 	TM_ICE_PUNCH, \
 	TM_FIRE_PUNCH, \
-	TM_THUNDERPUNCH
+	TM_THUNDERPUNCH, \
+	TM_HEADBUTT, \ ; Aironfaar mod
+	TM_SUBMISSION, \ ; Aironfaar mod
+	TM_COUNTER ; DRAIN PUNCH ; Aironfaar mod
 	

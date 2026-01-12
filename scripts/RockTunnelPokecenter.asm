@@ -10,6 +10,7 @@ RockTunnelPokecenter_TextPointers:
 	dw_const RockTunnelPokecenterFisherText,           TEXT_ROCKTUNNELPOKECENTER_FISHER
 	dw_const RockTunnelPokecenterLinkReceptionistText, TEXT_ROCKTUNNELPOKECENTER_LINK_RECEPTIONIST
 	dw_const RockTunnelCharityNurseText,               TEXT_ROCKTUNNELPOKECENTER_NURSE2
+	dw_const RockTunnelHikerText,                      TEXT_ROCKTUNNELPOKECENTER_HIKER ; Aironfaar mod
 
 RockTunnelPokecenterNurseText:
 	script_pokecenter_nurse
@@ -86,3 +87,11 @@ RockTunnelCharityNurseNotEnoughMoneyText:
 	text_far _GenericNotEnoughMoneyText
 	text_end
 
+;;; Aironfaar mod start
+RockTunnelHikerText:
+    text_asm
+	ld a, TRADE_FOR_SYLVESTER
+	ld [wWhichTrade], a
+	predef DoInGameTradeDialogue
+	rst TextScriptEnd
+;;; Aironfaar mod end

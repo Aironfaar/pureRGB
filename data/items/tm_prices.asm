@@ -53,4 +53,26 @@ TechnicalMachinePrices:
 	nybble 5 ; TM48
 	nybble 3 ; TM49
 	nybble 6 ; TM50
+;;; Aironfaar mod start: prices for new TMs
+	nybble 3 ; TM51
+	nybble 4 ; TM52
+	nybble 3 ; TM53
+	nybble 2 ; TM54
+	nybble 2 ; TM55
+	nybble 4 ; TM56
+	nybble 5 ; TM57
+	nybble 5 ; TM58
+	nybble 5 ; TM59
+	nybble 5 ; TM60
+	nybble 6 ; TM61
+	nybble 5 ; TM62
+	nybble 3 ; TM63
+	nybble 3 ; TM64
+	nybble 5 ; TM65
+	nybble 4 ; TM66
+	nybble 5 ; TM67
+	nybble 3 ; TM68
+	nybble 4 ; TM69
+	nybble 4 ; TM70
+;;; Aironfaar mod end
 	end_nybble_array NUM_TMS

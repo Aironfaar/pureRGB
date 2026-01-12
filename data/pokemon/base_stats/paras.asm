@@ -38,6 +38,10 @@
 	LIGHT_SCREEN,\
 	SLUDGE,\
 	SUBSTITUTE,\
+	REST,\ ; Aironfaar mod
+	MIMIC,\ ; Aironfaar mod
+	PAY_DAY,\ ; Aironfaar mod
+	LEECH_LIFE,\ ; Aironfaar mod
 	CUT,\
 	FLASH
 	; end

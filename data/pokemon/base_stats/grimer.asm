@@ -44,6 +44,13 @@
 	ROCK_SLIDE,\
 	GLARE,\
 	SUBSTITUTE,\
+	RECOVER,\ ; Aironfaar mod
+	REST,\ ; Aironfaar mod
+	MIMIC,\ ; Aironfaar mod
+	METRONOME,\ ; Aironfaar mod
+	SELFDESTRUCT,\ ; Aironfaar mod
+	EXPLOSION,\ ; Aironfaar mod
+	COUNTER,\ ; DRAIN PUNCH ; Aironfaar mod
 	SURF,\
 	STRENGTH,\
 	FLASH

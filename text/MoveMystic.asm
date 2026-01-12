@@ -128,6 +128,18 @@ _WigglytuffMoveMysticText::
 	line "globular glory."
 	prompt
 
+;;; Aironfaar mod start
+_MagikarpMoveMysticText::
+	text_start
+	line "careening carp."
+	prompt
+
+_GyaradosMoveMysticText::
+	text_start
+	line "lethal leviathan."
+	prompt
+;;; Aironfaar mod end
+
 _MoveMysticMasterOfMoveText::
 	text "It's a master"
 	line "of @"
@@ -167,6 +179,27 @@ _MoveMysticBeedrillText::
 	line "TWINEEDLE's POWER"
 	cont "increases to 65!"
 	done
+
+;;; Aironfaar mod start
+_MoveMysticMagikarpText::
+	text "It tries to leap"
+	line "always higher."
+	para "Starting at"
+	line "level 20, it can"
+	cont "pratically FLY"
+	cont "by using SPLASH!"
+	done
+
+_MoveMysticGyaradosText::
+	text "This sea serpent"
+	line "can take to the"
+	cont "skies."
+	para "It will SPLASH"
+	line "and bounce until"
+	cont "it takes off to"
+	cont "FLY!"
+	done
+;;; Aironfaar mod end
 
 _MoveMysticAccuracy85::
 	text "Its ACCURACY"

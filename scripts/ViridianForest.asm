@@ -27,6 +27,7 @@ ViridianForest_TextPointers:
 	dw_const PickUp2ItemText,                   TEXT_VIRIDIANFOREST_ITEM2
 	dw_const PickUp5ItemText,                   TEXT_VIRIDIANFOREST_ITEM3
 	dw_const ViridianForestYoungster5Text,      TEXT_VIRIDIANFOREST_YOUNGSTER6
+	dw_const ViridianForestMissingnoText,       TEXT_VIRIDIANFOREST_MISSINGNO ; Aironfaar mod
 	dw_const ViridianForestTrainerTips1Text,    TEXT_VIRIDIANFOREST_TRAINER_TIPS1
 	dw_const ViridianForestUseAntidoteSignText, TEXT_VIRIDIANFOREST_USE_ANTIDOTE_SIGN
 	dw_const ViridianForestTrainerTips2Text,    TEXT_VIRIDIANFOREST_TRAINER_TIPS2
@@ -169,3 +170,12 @@ ViridianForestTrainerTips4Text:
 ViridianForestLeavingSignText:
 	text_far _ViridianForestLeavingSignText
 	text_end
+
+;;; Aironfaar mod start
+ViridianForestMissingnoText:
+    text_asm
+	ld a, TRADE_FOR_MIRAGE
+	ld [wWhichTrade], a
+	predef DoInGameTradeDialogue
+	rst TextScriptEnd
+;;; Aironfaar mod end

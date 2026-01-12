@@ -37,6 +37,8 @@
 	LIGHT_SCREEN,\
 	THUNDER_WAVE,\
 	SUBSTITUTE,\
+	REST,\ ; Aironfaar mod
+	MIMIC,\ ; Aironfaar mod
 	CUT,\
 	SURF,\
 	FLASH

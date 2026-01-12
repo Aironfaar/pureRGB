@@ -16,6 +16,7 @@
 	; tm/hm learnset
 	tmhm \
 	TOXIC,\
+	HORN_DRILL,\ ; Aironfaar mod
 	BODY_SLAM,\
 	DOUBLE_EDGE,\
 	BUBBLEBEAM,\
@@ -33,6 +34,10 @@
 	SLUDGE,\
 	GLARE,\
 	SUBSTITUTE,\
+	TELEPORT,\ ; Aironfaar mod
+	REST,\ ; Aironfaar mod
+	MIMIC,\ ; Aironfaar mod
+	TRI_ATTACK,\ ; Aironfaar mod
 	SURF,\
 	FLASH
 	; end

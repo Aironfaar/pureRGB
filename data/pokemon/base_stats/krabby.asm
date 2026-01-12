@@ -38,6 +38,9 @@
 	ROCK_SLIDE,\
 	GLARE,\
 	SUBSTITUTE,\
+	REST,\ ; Aironfaar mod
+	MIMIC,\ ; Aironfaar mod
+	GUILLOTINE,\ ; Aironfaar mod
 	CUT,\
 	SURF,\
 	STRENGTH,\

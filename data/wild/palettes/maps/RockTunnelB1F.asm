@@ -1,4 +1,4 @@
 RockTunnelB1FWildPalettes:
-	db %10000000
-	db %00000011
+	db %11000000 ; Aironfaar mod
+	db 0 ; Aironfaar mod
 	db 0

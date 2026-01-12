@@ -109,20 +109,45 @@ HallOfFameOakCongratulationsScript:
 .hide1
 	ld a, HS_STARTER_BALL_1
 .hideStarterBall
-	ld [wMissableObjectIndex], a
-	predef HideObject
+	call .hide ; Aironfaar mod
 ;;;;;;;;;;
 	ld a, HS_CERULEAN_CAVE_GUY
-	ld [wMissableObjectIndex], a
-	predef HideObject
+	call .hide ; Aironfaar mod
 ;;;;;;;;;; PureRGBnote: ADDED: hide the guy in the first floor of the secret house in cerulean - makes it appear he went downstairs.
 	ld a, HS_CERULEAN_ROCKET_HOUSE_1F_GUY
-	ld [wMissableObjectIndex], a
-	predef HideObject
+	call .hide ; Aironfaar mod
 ;;;;;;;;;;
+;;; Aironfaar mod start: new objects to hide/show
+    ld a, HS_SILPH_CO_1F_MISSINGNO
+	call .show
+    ld a, HS_VIRIDIAN_FOREST_MISSINGNO
+	call .show
+	ld a, HS_CINNABARLABTRADEROOM_SCIENTIST1
+	call .hideExtra
+	ld a, HS_CINNABARLABTRADEROOM_SCIENTIST2
+	call .showExtra
+	ld a, HS_CINNABARLABTRADEROOM_SCIENTIST3
+	call .showExtra
+	ld a, HS_CINNABARLABTRADEROOM_SCIENTIST4
+	call .showExtra
+;;; Aironfaar mod end
 	ld a, SCRIPT_HALLOFFAME_RESET_EVENTS_AND_SAVE
 	ld [wHallOfFameCurScript], a
 	ret
+;;; Aironfaar mod start: labels for repetitive code
+.show
+    ld [wMissableObjectIndex], a
+	predef_jump ShowObject
+.hide
+    ld [wMissableObjectIndex], a
+	predef_jump HideObject
+.showExtra
+    ld [wMissableObjectIndex], a
+	predef_jump ShowExtraObject
+.hideExtra
+    ld [wMissableObjectIndex], a
+	predef_jump HideExtraObject
+;;; Aironfaar mod end
 
 HallOfFame_TextPointers:
 	def_text_pointers

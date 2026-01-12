@@ -135,7 +135,12 @@ PoisonEffect:
 	ld de, wEnemyToxicCounter
 .ok
 	cp TOXIC
-	jr nz, .normalPoison ; done if move is not Toxic
+;;; Aironfaar mod start: Filthy Slam now has a chance to badly poison the target, so handle it
+	jr z, .isToxic
+	cp SLAM
+	jr nz, .normalPoison ; done if move is not Toxic nor Filthy Slam
+.isToxic
+;;; Aironfaar mod end
 	set BADLY_POISONED, [hl] ; else set Toxic battstatus
 	xor a
 	ld [de], a
@@ -1563,6 +1568,45 @@ LeechSeedEffect:
 
 SplashEffect:
 	call PlayCurrentMoveAnimation
+;;; Aironfaar mod start: Splash is now signature move for Gyarados and Level 20+ Magikarp, so handle it
+	ldh a, [hWhoseTurn]
+	and a
+	ld a, [wBattleMonLevel]
+	ld d, a
+	ld a, [wBattleMonSpecies]
+	jr z, .checkMon
+	ld a, [wEnemyMonLevel]
+	ld d, a
+	ld a, [wEnemyMonSpecies]
+.checkMon
+	cp GYARADOS
+	jr z, .bounce
+	cp MAGIKARP
+	jr nz, .noEffect
+	ld a, d
+	cp 20
+	jr c, .noEffect
+.bounce
+	call PrintBounceText
+	ld a, FLY
+	ld [wNamedObjectIndex], a
+	ldh a, [hWhoseTurn]
+	and a
+	ld a, [wNamedObjectIndex]
+	jr z, .playerNotEnemy
+	ld hl, wEnemySelectedMove
+	ld [hl], a
+	ld de, wEnemyMoveNum
+	jr .callfarReload
+.playerNotEnemy
+	ld hl, wPlayerSelectedMove
+	ld [hl], a
+	ld de, wPlayerMoveNum
+.callfarReload
+	callfar FarReloadMoveData
+	jp ExecuteReplacedMove
+.noEffect
+;;; Aironfaar mod end
 	jp PrintNoEffectText
 
 ;;;;;;;;;; PureRGBnote: CHANGED: this function was updated to disable the previous move used by the opponent
@@ -1767,6 +1811,17 @@ PrintNoEffectText:
 NoEffectText:
 	text_far _NoEffectText
 	text_end
+
+;;; Aironfaar mod start: new text for signature move Splash
+PrintBounceText:
+	ld hl, BounceText
+	rst _PrintText
+	ret
+
+BounceText:
+	text_far _BounceText
+	text_end
+;;; Aironfaar mod end
 
 ConditionalPrintButItFailed:
 	ld a, [wMoveDidntMiss]

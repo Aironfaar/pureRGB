@@ -48,7 +48,11 @@ _LightChannelerHaunter::
 	line "this curse?"
 	para "It should go back"
 	line "to looking like a"
-	cont "GENGAR again."
+;;; Aironfaar mod start: change dialogue to reflect new stat changes
+	cont "GENGAR again, and"
+	cont "its stats should"
+	cont "return to normal."
+;;; Aironfaar mod end
 	done
 
 _LightChannelerHaunterNo::
@@ -78,6 +82,16 @@ _LightChannelerPurificationComplete::
 	para "It looks just"
 	line "like a GENGAR"
 	cont "should again."
+;;; Aironfaar mod start: change dialogue to reflect new stat changes
+	para "Its stats also"
+	line "have normalized."
+	para "Its base ATTACK"
+	line "dropped! 110→65"
+	para "Its base SPEED"
+	line "dropped! 135→110"
+	para "Its base SPECIAL"
+	line "grew! 60→130"
+;;; Aironfaar mod end
 	para "Safe travels!"
 	done
 	

@@ -216,6 +216,8 @@ INCLUDE "engine/movie/trade2.asm"
 INCLUDE "engine/menus/movedex.asm"
 INCLUDE "data/moves/movedex_type_palettes.asm"
 ;;;;;;;;;;
+; Aironfaar mod: moved from bank1c
+INCLUDE "engine/events/in_game_trades.asm"
 
 SECTION "Pokédex Rating", ROMX
 
@@ -316,7 +318,7 @@ INCLUDE "engine/overworld/player_animations.asm"
 INCLUDE "engine/battle/battle_transitions.asm"
 INCLUDE "engine/items/town_map.asm"
 INCLUDE "engine/gfx/mon_icons.asm"
-INCLUDE "engine/events/in_game_trades.asm"
+; Aironfaar mod: move to bank10: INCLUDE "engine/events/in_game_trades.asm"
 INCLUDE "engine/gfx/palettes.asm"
 INCLUDE "engine/menus/save.asm"
 

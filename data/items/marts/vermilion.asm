@@ -10,4 +10,5 @@ VermilionMartClerkText::
 VermilionTMKidShop::
 	script_mart \
 	TM_KINESIS, \ ; FIREWALL
-	TM_LEECH_SEED
+	TM_LEECH_SEED, \
+	TM_PAY_DAY ; Aironfaar mod

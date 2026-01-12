@@ -33,6 +33,10 @@
 	PSYBEAM,\
 	SLUDGE,\
 	SUBSTITUTE,\
+	REST,\ ; Aironfaar mod
+	MIMIC,\ ; Aironfaar mod
+	DREAM_EATER,\ ; Aironfaar mod
+	LEECH_LIFE,\ ; Aironfaar mod
 	CUT,\
 	FLASH
 	; end

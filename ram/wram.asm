@@ -1732,7 +1732,7 @@ wMonHFrontSprite:: dw
 wMonHBackSprite:: dw
 wMonHMoves:: ds NUM_MOVES
 wMonHGrowthRate:: db
-wMonHLearnset:: flag_array NUM_TMS + NUM_HMS
+wMonHLearnset:: flag_array NUM_TMS + NUM_HMS ; Aironfaar mod: used to be 7 bytes large, now is 10 bytes
 ; PureRGBnote: ADDED: new properties in the pokemon header - these take up new space in WRAM.
 wMonHPicBank:: db ; shifts
 wMonHAltPicBank:: db ; shifts
@@ -1740,7 +1740,7 @@ wMonHBackPicBank:: db ; shifts
 wMonHSpaceWorldBackPicBank:: db ; shifts
 wMonHAltFrontSprite:: dw ; shifts
 wMonHAltBackSprite:: dw ; shifts
-    ds 1 ; unused byte
+; Aironfaar mod: used to be "ds 1 ; unused byte", now swallowed by larger wMonHLearnset
 wMonHeaderEnd::
 
 ; saved at the start of a battle and then written back at the end of the battle
@@ -1750,7 +1750,7 @@ wSavedTileAnimations:: db
 
 wDamage:: dw
 
-	ds 2 ; unused 2 bytes
+; Aironfaar mod: used to be "ds 2 ; unused 2 bytes", now swallowed by larger wMonHLearnset
 
 wRepelRemainingSteps:: db
 

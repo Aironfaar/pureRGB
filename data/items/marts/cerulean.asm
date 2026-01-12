@@ -11,5 +11,6 @@ CeruleanMartClerkText::
 
 CeruleanTMKidShop::
 	script_mart \
-	TM_BIDE
+	TM_BIDE, \
+	TM_METRONOME ; Aironfaar mod
 

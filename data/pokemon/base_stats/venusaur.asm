@@ -42,7 +42,11 @@
 	SLUDGE,\
 	GLARE,\
 	SUBSTITUTE,\
+	REST,\ ; Aironfaar mod
+	MIMIC,\ ; Aironfaar mod
+	FISSURE,\ ; Aironfaar mod
 	CUT,\
+	SURF,\ ; Aironfaar mod
 	STRENGTH,\
 	FLASH
 	; end

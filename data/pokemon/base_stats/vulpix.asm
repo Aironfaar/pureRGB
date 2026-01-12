@@ -35,6 +35,8 @@
 	LIGHT_SCREEN,\
 	GLARE,\
 	SUBSTITUTE,\
+	REST,\ ; Aironfaar mod
+	MIMIC,\ ; Aironfaar mod
 	CUT,\
 	FLASH
 	; end

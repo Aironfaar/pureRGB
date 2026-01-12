@@ -12,13 +12,9 @@ DoInGameTradeDialogue:
 	call SaveScreenTilesToBuffer2
 	ld hl, TradeMons
 	ld a, [wWhichTrade]
-	ld b, a
-	swap a
-	sub b
-	sub b
-	ld c, a
 	ld b, 0
-	add hl, bc
+	ld c, 3 + NAME_LENGTH ; Aironfaar mod: simplified the flow
+	call AddNTimes ; Aironfaar mod
 	ld a, [hli]
 	ld [wInGameTradeGiveMonSpecies], a
 	ld a, [hli]
@@ -276,73 +272,139 @@ InGameTrade_TrainerString:
 InGameTradeTextPointers:
 ; entries correspond to TRADE_DIALOGSET_* constants
 	table_width 2
-	dw TradeTextPointers1
-	dw TradeTextPointers2
-	dw TradeTextPointers3
-	dw TradeTextPointers4
-	dw TradeTextPointers5
-	dw TradeTextPointers6
-	dw TradeTextPointers7
+;;; Aironfaar mod start: new trades, new tables and table contents
+	dw TradeTextPointers1  ; JYNX Lola
+	dw TradeTextPointers2  ; ELECTABUZZ Lightyear
+	dw TradeTextPointers3  ; TANGELA Discombob
+	dw TradeTextPointers4  ; BULBASAUR Bulbert
+	dw TradeTextPointers5  ; SQUIRTLE Mirtle
+	dw TradeTextPointers6  ; CHARMANDER Mandy
+	dw TradeTextPointers7  ; GRAVELER Sylvester
+	dw TradeTextPointers8  ; HAUNTER Blair
+	dw TradeTextPointers9  ; MACHOKE Arnold
+	dw TradeTextPointers10 ; KADABRA Liam
+	dw TradeTextPointers11 ; MAGNETON SPROCKET
+	dw TradeTextPointers12 ; Legendary Birds Roald, Lawrence, Nikola
+	dw TradeTextPointers13 ; Mythical PKMN Enigma, Mirage
 	assert_table_length NUM_TRADE_DIALOGSETS
 
 TradeTextPointers1:
 	table_width 2
-	dw WannaTrade1Text
-	dw NoTrade1Text
-	dw WrongMon1Text
-	dw Thanks1Text
-	dw AfterTrade1Text
+	dw WannaTradeLolaText
+	dw NoTradeLolaText
+	dw WrongMonLolaText
+	dw ThanksLolaText
+	dw AfterTradeLolaText
 	assert_table_length NUM_TRADE_TEXTS
 
 TradeTextPointers2:
 	table_width 2
-	dw WannaTrade2Text
-	dw NoTrade2Text
-	dw WrongMon2Text
-	dw Thanks2Text
-	dw AfterTrade2Text
+	dw WannaTradeLightyearText
+	dw NoTradeLightyearText
+	dw WrongMonLightyearText
+	dw ThanksLightyearText
+	dw AfterTradeLightyearText
 	assert_table_length NUM_TRADE_TEXTS
 
 TradeTextPointers3:
 	table_width 2
-	dw WannaTrade3Text
-	dw NoTrade3Text
-	dw WrongMon3Text
-	dw Thanks3Text
-	dw AfterTrade3Text
+	dw WannaTradeDiscombobText
+	dw NoTradeDiscombobText
+	dw WrongMonDiscombobText
+	dw ThanksDiscombobText
+	dw AfterTradeDiscombobText
 	assert_table_length NUM_TRADE_TEXTS
 
-;;;;;;;;;; PureRGBnote: ADDED: some trade NPCs have alt palette pokemon to trade and will tell you about it.
-
 TradeTextPointers4:
-	dw WannaTrade1ColorText
-	dw NoTrade1Text
-	dw WrongMon1Text
-	dw Thanks1TextPrompt
-	dw AfterTrade1Text
+	table_width 2
+	dw WannaTradeStarterText
+	dw NoTradeStarterText
+	dw WrongMonStarterText
+	dw ThanksStarterText
+	dw AfterTradeBulbertText
+	assert_table_length NUM_TRADE_TEXTS
 
 TradeTextPointers5:
-	dw WannaTrade1ColorText
-	dw NoTrade1Text
-	dw WrongMon1Text
-	dw Thanks1Text
-	dw AfterTrade1Text
+	table_width 2
+	dw WannaTradeStarterText
+	dw NoTradeStarterText
+	dw WrongMonStarterText
+	dw ThanksStarterText
+	dw AfterTradeMirtleText
+	assert_table_length NUM_TRADE_TEXTS
 
 TradeTextPointers6:
-	dw WannaTrade2ColorText
-	dw NoTrade2Text
-	dw WrongMon2Text
-	dw Thanks2Text
-	dw AfterTrade2Text
+	table_width 2
+	dw WannaTradeStarterText
+	dw NoTradeStarterText
+	dw WrongMonStarterText
+	dw ThanksStarterText
+	dw AfterTradeMandyText
+	assert_table_length NUM_TRADE_TEXTS
 
 TradeTextPointers7:
-	dw WannaTrade3ColorText
-	dw NoTrade3Text
-	dw WrongMon3Text
-	dw Thanks3Text
-	dw AfterTrade3Text
+	table_width 2
+	dw WannaTradeSylvesterText
+	dw NoTradeSylvesterText
+	dw WrongMonSylvesterText
+	dw ThanksSylvesterText
+	dw AfterTradeSylvesterText
+	assert_table_length NUM_TRADE_TEXTS
 
-;;;;;;;;;;
+TradeTextPointers8:
+	table_width 2
+	dw WannaTradeBlairText
+	dw NoTradeBlairText
+	dw WrongMonBlairText
+	dw ThanksBlairText
+	dw AfterTradeBlairText
+	assert_table_length NUM_TRADE_TEXTS
+
+TradeTextPointers9:
+	table_width 2
+	dw WannaTradeArnoldText
+	dw NoTradeArnoldText
+	dw WrongMonArnoldText
+	dw ThanksArnoldText
+	dw AfterTradeArnoldText
+	assert_table_length NUM_TRADE_TEXTS
+
+TradeTextPointers10:
+	table_width 2
+	dw WannaTradeLiamText
+	dw NoTradeLiamText
+	dw WrongMonLiamText
+	dw ThanksLiamText
+	dw AfterTradeLiamText
+	assert_table_length NUM_TRADE_TEXTS
+
+TradeTextPointers11:
+	table_width 2
+	dw WannaTradeSprocketTextConcat
+	dw NoTradeSprocketText
+	dw WrongMonSprocketText
+	dw ThanksSprocketText
+	dw AfterTradeSprocketText
+	assert_table_length NUM_TRADE_TEXTS
+
+TradeTextPointers12:
+	table_width 2
+	dw WannaTradeScientistText
+	dw NoTradeScientistText
+	dw WrongMonScientistTextConcat
+	dw ThanksScientistText
+	dw AfterTradeScientistText
+	assert_table_length NUM_TRADE_TEXTS
+
+TradeTextPointers13:
+	table_width 2
+    dw TradeMissingnoCryAskText
+	dw TradeMissingnoCryText
+	dw TradeMissingnoCryText
+	dw TradeMissingnoCryExclaimText
+	dw TradeMissingnoCryExclaimText
+	assert_table_length NUM_TRADE_TEXTS
+;;; Aironfaar mod end
 
 
 ConnectCableText:
@@ -355,131 +417,334 @@ TradedForText:
 	text_pause
 	text_end
 
-WannaTrade1Text:
-	text_far _WannaTrade1Text
-	text_end
-
-WannaTrade1TextPrompt:
-	text_far _WannaTrade1Text
+;;; Aironfaar mod start: new trades, new trade dialogues
+WrongMonWhatText:
+    text_far _WrongMonWhatText
 	text_promptbutton
+    text_end
+
+WrongMonHmmText:
+    text_far _WrongMonHmmText
+	text_promptbutton
+    text_end
+
+WrongMonOhText:
+    text_far _WrongMonOhText
+	text_promptbutton
+    text_end
+
+WrongMonHeyText:
+    text_far _WrongMonHeyText
+	text_promptbutton
+    text_end
+
+WannaTradeLolaText:
+	text_far _WannaTradeLolaText
 	text_end
 
-WannaTradeColorPaletteText:
-	text_far _TradeColorPaletteText
+NoTradeLolaText:
+    text_far _NoTradeLolaText
 	text_end
 
-WannaTrade1ColorText:
-	text_asm
-	ld a, [wOptions2]
-	bit BIT_ALT_PKMN_PALETTES, a ; do we have alt palettes enabled
-	jr nz, .altPalettesOn
-	ld hl, WannaTrade1Text
-	jr .done
-.altPalettesOn
-	ld hl, WannaTrade1TextPrompt
+WrongMonLolaText:
+    text_asm
+	ld hl, WrongMonWhatText
 	rst _PrintText
-	ld hl, WannaTradeColorPaletteText
-.done
+	ld hl, NoTradeLolaText
 	rst _PrintText
 	rst TextScriptEnd
 
-NoTrade1Text:
-	text_far _NoTrade1Text
+ThanksLolaText:
+    text_far _ThanksLolaText
 	text_end
 
-WrongMon1Text:
-	text_far _WrongMon1Text
+AfterTradeLolaText:
+	text_far _AfterTradeLolaText
 	text_end
 
-Thanks1Text:
-	text_far _Thanks1Text
+WannaTradeLightyearText:
+    text_far _WannaTradeLightyearText
 	text_end
 
-Thanks1TextPrompt:
-	text_far _Thanks1Text
-	text_promptbutton
+NoTradeLightyearText:
+    text_far _NoTradeLightyearText
 	text_end
 
-AfterTrade1Text:
-	text_far _AfterTrade1Text
-	text_end
-
-WannaTrade2Text:
-	text_far _WannaTrade2Text
-	text_end
-
-WannaTrade2TextPrompt:
-	text_far _WannaTrade2Text
-	text_promptbutton
-	text_end
-
-WannaTrade2ColorText:
-	text_asm
-	ld a, [wOptions2]
-	bit BIT_ALT_PKMN_PALETTES, a ; do we have alt palettes enabled
-	jr nz, .altPalettesOn
-	ld hl, WannaTrade2Text
-	jr .done
-.altPalettesOn
-	ld hl, WannaTrade2TextPrompt
+WrongMonLightyearText:
+    text_asm
+	ld hl, WrongMonHmmText
 	rst _PrintText
-	ld hl, WannaTradeColorPaletteText
-.done
+	ld hl, NoTradeLightyearText
 	rst _PrintText
 	rst TextScriptEnd
 
-NoTrade2Text:
-	text_far _NoTrade2Text
+ThanksLightyearText:
+    text_far _ThanksLightyearText
 	text_end
 
-WrongMon2Text:
-	text_far _WrongMon2Text
+AfterTradeLightyearText:
+    text_far _AfterTradeLightyearText
 	text_end
 
-Thanks2Text:
-	text_far _Thanks2Text
+WannaTradeDiscombobText:
+    text_far _WannaTradeDiscombobText
 	text_end
 
-AfterTrade2Text:
-	text_far _AfterTrade2Text
+NoTradeDiscombobText:
+    text_far _NoTradeDiscombobText
 	text_end
 
-WannaTrade3Text:
-	text_far _WannaTrade3Text
-	text_end
-
-WannaTrade3TextPrompt:
-	text_far _WannaTrade3Text
-	text_promptbutton
-	text_end
-
-WannaTrade3ColorText:
-	text_asm
-	ld a, [wOptions2]
-	bit BIT_ALT_PKMN_PALETTES, a ; do we have alt palettes enabled
-	jr nz, .altPalettesOn
-	ld hl, WannaTrade3Text
-	jr .done
-.altPalettesOn
-	ld hl, WannaTrade3TextPrompt
+WrongMonDiscombobText:
+    text_asm
+	ld hl, WrongMonHeyText
 	rst _PrintText
-	ld hl, WannaTradeColorPaletteText
-.done
+	ld hl, NoTradeDiscombobText
 	rst _PrintText
 	rst TextScriptEnd
 
-NoTrade3Text:
-	text_far _NoTrade3Text
+ThanksDiscombobText:
+    text_far _ThanksDiscombobText
 	text_end
 
-WrongMon3Text:
-	text_far _WrongMon3Text
+AfterTradeDiscombobText:
+	text_far _AfterTradeDiscombobText
 	text_end
 
-Thanks3Text:
-	text_far _Thanks3Text
+WannaTradeStarterText:
+    text_far _WannaTradeStarterText
 	text_end
 
-AfterTrade3Text:
-	text_far _AfterTrade3Text
+NoTradeStarterText:
+    text_far _NoTradeStarterText
 	text_end
+
+WrongMonStarterText:
+    text_far _WrongMonStarterText
+	text_end
+
+ThanksStarterText:
+    text_far _ThanksStarterText
+	text_end
+
+AfterTradeBulbertText:
+    text_far _AfterTradeBulbertText
+	text_end
+
+AfterTradeMirtleText:
+    text_far _AfterTradeMirtleText
+	text_end
+
+AfterTradeMandyText:
+    text_far _AfterTradeMandyText
+	text_end
+
+WannaTradeSylvesterText:
+    text_far _WannaTradeSylvesterText
+	text_end
+
+NoTradeSylvesterText:
+    text_far _NoTradeSylvesterText
+	text_end
+
+WrongMonSylvesterText:
+    text_asm
+	ld hl, WrongMonOhText
+	rst _PrintText
+	ld hl, NoTradeSylvesterText
+	rst _PrintText
+	rst TextScriptEnd
+
+ThanksSylvesterText:
+    text_far _ThanksSylvesterText
+	text_end
+
+AfterTradeSylvesterText:
+	text_far _AfterTradeSylvesterText
+	text_end
+
+WannaTradeBlairText:
+    text_far _WannaTradeBlairText
+	text_end
+
+NoTradeBlairText:
+    text_far _NoTradeBlairText
+	text_end
+
+WrongMonBlairText:
+    text_asm
+	ld hl, WrongMonWhatText
+	rst _PrintText
+	ld hl, NoTradeBlairText
+	rst _PrintText
+	rst TextScriptEnd
+
+ThanksBlairText:
+    text_far _ThanksBlairText
+	text_end
+
+AfterTradeBlairText:
+	text_far _AfterTradeBlairText
+	text_end
+
+WannaTradeArnoldText:
+    text_far _WannaTradeArnoldText
+	text_end
+
+NoTradeArnoldText:
+    text_far _NoTradeArnoldText
+	text_end
+
+WrongMonArnoldText:
+    text_asm
+	ld hl, WrongMonHeyText
+	rst _PrintText
+	ld hl, NoTradeArnoldText
+	rst _PrintText
+	rst TextScriptEnd
+
+ThanksArnoldText:
+    text_far _ThanksArnoldText
+	text_end
+
+AfterTradeArnoldText:
+	text_far _AfterTradeArnoldText
+	text_end
+
+WannaTradeLiamText:
+    text_far _WannaTradeLiamText
+	text_end
+
+NoTradeLiamText:
+    text_far _NoTradeLiamText
+	text_end
+
+WrongMonLiamText:
+    text_asm
+	ld hl, WrongMonOhText
+	rst _PrintText
+	ld hl, NoTradeLiamText
+	rst _PrintText
+	rst TextScriptEnd
+
+ThanksLiamText:
+    text_far _ThanksLiamText
+	text_end
+
+AfterTradeLiamText:
+	text_far _AfterTradeLiamText
+	text_end
+
+BeforeTradeSprocketText:
+    text_far _CeruleanRocketHouseB1FBeforeTradeText
+	text_promptbutton
+	text_end
+
+WannaTradeSprocketText:
+    text_far _WannaTradeSprocketText
+	text_end
+
+WannaTradeSprocketTextConcat:
+    text_asm
+	ld hl, BeforeTradeSprocketText
+	rst _PrintText
+	ld hl, WannaTradeSprocketText
+	rst _PrintText
+	rst TextScriptEnd
+
+NoTradeSprocketText:
+    text_far _NoTradeSprocketText
+	text_end
+
+WrongMonSprocketText:
+    text_far _WrongMonSprocketText
+	text_end
+
+WrongMonSprocketTextConcat:
+    text_asm
+	ld hl, WrongMonHmmText
+	rst _PrintText
+	ld hl, WrongMonSprocketText
+	rst _PrintText
+	rst TextScriptEnd
+
+ThanksSprocketText:
+    text_far _ThanksSprocketText
+	text_promptbutton
+	text_end
+
+AfterTradeSprocketText:
+    text_far _CeruleanRocketHouseB1FAfterTradeText
+	text_end
+
+WannaTradeScientistText:
+    text_far _WannaTradeScientistText
+	text_end
+
+NoTradeScientistText:
+    text_far _NoTradeScientistText
+	text_end
+
+WrongMonScientistText:
+    text_far _WrongMonScientistText
+	text_end
+
+WrongMonScientistTextConcat:
+    text_asm
+	ld hl, WrongMonHmmText
+	rst _PrintText
+	ld hl, WrongMonScientistText
+	rst _PrintText
+	rst TextScriptEnd	
+	
+ThanksScientistText:
+    text_far _ThanksScientistText
+	text_end
+
+AfterTradeScientistText:
+    text_far _AfterTradeScientistText
+	text_end
+
+TradeMissingnoText:
+    text_far _TradeMissingnoText
+	text_end
+
+TradeMissingnoExclaimText:
+    text_far _TradeMissingnoExclaimText
+	text_end
+
+TradeMissingnoAskText:
+    text_far _TradeMissingnoAskText
+	text_end
+
+TradeMissingnoCryText:
+    text_asm
+	ld hl, TradeMissingnoText
+	rst _PrintText
+	ld a, MISSINGNO
+	call PlayCry
+	rst TextScriptEnd
+
+TradeMissingnoCryAskText:
+    text_asm
+	ld hl, TradeMissingnoAskText
+	rst _PrintText
+	ld a, 2
+	ld [wFrequencyModifier], a
+	ld a, $C0
+	ld [wTempoModifier], a
+	ld a, SFX_CRY_23
+	rst _PlaySound
+	rst TextScriptEnd
+
+TradeMissingnoCryExclaimText:
+    text_asm
+	ld hl, TradeMissingnoExclaimText
+	rst _PrintText
+	ld a, 4
+	ld [wFrequencyModifier], a
+	ld a, $C0
+	ld [wTempoModifier], a
+	ld a, SFX_CRY_23
+	rst _PlaySound
+	rst TextScriptEnd
+;;; Aironfaar mod end

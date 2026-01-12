@@ -159,7 +159,7 @@ _CutDexEntry::
 	next "with a claw, barb"
 	next "tooth, wing, etc.@"
 
-	text_call _GenericNoAdditionalEffectText
+	text_call _GenericRaisesAttack1StageText ; Aironfaar mod
 
 	bage "Usable outside"
 	next "battle to cut down"
@@ -219,7 +219,11 @@ _SlamDexEntry::
 	next "with a dirty tail"
 	next "leg, arm, etc.@"
 
-	text_jump _GenericNoAdditionalEffectText
+	bage "20% chance of"
+	next "badly poison-"
+	next "ing the foe"
+
+	text_jump _GenericBadlyPoisonedText
 
 
 _VineWhipDexEntry::
@@ -503,7 +507,8 @@ _AcidDexEntry::
 	text "A spray of acid"
 	next "is unleashed on"
 	next "the <opponent>."
-
+; fall through ; Aironfaar mod
+_Generic33PercentLowerDefenseText:: ; Aironfaar mod
 	bage "33% chance to"
 	next "lower DEFENSE."
 	next "(-1 DEFENSE)"
@@ -606,13 +611,10 @@ _PsybeamDexEntry::
 	text "Psychic power"
 	next "of the <user> is"
 	next "focused into a"
-
+	
 	bage "strange beam."
-	; fall through
-_Generic10PercentConfusionText::
-	bage "Causes confusion"
-	next "10% of the time"
-	dex
+	
+    text_jump _Generic30PercentConfusionText
 
 _BubblebeamDexEntry::
 	text "A jet of bubbles"
@@ -721,7 +723,7 @@ _StrengthDexEntry::
 	next "with a massive"
 	next "built up power.@"
 
-	text_call _GenericNoAdditionalEffectText
+	text_call _Generic33PercentLowerDefenseText ; Aironfaar mod
 
 	bage "Usable outside of"
 	next "battle to push"
@@ -849,7 +851,7 @@ _DragonRageDexEntry::
 	next "by a shockwave of"
 	next "draconic rage.@"
 
-	text_jump _GenericNoAdditionalEffectText
+	text_jump _Generic10PercentFlinchText ; Aironfaar mod
 
 _FireSpinDexEntry::
 	text "A swirling pillar"
@@ -949,6 +951,8 @@ _ToxicDexEntry::
 	bage "Badly poisons the"
 	next "foe if it hits."
 
+    ; fall through
+_GenericBadlyPoisonedText::
 	bage "The damage poison"
 	next "does to the foe"
 	next "grows each turn"
@@ -958,8 +962,11 @@ _ConfusionDexEntry::
 	text "Uses psychic"
 	next "powers to confuse"
 	next "the foe's mind.@"
-
-	text_jump _Generic10PercentConfusionText
+	; fall through
+_Generic10PercentConfusionText::
+	bage "Causes confusion"
+	next "10% of the time"
+	dex
 
 _PsychicDexEntry::
 	text "Telekinetic power"

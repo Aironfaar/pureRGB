@@ -12,7 +12,7 @@ Route2TradeHouseScientistText:
 
 Route2TradeHouseGameboyKidText:
 	text_asm
-	ld a, TRADE_FOR_MARCEL
+	ld a, TRADE_FOR_BULBERT ; Aironfaar mod
 	ld [wWhichTrade], a
 	predef DoInGameTradeDialogue
 	rst TextScriptEnd

@@ -15,5 +15,6 @@ LavenderTMKidShop::
 	script_mart \
 	TM_BUBBLEBEAM, \
 	TM_AURORA_BEAM, \
-	TM_THUNDER_WAVE
-	
+	TM_THUNDER_WAVE, \
+	TM_REST, \ ; Aironfaar mod
+	TM_DREAM_EATER ; Aironfaar mod

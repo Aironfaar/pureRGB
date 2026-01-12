@@ -1,12 +1,17 @@
-_CinnabarLabTradeRoomSuperNerdText::
-	text "I found this very"
-	line "strange fossil in"
-	cont "MT.MOON!"
-
-	para "I think it's a"
-	line "rare, prehistoric"
-	cont "#MON!"
+;;; Aironfaar mod start
+_CinnabarLabTradeRoomPreparationText::
+    text "We are preparing"
+	line "something special"
+	cont "for members of"
+	cont "the #MON"
+	cont "LEAGUE in here."
+	para "That means GYM"
+	line "LEADERs, the"
+	cont "ELITE FOUR and,"
+	cont "of course,"
+	cont "the champion!"
 	done
+;;; Aironfaar mod end
 
 _CinnabarLabTradeRoomPosterText::
 	text "A photo of a"

@@ -5,15 +5,17 @@ InGameTrade_CheckForTradeEvo:
 ; For English Red and Blue, this routine was adjusted for
 ; Graveler's English name and Haunter's early English name "Spectre".
 ; The final release replaced Graveler and Haunter in TradeMons.
-	ld a, [wInGameTradeReceiveMonName]
-	cp "G" ; GRAVELER
+;;; Aironfaar mod start: in-game trades are entirely changed, so the check logic had to be adapted
+	ld a, [wInGameTradeReceiveMonSpecies]
+	cp GRAVELER
 	jr z, .nameMatched
-	; "SPECTRE" (HAUNTER)
-	cp "S"
+	cp HAUNTER
+	jr z, .nameMatched
+	cp KADABRA
+	jr z, .nameMatched
+	cp MACHOKE
 	ret nz
-	ld a, [wInGameTradeReceiveMonName + 1]
-	cp "P"
-	ret nz
+;;; Aironfaar mod end
 .nameMatched
 	ld a, [wPartyCount]
 	dec a

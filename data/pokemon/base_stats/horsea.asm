@@ -33,6 +33,8 @@
 	LIGHT_SCREEN,\
 	SLUDGE,\
 	SUBSTITUTE,\
+	REST,\ ; Aironfaar mod
+	MIMIC,\ ; Aironfaar mod
 	SURF,\
 	FLASH
 	; end

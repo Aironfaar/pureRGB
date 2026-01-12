@@ -42,6 +42,12 @@
 	PSYBEAM,\
 	GLARE,\
 	SUBSTITUTE,\
+	TELEPORT,\ ; Aironfaar mod
+	REST,\ ; Aironfaar mod
+	MIMIC,\ ; Aironfaar mod
+	METRONOME,\ ; Aironfaar mod
+	EGG_BOMB,\ ; Aironfaar mod
+	DREAM_EATER,\ ; Aironfaar mod
 	SURF,\
 	FLASH
 	; end

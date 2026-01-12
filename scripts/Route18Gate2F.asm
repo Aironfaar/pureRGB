@@ -3,13 +3,13 @@ Route18Gate2F_Script:
 
 Route18Gate2F_TextPointers:
 	def_text_pointers
-	dw_const Route18Gate2FYoungsterText,       TEXT_ROUTE18GATE2F_YOUNGSTER
+	dw_const Route18Gate2FLittleGirlText,      TEXT_ROUTE18GATE2F_LITTLE_GIRL ; Aironfaar mod
 	dw_const Route18Gate2FLeftBinocularsText,  TEXT_ROUTE18GATE2F_LEFT_BINOCULARS
 	dw_const Route18Gate2FRightBinocularsText, TEXT_ROUTE18GATE2F_RIGHT_BINOCULARS
 
-Route18Gate2FYoungsterText:
+Route18Gate2FLittleGirlText: ; Aironfaar mod
 	text_asm
-	ld a, TRADE_FOR_MARC
+	ld a, TRADE_FOR_ARNOLD ; Aironfaar mod
 	ld [wWhichTrade], a
 	predef DoInGameTradeDialogue
 	rst TextScriptEnd

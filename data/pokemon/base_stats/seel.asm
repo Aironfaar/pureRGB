@@ -3,7 +3,7 @@
 	db  65,  45,  55,  45,  70
 	;   hp  atk  def  spd  spc
 
-	db WATER, WATER ; type
+	db WATER, ICE ; type ; Aironfaar mod: from Water to Water/Ice
 	db 190 ; catch rate
 	db 100 ; base exp
 
@@ -33,6 +33,10 @@
 	LIGHT_SCREEN,\
 	GLARE,\
 	SUBSTITUTE,\
+	REST,\ ; Aironfaar mod
+	MIMIC,\ ; Aironfaar mod
+	HEADBUTT,\ ; Aironfaar mod
+	PAY_DAY,\ ; Aironfaar mod
 	SURF,\
 	STRENGTH,\
 	FLASH

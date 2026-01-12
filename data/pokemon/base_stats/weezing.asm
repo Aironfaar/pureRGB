@@ -34,6 +34,12 @@
 	LIGHT_SCREEN,\
 	SLUDGE,\
 	SUBSTITUTE,\
+	REST,\ ; Aironfaar mod
+	MIMIC,\ ; Aironfaar mod
+	SELFDESTRUCT,\ ; Aironfaar mod
+	EXPLOSION,\ ; Aironfaar mod
+	HEADBUTT,\ ; Aironfaar mod
+	EGG_BOMB,\ ; Aironfaar mod
 	FLASH
 	; end
 

@@ -45,6 +45,15 @@
 	PSYBEAM,\
 	ROCK_SLIDE,\
 	SUBSTITUTE,\
+	REST,\ ; Aironfaar mod
+	MIMIC,\ ; Aironfaar mod
+	METRONOME,\ ; Aironfaar mod
+	FISSURE,\ ; Aironfaar mod
+	SELFDESTRUCT,\ ; Aironfaar mod
+	EXPLOSION,\ ; Aironfaar mod
+	HEADBUTT,\ ; Aironfaar mod
+	PAY_DAY,\ ; Aironfaar mod
+	COUNTER,\ ; DRAIN PUNCH ; Aironfaar mod
 	CUT,\
 	SURF,\
 	STRENGTH

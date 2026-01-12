@@ -10,7 +10,7 @@ Route11Gate2F_TextPointers:
 
 Route11Gate2FYoungsterText:
 	text_asm
-	xor a ; TRADE_FOR_TERRY
+	ld a, TRADE_FOR_MANDY ; Aironfaar mod
 	ld [wWhichTrade], a
 	predef DoInGameTradeDialogue
 	rst TextScriptEnd

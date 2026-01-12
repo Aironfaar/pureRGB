@@ -45,6 +45,13 @@
 	ROCK_SLIDE,\
 	GLARE,\
 	SUBSTITUTE,\
+	REST,\ ; Aironfaar mod
+	MIMIC,\ ; Aironfaar mod
+	FISSURE,\ ; Aironfaar mod
+	HEADBUTT,\ ; Aironfaar mod
+	RAGE,\ ; Aironfaar mod
+	SUBMISSION,\ ; Aironfaar mod
+	COUNTER,\ ; DRAIN PUNCH ; Aironfaar mod
 	CUT,\
 	STRENGTH
 	; end

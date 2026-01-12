@@ -35,6 +35,14 @@
 	LIGHT_SCREEN,\
 	PSYBEAM,\
 	SUBSTITUTE,\
+	TELEPORT,\ ; Aironfaar mod
+	SOFTBOILED,\ ; Aironfaar mod
+	REST,\ ; Aironfaar mod
+	MIMIC,\ ; Aironfaar mod
+	METRONOME,\ ; Aironfaar mod
+	TRI_ATTACK,\ ; Aironfaar mod
+	EGG_BOMB,\ ; Aironfaar mod
+	DREAM_EATER,\ ; Aironfaar mod
 	STRENGTH,\
 	FLASH
 	; end

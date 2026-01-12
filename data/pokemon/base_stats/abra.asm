@@ -30,6 +30,11 @@
 	LIGHT_SCREEN,\
 	PSYBEAM,\
 	SUBSTITUTE,\
+	TELEPORT,\ ; Aironfaar mod
+	REST,\ ; Aironfaar mod
+	MIMIC,\ ; Aironfaar mod
+	METRONOME,\ ; Aironfaar mod
+	TRI_ATTACK,\ ; Aironfaar mod
 	FLASH
 	; end
 
