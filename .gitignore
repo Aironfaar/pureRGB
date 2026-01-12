@@ -29,3 +29,9 @@
 *.sn*
 *.sa*
 *.sg1
+
+# original pureRGB files
+releases/
+FEATURES.md
+INSTALL.md
+REVIEWS.md
