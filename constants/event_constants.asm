@@ -4,7 +4,8 @@
 ; Pallet Town events
 	const_def
 	const EVENT_FOLLOWED_OAK_INTO_LAB
-	const_skip 2
+	const EVENT_STARTER_SWAP_MET ; Aironfaar mod - technically should be in Route 1, but couldn't make it work there
+	const EVENT_STARTER_SWAP_DONE ; Aironfaar mod - and this is close enough
 	const EVENT_HALL_OF_FAME_DEX_RATING
 	const_skip 2
 	const EVENT_PALLET_AFTER_GETTING_POKEBALLS

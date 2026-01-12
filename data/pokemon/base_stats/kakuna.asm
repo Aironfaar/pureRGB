@@ -10,24 +10,11 @@
 	INCBIN "gfx/pokemon/front/kakuna.pic", 0, 1 ; sprite dimensions
 	dw KakunaPicFront, KakunaPicBackSW
 
-	db POISON_STING, STRING_SHOT, HARDEN, NO_MOVE ; level 1 learnset
+	db POISON_STING, STRING_SHOT, NO_MOVE, NO_MOVE ; level 1 learnset
 	db GROWTH_MEDIUM_FAST ; growth rate
 
 	; tm/hm learnset
-	tmhm \
-	PIN_MISSILE,\
-	TOXIC,\
-	DOUBLE_EDGE,\
-	BARRIER,\
-	MEGA_DRAIN,\
-	SWORDS_DANCE,\
-	REFLECT,\
-	BIDE,\
-	SLUDGE,\
-	GLARE,\
-	SUBSTITUTE,\
-	CUT,\
-	FLASH
+	tmhm ; Aironfaar mod: return to inability to learn TMs and HMs - this feels too iconic to change
 	; end
 
 	db BANK(KakunaPicFront)

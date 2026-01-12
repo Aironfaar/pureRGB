@@ -17,7 +17,13 @@ CeladonMart2FClerk2Text::
 	script_mart \
 	TM_RAZOR_WIND, \ ; ROOST
 	TM_HORN_DRILL, \
+	TM_HYPER_BEAM, \ ; Aironfaar mod
 	TM_ROLLING_KICK, \
 	TM_DIG, \
+	TM_SWORDS_DANCE, \ ; Aironfaar mod
 	TM_REFLECT, \
-	TM_LIGHT_SCREEN
+	TM_LIGHT_SCREEN, \ ; Aironfaar mod
+	TM_SOFTBOILED, \ ; Aironfaar mod
+	TM_RECOVER, \ ; Aironfaar mod
+	TM_FISSURE, \ ; Aironfaar mod
+	TM_GUILLOTINE ; Aironfaar mod

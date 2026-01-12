@@ -49,6 +49,11 @@
 	PSYBEAM,\
 	GLARE,\
 	SUBSTITUTE,\
+	TELEPORT,\ ; Aironfaar mod
+	REST,\ ; Aironfaar mod
+	MIMIC,\ ; Aironfaar mod
+	METRONOME,\ ; Aironfaar mod
+	PAY_DAY,\ ; Aironfaar mod
 	CUT,\
 	SURF,\
 	STRENGTH,\

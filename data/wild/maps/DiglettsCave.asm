@@ -7,7 +7,7 @@ DiglettsCaveWildMons:
 	db 16, DIGLETT
 	db 15, DIGLETT
 	db 21, DIGLETT
-	db 22, DIGLETT
+	db 28, DUGTRIO ; Aironfaar mod
 	db 29, DUGTRIO
 	db 31, DUGTRIO
 	end_grass_wildmons

@@ -33,6 +33,8 @@
 	SLUDGE,\
 	GLARE,\
 	SUBSTITUTE,\
+	REST,\ ; Aironfaar mod
+	MIMIC,\ ; Aironfaar mod
 	CUT,\
 	FLASH
 	; end

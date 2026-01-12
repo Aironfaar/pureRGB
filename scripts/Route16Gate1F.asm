@@ -91,6 +91,7 @@ Route16Gate1F_TextPointers:
 	def_text_pointers
 	dw_const Route16Gate1FGuardText,       TEXT_ROUTE16GATE1F_GUARD
 	dw_const Route16Gate1FGamblerText,     TEXT_ROUTE16GATE1F_GAMBLER
+	dw_const Route16Gate1FRockerText,      TEXT_ROUTE16GATE1F_ROCKER ; Aironfaar mod
 	dw_const Route16Gate1FGuardWaitUpText, TEXT_ROUTE16GATE1F_GUARD_WAIT_UP
 
 Route16Gate1FGuardText:
@@ -121,3 +122,12 @@ Route16Gate1FGuardWaitUpText:
 Route16Gate1FGamblerText:
 	text_far _Route16Gate1FGamblerText
 	text_end
+
+;;; Aironfaar mod start
+Route16Gate1FRockerText:
+    text_asm
+	ld a, TRADE_FOR_BLAIR
+	ld [wWhichTrade], a
+	predef DoInGameTradeDialogue
+	rst TextScriptEnd
+;;; Aironfaar mod end

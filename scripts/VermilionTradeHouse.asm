@@ -3,11 +3,11 @@ VermilionTradeHouse_Script:
 
 VermilionTradeHouse_TextPointers:
 	def_text_pointers
-	dw_const VermilionTradeHouseLittleGirlText, TEXT_VERMILIONTRADEHOUSE_LITTLE_GIRL
+	dw_const VermilionTradeHouseCooltrainerFText, TEXT_VERMILIONTRADEHOUSE_COOLTRAINER_F ; Aironfaar mod
 
-VermilionTradeHouseLittleGirlText:
+VermilionTradeHouseCooltrainerFText: ; Aironfaar mod
 	text_asm
-	ld a, TRADE_FOR_DUX
+	ld a, TRADE_FOR_LIGHTYEAR ; Aironfaar mod
 	ld [wWhichTrade], a
 	predef DoInGameTradeDialogue
 	rst TextScriptEnd

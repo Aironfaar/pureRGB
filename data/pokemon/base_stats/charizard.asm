@@ -44,6 +44,11 @@
 	LIGHT_SCREEN,\
 	GLARE,\
 	SUBSTITUTE,\
+	REST,\ ; Aironfaar mod
+	MIMIC,\ ; Aironfaar mod
+	FISSURE,\ ; Aironfaar mod
+	WHIRLWIND,\ ; Aironfaar mod
+	RAGE,\ ; Aironfaar mod
 	CUT,\
 	FLY,\
 	STRENGTH,\

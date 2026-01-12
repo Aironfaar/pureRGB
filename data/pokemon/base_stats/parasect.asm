@@ -40,7 +40,12 @@
 	SLUDGE,\
 	ROCK_SLIDE,\
 	SUBSTITUTE,\
+	REST,\ ; Aironfaar mod
+	MIMIC,\ ; Aironfaar mod
+	PAY_DAY,\ ; Aironfaar mod
+	LEECH_LIFE,\ ; Aironfaar mod
 	CUT,\
+	SURF,\ ; Aironfaar mod
 	STRENGTH,\
 	FLASH
 	; end

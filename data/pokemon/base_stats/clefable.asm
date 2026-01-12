@@ -50,6 +50,15 @@
 	THUNDER_WAVE,\
 	PSYBEAM,\
 	SUBSTITUTE,\
+	TELEPORT,\ ; Aironfaar mod
+	SOFTBOILED,\ ; Aironfaar mod
+	REST,\ ; Aironfaar mod
+	MIMIC,\ ; Aironfaar mod
+	METRONOME,\ ; Aironfaar mod
+	WHIRLWIND,\ ; Aironfaar mod
+	TRI_ATTACK,\ ; Aironfaar mod
+	HEADBUTT,\ ; Aironfaar mod
+	DREAM_EATER,\ ; Aironfaar mod
 	CUT,\
 	STRENGTH,\
 	FLASH

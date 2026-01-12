@@ -12,12 +12,33 @@ IndigoPlateauLobbyClerkText:
 	SUPER_REPEL, \
 	MAX_REPEL
 
-IndigoGymGuideShop:
+IndigoGymGuideShop: ; Aironfaar mod: includes all status move TMs (can't have more than 56 items in store, so TMs are split between here and IndigoGymGuideSonShop2)
 	script_mart \ 
 	APEX_CHIP, \
 	MAX_REVIVE, \
 	MAX_ELIXER, \
-	MAX_ETHER
+	MAX_ETHER, \
+	TM_RAZOR_WIND, \	; ROOST
+	TM_LEECH_SEED, \
+	TM_TOXIC, \
+	TM_AMNESIA, \
+	TM_BARRIER, \
+	TM_SWORDS_DANCE, \
+	TM_REFLECT, \
+	TM_BIDE, \
+	TM_AGILITY, \
+	TM_MEDITATE, \
+	TM_LOVELY_KISS, \
+	TM_LIGHT_SCREEN, \
+	TM_THUNDER_WAVE, \
+	TM_GLARE, \
+	TM_SUBSTITUTE, \
+	TM_TELEPORT, \
+	TM_SOFTBOILED, \
+	TM_RECOVER, \
+	TM_REST, \
+	TM_MIMIC, \
+	TM_METRONOME
 
 IndigoGymGuideSonShop1:
 	script_mart \
@@ -32,14 +53,11 @@ IndigoGymGuideSonShop1:
 	TM_SLUDGE, \
 	TM_DOUBLE_EDGE
 
-IndigoGymGuideSonShop2: ; all TMs
+IndigoGymGuideSonShop2: ; all attack move TMs (Aironfaar mod: can't have more than 56 items in store, so TMs are split between here and IndigoGymGuideShop)
 	script_mart \
 	TM_ICE_PUNCH, \
-	TM_RAZOR_WIND, \    ; ROOST
-	TM_LEECH_SEED, \
 	TM_PIN_MISSILE, \
 	TM_FIRE_PUNCH, \
-	TM_TOXIC, \
 	TM_HORN_DRILL, \
 	TM_BODY_SLAM, \
 	TM_SLASH, \
@@ -49,11 +67,9 @@ IndigoGymGuideSonShop2: ; all TMs
 	TM_ICE_BEAM, \
 	TM_BLIZZARD, \
 	TM_HYPER_BEAM, \
-	TM_AMNESIA, \
 	TM_HI_JUMP_KICK, \
 	TM_THUNDERPUNCH, \
 	TM_ROLLING_KICK, \
-	TM_BARRIER, \
 	TM_RAZOR_LEAF, \
 	TM_SOLARBEAM, \
 	TM_DRAGON_RAGE, \
@@ -65,22 +81,26 @@ IndigoGymGuideSonShop2: ; all TMs
 	TM_PSYCHIC_M, \
 	TM_MEGA_DRAIN, \
 	TM_KINESIS, \    	; FIREWALL
-	TM_SWORDS_DANCE, \
-	TM_REFLECT, \
-	TM_BIDE, \
-	TM_AGILITY, \
 	TM_BARRAGE, \
 	TM_FIRE_BLAST, \
 	TM_FLAMETHROWER, \
 	TM_SLAM, \          ; FILTHY SLAM
 	TM_KARATE_CHOP, \
-	TM_MEDITATE, \
-	TM_LOVELY_KISS, \
 	TM_SKY_ATTACK, \
-	TM_LIGHT_SCREEN, \
-	TM_THUNDER_WAVE, \
 	TM_PSYBEAM, \
 	TM_SLUDGE, \
 	TM_ROCK_SLIDE, \
-	TM_GLARE, \
-	TM_SUBSTITUTE
+	TM_FISSURE, \
+	TM_GUILLOTINE, \
+	TM_SELFDESTRUCT, \
+	TM_EXPLOSION, \
+	TM_WHIRLWIND, \
+	TM_TRI_ATTACK, \
+	TM_HEADBUTT, \
+	TM_PAY_DAY, \
+	TM_EGG_BOMB, \
+	TM_RAGE, \
+	TM_SUBMISSION, \
+	TM_DREAM_EATER, \
+	TM_LEECH_LIFE, \
+	TM_COUNTER			; DRAIN PUNCH

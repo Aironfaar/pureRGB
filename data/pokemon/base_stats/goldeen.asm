@@ -33,6 +33,8 @@
 	LOVELY_KISS,\
 	LIGHT_SCREEN,\
 	SUBSTITUTE,\
+	REST,\ ; Aironfaar mod
+	MIMIC,\ ; Aironfaar mod
 	SURF,\
 	FLASH
 	; end

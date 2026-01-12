@@ -358,7 +358,24 @@ _OaksLabRivalLeaveItAllToMeText::
 	cont "<PLAYER>! Hahaha!"
 	done
 
-_OaksLabScientistText::
+_OaksLabScientist1Text:: ; Aironfaar mod
 	text "I study #MON as"
 	line "PROF.OAK's AIDE."
 	done
+
+;;; Aironfaar mod start: new text acknowledges a peculiarity brought on by other changes and provides an explanation
+_OaksLabScientist2Text::
+	text "Did you know?"
+	para "A narrow tunnel"
+	line "connects the"
+	cont "bodies of water"
+	cont "of Route 22 and"
+	cont "Route 23."
+	para "Young SEEL born in"
+	line "Route 23 like to"
+	cont "pass through it."
+	para "Sometimes, you can"
+	line "see them sunbathe"
+	cont "in Route 22!"
+	done
+;;; Aironfaar mod end

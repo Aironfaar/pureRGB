@@ -31,12 +31,13 @@ _CopycatsHouse2FCopycatTM31Explanation1Text::
 	para "@"
 	text_ram wStringBuffer
 	text " contains my"
-	line "favorite,"
-	cont "SUBSTITUTE!"
+;;; Aironfaar mod start: return Copycat's TM to Mimic
+	line "favorite, MIMIC!"
 
-	para "Your #MON will"
-	line "trick the foe"
-	cont "with a decoy!"
+	para "There's just no"
+	line "substitute for"
+	cont "this move." ; not trying to throw shade, honest!
+;;; Aironfaar mod end
 
 	para "Use it on a good"
 	line "#MON!@"
@@ -44,7 +45,7 @@ _CopycatsHouse2FCopycatTM31Explanation1Text::
 
 _CopycatsHouse2FCopycatTM31Explanation2Text::
 	text "<PLAYER>: Hi!"
-	line "Thanks for <TM>50!"
+	line "Thanks for <TM>55!" ; Aironfaar mod
 
 	para "<PLAYER>: Pardon?"
 

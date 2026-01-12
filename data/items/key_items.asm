@@ -30,7 +30,7 @@ KeyItemFlags:
 	dbit TRUE  ; UNUSED_ITEM6
 	dbit FALSE ; ESCAPE_ROPE
 	dbit FALSE ; REPEL
-	dbit TRUE  ; OLD_AMBER
+	dbit FALSE ; OLD_AMBER ; Aironfaar mod: was TRUE
 	dbit FALSE ; FIRE_STONE
 	dbit FALSE ; THUNDER_STONE
 	dbit FALSE ; WATER_STONE
@@ -40,8 +40,8 @@ KeyItemFlags:
 	dbit FALSE ; CARBOS
 	dbit FALSE ; CALCIUM
 	dbit FALSE ; RARE_CANDY
-	dbit TRUE  ; DOME_FOSSIL
-	dbit TRUE  ; HELIX_FOSSIL
+	dbit FALSE ; DOME_FOSSIL ; Aironfaar mod: was TRUE
+	dbit FALSE ; HELIX_FOSSIL ; Aironfaar mod: was TRUE
 	dbit TRUE  ; SECRET_KEY
 	dbit TRUE  ; POCKET_ABRA
 	dbit TRUE  ; BIKE_VOUCHER

@@ -206,6 +206,13 @@ _NoEffectText::
 	text "No effect!"
 	prompt
 
+;;; Aironfaar mod start: added message for Splash as signature move
+_BounceText::
+    text "With a mighty"
+	line "leap<...>"
+	prompt
+;;; Aironfaar mod end
+
 _ButItFailedText::
 	text "But, it failed!"
 	prompt

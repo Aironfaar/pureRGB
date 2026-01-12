@@ -48,6 +48,11 @@
 	SLUDGE,\
 	GLARE,\
 	SUBSTITUTE,\
+	TELEPORT,\ ; Aironfaar mod
+	REST,\ ; Aironfaar mod
+	MIMIC,\ ; Aironfaar mod
+	METRONOME,\ ; Aironfaar mod
+	EGG_BOMB,\ ; Aironfaar mod
 	CUT,\
 	STRENGTH,\
 	FLASH

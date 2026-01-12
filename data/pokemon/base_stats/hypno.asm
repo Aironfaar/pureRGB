@@ -41,6 +41,14 @@
 	SLUDGE,\
 	GLARE,\
 	SUBSTITUTE,\
+	TELEPORT,\ ; Aironfaar mod
+	REST,\ ; Aironfaar mod
+	MIMIC,\ ; Aironfaar mod
+	METRONOME,\ ; Aironfaar mod
+	TRI_ATTACK,\ ; Aironfaar mod
+	HEADBUTT,\ ; Aironfaar mod
+	DREAM_EATER,\ ; Aironfaar mod
+	COUNTER,\ ; DRAIN PUNCH ; Aironfaar mod
 	CUT,\
 	STRENGTH,\
 	FLASH

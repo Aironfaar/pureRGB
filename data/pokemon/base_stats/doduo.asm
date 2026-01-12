@@ -36,6 +36,10 @@
 	THUNDER_WAVE,\
 	GLARE,\
 	SUBSTITUTE,\
+	REST,\ ; Aironfaar mod
+	MIMIC,\ ; Aironfaar mod
+	TRI_ATTACK,\ ; Aironfaar mod
+	RAGE,\ ; Aironfaar mod
 	CUT,\
 	FLY,\
 	STRENGTH

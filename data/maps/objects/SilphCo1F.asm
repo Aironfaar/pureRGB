@@ -8,6 +8,7 @@
 	const_export SILPHCO1F_ROCKET2
 	const_export SILPHCO1F_ROCKET3
 	const_export SILPHCO1F_WEEZING_PROXY
+	const_export SILPHCO1F_MISSINGNO ; Aironfaar mod
 
 SilphCo1F_Object:
 	db $2e ; border block
@@ -36,5 +37,6 @@ SilphCo1F_Object:
 	object_event  50,  6, SPRITE_ROCKET, STAY, RIGHT, TEXT_SILPHCO1F_ROCKET2
 	object_event  40,  9, SPRITE_ROCKET, STAY, LEFT, TEXT_SILPHCO1F_ROCKET3
 	object_event  36,  0, SPRITE_SEEL, STAY, DOWN, TEXT_SILPHCO1F_WEEZING_PROXY
+	object_event  51,  8, SPRITE_MISSINGNO, WALK, ANY_DIR, TEXT_SILPHCO1F_MISSINGNO ; Aironfaar mod
 
 	def_warps_to SILPH_CO_1F

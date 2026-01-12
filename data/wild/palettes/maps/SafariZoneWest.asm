@@ -1,5 +1,4 @@
-
 SafariZoneWestWildPalettes:
 	db $FF
-	db 0
-	db 0
+	db %11111100 ; Aironfaar mod
+	db %01101010 ; Aironfaar mod

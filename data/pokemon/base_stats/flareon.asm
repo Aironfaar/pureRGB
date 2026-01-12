@@ -38,6 +38,11 @@
 	LIGHT_SCREEN,\
 	GLARE,\
 	SUBSTITUTE,\
+	REST,\ ; Aironfaar mod
+	MIMIC,\ ; Aironfaar mod
+	TRI_ATTACK,\ ; Aironfaar mod
+	HEADBUTT,\ ; Aironfaar mod
+	RAGE,\ ; Aironfaar mod
 	CUT,\
 	STRENGTH,\
 	FLASH

@@ -34,7 +34,11 @@
 	LIGHT_SCREEN,\
 	GLARE,\
 	SUBSTITUTE,\
+	TELEPORT,\ ; Aironfaar mod
+	REST,\ ; Aironfaar mod
+	MIMIC,\ ; Aironfaar mod
 	CUT,\
+	SURF,\ ; Aironfaar mod
 	STRENGTH,\
 	FLASH
 	; end

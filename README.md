@@ -1,82 +1,66 @@
 # Pokémon PureRGB (PureRed, PureGreen, PureBlue)
 
-A purist's enhancement of Pokémon Red, Green, and Blue based on the pokered disassembly.
+A purist's enhancement of Pokémon Red, Green, and Blue based on the pokered disassembly, created by Vortyne. Please see the [original github page](https://github.com/Vortyne/pureRGB) for information about this hack. My own modifications are documented in this readme.
 
-To download the latest version of this romhack, [**go here**](https://github.com/Vortyne/pureRGB/releases/latest)
+I don't provide ips files for patching, but you can build this modified version the same way you can build [the disassembly of Pokémon RGB](https://github.com/pret/pokered) using make.
 
-To see the full list of features, bugfixes, and everything else, see [**FEATURES.md**](FEATURES.md)
+## Fork Changes
+First, a bit of a disclaimer: If you play my modded version of pureRGB, create a new save file for it. I didn't update the save import feature to my particular changes, so something might break if you try anyway. Also, as long as I play pureRGB myself, I'll try to keep things updated in a way that will avoid issues, but I started this project mostly to satisfy my curiosity whether I could learn to make the changes I wanted, so keeping it up-to-date isn't a high priority for me. With that out of the way…
 
-If you want info on the game while playing it (learnsets, for example), see [**The Wiki**](https://github.com/Vortyne/pureRGB/wiki)
+Some of the modifications are supposed to make certain mono type runs go a bit more smoothly:
+- Arcanine, Parasect and Venusaur can now learn Surf. With this change, it is possible to cover all of Flash, Cut, Strength, Fly or Dig, and Surf with mono type teams.
+- You can now find at least one pokémon of each type before reaching Pewter City. One of them requires interaction with a new NPC, the others are out there in the wild.
+- Seel is now Water/Ice instead of Ice. This was the only somewhat reasonable way to provide a proper Ice type pokémon before reaching Pewter City. You can disable this change at the usual Type Changer NPC.
 
-If you experience a bug or have an issue while playing, report it [**Here**](https://github.com/Vortyne/pureRGB/issues/new?assignees=&labels=&template=blank_issue.md)
-
-If you played through the romhack and want to leave a review, you can review it [**Here**](https://github.com/Vortyne/pureRGB/issues/new?assignees=&labels=review&projects=&template=review.yml&title=%5BReview%5D%3A+Summarize+your+review+here)
-
-This is a purist's enhancement of Pokemon Red/Blue/Green. The goal is to enhance the original games for excellent replayability without bringing in mechanics, moves, sprites, visuals, type matchups, or pokemon that were introduced in later games. 
-- It makes the bulk of the 151 original pokemon all more obtainable and usable in the early game, with better movesets and more balanced stats. 
-- Many moves in the game were rebalanced or modified. When I say "rebalanced", I mean "the useless things were made more useful!" 
-- There are more bug, poison, and ghost type moves available. The focus is on getting a useful set of moves available for every single pokemon in the game. 
-- Front sprites were updated to be just about the best set of sprites from Red/Green/Blue/Spaceworld 1997 overall.
-- All 151 pokemon are obtainable in all versions of this hack.
-- HMs are deletable anytime you like and new code to prevent softlocks by deleting them was introduced.
-- Some pokemon have additional types, for example, Ninetales is now FIRE/GHOST instead of FIRE. If you don't like specific type changes, you can change any specific pokemon or all of them back to normal type-wise at an NPC in indigo plateau route 23.
-- [Many small quality-of-life tweaks and bugfixes](https://github.com/Vortyne/pureRGB/blob/master/FEATURES.md#quality-of-life-enhancements) were made. 
-- Game bugs that can be used to your own advantage (like the leech seed/toxic bug, the hyper beam no recharge on faint bug, etc.) are unchanged, because they are quirks of the battle engine that you can use as your own tool. 
-- Mew is under the truck as expected!
-- Missingno and the item duplication glitch are intact - but won't corrupt your save anymore!
-- An entirely new mode for the pokedex called the MOVEDEX was added. It shows data about moves you have seen in detail. You unlock the MOVEDEX in viridian city.
-- CINNABAR VOLCANO was added (an area based on unused map data). It's accessible from Route 21. You can turn it off from your PC if you don't want this new area.
-- There is an arena to rematch gym leaders and other important trainers after becoming CHAMP.
-- There are multiple secret areas to be found after becoming CHAMP. Bills Garden, Team Rocket / Mewtwo lore, and more...
-- [Many options to enhance the game visually and mechanically were added.](https://github.com/Vortyne/pureRGB/blob/master/FEATURES.md#new-options-in-the-options-menu) **(You must turn them on via the options in-game!)** Including:
-  - Switchable color palettes (Choose between original colors, Super Gameboy Colors, or Pokemon Yellow Colors in-game whenever you like! Works on GBC and Super Gameboy. Yes, this romhack has GBC support!)
-  - Optional Spaceworld 1997 Back Sprites
-  - Optional enhanced menu sprites/overworld icons
-  - Optional enhanced music (Add in cut content music like Giovanni's theme) 
-  - Optional stereo panned audio (Similar to the Earphone1 option in Pokemon Yellow)
-  - Optional alternate color palette pokemon based on region (catch differently colored pokemon depending on where they appear in Kanto)
-  - Option to turn off the bicycle song (plays in cycling road still)
-  - Option to turn on smoother higher framerate fade animations while on the GBC
-  - Tweak the type matchups to be exactly like gen 1, gen 2, or a cross between them if you like directly in-game.
-  - Optional in-battle experience bar
-  - Option to give trainers some Stat EXP to their pokemon based on level. Makes the game a little bit harder.
-  - Option to have the game track the PP of opponents (the original game they had infinite PP). Makes the game a little bit easier.
-- If you're playing on GBC and have the palettes set to SGB or GBC mode, move animations will have colors! Surf will be blue, ember will be red, etc.
-- There are a couple entirely new things added into the game to facilitate quality of life fixes. Including:
-  - An NPC who can permanently remove CUT trees.
-  - An NPC who can revive fossils for you in SAFFRON CITY so you can get fossil pokemon a bit earlier.
-  - An NPC who will give you LAPRAS a bit earlier in the game.
-  - An NPC who will teach you how to DIG in between towns just like you can FLY in between towns.
-  
-![blue gb](/screenshots/blue_title_gb_no_color.png?raw=true) ![blue gbc default](/screenshots/blue_title_default_gbc_color.png?raw=true) ![blue sgb colors](/screenshots/blue_title_sgb_colors_on_gbc.png?raw=true) ![blue sgb2 colors](/screenshots/blue_title_sgb2_colors_on_gbc.png?raw=true) ![blue gbc colors](/screenshots/blue_title_gbc_colors_on_gbc.png?raw=true) 
-
-![red gb](/screenshots/red_title_gb_no_color.png?raw=true) ![red gbc default](/screenshots/red_title_default_gbc_color.png?raw=true)  ![red sgb colors](/screenshots/red_title_sgb_colors_on_gbc.png?raw=true) ![red sgb2 colors](/screenshots/red_title_sgb2_colors_on_gbc.png?raw=true) ![red gbc colors](/screenshots/red_title_gbc_colors_on_gbc.png?raw=true) 
-
-![green gb](/screenshots/green_title_gb_no_color.png?raw=true) ![green gbc default](/screenshots/green_title_default_gbc_color.png?raw=true)  ![green sgb colors](/screenshots/green_title_sgb_colors_on_gbc.png?raw=true) ![green sgb2 colors](/screenshots/green_title_sgb2_colors_on_gbc.png?raw=true) ![green gbc colors](/screenshots/green_title_gbc_colors_on_gbc.png?raw=true) 
-
-Pictured: GB Monochrome, Original GBC color, SGB Colors, Alternate SGB Colors, GBC Colors (can choose between the 4 color options on GBC in-game)
-
-## Contact the creator
-
-**DO NOT contact me directly in order to ask me how to write assembly code. Contact me with questions or comments on this romhack.**
-- **Reddit:** [send a direct message to user Vortiene](https://old.reddit.com/message/compose/?to=Vortiene)
-- **Discord:** [send a direct message to user Vortiene](https://discord.com/channels/@me/)
-
-If you want to learn gameboy assembly code, join the **[pret discord.](https://discord.gg/d5dubZ3)**
-
-If you'd like to make your own romhack based on this one, fork the repository and see [**INSTALL.md**](INSTALL.md).
-
-## Credits
-
-Jojobear13 - Tons of code snippets and help via the shinpokered romhack codebase, direct support regarding the pokemon yellow gbc enhancements porting
-
-Danny-E 33 - Larger back sprites code snippets, EXP Bar code snippets, various support regarding game audio and questions about rgbasm/gbz80 answered
-
-Mechanicalpen - enhanced menu icons code
-
-LJSTAR - Most of the work creating the type icons used in the movedex
-
-Mord - Most of the work creating LT.Surge and Erika overworld sprites
-
-pret discord and pret in general for their original disassembly work on Red / Blue
-
+Others are simply modifications to my personal taste:
+- The Pokédex now uses meters and kilograms instead of feet and pounds.
+- Gyarados can now learn Fly.
+- Splash is now a signature move for Magikarps of level 20 or higher, as well as for Gyarados. The Move Mystic will tell you more. To make sure that Gyarados can be encountered in the wild with Splash, they now know Splash at level 1.
+- Cursed Gengar now has different stats. The Dark and Light Channeler that inflict and remove the curse will inform you of the exact stat changes. To emphasize the new stat spread of Cursed Gengar, Gastly, Haunter and Gengar now learn Poison Gas instead of Filthy Slam at level 41. They can still learn Filthy Slam via TM.
+- Wild Missingno. are diversified. Before the change, catching one of them felt like a cheat since they were all already at level 120. Now, they appear at levels 40 to 120, and due to additions of TM moves (which it could learn already anyway) to its natural learnset, every level of wild Missingno. has a different moveset.
+- Some encounter tables have been touched upon for nitpicky reasons, like wondering how a horse, flaming or not, could live in the rugged terrain of a volcanic mountain.
+- All unevolved and non-evolving pokémon except Zapdos, Articuno, Moltres, Mewtwo, Mew and the fossil pokémon can now be encountered in the wild in either palette somewhere in the world. This means you can catch them all in whichever palette you like best. To facilitate this, some encounter tables have been changed, in particular the entire Safari Zone.
+- Fossil pokémon are now revived with their normal or alternate palette, chosen at random.
+- Team Rocket now offers fossils and ambers as Game Corner prizes. So that's what they were in Mt. Moon for! Since the fossils and amber can now be replaced, they are no longer key items. However, like the Master Ball, they are invaluable, so they sell for nothing. The TMs that would normally be offered as prizes are now sold in the Celadon Department Store.
+- In-game trades have been completely redone:
+  - A bit of unique dialogue has been added to each trade to give the NPCs some personality and their pokémon a bit of background.
+  - Existing trade NPCs may ask for different pokémon and give you a different one in return.
+  - The trades on Cinnabar Island are now only accessible once you become the champion of the Pokémon League. In turn, the pokémon you receive in these trades are much more interesting.
+  - Six new trades have been introduced to the game, two of which require you to be the champion.
+- Learnsets have been touched: While you shouldn't have to worry anymore about missing moves by evolving at inopportune times, an evolved pokémon now always learns moves later than its previous form would (specifically, at the level its previous evolution would learn it * 1.1, rounded down). In turn, some evolved pokémon can learn moves that their previous form can't.
+- Some moves have been changed:
+  - Cut: BP 70 -> 60, gives +1 Attack
+  - Dig: BP 80 -> 130, ACC 100 -> 95, PP 10 -> 5
+  - Doubleslap: ACC 85 -> 100
+  - Dragon Rage: 10% chance to make target flinch
+  - Filthy Slam: 20% chance to badly poison the target
+  - Fly: BP 90 -> 130, ACC 100 -> 95, PP 15 -> 5
+  - Guillotine: Type BUG -> NORMAL
+  - Horn Drill: Type NORMAL -> FIGHTING
+  - Pin Missile: BP 18 -> 20
+  - Psybeam: BP 65 -> 75, confusion chance 10% -> 30%
+  - Splash: Type NORMAL -> FLYING, signature move of Gyarados and Level 20+ Magikarp (refer to Move Mystic in Saffron City for details)
+  - Strength: 33% chance for -1 Defense
+- 20 TMs have been added, most to reintroduce previously available TMs, some to add new moves to the TM pool.
+  - TM 51: Teleport
+  - TM 52: Softboiled
+  - TM 53: Recover
+  - TM 54: Rest (new)
+  - TM 55: Mimic
+  - TM 56: Metronome
+  - TM 57: Fissure
+  - TM 58: Guillotine (new)
+  - TM 59: Selfdestruct
+  - TM 60: Explosion
+  - TM 61: Whirlwind
+  - TM 62: Tri Attack
+  - TM 63: Headbutt (new)
+  - TM 64: Pay Day
+  - TM 65: Egg Bomb
+  - TM 66: Rage
+  - TM 67: Submission
+  - TM 68: Dream Eater
+  - TM 69: Leech Life (new)
+  - TM 70: Drain Punch (new)
+- Copycat now gives you Mimic again. Just felt too iconic to change that.
+- Caterpie, Metapod, Weedle, Kakuna and Magikarp are back to being unable to learn any TMs and HMs.

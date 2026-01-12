@@ -51,6 +51,13 @@
 	PSYBEAM,\
 	GLARE,\
 	SUBSTITUTE,\
+	TELEPORT,\ ; Aironfaar mod
+	RECOVER,\ ; Aironfaar mod
+	REST,\ ; Aironfaar mod
+	MIMIC,\ ; Aironfaar mod
+	METRONOME,\ ; Aironfaar mod
+	TRI_ATTACK,\ ; Aironfaar mod
+	PAY_DAY,\ ; Aironfaar mod
 	CUT,\
 	STRENGTH,\
 	FLASH

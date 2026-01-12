@@ -7,9 +7,9 @@ PokemonMansion3FWildMons:
 	db 34, WEEZING
 	db 40, MUK
 	db 36, MUK
-	db 38, FLAREON
-	db 36, FLAREON
-	db 42, FLAREON
+	db 38, MAGMAR ; Aironfaar mod
+	db 36, MAGMAR ; Aironfaar mod
+	db 42, MAGMAR ; Aironfaar mod
 	end_grass_wildmons
 
 	def_water_wildmons 0 ; encounter rate

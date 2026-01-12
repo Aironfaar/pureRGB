@@ -5,7 +5,7 @@
 ; last 4 bits: super rod encounters
 
 CeruleanCave1FWildPalettes:
-	db %01110011
+	db 0 ; Aironfaar mod
 	db %01010100
 	db %11110101
 

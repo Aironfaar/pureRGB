@@ -41,6 +41,10 @@
 	LIGHT_SCREEN,\
 	THUNDER_WAVE,\
 	SUBSTITUTE,\
+	REST,\ ; Aironfaar mod
+	MIMIC,\ ; Aironfaar mod
+	METRONOME,\ ; Aironfaar mod
+	WHIRLWIND,\ ; Aironfaar mod
 	CUT,\
 	FLY,\
 	SURF,\

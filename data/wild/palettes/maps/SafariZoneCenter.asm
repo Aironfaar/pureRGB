@@ -1,4 +1,4 @@
 SafariZoneCenterWildPalettes:
-	db $FF
-	db %00000011
-	db %00000000
+	db %11011111 ; Aironfaar mod
+	db $FF ; Aironfaar mod
+	db %01101010 ; Aironfaar mod

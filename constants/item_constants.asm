@@ -118,12 +118,12 @@ DEF NUM_FLOORS EQU const_value - 1 - NUM_ITEMS
 	const VOLCANOBADGE  ; $68
 	const EARTHBADGE    ; $69
 ;;;;;;;;;;
-	const_next $C4
+	const_next $B4 ; Aironfaar mod: was $C4, made room to add 20 TMs
 
 ; HMs are defined before TMs, so the actual number of TM definitions
 ; is not yet available. The TM quantity is hard-coded here and must
 ; match the actual number below.
-DEF NUM_TMS EQU 50
+DEF NUM_TMS EQU 70 ; Aironfaar mod: 50 -> 70
 
 DEF __tmhm_value__ = NUM_TMS + 1
 
@@ -134,8 +134,8 @@ ENDM
 
 MACRO add_hm
 ; Defines three constants:
-; - HM_\1: the item id, starting at $C4
-; - \1_TMNUM: the learnable TM/HM flag, starting at 51
+; - HM_\1: the item id, starting at $B4 ; Aironfaar mod: adjusted numbers from C4 -> B4, 51 -> 71
+; - \1_TMNUM: the learnable TM/HM flag, starting at 71
 ; - HM##_MOVE: alias for the move id, equal to the value of \1
 	const HM_\1
 	DEF HM_VALUE = __tmhm_value__ - NUM_TMS
@@ -144,18 +144,18 @@ MACRO add_hm
 ENDM
 
 DEF HM01 EQU const_value
-	add_hm CUT          ; $C4
-	add_hm FLY          ; $C5
-	add_hm SURF         ; $C6
-	add_hm STRENGTH     ; $C7
-	add_hm FLASH        ; $C8
+	add_hm CUT          ; $B4 ; Aironfaar mod: C -> B for all HMs
+	add_hm FLY          ; $B5
+	add_hm SURF         ; $B6
+	add_hm STRENGTH     ; $B7
+	add_hm FLASH        ; $B8
 DEF NUM_HMS EQU const_value - HM01
 
 DEF __tmhm_value__ = 1
 
 MACRO add_tm
 ; Defines three constants:
-; - TM_\1: the item id, starting at $C9
+; - TM_\1: the item id, starting at $B9 ; Aironfaar mod: C9 -> B9
 ; - \1_TMNUM: the learnable TM/HM flag, starting at 1
 ; - TM##_MOVE: alias for the move id, equal to the value of \1
 	const TM_\1
@@ -165,62 +165,85 @@ ENDM
 
 ;;;;; PureRGBnote: CHANGED: TMs were reassigned better moves
 DEF TM01 EQU const_value
-	add_tm ICE_PUNCH   	; $C9
-	add_tm RAZOR_WIND   ; $CA ROOST
-	add_tm LEECH_SEED 	; $CB
-	add_tm PIN_MISSILE  ; $CC
-	add_tm FIRE_PUNCH   ; $CD
-	add_tm TOXIC        ; $CE
-	add_tm HORN_DRILL   ; $CF
-	add_tm BODY_SLAM    ; $D0
-	add_tm SLASH    	; $D1
-	add_tm DOUBLE_EDGE  ; $D2
-	add_tm BUBBLEBEAM   ; $D3
-	add_tm AURORA_BEAM  ; $D4
-	add_tm ICE_BEAM     ; $D5
-	add_tm BLIZZARD     ; $D6
-	add_tm HYPER_BEAM   ; $D7
-	add_tm AMNESIA      ; $D8
-	add_tm HI_JUMP_KICK ; $D9
-	add_tm THUNDERPUNCH ; $DA
-	add_tm ROLLING_KICK ; $DB
-	add_tm BARRIER      ; $DC
-	add_tm RAZOR_LEAF   ; $DD
-	add_tm SOLARBEAM    ; $DE
-	add_tm DRAGON_RAGE  ; $DF
-	add_tm THUNDERBOLT  ; $E0
-	add_tm THUNDER      ; $E1
-	add_tm EARTHQUAKE   ; $E2
-	add_tm CRABHAMMER	; $E3
-	add_tm DIG          ; $E4
-	add_tm PSYCHIC_M    ; $E5
-	add_tm MEGA_DRAIN   ; $E6
-	add_tm KINESIS      ; $E7 FIREWALL
-	add_tm SWORDS_DANCE ; $E8
-	add_tm REFLECT      ; $E9
-	add_tm BIDE         ; $EA 
-	add_tm AGILITY    	; $EB
-	add_tm BARRAGE 		; $EC
-	add_tm FLAMETHROWER ; $ED
-	add_tm FIRE_BLAST   ; $EE
-	add_tm SLAM        	; $EF FILTHY SLAM
-	add_tm KARATE_CHOP  ; $F0
-	add_tm MEDITATE   	; $F1 
-	add_tm LOVELY_KISS  ; $F2
-	add_tm SKY_ATTACK   ; $F3
-	add_tm LIGHT_SCREEN ; $F4
-	add_tm THUNDER_WAVE ; $F5
-	add_tm PSYBEAM      ; $F6
-	add_tm SLUDGE    	; $F7
-	add_tm ROCK_SLIDE   ; $F8
-	add_tm GLARE   		; $F9
-	add_tm SUBSTITUTE   ; $FA
+; Aironfaar mod: adjusted numbering in comments
+	add_tm ICE_PUNCH   	; $B9
+	add_tm RAZOR_WIND   ; $BA ROOST
+	add_tm LEECH_SEED 	; $BB
+	add_tm PIN_MISSILE  ; $BC
+	add_tm FIRE_PUNCH   ; $BD
+	add_tm TOXIC        ; $BE
+	add_tm HORN_DRILL   ; $BF
+	add_tm BODY_SLAM    ; $C0
+	add_tm SLASH    	; $C1
+	add_tm DOUBLE_EDGE  ; $C2
+	add_tm BUBBLEBEAM   ; $C3
+	add_tm AURORA_BEAM  ; $C4
+	add_tm ICE_BEAM     ; $C5
+	add_tm BLIZZARD     ; $C6
+	add_tm HYPER_BEAM   ; $C7
+	add_tm AMNESIA      ; $C8
+	add_tm HI_JUMP_KICK ; $C9
+	add_tm THUNDERPUNCH ; $CA
+	add_tm ROLLING_KICK ; $CB
+	add_tm BARRIER      ; $CC
+	add_tm RAZOR_LEAF   ; $CD
+	add_tm SOLARBEAM    ; $CE
+	add_tm DRAGON_RAGE  ; $CF
+	add_tm THUNDERBOLT  ; $D0
+	add_tm THUNDER      ; $D1
+	add_tm EARTHQUAKE   ; $D2
+	add_tm CRABHAMMER	; $D3
+	add_tm DIG          ; $D4
+	add_tm PSYCHIC_M    ; $D5
+	add_tm MEGA_DRAIN   ; $D6
+	add_tm KINESIS      ; $D7 FIREWALL
+	add_tm SWORDS_DANCE ; $D8
+	add_tm REFLECT      ; $D9
+	add_tm BIDE         ; $DA 
+	add_tm AGILITY    	; $DB
+	add_tm BARRAGE 		; $DC
+	add_tm FLAMETHROWER ; $DD
+	add_tm FIRE_BLAST   ; $DE
+	add_tm SLAM        	; $DF FILTHY SLAM
+	add_tm KARATE_CHOP  ; $E0
+	add_tm MEDITATE   	; $E1 
+	add_tm LOVELY_KISS  ; $E2
+	add_tm SKY_ATTACK   ; $E3
+	add_tm LIGHT_SCREEN ; $E4
+	add_tm THUNDER_WAVE ; $E5
+	add_tm PSYBEAM      ; $E6
+	add_tm SLUDGE    	; $E7
+	add_tm ROCK_SLIDE   ; $E8
+	add_tm GLARE   		; $E9
+	add_tm SUBSTITUTE   ; $EA
+; Aironfaar mod: the following TMs are new
+	add_tm TELEPORT		; $EB
+	add_tm SOFTBOILED	; $EC
+	add_tm RECOVER		; $ED
+	add_tm REST			; $EE
+	add_tm MIMIC		; $EF
+	add_tm METRONOME	; $F0
+	add_tm FISSURE		; $F1
+	add_tm GUILLOTINE	; $F2
+	add_tm SELFDESTRUCT	; $F3
+	add_tm EXPLOSION	; $F4
+	add_tm WHIRLWIND	; $F5
+	add_tm TRI_ATTACK	; $F6
+	add_tm HEADBUTT		; $F7
+	add_tm PAY_DAY		; $F8
+	add_tm EGG_BOMB		; $F9
+	add_tm RAGE			; $FA
+	add_tm SUBMISSION	; $FB
+	add_tm DREAM_EATER	; $FC
+	add_tm LEECH_LIFE	; $FD
+	add_tm COUNTER		; $FE DRAIN PUNCH
 ASSERT NUM_TMS == const_value - TM01, "NUM_TMS ({d:NUM_TMS}) does not match the number of add_tm definitions"
 
 DEF NUM_TM_HM EQU NUM_TMS + NUM_HMS
 
-; 50 TMs + 5 HMs = 55 learnable TM/HM flags per Pokémon.
-; These fit in 7 bytes, with one unused bit left over.
+; Aironfaar mod: adjusted numbers in comment
+; 70 TMs + 5 HMs = 75 learnable TM/HM flags per Pokémon.
+; These fit in 10 bytes, with 5 unused bits left over.
 DEF __tmhm_value__ = NUM_TM_HM + 1
 DEF UNUSED_TMNUM EQU __tmhm_value__
 

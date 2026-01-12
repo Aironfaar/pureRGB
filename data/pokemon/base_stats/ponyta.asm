@@ -35,6 +35,9 @@
 	LIGHT_SCREEN,\
 	GLARE,\
 	SUBSTITUTE,\
+	REST,\ ; Aironfaar mod
+	MIMIC,\ ; Aironfaar mod
+	HEADBUTT,\ ; Aironfaar mod
 	STRENGTH,\
 	FLASH
 	; end

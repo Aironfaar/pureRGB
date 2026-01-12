@@ -24,6 +24,7 @@ INCLUDE "text/SilphCo2F.asm"
 INCLUDE "text/SilphCo3F.asm"
 INCLUDE "text/SilphCo4F.asm"
 INCLUDE "text/CinnabarVolcano.asm"
+INCLUDE "text/InGameTrades_3.asm" ; Aironfaar mod
 
 
 SECTION "Text 2", ROMX
@@ -55,6 +56,7 @@ INCLUDE "text/LoreleisRoom.asm"
 INCLUDE "text/BrunosRoom.asm"
 INCLUDE "text/AgathasRoom.asm"
 INCLUDE "text/RockTunnelB1F.asm"
+INCLUDE "text/InGameTrades_1.asm" ; Aironfaar mod
 
 
 SECTION "Text 3", ROMX
@@ -139,6 +141,7 @@ INCLUDE "text/CinnabarLabTradeRoom.asm"
 INCLUDE "text/FuchsiaMeetingRoom.asm"
 INCLUDE "text/SSAnneKitchen.asm"
 INCLUDE "text/SaffronAbandonedBuilding.asm"
+INCLUDE "text/InGameTrades_2.asm" ; Aironfaar mod
 
 SECTION "Text 6", ROMX
 
