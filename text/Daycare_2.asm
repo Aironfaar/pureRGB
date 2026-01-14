@@ -1,34 +1,41 @@
-_DaycareGentlemanAllRightThenText::
+_DaycareAllRightThenText:: ; Aironfaar mod: renamed all instances of DaycareGentleman in file to Daycare, uses a different sprite now
 	text "All right then,"
 	line "@"
 	text_end
 
-_DaycareGentlemanComeAgainText::
-	text "come again."
+;;; Aironfaar mod start: add some text to make saying no much less abrupt
+_DaycareDontBeShyText::
+	text "Don't be shy,"
+	line "@"
+	text_end
+;;; Aironfaar mod end
+
+_DaycareComeAgainText::
+	text "come again!" ; Aironfaar mod: ! instead of .
 	done
 
-_DaycareGentlemanNoRoomForMonText::
+_DaycareNoRoomForMonText::
 	text "You have no room"
 	line "for this #MON!"
 	done
 
-_DaycareGentlemanOnlyHaveOneMonText::
+_DaycareOnlyHaveOneMonText::
 	text "You only have one"
 	line "#MON with you."
 	done
 
-;_DaycareGentlemanCantAcceptMonWithHMText::
+;_DaycareCantAcceptMonWithHMText::
 ;	text "I can't accept a"
 ;	line "#MON that"
 ;	cont "knows an HM move."
 ;	done
 
-_DaycareGentlemanHeresYourMonText::
+_DaycareHeresYourMonText::
 	text "Thank you! Here's"
 	line "your #MON!"
 	prompt
 
-_DaycareGentlemanNotEnoughMoneyText::
+_DaycareNotEnoughMoneyText::
 	text "Hey, you don't"
 	line "have enough ¥!"
 	done

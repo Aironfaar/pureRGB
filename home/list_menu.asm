@@ -123,6 +123,10 @@ DisplayListMenuIDLoop::
 	jr z, .skipGetName
 	assert wCurListMenuItem == wCurItem
 	push hl
+;;; Aironfaar mod start: needed to make move reminder work
+	cp a, MOVESLISTMENU
+	jr z, .skipGetName
+;;; Aironfaar mod end
 	call GetItemPrice
 	pop hl
 	ld a, [wListMenuID]

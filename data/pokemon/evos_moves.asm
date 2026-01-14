@@ -231,6 +231,11 @@ MissingnoEvosMoves:
 	db 90, RAZOR_WIND ; ROOST
 	db 95, SUBSTITUTE
 	db 100, HYPER_BEAM
+	db 105, COUNTER ; DRAIN PUNCH
+	db 110, LEECH_LIFE
+	db 115, REST
+	db 120, RECOVER
+	db 0
 ;;; Aironfaar mod end
 
 BulbasaurEvosMoves:

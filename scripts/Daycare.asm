@@ -3,9 +3,10 @@ Daycare_Script:
 
 Daycare_TextPointers:
 	def_text_pointers
-	dw_const DaycareGentlemanText, TEXT_DAYCARE_GENTLEMAN
+	dw_const MoveReminderText, TEXT_MOVEREMINDER ; Aironfaar mod: Move Reminder
+	dw_const DaycareText, TEXT_DAYCARE ; Aironfaar mod: swap positions, different sprite, so no mention of Gentleman anymore
 
-DaycareGentlemanText:
+DaycareText: ; Aironfaar mod: renamed all instances of DaycareGentleman in file to Daycare, uses a different sprite now
 	text_asm
 	call SaveScreenTilesToBuffer2
 	ld a, [wDayCareInUse]
@@ -16,7 +17,7 @@ DaycareGentlemanText:
 	call YesNoChoice
 	ld a, [wCurrentMenuItem]
 	and a
-	ld hl, .ComeAgainText
+	ld hl, .DontBeShyText
 	jp nz, .done
 	ld a, [wPartyCount]
 	dec a
@@ -212,59 +213,188 @@ DaycareGentlemanText:
 	rst TextScriptEnd
 
 .IntroText:
-	text_far _DaycareGentlemanIntroText
+	text_far _DaycareIntroText
 	text_end
 
 .WhichMonText:
-	text_far _DaycareGentlemanWhichMonText
+	text_far _DaycareWhichMonText
 	text_end
 
 .WillLookAfterMonText:
-	text_far _DaycareGentlemanWillLookAfterMonText
+	text_far _DaycareWillLookAfterMonText
 	text_end
 
 .ComeSeeMeInAWhileText:
-	text_far _DaycareGentlemanComeSeeMeInAWhileText
+	text_far _DaycareComeSeeMeInAWhileText
 	text_end
 
 .MonHasGrownText:
-	text_far _DaycareGentlemanMonHasGrownText
+	text_far _DaycareMonHasGrownText
 	text_end
 
 .OweMoneyText:
-	text_far _DaycareGentlemanOweMoneyText
+	text_far _DaycareOweMoneyText
 	text_end
 
 .GotMonBackText:
-	text_far _DaycareGentlemanGotMonBackText
+	text_far _DaycareGotMonBackText
 	text_end
 
 .MonNeedsMoreTimeText:
-	text_far _DaycareGentlemanMonNeedsMoreTimeText
+	text_far _DaycareMonNeedsMoreTimeText
+	text_end
+
+.DontBeShyText:
+	text_far _DaycareDontBeShyText
+	text_far _DaycareComeAgainText
 	text_end
 
 .AllRightThenText:
-	text_far _DaycareGentlemanAllRightThenText
-.ComeAgainText:
-	text_far _DaycareGentlemanComeAgainText
+	text_far _DaycareAllRightThenText
+	text_far _DaycareComeAgainText
 	text_end
 
 .NoRoomForMonText:
-	text_far _DaycareGentlemanNoRoomForMonText
+	text_far _DaycareNoRoomForMonText
 	text_end
 
 .OnlyHaveOneMonText:
-	text_far _DaycareGentlemanOnlyHaveOneMonText
+	text_far _DaycareOnlyHaveOneMonText
 	text_end
 
 ;.CantAcceptMonWithHMText:
-;	text_far _DaycareGentlemanCantAcceptMonWithHMText
+;	text_far _DaycareCantAcceptMonWithHMText
 ;	text_end
 
 .HeresYourMonText:
-	text_far _DaycareGentlemanHeresYourMonText
+	text_far _DaycareHeresYourMonText
 	text_end
 
 .NotEnoughMoneyText:
-	text_far _DaycareGentlemanNotEnoughMoneyText
+	text_far _DaycareNotEnoughMoneyText
 	text_end
+
+;;; Aironfaar mod start: Move Reminder stuff
+MoveReminderText:
+	text_asm
+	call SaveScreenTilesToBuffer2
+	ld hl, .ReminderGreetingText
+	rst _PrintText
+	call YesNoChoice
+	ld a, [wCurrentMenuItem]
+	and a
+	jp nz, .bye
+	; check for player money (5000)
+	xor a
+	ld [hMoney], a
+	ld [hMoney + 2], a
+	ld a, $50
+	ld [hMoney + 1], a
+	call HasEnoughMoney
+	jr nc, .enoughMoney
+	ld hl, .ReminderNotEnoughMoneyText
+	jp .exit
+.enoughMoney
+	ld hl, .ReminderSaidYesText
+	rst _PrintText
+	xor a
+	ld [wListScrollOffset], a
+	ld [wPartyMenuTypeOrMessageID], a
+	ld [wUpdateSpritesEnabled], a
+	ld [wMenuItemToSwap], a
+	call DisplayPartyMenu
+	push af
+	call GBPalWhiteOutWithDelay3
+	call RestoreScreenTilesAndReloadTilePatterns
+	call LoadGBPal
+	pop af
+	jp c, .bye
+	ld a, [wWhichPokemon]
+	ld b, a
+	push bc
+	ld hl, WriteReminderMoveList
+	ld b, BANK(WriteReminderMoveList)
+	rst _Bankswitch
+	ld a, [wMoveReminderList]
+	and a
+	jr nz, .chooseMove
+	pop bc
+	ld hl, .ReminderNoMovesText
+	jp .exit
+.chooseMove
+	ld hl, .ReminderWhichMoveText
+	rst _PrintText
+	xor a
+	ld [wCurrentMenuItem], a
+	ld [wLastMenuItem], a
+	ld a, MOVESLISTMENU
+	ld [wListMenuID], a
+	ld de, wMoveReminderList
+	ld hl, wListPointer
+	ld [hl], e
+	inc hl
+	ld [hl], d
+	xor a
+	ld [wPrintItemPrices], a ; don't print prices
+	call DisplayListMenuID
+	pop bc
+	jr c, .bye
+	push bc
+	ld a, [wCurListMenuItem]
+	ld [wMoveNum], a
+	ld [wNamedObjectIndex], a
+	call GetMoveName
+	call CopyToStringBuffer
+	pop bc
+	ld a, b
+	ld [wWhichPokemon], a
+	ld a, [wLetterPrintingDelayFlags]
+	push af
+	xor a
+	ld [wLetterPrintingDelayFlags], a
+	predef LearnMove
+	pop af
+	ld [wLetterPrintingDelayFlags], a
+	ld a, b
+	and a
+	jr z, .bye
+	; charge money (5000)
+	xor a
+	ld [wPriceTemp], a
+	ld [wPriceTemp + 2], a
+	ld a, $50
+	ld [wPriceTemp + 1], a
+	ld hl, wPriceTemp +2
+	ld de, wPlayerMoney + 2
+	ld c, $3
+	predef SubBCDPredef	
+.bye
+	ld hl, .ReminderByeText
+.exit
+	rst _PrintText
+	rst TextScriptEnd
+
+.ReminderGreetingText:
+	text_far _MoveReminderGreetingText
+	text_end
+
+.ReminderSaidYesText:
+	text_far _MoveReminderSaidYesText
+	text_end
+
+.ReminderNotEnoughMoneyText:
+	text_far _MoveReminderNotEnoughMoneyText
+	text_end
+
+.ReminderWhichMoveText:
+	text_far _MoveReminderWhichMoveText
+	text_end
+
+.ReminderByeText:
+	text_far _MoveReminderByeText
+	text_end
+
+.ReminderNoMovesText:
+	text_far _MoveReminderNoMovesText
+	text_end
+;;; Aironfaar mod end

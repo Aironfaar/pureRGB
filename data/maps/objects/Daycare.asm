@@ -11,6 +11,7 @@ Daycare_Object:
 	def_bg_events
 
 	def_object_events
-	object_event  2,  3, SPRITE_GENTLEMAN, STAY, RIGHT, TEXT_DAYCARE_GENTLEMAN
+	object_event  5,  3, SPRITE_GENTLEMAN, STAY, LEFT, TEXT_MOVEREMINDER ; Aironfaar mod: Move Reminder
+	object_event  5,  4, SPRITE_BALDING_GUY, STAY, LEFT, TEXT_DAYCARE ; Aironfaar mod: sit on same side, different sprite
 
 	def_warps_to DAYCARE
