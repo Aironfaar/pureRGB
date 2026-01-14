@@ -611,4 +611,170 @@ WriteMonMoves_ShiftMoveData:
 Evolution_FlagAction:
 	predef_jump FlagActionPredef
 
+;;; Aironfaar mod start: function for move reminder
+; Input:
+; [wWhichPokemon] = selected mon
+; [wCurPartySpecies] = selected mon's species
+; (set accordingly after calling DisplayPartyMenu)
+WriteReminderMoveList::
+	; load pointer to selected mon's currently known moves into de
+	ld a, [wWhichPokemon]
+	ld hl, wPartyMon1Moves
+	ld bc, wPartyMon2 - wPartyMon1
+	call AddNTimes
+	ld d, h
+	ld e, l
+	; load selected mon's level into b
+	ld a, [wWhichPokemon]
+	ld hl, wPartyMon1Level
+	call AddNTimes
+	ld b, [hl]
+	push bc ; will need this later in .loopTwo
+	; write selected mon's header into WRAM
+	ld a, [wCurPartySpecies]
+	ld [wCurSpecies], a
+	call GetMonHeader
+	ld hl, wMonHMoves ; pointer to selected mon's initial moves
+	; throughout .loopOne and .loopTwo:
+	; c = # moves that the selected mon can remember
+	; de = selected mon's current moves (frequently iterated through, then reset to initial value)
+	; during .loopOne:
+	; b = loop counter (breaks loop at NUM_MOVES, i.e. 4)
+	; hl = selected mon's initial moves (iterate through via iterations of .loopOne)
+	ld bc, 0
+	ld a, [wCurPartySpecies]
+	cp MISSINGNO
+	jr nz, .loopOne ; Missingno's first two initial moves are duplicates, so skip one iteration ahead
+	inc b
+	inc hl
+.loopOne ; inspect initial moves
+	ld a, [hli] ; load initial move into a, increment hl
+	and a
+	jr z, .doneOne ; stop loop if NO_MOVE (a = 0)
+	push de
+	push bc
+	; during .checkLoopOne:
+	; b = ID of move potentially being added during this iteration of .loopOne
+	; c = loop counter
+	ld b, a
+	ld c, 0
+.checkLoopOne
+	ld a, [de]
+	cp b
+	jr z, .knowsMove
+	inc de
+	inc c
+	ld a, c
+	cp NUM_MOVES
+	jr c, .checkLoopOne
+; add move to wMoveReminderList
+	ld a, b
+	pop bc
+	ld d, 0
+	ld e, c
+	inc c
+	push hl
+	ld hl, wMoveReminderList + 1
+	add hl, de
+	ld [hl], a
+	pop hl
+	jp .forgotMove
+.knowsMove
+	pop bc
+.forgotMove
+	pop de
+	inc b
+	ld a, b
+	cp NUM_MOVES
+	jr c, .loopOne
+.doneOne
+	; have:
+	; c = # moves that selected mon can remember
+	; de = pointer to currently known moves
+	; also need:
+	; hl = pointer to EvosMovesPointerTable entry for selected mon (requires bc to calculate)
+	; b = level of selected mon (ready to pop from stack)
+	push bc
+	; load pointer to evos moves table of selected mon into hl
+	ld a, [wCurPartySpecies]
+	dec a
+	ld bc, 0
+	add a ; effectively 2*a; can overflow! If so, sets carry flag.
+	rl b ; b is 0, so if carry flag is set, sets least significant bit to 1
+	ld c, a ; => bc is properly calculated 2*a
+	ld hl, EvosMovesPointerTable
+	add hl, bc
+	ld a, [hli]
+	ld h, [hl]
+	ld l, a ; => hl = pointer to evos moves table of selected mon
+	; load selected mon's level into b
+	pop bc
+	ld a, c
+	pop bc
+	ld c, a
+.skipEvolutionData
+	ld a, [hli]
+	and a
+	jr nz, .skipEvolutionData
+	; during .loopTwo:
+	; b = level of selected mon
+	; hl = pointer to selected mon's learnset (iterate through via iterations of .loopTwo)
+.loopTwo ; inspect learnset moves
+	ld a, [hli]
+	and a
+	jr z, .doneTwo ; stop loop if end of learnset reached
+	cp b
+	jr c, .checkForDuplicates
+	jr nz, .doneTwo
+.checkForDuplicates
+	ld a, [hli]
+	push hl
+	push de
+	push bc
+	; during .checkLoopTwo:
+	; b = ID of move potentially being added during this iteration of .loopOne
+	; c = loop counter
+	; hl = pointer to selected mon's initial moves
+	ld b, a
+	ld c, 0
+	ld hl, wMonHMoves
+.checkLoopTwo
+	ld a, [hli]
+	cp b
+	jr z, .skipMove
+	ld a, [de]
+	cp b
+	jr z, .skipMove
+	inc de
+	inc c
+	ld a, c
+	cp NUM_MOVES
+	jr c, .checkLoopTwo
+; add move to wReminderList
+	ld a, b
+	pop bc
+	ld d, 0
+	ld e, c
+	inc c
+	ld hl, wMoveReminderList + 1
+	add hl, de
+	ld [hl], a
+	jp .canRemember
+.skipMove
+	pop bc
+.canRemember
+	pop de
+	pop hl
+	jp .loopTwo
+.doneTwo
+	ld b, 0
+	ld hl, wMoveReminderList + 1
+	add hl, bc
+	ld a, $ff
+	ld [hl], a
+	ld hl, wMoveReminderList
+	ld [hl], c
+	ret
+;;; Aironfaar mod end
+
 INCLUDE "data/pokemon/evos_moves.asm"

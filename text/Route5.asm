@@ -74,7 +74,13 @@ _Route5AfterBattleText3::
 	cont "you."
 	para "Come back later"
 	line "and it will be"
-	cont "stronger!"
+;;; Aironfaar mod start: add mention of Move Reminder
+	cont "stronger."
+	para "They can even"
+	line "help your #MON"
+	cont "remember for-"
+	cont "gotten moves!"
+;;; Aironfaar mod end
 	done
 
 _Route5BattleText4::
