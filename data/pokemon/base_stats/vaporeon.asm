@@ -10,7 +10,7 @@
 	INCBIN "gfx/pokemon/front/vaporeon.pic", 0, 1 ; sprite dimensions
 	dw VaporeonPicFront, VaporeonPicBackSW
 
-	db TACKLE, SAND_ATTACK, NO_MOVE, NO_MOVE ; level 1 learnset
+	db TACKLE, SAND_ATTACK, WATER_GUN, NO_MOVE ; level 1 learnset
 	db GROWTH_MEDIUM_FAST ; growth rate
 
 	; tm/hm learnset
@@ -36,6 +36,7 @@
 	SLAM,\ ; FILTHY SLAM
 	KARATE_CHOP,\
 	LIGHT_SCREEN,\
+	SLUDGE,\ ; Aironfaar mod
 	GLARE,\
 	SUBSTITUTE,\
 	REST,\ ; Aironfaar mod

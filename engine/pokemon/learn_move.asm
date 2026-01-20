@@ -232,6 +232,51 @@ TryingToLearn:
 	scf
 	ret
 
+;;; Aironfaar mod start: ReplaceMove looks for the move specified in wMoveToReplace in the known moves of the party mon specified in wWhichPokemon. If it finds the move, it sets it to NO_MOVE and displays the "1, 2... poof! X forgot Y! And..." text, then makes the mon learn the move specified in wMoveNum to fill the emptied move slot immediately.
+; [wWhichPokemon] = index of mon in party that should forget a move
+; [wMoveToReplace] = id of move to replace
+; [wMoveNum] = id of new move
+ReplaceMove:
+	ld hl, wPartyMon1Moves
+	ld bc, wPartyMon2Moves - wPartyMon1Moves
+	ld a, [wWhichPokemon]
+	call AddNTimes
+	ld a, [wMoveToReplace]
+	ld b, a
+	ld c, 0
+.loop
+	ld a, [hl]
+	cp b
+	jr z, .moveFound
+	inc hl
+	inc c
+	ld a, c
+	cp NUM_MOVES
+	jr c, .loop
+	ret
+.moveFound ; delete the move
+	ld [hl], NO_MOVE
+	ld a, [wWhichPokemon]
+	ld hl, wPartyMonNicks
+	call GetPartyMonName
+	ld hl, wNameBuffer
+	ld de, wLearnMoveMonName
+	ld bc, NAME_LENGTH
+	rst _CopyData
+	ld a, [wMoveToReplace]
+	ld [wNamedObjectIndex], a
+	call GetMoveName
+	ld hl, OneTwoAndText
+	rst _PrintText
+	; now learn the new move
+	ld a, [wMoveNum]
+	ld [wNamedObjectIndex], a
+	call GetMoveName
+	call CopyToStringBuffer
+	call LearnMove
+	ret
+;;; Aironfaar mod end
+
 ResetStrengthOverworldBit:
 	ld d, STRENGTH
 	callfar IsMoveInParty

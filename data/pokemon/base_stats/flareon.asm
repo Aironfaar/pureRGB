@@ -10,12 +10,11 @@
 	INCBIN "gfx/pokemon/front/flareon.pic", 0, 1 ; sprite dimensions
 	dw FlareonPicFront, FlareonPicBackSW
 
-	db TACKLE, SAND_ATTACK, NO_MOVE, NO_MOVE ; level 1 learnset
+	db TACKLE, SAND_ATTACK, EMBER, NO_MOVE ; level 1 learnset
 	db GROWTH_MEDIUM_FAST ; growth rate
 
 	; tm/hm learnset
 	tmhm \
-	PIN_MISSILE,\
 	TOXIC,\
 	BODY_SLAM,\
 	SLASH,\
@@ -40,6 +39,8 @@
 	SUBSTITUTE,\
 	REST,\ ; Aironfaar mod
 	MIMIC,\ ; Aironfaar mod
+	SELFDESTRUCT,\ ; Aironfaar mod
+	EXPLOSION,\ ; Aironfaar mod
 	TRI_ATTACK,\ ; Aironfaar mod
 	HEADBUTT,\ ; Aironfaar mod
 	RAGE,\ ; Aironfaar mod

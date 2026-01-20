@@ -86,7 +86,7 @@ MonsterNames::
 	db "PIKACHU@@@"
 	db "RAICHU@@@@"
 	db "CHUNKY@@@@"
-	db "MISSINGNO."
+	db "RAICHU@@@@" ; Goro Raichu ; Aironfaar mod
 	db "DRATINI@@@"
 	db "DRAGONAIR@"
 	db "KABUTO@@@@"
@@ -158,10 +158,10 @@ MonsterNames::
 	db "MISSINGNO."
 	db "GOLDEEN@@@"
 	db "SEAKING@@@"
-	db "MISSINGNO."
-	db "MISSINGNO."
-	db "MISSINGNO."
-	db "MISSINGNO."
+	db "NIDORINA@@" ; Kaiju Nidorina ; Aironfaar mod
+	db "NIDOQUEEN@" ; Kaiju Nidoqueen ; Aironfaar mod
+	db "NIDORINO@@" ; Kaiju Nidorino ; Aironfaar mod
+	db "NIDOKING@@" ; Kaiju Nidoking ; Aironfaar mod
 	db "PONYTA@@@@"
 	db "RAPIDASH@@"
 	db "RATTATA@@@"

@@ -10,7 +10,7 @@
 	INCBIN "gfx/pokemon/front/gyarados.pic", 0, 1 ; sprite dimensions
 	dw GyaradosPicFront, GyaradosPicBackSW
 
-	db TACKLE, BUBBLE, SPLASH, NO_MOVE ; level 1 learnset ; Aironfaar mod
+	db TACKLE, BUBBLE, SPLASH, BITE ; level 1 learnset ; Aironfaar mod
 	db GROWTH_MEDIUM_SLOW ; growth rate
 
 	; tm/hm learnset

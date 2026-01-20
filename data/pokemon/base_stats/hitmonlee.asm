@@ -41,6 +41,7 @@
 	MIMIC,\ ; Aironfaar mod
 	METRONOME,\ ; Aironfaar mod
 	SUBMISSION,\ ; Aironfaar mod
+	COUNTER,\ ; Aironfaar mod
 	CUT,\
 	STRENGTH
 	; end

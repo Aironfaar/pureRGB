@@ -1,21 +1,21 @@
+;;; Aironfaar mod: new variant mon
 	db DEX_NIDORINO ; pokedex id
 
-	db  61,  72,  57,  65,  55
+	db  57,  72,  55,  61,  65
 	;   hp  atk  def  spd  spc
 
 	db POISON, POISON ; type
 	db 120 ; catch rate
 	db 118 ; base exp
 
-	INCBIN "gfx/pokemon/front/nidorino.pic", 0, 1 ; sprite dimensions
-	dw NidorinoPicFront, NidorinoPicBackSW
+	INCBIN "gfx/pokemon/front_alt/kaiju_nidorino.pic", 0, 1 ; sprite dimensions
+	dw KaijuNidorinoPicFront, KaijuNidorinoaPicBack
 
 	db TACKLE, LEER, NO_MOVE, NO_MOVE ; level 1 learnset
 	db GROWTH_MEDIUM_SLOW ; growth rate
 
 	; tm/hm learnset
 	tmhm \
-	PIN_MISSILE,\
 	TOXIC,\
 	BODY_SLAM,\
 	SLASH,\
@@ -39,19 +39,20 @@
 	ROCK_SLIDE,\
 	GLARE,\
 	SUBSTITUTE,\
-	REST,\ ; Aironfaar mod
-	MIMIC,\ ; Aironfaar mod
-	RAGE,\ ; Aironfaar mod
-	COUNTER,\ ; DRAIN PUNCH ; Aironfaar mod
+	REST,\
+	MIMIC,\
+	HEADBUTT,\
+	RAGE,\
+	COUNTER,\ ; DRAIN PUNCH
 	CUT,\
 	STRENGTH,\
 	FLASH
 	; end
 
-	db BANK(NidorinoPicFront)
-	db BANK(NidorinoPicFrontAlt)
-	db BANK(NidorinoPicBack)
-	db BANK(NidorinoPicBackSW)
+	db BANK(KaijuNidorinoPicFront)
+	db 0
+	db BANK(KaijuNidorinoaPicBack)
+	db BANK(KaijuNidorinoaPicBack)
 
-	dw NidorinoPicFrontAlt, NidorinoPicBack
+	dw 0, KaijuNidorinoaPicBack
 

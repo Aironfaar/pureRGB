@@ -92,7 +92,7 @@ CryData::
 	mon_cry SFX_CRY_0F, $EE, $01 ; Pikachu
 	mon_cry SFX_CRY_09, $EE, $08 ; Raichu
 	mon_cry SFX_CRY_09, 238, 255 ; Chunky
-	mon_cry SFX_CRY_00, $00, $00 ; MissingNo.
+	mon_cry SFX_CRY_09, $C9, $08 ; Goro Raichu ; Aironfaar mod
 	mon_cry SFX_CRY_0F, $60, $40 ; Dratini
 	mon_cry SFX_CRY_0F, $40, $80 ; Dragonair
 	mon_cry SFX_CRY_16, $BB, $40 ; Kabuto
@@ -164,10 +164,10 @@ CryData::
 	mon_cry SFX_CRY_1C, $3D, $FF ; MissingNo. ; black fog
 	mon_cry SFX_CRY_16, $80, $40 ; Goldeen
 	mon_cry SFX_CRY_16, $10, $FF ; Seaking
-	mon_cry SFX_CRY_00, $00, $00 ; MissingNo.
-	mon_cry SFX_CRY_00, $00, $00 ; MissingNo.
-	mon_cry SFX_CRY_00, $00, $00 ; MissingNo.
-	mon_cry SFX_CRY_00, $00, $00 ; MissingNo.
+	mon_cry SFX_CRY_01, $4F, $E0 ; Kaiju Nidorina ; Aironfaar mod
+	mon_cry SFX_CRY_0A, $23, $80 ; Kaiju Nidoqueen ; Aironfaar mod
+	mon_cry SFX_CRY_00, $32, $C0 ; Kaiju Nidorino ; Aironfaar mod
+	mon_cry SFX_CRY_09, $06, $80 ; Kaiju Nidoking ; Aironfaar mod
 	mon_cry SFX_CRY_25, $00, $80 ; Ponyta
 	mon_cry SFX_CRY_25, $20, $C0 ; Rapidash
 	mon_cry SFX_CRY_22, $00, $80 ; Rattata

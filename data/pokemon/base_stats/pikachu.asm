@@ -13,7 +13,7 @@
 	db THUNDERSHOCK, GROWL, NO_MOVE, NO_MOVE ; level 1 learnset
 	db GROWTH_MEDIUM_FAST ; growth rate
 
-	; tm/hm learnset
+	; tm/hm learnset ; Aironfaar mod: removed access to Thunderbolt and Thunder to branch off into different directions
 	tmhm \
 	ICE_PUNCH,\
 	FIRE_PUNCH,\
@@ -26,8 +26,6 @@
 	THUNDERPUNCH,\
 	ROLLING_KICK,\
 	BARRIER,\
-	THUNDERBOLT,\
-	THUNDER,\
 	DIG,\
 	REFLECT,\
 	BIDE,\

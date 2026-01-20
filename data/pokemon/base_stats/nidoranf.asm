@@ -13,8 +13,8 @@
 	db TACKLE, GROWL, NO_MOVE, NO_MOVE ; level 1 learnset
 	db GROWTH_MEDIUM_SLOW ; growth rate
 
+	; tm/hm learnset
 	tmhm \
-	PIN_MISSILE,\
 	TOXIC,\
 	BODY_SLAM,\
 	SLASH,\

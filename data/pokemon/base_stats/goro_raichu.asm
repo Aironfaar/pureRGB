@@ -1,14 +1,15 @@
+;;; Aironfaar mod: new variant mon
 	db DEX_RAICHU ; pokedex id
 
-	db  70,  85,  65, 100, 100
+	db  70,  90,  80,  90, 90
 	;   hp  atk  def  spd  spc
 
 	db ELECTRIC, ELECTRIC ; type
 	db 95 ; catch rate
 	db 122 ; base exp
 
-	INCBIN "gfx/pokemon/front/raichu.pic", 0, 1 ; sprite dimensions
-	dw RaichuPicFront, RaichuPicBackSW
+	INCBIN "gfx/pokemon/front_alt/goro_raichu.pic", 0, 1 ; sprite dimensions
+	dw GoroRaichuPicFront, GoroRaichuPicBack
 
 	db THUNDERSHOCK, GROWL, THUNDER_WAVE, NO_MOVE ; level 1 learnset
 	db GROWTH_MEDIUM_FAST ; growth rate
@@ -21,14 +22,12 @@
 	BODY_SLAM,\
 	SLASH,\
 	DOUBLE_EDGE,\
-	HYPER_BEAM,\
 	AMNESIA,\
 	HI_JUMP_KICK,\
 	THUNDERPUNCH,\
 	ROLLING_KICK,\
 	BARRIER,\
-	THUNDERBOLT,\
-	THUNDER,\
+	DRAGON_RAGE,\
 	DIG,\
 	REFLECT,\
 	BIDE,\
@@ -41,19 +40,21 @@
 	THUNDER_WAVE,\
 	GLARE,\
 	SUBSTITUTE,\
-	REST,\ ; Aironfaar mod
-	MIMIC,\ ; Aironfaar mod
-	PAY_DAY,\ ; Aironfaar mod
+	REST,\
+	MIMIC,\
+	PAY_DAY,\
+	RAGE,\
+	COUNTER,\ ; DRAIN PUNCH
 	CUT,\
 	SURF,\
 	STRENGTH,\
 	FLASH
 	; end
 
-	db BANK(RaichuPicFront)
+	db BANK(GoroRaichuPicFront)
 	db 0
-	db BANK(RaichuPicBack)
-	db BANK(RaichuPicBackSW)
+	db BANK(GoroRaichuPicBack)
+	db BANK(GoroRaichuPicBack)
 
-	dw 0, RaichuPicBack
+	dw 0, GoroRaichuPicBack
 
