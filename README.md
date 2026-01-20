@@ -11,7 +11,7 @@ Some of the modifications are supposed to make certain mono type runs go a bit m
 - Arcanine, Parasect and Venusaur can now learn Surf. With this change, it is possible to cover all of Flash, Cut, Strength, Fly or Dig, and Surf with mono type teams.
 - You can now find at least one pokémon of each type before reaching Pewter City. One of them requires interaction with a new NPC, the others are out there in the wild.
 - Seel is now Water/Ice instead of Ice. This was the only somewhat reasonable way to provide a proper Ice type pokémon before reaching Pewter City. You can disable this change at the usual Type Changer NPC.
-- Three new Dragon types have been added as variants of existing pokémon:
+- Three new Dragon types have been added as variants of existing pokémon. There are new texts in the game that hint at them, but they are:
   - Using a Moon Stone, Pikachu can now be evolved into a Raichu variant of Electric/Dragon type.
   - Using a Moon Stone, Nidoran F and Nidoran M can now be evolved into Nidorina and Nidorino variants with different base stats and learnsets. These variants evolve into Nidoqueen and Nidoking variants at level 36, which, instead of Poison/Ground types, are Poison/Dragon types.
 

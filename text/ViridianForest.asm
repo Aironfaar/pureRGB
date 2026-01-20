@@ -78,6 +78,11 @@ _ViridianForestAfterBattleTextPikaGirl::
 	cont "here!"
 	para "Have you seen"
 	line "any?"
+	para "They evolve with"
+	line "a THUNDERSTONE,"
+	cont "but I heard you"
+	cont "can use a MOON"
+	cont "STONE, too!"
 	done
 
 _ViridianForestBattleTextSamurai::

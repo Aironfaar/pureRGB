@@ -7,6 +7,7 @@ PewterNidoranHouse_TextPointers:
 	dw_const PewterNidoranHouseLittleBoyText,        TEXT_PEWTERNIDORANHOUSE_LITTLE_BOY
 	dw_const PewterNidoranHouseMiddleAgedManText,    TEXT_PEWTERNIDORANHOUSE_MIDDLE_AGED_MAN
 	dw_const PewterNidoranHouseMiddleAgedWomanText,  TEXT_PEWTERNIDORANHOUSE_MIDDLE_AGED_WOMAN
+	dw_const PewterNidoranHouseKaijuNidoExposition,  TEXT_KAIJU_NIDO_EXPOSITION_BOOK ; Aironfaar mod
 
 PewterNidoranHouseNidoranText:
 	text_far _PewterNidoranHouseNidoranText
@@ -45,3 +46,9 @@ PewterNidoranHouseMiddleAgedWomanText:
 .TextColor::
 	text_far _PewterHouse1Text4Color
 	text_end
+
+;;; Aironfaar mod start
+PewterNidoranHouseKaijuNidoExposition:
+	text_far _PewterNidoranHouseKaijuNidoExpositionText
+	text_end
+;;; Aironfaar mod end

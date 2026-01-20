@@ -45,3 +45,21 @@ _PewterHouse1Text4::
 	para "What a stunning"
 	line "#MON!"
 	done
+
+;;; Aironfaar mod start
+_PewterNidoranHouseKaijuNidoExpositionText::
+	text "A Friend in Nido:"
+	line "How to Care for"
+	cont "your NIDORAN!"
+	para "The book warns"
+	line "that when a"
+	cont "NIDORAN comes"
+	cont "into contact with"
+	cont "a MOON STONE, it"
+	cont "evolves early."
+	para "It turns sterile"
+	line "and androgynous,"
+	cont "but develops"
+	cont "draconic traits."
+	done
+;;; Aironfaar mod end
