@@ -614,6 +614,16 @@ WinterDragonairPicFront:: INCBIN "gfx/pokemon/front_alt/dragonair.pic"
 VolcanicMagmarPicFront:: INCBIN "gfx/pokemon/front_alt/volcanic_magmar.pic"
 VolcanicMagmarPicBackSW:: INCBIN "gfx/pokemon/back_sw/volcanic_magmarb.pic"
 
+; Aironfaar mod sprites
+GoroRaichuPicFront:: INCBIN "gfx/pokemon/front_alt/goro_raichu.pic"
+GoroRaichuPicBack:: INCBIN "gfx/pokemon/back/goro_raichub.pic"
+KaijuNidorinaPicFront:: INCBIN "gfx/pokemon/front_alt/kaiju_nidorina.pic"
+KaijuNidorinoPicFront:: INCBIN "gfx/pokemon/front_alt/kaiju_nidorino.pic"
+KaijuNidorinoaPicBack:: INCBIN "gfx/pokemon/back/kaiju_nidorinoab.pic"
+KaijuNidoqueenPicFront:: INCBIN "gfx/pokemon/front_alt/kaiju_nidoqueen.pic"
+KaijuNidokingPicFront:: INCBIN "gfx/pokemon/front_alt/kaiju_nidoking.pic"
+KaijuNidomonarchPicBack:: INCBIN "gfx/pokemon/back/kaiju_nidomonarchb.pic"
+
 ; spirits
 TorchedPicFront:: INCBIN "gfx/battle/spirit_torched.pic"
 ChunkyPicFront:: INCBIN "gfx/battle/spirit_chunky.pic"

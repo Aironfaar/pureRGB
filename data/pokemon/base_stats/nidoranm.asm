@@ -15,9 +15,7 @@
 
 	; tm/hm learnset
 	tmhm \
-	PIN_MISSILE,\
 	TOXIC,\
-	HORN_DRILL,\
 	BODY_SLAM,\
 	SLASH,\
 	DOUBLE_EDGE,\

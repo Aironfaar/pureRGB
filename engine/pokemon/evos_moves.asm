@@ -237,6 +237,7 @@ Evolution_PartyMonLoop: ; loop over party mons
 	xor a
 	ld [wMonDataLocation], a
 	call EeveelutionForceLearnMove ; PureRGBnote: ADDED: Force eeveelutions to learn a move on evolution
+	call KaijuNidoForceReplaceMove ; Aironfaar mod: upon evolving to Kaiju Nidorino or Kaiju Nidorina, the mon forcefully forgets Poison Sting and Horn Attack/Dust Claw to replace them with Smog and Roar, respectively
 ;;;;;;;;;; shinpokerednote: FIXED: fixing skip move-learn on level-up evolution
 	ld a, [wIsInBattle]
 	and a
@@ -460,7 +461,7 @@ EeveelutionForceLearnMove:
 .forceLearnMove
 	push af ; put species number on the stack
 	ld a, b
-	push hl	
+	push hl
 	push de
 	ld [wMoveNum], a
 	ld [wNamedObjectIndex], a
@@ -475,6 +476,47 @@ EeveelutionForceLearnMove:
 	pop bc
 	ret
 
+;;; Aironfaar mod start: This function, called upon evolution of a mon, forces Kaiju Nidorina and Kaiju Nidorino to forget Posion Sting and Dust Claw/Horn Attack upon evolving, replacing them with Smog and Roar to limit them to the Kaiju learnsets.
+KaijuNidoForceReplaceMove:
+	push bc
+	ld a, [wPokedexNum]
+	cp KAIJU_NIDORINA
+	ld b, FURY_SWIPES
+	jr z, .start
+	cp KAIJU_NIDORINO
+	ld b, HORN_ATTACK
+	jr nz, .notKaijuNidorinoa
+.start
+	push af
+	push hl
+	push de
+.loop
+	push bc
+	ld a, b
+	ld [wMoveToReplace], a
+	cp POISON_STING
+	ld a, SMOG
+	jr z, .secondIteration
+	ld a, ROAR
+.secondIteration
+	ld [wMoveNum], a
+	callfar ReplaceMove
+	pop bc
+	ld a, b
+	cp POISON_STING
+	jr z, .cleanup
+	ld b, POISON_STING
+	jr .loop
+.cleanup
+	pop de
+	pop hl
+	pop af
+	ld [wPokedexNum], a
+.notKaijuNidorinoa
+	pop bc
+	ret
+;;; Aironfaar mod end
+	
 
 ; writes the moves a mon has at level [wCurEnemyLevel] to [de]
 ; move slots are being filled up sequentially and shifted if all slots are full

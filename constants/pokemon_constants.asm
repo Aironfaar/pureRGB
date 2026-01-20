@@ -94,7 +94,7 @@
 	const PIKACHU            ; $54
 	const RAICHU             ; $55
 	const SPIRIT_CHUNKY      ; $56
-	const_skip               ; $57
+	const GORO_RAICHU        ; $57 ; Aironfaar mod
 	const DRATINI            ; $58
 	const DRAGONAIR          ; $59
 	const KABUTO             ; $5A
@@ -166,10 +166,10 @@
 	const_skip               ; $9C
 	const GOLDEEN            ; $9D
 	const SEAKING            ; $9E
-	const_skip               ; $9F
-	const_skip               ; $A0
-	const_skip               ; $A1
-	const_skip               ; $A2
+	const KAIJU_NIDORINA     ; $9F ; Aironfaar mod
+	const KAIJU_NIDOQUEEN    ; $A0 ; Aironfaar mod
+	const KAIJU_NIDORINO     ; $A1 ; Aironfaar mod
+	const KAIJU_NIDOKING     ; $A2 ; Aironfaar mod
 	const PONYTA             ; $A3
 	const RAPIDASH           ; $A4
 	const RATTATA            ; $A5

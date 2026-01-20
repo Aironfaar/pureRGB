@@ -1,14 +1,15 @@
+;;; Aironfaar mod: new variant mon
 	db DEX_NIDOKING ; pokedex id
 
-	db  81,  92,  77,  85,  75
+	db  77,  92,  75,  81,  85
 	;   hp  atk  def  spd  spc
 
-	db POISON, GROUND ; type
+	db POISON, DRAGON ; type
 	db 65 ; catch rate
 	db 195 ; base exp
 
-	INCBIN "gfx/pokemon/front/nidoking.pic", 0, 1 ; sprite dimensions
-	dw NidokingPicFront, NidokingPicBackSW
+	INCBIN "gfx/pokemon/front_alt/kaiju_nidoking.pic", 0, 1 ; sprite dimensions
+	dw KaijuNidokingPicFront, KaijuNidomonarchPicBack
 
 	db TACKLE, LEER, THRASH, NO_MOVE ; level 1 learnset
 	db GROWTH_MEDIUM_SLOW ; growth rate
@@ -16,10 +17,8 @@
 	; tm/hm learnset
 	tmhm \
 	ICE_PUNCH,\
-	PIN_MISSILE,\
 	FIRE_PUNCH,\
 	TOXIC,\
-	HORN_DRILL,\
 	BODY_SLAM,\
 	SLASH,\
 	DOUBLE_EDGE,\
@@ -31,6 +30,7 @@
 	THUNDERPUNCH,\
 	ROLLING_KICK,\
 	BARRIER,\
+	SOLARBEAM,\
 	DRAGON_RAGE,\
 	THUNDERBOLT,\
 	THUNDER,\
@@ -49,22 +49,25 @@
 	ROCK_SLIDE,\
 	GLARE,\
 	SUBSTITUTE,\
-	REST,\ ; Aironfaar mod
-	MIMIC,\ ; Aironfaar mod
-	FISSURE,\ ; Aironfaar mod
-	PAY_DAY,\ ; Aironfaar mod
-	RAGE,\ ; Aironfaar mod
-	COUNTER,\ ; DRAIN PUNCH ; Aironfaar mod
+	REST,\
+	MIMIC,\
+	FISSURE,\
+	WHIRLWIND,\
+	TRI_ATTACK,\
+	HEADBUTT,\
+	PAY_DAY,\
+	RAGE,\
+	COUNTER,\ ; DRAIN PUNCH
 	CUT,\
 	SURF,\
 	STRENGTH,\
 	FLASH
 	; end
 
-	db BANK(NidokingPicFront)
+	db BANK(KaijuNidokingPicFront)
 	db 0
-	db BANK(NidokingPicBack)
-	db BANK(NidokingPicBackSW)
+	db BANK(KaijuNidomonarchPicBack)
+	db BANK(KaijuNidomonarchPicBack)
 
-	dw 0, NidokingPicBack
+	dw 0, KaijuNidomonarchPicBack
 

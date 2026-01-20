@@ -86,7 +86,7 @@ PokedexOrder:
 	db DEX_PIKACHU
 	db DEX_RAICHU
 	db DEX_RAICHU ; SPIRIT_CHUNKY
-	db 0 ; MISSINGNO.
+	db DEX_RAICHU ; Goro Raichu ; Aironfaar mod
 	db DEX_DRATINI
 	db DEX_DRAGONAIR
 	db DEX_KABUTO
@@ -158,10 +158,10 @@ PokedexOrder:
 	db 0 ; MISSINGNO.
 	db DEX_GOLDEEN
 	db DEX_SEAKING
-	db 0 ; MISSINGNO.
-	db 0 ; MISSINGNO.
-	db 0 ; MISSINGNO.
-	db 0 ; MISSINGNO.
+	db DEX_NIDORINA ; Kaiju Nidorina ; Aironfaar mod
+	db DEX_NIDOQUEEN ; Kaiju Nidoqueen ; Aironfaar mod
+	db DEX_NIDORINO ; Kaiju Nidorino ; Aironfaar mod
+	db DEX_NIDOKING ; Kaiju Nidoking ; Aironfaar mod
 	db DEX_PONYTA
 	db DEX_RAPIDASH
 	db DEX_RATTATA

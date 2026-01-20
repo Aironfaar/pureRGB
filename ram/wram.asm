@@ -1761,7 +1761,8 @@ wMoveNum:: db
 
 ; PureRGBnote: MOVED: itemlist is a temp list for indicating what items appear in a mart, the size was expanded to allow for bigger mart stocks.
 ; we reuse wMovesString for this expanded list since wMovesString is only used in battle.
-wMoveReminderList:: ; Aironfaar mod: now also used by move reminder
+wMoveReminderList:: ; Aironfaar mod: now also used by move reminder (scripts/Daycare.asm, engine/pokemon/evos_moves.asm)
+wMoveToReplace:: ; Aironfaar mod: and by ReplaceMove function (engine/pokemon/learn_move.asm)
 wItemList:: 
 wMovesString:: ds 56
 

@@ -398,7 +398,7 @@ ConversionAttackTable:
 	db EARTHQUAKE            ; PIKACHU            
 	db EARTHQUAKE            ; RAICHU             
 	db SUPER_FANG            ; SPIRIT_CHUNKY
-	db 0               ; $57
+	db EARTHQUAKE            ; GORO_RAICHU ; Aironfaar mod
 	db ICE_BEAM              ; DRATINI            
 	db ICE_BEAM              ; DRAGONAIR          
 	db SURF                  ; KABUTO             
@@ -470,10 +470,10 @@ ConversionAttackTable:
 	db 0               ; $9C
 	db CONVERT_WATER         ; GOLDEEN            
 	db CONVERT_WATER         ; SEAKING            
-	db 0               ; $9F
-	db 0               ; $A0
-	db 0               ; $A1
-	db 0               ; $A2
+	db EARTHQUAKE            ; KAIJU_NIDORINA	; Aironfaar mod
+	db EARTHQUAKE            ; KAIJU_NIDOQUEEN	; Aironfaar mod
+	db EARTHQUAKE            ; KAIJU_NIDORINO	; Aironfaar mod
+	db EARTHQUAKE            ; KAIJU_NIDOKING	; Aironfaar mod
 	db SURF                  ; PONYTA             
 	db SURF                  ; RAPIDASH           
 	db DIZZY_PUNCH           ; RATTATA            

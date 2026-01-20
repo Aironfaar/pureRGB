@@ -1,4 +1,5 @@
-	db DEX_BUTTERFREE ; pokedex id
+
+db DEX_BUTTERFREE ; pokedex id
 
 	db  70,  25,  75,  95,  92
 	;   hp  atk  def  spd  spc
@@ -10,7 +11,7 @@
 	INCBIN "gfx/pokemon/front/butterfree.pic", 0, 1 ; sprite dimensions
 	dw ButterfreePicFront, ButterfreePicBackSW
 
-	db TACKLE, STRING_SHOT, NO_MOVE, NO_MOVE ; level 1 learnset
+	db TACKLE, STRING_SHOT, HARDEN, NO_MOVE ; level 1 learnset
 	db GROWTH_MEDIUM_FAST ; growth rate
 
 	; tm/hm learnset

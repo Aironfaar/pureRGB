@@ -11,10 +11,12 @@ Some of the modifications are supposed to make certain mono type runs go a bit m
 - Arcanine, Parasect and Venusaur can now learn Surf. With this change, it is possible to cover all of Flash, Cut, Strength, Fly or Dig, and Surf with mono type teams.
 - You can now find at least one pokémon of each type before reaching Pewter City. One of them requires interaction with a new NPC, the others are out there in the wild.
 - Seel is now Water/Ice instead of Ice. This was the only somewhat reasonable way to provide a proper Ice type pokémon before reaching Pewter City. You can disable this change at the usual Type Changer NPC.
+- Three new Dragon types have been added as variants of existing pokémon:
+  - Using a Moon Stone, Pikachu can now be evolved into a Raichu variant of Electric/Dragon type.
+  - Using a Moon Stone, Nidoran F and Nidoran M can now be evolved into Nidorina and Nidorino variants with different base stats and learnsets. These variants evolve into Nidoqueen and Nidoking variants at level 36, which, instead of Poison/Ground types, are Poison/Dragon types.
 
 Others are simply modifications to my personal taste:
 - The Pokédex now uses meters and kilograms instead of feet and pounds.
-- There is now a Move Reminder in the Daycare.
 - Gyarados can now learn Fly.
 - Splash is now a signature move for Magikarps of level 20 or higher, as well as for Gyarados. The Move Mystic will tell you more. To make sure that Gyarados can be encountered in the wild with Splash, they now know Splash at level 1.
 - Cursed Gengar now has different stats. The Dark and Light Channeler that inflict and remove the curse will inform you of the exact stat changes. To emphasize the new stat spread of Cursed Gengar, Gastly, Haunter and Gengar now learn Poison Gas instead of Filthy Slam at level 41. They can still learn Filthy Slam via TM.
@@ -28,7 +30,8 @@ Others are simply modifications to my personal taste:
   - Existing trade NPCs may ask for different pokémon and give you a different one in return.
   - The trades on Cinnabar Island are now only accessible once you become the champion of the Pokémon League. In turn, the pokémon you receive in these trades are much more interesting.
   - Six new trades have been introduced to the game, two of which require you to be the champion.
-- Learnsets have been touched: While you shouldn't have to worry anymore about missing moves by evolving at inopportune times, an evolved pokémon now always learns moves later than its previous form would (specifically, at the level its previous evolution would learn it * 1.1, rounded down). In turn, some evolved pokémon can learn moves that their previous form can't.
+- There is now a Move Reminder in the Daycare.
+- Learnsets have been touched: Except for the new variants of Nidorina, Nidoqueen, Nidorino and Nidoking, which forget moves that are no longer part of their learnset upon evolving from Nidoran F/M and learn the moves that replaced them, all evolved pokémon can learn their previous forms' moves either by level or TM/HM. If you evolve your pokémon the moment it becomes possible, you will neither miss a move nor lose out entirely on something that the previous form could learn. If all else fails, the Move Reminder can help.
 - Some moves have been changed:
   - Cut: BP 70 -> 60, gives +1 Attack
   - Dig: BP 80 -> 130, ACC 100 -> 95, PP 10 -> 5
@@ -41,6 +44,7 @@ Others are simply modifications to my personal taste:
   - Pin Missile: BP 18 -> 20
   - Psybeam: BP 65 -> 75, confusion chance 10% -> 30%
   - Splash: Type NORMAL -> FLYING, signature move of Gyarados and Level 20+ Magikarp (refer to Move Mystic in Saffron City for details)
+  - Stomp: Type NORMAL -> GROUND
   - Strength: 33% chance for -1 Defense
 - 20 TMs have been added, most to reintroduce previously available TMs, some to add new moves to the TM pool.
   - TM 51: Teleport
@@ -65,3 +69,26 @@ Others are simply modifications to my personal taste:
   - TM 70: Drain Punch (new)
 - Copycat now gives you Mimic again. Just felt too iconic to change that.
 - Caterpie, Metapod, Weedle, Kakuna and Magikarp are back to being unable to learn any TMs and HMs.
+
+## Credits
+Vortyne - Creator of pureRGB, which this is a modification of
+
+Helix Chamber - [Published fan-made sprite reconstructions](https://x.com/helixchamber/status/1158772044533813250), some of which I used in this project (more specific credits below)
+
+@catstorm26 - Creator of the [variant Nidorina](https://github.com/Aironfaar/pureRGB/tree/main/gfx/pokemon/front_alt/kaiju_nidorina.png) and [variant Nidoqueen](https://github.com/Aironfaar/pureRGB/tree/main/gfx/pokemon/front_alt/kaiju_nidoqueen.png) sprites; these sprites were originally intended as a reconstruction of a Nidoran or Nidorino/Nidorina protoype, and a reconstruction of the scrapped "Gyaōn", respectively
+
+@RacieBeep - Creator of the [variant Nidorino](https://github.com/Aironfaar/pureRGB/tree/main/gfx/pokemon/front_alt/kaiju_nidorino.png), [variant Nidoking](https://github.com/Aironfaar/pureRGB/tree/main/gfx/pokemon/front_alt/kaiju_nidoking.png) and [variant Raichu](https://github.com/Aironfaar/pureRGB/tree/main/gfx/pokemon/front_alt/goro_raichu.png) sprites; these sprites were originally intended as a reconstruction of a Nidoran or Nidorino/Nidorina protoype, a reconstruction of the scrapped "Gyaōn", and a reconstruction of the scrapped "Gorochu", respectively
+
+Of course, Vortyne's original credits are relevant to this project as well, although these are not written from my own perspective:
+
+Jojobear13 - Tons of code snippets and help via the shinpokered romhack codebase, direct support regarding the pokemon yellow gbc enhancements porting
+
+Danny-E 33 - Larger back sprites code snippets, EXP Bar code snippets, various support regarding game audio and questions about rgbasm/gbz80 answered
+
+Mechanicalpen - enhanced menu icons code
+
+LJSTAR - Most of the work creating the type icons used in the movedex
+
+Mord - Most of the work creating LT.Surge and Erika overworld sprites
+
+pret discord and pret in general for their original disassembly work on Red / Blue

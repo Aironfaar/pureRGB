@@ -10,13 +10,14 @@
 	INCBIN "gfx/pokemon/front/jolteon.pic", 0, 1 ; sprite dimensions
 	dw JolteonPicFront, JolteonPicBackSW
 
-	db TACKLE, SAND_ATTACK, NO_MOVE, NO_MOVE ; level 1 learnset
+	db TACKLE, SAND_ATTACK, THUNDERSHOCK, NO_MOVE ; level 1 learnset
 	db GROWTH_MEDIUM_FAST ; growth rate
 
 	; tm/hm learnset
 	tmhm \
 	PIN_MISSILE,\
 	TOXIC,\
+	HORN_DRILL,\ ; Aironfaar mod
 	BODY_SLAM,\
 	SLASH,\
 	DOUBLE_EDGE,\
@@ -33,10 +34,12 @@
 	BARRAGE,\
 	SLAM,\ ; FILTHY SLAM
 	KARATE_CHOP,\
+	MEDITATE,\ ; Aironfaar mod
 	LIGHT_SCREEN,\
 	THUNDER_WAVE,\
 	GLARE,\
 	SUBSTITUTE,\
+	TELEPORT,\ ; Aironfaar mod
 	REST,\ ; Aironfaar mod
 	MIMIC,\ ; Aironfaar mod
 	TRI_ATTACK,\ ; Aironfaar mod
