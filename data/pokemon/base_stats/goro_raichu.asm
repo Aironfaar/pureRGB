@@ -4,7 +4,7 @@
 	db  70,  90,  80,  90, 90
 	;   hp  atk  def  spd  spc
 
-	db ELECTRIC, ELECTRIC ; type
+	db ELECTRIC, DRAGON ; type
 	db 95 ; catch rate
 	db 122 ; base exp
 
