@@ -73,7 +73,7 @@ Others are simply modifications to my personal taste:
 ## Credits
 Vortyne - Creator of pureRGB, which this is a modification of
 
-Helix Chamber - [Published fan-made sprite reconstructions](https://x.com/helixchamber/status/1158772044533813250), some of which I used in this project (more specific credits below)
+Helix Chamber - [Published their fan-made sprite reconstructions](https://x.com/helixchamber/status/1158772044533813250), some of which I used in this project (more specific credits below)
 
 @catstorm26 - Creator of the [variant Nidorina](https://github.com/Aironfaar/pureRGB/tree/main/gfx/pokemon/front_alt/kaiju_nidorina.png) and [variant Nidoqueen](https://github.com/Aironfaar/pureRGB/tree/main/gfx/pokemon/front_alt/kaiju_nidoqueen.png) sprites; these sprites were originally intended as a reconstruction of a Nidoran or Nidorino/Nidorina protoype, and a reconstruction of the scrapped "Gyaōn", respectively
 
