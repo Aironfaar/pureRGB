@@ -2578,6 +2578,10 @@ ItemUseTMHM:
 	ld a, [wTempTMHM]
 	ld [wMoveNum], a
 	call GetMoveName
+;;; Aironfaar mod start: TM freeze fix needs to be here (thanks, RainbowMetalPigeon)
+    ld a, ITEM_NAME
+    ld [wNameListType], a; if you decide not to use the machine, change the list type back to item list.
+;;; Aironfaar mod end
 	call CopyToStringBuffer
 	pop af
 	ld hl, BootedUpTMText
@@ -2610,8 +2614,7 @@ ItemUseTMHM:
 	and a
 	jr z, .useMachine
 ;;;;;;;;;; Vimescarrotnote: FIXED: fixes a rare bug where booting up a TM and then going back can freeze up the game on booting up another
-    ld a, ITEM_NAME
-    ld [wNameListType], a; if you decide not to use the machine, change the list type back to item list.
+; Aironfaar mod: YOINK! This is now found a few lines further up.
 ;;;;;;;;;;
 	ld a, 2
 	ld [wActionResultOrTookBattleTurn], a ; item not used
