@@ -2578,7 +2578,7 @@ ItemUseTMHM:
 	ld a, [wTempTMHM]
 	ld [wMoveNum], a
 	call GetMoveName
-;;; Aironfaar mod start: TM freeze fix needs to be here (thanks, RainbowMetalPigeon)
+;;; Aironfaar mod start: TM freeze fix needs to be here to catch a few more cases than it would have after the line "jr z, .useMachine" further down (thanks, RainbowMetalPigeon)
     ld a, ITEM_NAME
     ld [wNameListType], a; if you decide not to use the machine, change the list type back to item list.
 ;;; Aironfaar mod end
@@ -2614,7 +2614,7 @@ ItemUseTMHM:
 	and a
 	jr z, .useMachine
 ;;;;;;;;;; Vimescarrotnote: FIXED: fixes a rare bug where booting up a TM and then going back can freeze up the game on booting up another
-; Aironfaar mod: YOINK! This is now found a few lines further up.
+; Aironfaar mod: YOINK! This is now found both a few lines up and a few lines down. Specifically, [wNameListType] HAS to be set to ITEM_NAME before returning. This is necessary due to changes to GetName, which were necessary because I added 20 TMs and had to alter the function's logic to rely on wNameListType.
 ;;;;;;;;;;
 	ld a, 2
 	ld [wActionResultOrTookBattleTurn], a ; item not used
@@ -2669,6 +2669,10 @@ ItemUseTMHM:
 	jr c, .chooseMon
 	SetEvent FLAG_LEARNING_TM_MOVE
 	predef LearnMove ; teach move
+;;; Aironfaar mod start: TM freeze fix also needs to be here
+    ld a, ITEM_NAME
+    ld [wNameListType], a
+;;; Aironfaar mod end
 	pop af
 	ld [wCurItem], a
 	pop af
