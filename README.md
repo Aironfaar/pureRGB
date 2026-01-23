@@ -25,6 +25,7 @@ Others are simply modifications to my personal taste:
 - All unevolved and non-evolving pokémon except Zapdos, Articuno, Moltres, Mewtwo, Mew and the fossil pokémon can now be encountered in the wild in either palette somewhere in the world. This means you can catch them all in whichever palette you like best. To facilitate this, some encounter tables have been changed, in particular the entire Safari Zone.
 - Fossil pokémon are now revived with their normal or alternate palette, chosen at random.
 - Team Rocket now offers fossils and ambers as Game Corner prizes. So that's what they were in Mt. Moon for! Since the fossils and amber can now be replaced, they are no longer key items. However, like the Master Ball, they are invaluable, so they sell for nothing. The TMs that would normally be offered as prizes are now sold in the Celadon Department Store.
+- The Fossil Guy in Saffron will now offer that you can pay for the repairs of his broken experimental teleporter after you gave him your Mt. Moon fossil and the Old Amber. This means he'll still get those fossils to Cinnabar Lab for you so they can be revived, allowing you to revive those fossils from Game Corner before reaching Cinnabar Island. However, those repairs aren't cheap!
 - In-game trades have been completely redone:
   - A bit of unique dialogue has been added to each trade to give the NPCs some personality and their pokémon a bit of background.
   - Existing trade NPCs may ask for different pokémon and give you a different one in return.

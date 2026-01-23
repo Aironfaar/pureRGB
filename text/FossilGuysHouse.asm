@@ -164,12 +164,52 @@ _FossilGuyGoToCinnabarText::
 
 	para "I can't go to"
 	line "CINNABAR LAB"
-	cont "until i fix it."
+	cont "until I fix it."
 
-	para "You'll have to"
-	line "go there"
-	cont "yourself!"
+;;; Aironfaar mod start: give option to get your fossil to Cinnabar for money
+	para "Tell you what,"
+	line "if you pay for"
+	cont "the repairs,"
+	cont "I'll bring your"
+	cont "fossil to the"
+	cont "lab."
 	done
+
+_FossilGuyRepairPriceText::
+	text "That's ¥20000."
+	line "How about it?"
+	done
+
+_FossilGuyNotEnoughMoneyText::
+	text "I'm afraid the"
+	line "repairs cost more"
+	cont "than you have."
+	done
+
+_FossilGuyWhichFossilText::
+	text "Grand! Which"
+	line "fossil is it?"
+	done
+
+_FossilGuyStartRepairsText::
+	text "Wonderful! I'll"
+	line "start the repairs"
+	cont "right away."
+	
+	para "Then I'll be off"
+	line "to CINNABAR LAB"
+	cont "for you."
+	
+	para "Come back in a"
+	line "bit!"
+	done
+
+_FossilGuyGoThereYourselfText::
+	text "You'll have to"
+	line "go to CINNABAR"
+	cont "yourself, then!"
+	done
+;;; Aironfaar mod end
 
 _FossilGuysTeleporterText::
 	text "WARNING!"

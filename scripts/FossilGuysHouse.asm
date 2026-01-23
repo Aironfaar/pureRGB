@@ -25,6 +25,7 @@ FossilGuysHouse_TextPointers:
 	dw_const FossilGuysHousePosterText,      TEXT_FOSSILGUYSHOUSE_POSTER
 	dw_const FossilGuysHouseDeskText,        TEXT_FOSSILGUYSHOUSE_DESK
 
+;;; Aironfaar mod start: Fossil Guy now offers "fossil shuttle service" if you pay for teleporter repairs
 FossilGuysHouseFossilGuyText:
 	text_asm
 	CheckEitherEventSet EVENT_GOT_DOME_FOSSIL, EVENT_GOT_HELIX_FOSSIL
@@ -46,15 +47,14 @@ FossilGuysHouseFossilGuyText:
 	jr nz, .doneRevivedFossil
 .stageOneStart
 	CheckEvent EVENT_SEAFOAM_FOUND_OTHER_FOSSIL
-	jp nz, .goToCinnabar
+	jp nz, .stageThreeStart
 	CheckEvent EVENT_GOT_HELIX_FOSSIL
 	jr nz, .checkHelix
 	CheckEvent EVENT_GOT_DOME_FOSSIL
 	jr nz, .checkDome
 .noFossil
 	ld hl, FossilGuyWhereFossilText
-	rst _PrintText
-	jp .done
+	jp .donePrint
 .checkHelix
 	ld b, HELIX_FOSSIL
 	jr .checkItemFossil
@@ -82,12 +82,10 @@ FossilGuysHouseFossilGuyText:
 	call RemoveItemFromInventory
 	SetEvents EVENT_GAVE_FOSSIL_TO_SUPER_NERD, EVENT_SUPER_NERD_GOING_TO_CINNABAR, EVENT_SKIP_FOSSIL_GUY_GREETING
 	ld hl, FossilGuyGaveFossil
-	rst _PrintText
-	jp .done
+	jp .donePrint
 .suitYourself
 	ld hl, FossilGuyDenied
-	rst _PrintText
-	jp .done
+	jp .donePrint
 .doneRevivedFossil
 	ld hl, FossilGuyCameBackFossil
 	rst _PrintText
@@ -98,7 +96,7 @@ FossilGuysHouseFossilGuyText:
 .finishGiveFossil
 	ld b, a
 	ld c, 24
-	call GivePokemonRandomPalette ; Aironfaar mod
+	call GivePokemonRandomPalette
 	jp nc, .done
 	SetEvent EVENT_RECEIVED_FOSSIL_PKMN_FROM_SUPER_NERD
 	ResetEvent EVENT_SKIP_FOSSIL_GUY_GREETING
@@ -108,7 +106,7 @@ FossilGuysHouseFossilGuyText:
 	predef GetIndexOfItemInBag
 	ld a, b
 	cp $FF ; not in bag
-	jr z, .greetingEnd
+	jp z, .greetingEnd
 	push bc
 	ld hl, FossilGuyHaveAmber
 	rst _PrintText
@@ -126,54 +124,142 @@ FossilGuysHouseFossilGuyText:
 	call RemoveItemFromInventory
 	SetEvents EVENT_GAVE_OLD_AMBER_TO_SUPER_NERD, EVENT_SUPER_NERD_GOING_TO_CINNABAR
 	ld hl, FossilGuyGaveAmber
-	rst _PrintText
-	jr .done
+	jp .donePrint
 .doneRevivedAmber
 	ld hl, FossilGuyCameBackAmber
 	rst _PrintText
 	lb bc, AERODACTYL, 24
-	call GivePokemonRandomPalette ; Aironfaar mod
-	jr nc, .done
+	call GivePokemonRandomPalette
+	jp nc, .done
 	SetEvent EVENT_RECEIVED_AERODACTYL_FROM_SUPER_NERD
-	jr .done
+	jp .done
 .stageThreeStart
-;;; Aironfaar mod start: Since fossils and ambers are now available from the Game Corner, check independently of events for those items in the bag.
-    ld b, DOME_FOSSIL
-.checkItemLoop
-    push bc
-    predef GetIndexOfItemInBag
-	ld a, b
-	cp $FF ; not in bag
-	jr nz, .goToCinnabar
-	pop bc
-	ld a, DOME_FOSSIL
-	cp b
-	jr z, .checkAmber
-	jr c, .endText
-	ld b, HELIX_FOSSIL
-	jr .checkItemLoop
-.checkAmber
-	ld b, OLD_AMBER
-	jr .checkItemLoop
-.endText
-	ld hl, FossilGuyEndText
+	ld c, 24
+	CheckEvent EVENT_FOSSIL_GUY_DOME_SHUTTLE
+	ld b, KABUTO
+	jr nz, .giveRevivedMon
+	CheckEvent EVENT_FOSSIL_GUY_HELIX_SHUTTLE
+	ld b, OMANYTE
+	jr nz, .giveRevivedMon
+	CheckEvent EVENT_FOSSIL_GUY_AMBER_SHUTTLE
+	ld b, AERODACTYL
+	jr z, .noRevivedMonPending
+.giveRevivedMon
+	push bc
+	ld hl, FossilGuyCameBackAmber
 	rst _PrintText
-	jr .done
-.goToCinnabar
+	pop bc
+	call GivePokemonRandomPalette
+	jp nc, .done
+	ResetEvents EVENT_FOSSIL_GUY_DOME_SHUTTLE, EVENT_FOSSIL_GUY_HELIX_SHUTTLE, EVENT_FOSSIL_GUY_AMBER_SHUTTLE
+	jp .done
+.noRevivedMonPending
+	call FossilGuy_GetFossilsInBag
+	ld a, [wFilteredBagItemsCount]
+	and a
+	ld hl, FossilGuyEndText
+	jp z, .donePrint ; no fossils in bag
 	ld hl, FossilGuyGoToCinnabarText
 	rst _PrintText
-	jr .done
-;;; Aironfaar mod end
-.greetingEnd
-	ld hl, FossilGuyGreetingEnd
+	call DisplayTextPromptButton
+	ld a, 1
+	ld [wDoNotWaitForButtonPressAfterDisplayingText], a
+	ld hl, FossilGuyRepairPriceText
 	rst _PrintText
-	jr .done
-.comeBackLater
-	ld hl, FossilGuyComeBackLater
+	ld a, 0
+	ld [wDoNotWaitForButtonPressAfterDisplayingText], a
+	call YesNoChoice
+	ld a, [wCurrentMenuItem]
+	and a
+	jr z, .saidYes
+.goThereYourself
+	ld hl, FossilGuyGoThereYourselfText
+	jp .donePrint
+.saidYes
+	; check for money (20000)
+	xor a
+	ld [hMoney + 2], a
+	ld [hMoney + 1], a
+	ld a, $2
+	ld [hMoney], a
+	call HasEnoughMoney
+	jr nc, .enoughMoney
+	ld hl, FossilGuyNotEnoughMoneyText
+	jp .donePrint
+.enoughMoney
+	ld hl, FossilGuyWhichFossilText
 	rst _PrintText
-	jr .done
+	ld hl, wStatusFlags5
+	set BIT_NO_TEXT_DELAY, [hl]
+	xor a
+	ld [wCurrentMenuItem], a
+	ld a, A_BUTTON | B_BUTTON
+	ld [wMenuWatchedKeys], a
+	ld a, [wFilteredBagItemsCount]
+	dec a
+	ld [wMaxMenuItem], a
+	ld a, 2
+	ld [wTopMenuItemY], a
+	ld a, 1
+	ld [wTopMenuItemX], a
+	ld a, [wFilteredBagItemsCount]
+	dec a
+	ld bc, 2
+	ld hl, 3
+	call AddNTimes
+	dec l
+	ld b, l
+	ld c, $d
+	hlcoord 0, 0
+	call TextBoxBorder
+	call UpdateSprites
+	call FossilGuy_PrintFossilsInBag
+	ld hl, wStatusFlags5
+	res BIT_NO_TEXT_DELAY, [hl]
+	call HandleMenuInput
+	bit BIT_B_BUTTON, a
+	jr nz, .goThereYourself
+	ld hl, wFilteredBagItems
+	ld a, [wCurrentMenuItem]
+	ld d, 0
+	ld e, a
+	add hl, de
+	ld a, [hl]
+	ldh [hItemToRemoveID], a
+	cp DOME_FOSSIL
+	jr nz, .notDome
+	SetEvents EVENT_FOSSIL_GUY_DOME_SHUTTLE, EVENT_SUPER_NERD_GOING_TO_CINNABAR
+	jr .removeFossil
+.notDome
+	cp HELIX_FOSSIL
+	jr nz, .notHelix
+	SetEvents EVENT_FOSSIL_GUY_HELIX_SHUTTLE, EVENT_SUPER_NERD_GOING_TO_CINNABAR
+	jr .removeFossil
+.notHelix
+	SetEvents EVENT_FOSSIL_GUY_AMBER_SHUTTLE, EVENT_SUPER_NERD_GOING_TO_CINNABAR
+	jr .removeFossil
+.removeFossil
+	farcall RemoveItemByID
+	xor a
+	ld [wPriceTemp + 2], a
+	ld [wPriceTemp + 1], a
+	ld a, $2
+	ld [wPriceTemp], a
+	ld hl, wPriceTemp + 2
+	ld de, wPlayerMoney + 2
+	ld c, $3
+	predef SubBCDPredef
+	ld hl, FossilGuyStartRepairsText
+	jr .donePrint
 .neverMet
 	ld hl, FossilGuyNeverMet
+	jr .donePrint
+.comeBackLater
+	ld hl, FossilGuyComeBackLater
+	jr .donePrint
+.greetingEnd
+	ld hl, FossilGuyGreetingEnd
+.donePrint
 	rst _PrintText
 .done
 	rst TextScriptEnd
@@ -235,6 +321,89 @@ FossilGuyEndText:
 FossilGuyGoToCinnabarText:
 	text_far _FossilGuyGoToCinnabarText
 	text_end
+
+FossilGuyRepairPriceText:
+	text_far _FossilGuyRepairPriceText
+	text_end
+
+FossilGuyWhichFossilText:
+	text_far _FossilGuyWhichFossilText
+	text_end
+
+FossilGuyNotEnoughMoneyText:
+	text_far _FossilGuyNotEnoughMoneyText
+	text_end
+
+FossilGuyGoThereYourselfText:
+	text_far _FossilGuyGoThereYourselfText
+	text_end
+
+FossilGuyStartRepairsText:
+	text_far _FossilGuyStartRepairsText
+	text_end
+
+FossilGuy_GetFossilsInBag:
+; construct a list of all fossils in the player's bag
+	xor a
+	ld [wFilteredBagItemsCount], a
+	ld de, wFilteredBagItems
+	ld hl, FossilGuy_FossilsList
+.loop
+	ld a, [hli]
+	and a
+	jr z, .done
+	push hl
+	push de
+	ld [wTempByteValue], a
+	ld b, a
+	predef GetQuantityOfItemInBag
+	pop de
+	pop hl
+	ld a, b
+	and a
+	jr z, .loop
+	; A fossil is in the bag
+	ld a, [wTempByteValue]
+	ld [de], a
+	inc de
+	push hl
+	ld hl, wFilteredBagItemsCount
+	inc [hl]
+	pop hl
+	jr .loop
+.done
+	ld a, $ff
+	ld [de], a
+	ret
+
+FossilGuy_FossilsList:
+	db DOME_FOSSIL
+	db HELIX_FOSSIL
+	db OLD_AMBER
+	db 0 ; end
+
+FossilGuy_PrintFossilsInBag:
+	ld hl, wFilteredBagItems
+	xor a
+	ldh [hItemCounter], a
+.loop
+	ld a, [hli]
+	cp $ff
+	ret z
+	push hl
+	ld [wNamedObjectIndex], a
+	call GetItemName
+	hlcoord 2, 2
+	ldh a, [hItemCounter]
+	ld bc, SCREEN_WIDTH * 2
+	call AddNTimes
+	ld de, wNameBuffer
+	call PlaceString
+	ld hl, hItemCounter
+	inc [hl]
+	pop hl
+	jr .loop
+;;; Aironfaar mod end
 
 ; cat text
 
