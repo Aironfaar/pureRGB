@@ -144,8 +144,9 @@ FossilGuysHouseFossilGuyText:
     predef GetIndexOfItemInBag
 	ld a, b
 	cp $FF ; not in bag
-	jr nz, .goToCinnabar
 	pop bc
+	jr nz, .goToCinnabar
+	; Since OLD_AMBER < DOME_FOSSIL < HELIX_FOSSIL, the loop checks for DOME_FOSSIL, then OLD_AMBER, then HELIX_FOSSIL. If none are found, it jumps to .endText.
 	ld a, DOME_FOSSIL
 	cp b
 	jr z, .checkAmber
