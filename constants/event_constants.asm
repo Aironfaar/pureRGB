@@ -4,8 +4,7 @@
 ; Pallet Town events
 	const_def
 	const EVENT_FOLLOWED_OAK_INTO_LAB
-	const EVENT_STARTER_SWAP_MET ; Aironfaar mod - technically should be in Route 1, but couldn't make it work there
-	const EVENT_STARTER_SWAP_DONE ; Aironfaar mod - and this is close enough
+	const_skip 2
 	const EVENT_HALL_OF_FAME_DEX_RATING
 	const_skip 2
 	const EVENT_PALLET_AFTER_GETTING_POKEBALLS
@@ -394,8 +393,10 @@
 ; Route 1 events
 	const_next $3C0
 	const EVENT_GOT_POTION_SAMPLE
+	const EVENT_STARTER_SWAP_MET ; Aironfaar mod
+	const EVENT_STARTER_SWAP_DONE ; Aironfaar mod
 
-	; pureRGBnote: ~23 bits of unused event space
+	; pureRGBnote: ~21 bits of unused event space ; Aironfaar mod: was 23
 
 ; Route 2 events
 	const_next $3D8
