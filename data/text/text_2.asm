@@ -483,7 +483,7 @@ TMNotebookText::
 
 	para "<...>"
 
-	para "There are 50 <TM>s"
+	para "There are 70 <TM>s" ; Aironfaar mod: 70 now, not 50!
 	line "in all."
 
 	para "There are also 5"
