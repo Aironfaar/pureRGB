@@ -8,8 +8,8 @@
 	db 95 ; catch rate
 	db 122 ; base exp
 
-	INCBIN "gfx/pokemon/front_alt/goro_raichu.pic", 0, 1 ; sprite dimensions
-	dw GoroRaichuPicFront, GoroRaichuPicBack
+	INCBIN "gfx/pokemon/front/goro_raichu.pic", 0, 1 ; sprite dimensions
+	dw GoroRaichuPicFront, GoroRaichuPicBackSW
 
 	db THUNDERSHOCK, GROWL, THUNDER_WAVE, NO_MOVE ; level 1 learnset
 	db GROWTH_MEDIUM_FAST ; growth rate
@@ -54,7 +54,7 @@
 	db BANK(GoroRaichuPicFront)
 	db 0
 	db BANK(GoroRaichuPicBack)
-	db BANK(GoroRaichuPicBack)
+	db BANK(GoroRaichuPicBackSW)
 
 	dw 0, GoroRaichuPicBack
 
