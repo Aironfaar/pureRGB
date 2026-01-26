@@ -7,8 +7,8 @@
 	db 45 ; catch rate
 	db 190 ; base exp
 
-	INCBIN "gfx/pokemon/front/haunter.pic", 0, 1 ; sprite dimensions
-	dw HaunterPicFront, HaunterPicBackSW
+	INCBIN "gfx/pokemon/front/powered_haunter.pic", 0, 1 ; sprite dimensions ; Aironfaar mod
+	dw PoweredHaunterPicFront, HaunterPicBackSW
 
 	db LICK, CONFUSE_RAY, NIGHT_SHADE, NO_MOVE ; level 1 learnset
 	db GROWTH_MEDIUM_SLOW ; growth rate
@@ -47,7 +47,7 @@
 	FLASH
 	; end
 
-	db BANK(HaunterPicFront)
+	db BANK(PoweredHaunterPicFront)
 	db 0
 	db BANK(HaunterPicBack)
 	db BANK(HaunterPicBackSW)
