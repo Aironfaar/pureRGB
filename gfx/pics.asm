@@ -601,6 +601,7 @@ SoldierPic::       INCBIN "gfx/unused_prototype_sprites/soldier.pic"
 ChiefPic::         INCBIN "gfx/unused_prototype_sprites/chief.pic"
 GymGuidePic::      INCBIN "gfx/unused_prototype_sprites/gym_guide.pic"
 
+
 SECTION "Pics 11", ROMX
 
 ArticunoPicFrontAlt:: INCBIN "gfx/pokemon/front_alt/articuno.pic"
@@ -614,16 +615,6 @@ WinterDragonairPicFront:: INCBIN "gfx/pokemon/front_alt/dragonair.pic"
 VolcanicMagmarPicFront:: INCBIN "gfx/pokemon/front_alt/volcanic_magmar.pic"
 VolcanicMagmarPicBackSW:: INCBIN "gfx/pokemon/back_sw/volcanic_magmarb.pic"
 
-; Aironfaar mod sprites
-GoroRaichuPicFront:: INCBIN "gfx/pokemon/front_alt/goro_raichu.pic"
-GoroRaichuPicBack:: INCBIN "gfx/pokemon/back/goro_raichub.pic"
-KaijuNidorinaPicFront:: INCBIN "gfx/pokemon/front_alt/kaiju_nidorina.pic"
-KaijuNidorinoPicFront:: INCBIN "gfx/pokemon/front_alt/kaiju_nidorino.pic"
-KaijuNidorinoaPicBack:: INCBIN "gfx/pokemon/back/kaiju_nidorinoab.pic"
-KaijuNidoqueenPicFront:: INCBIN "gfx/pokemon/front_alt/kaiju_nidoqueen.pic"
-KaijuNidokingPicFront:: INCBIN "gfx/pokemon/front_alt/kaiju_nidoking.pic"
-KaijuNidomonarchPicBack:: INCBIN "gfx/pokemon/back/kaiju_nidomonarchb.pic"
-
 ; spirits
 TorchedPicFront:: INCBIN "gfx/battle/spirit_torched.pic"
 ChunkyPicFront:: INCBIN "gfx/battle/spirit_chunky.pic"
@@ -636,6 +627,21 @@ LavaSuitBattlePicSW:: INCBIN "gfx/player/lava_suitb_big.pic"
 LavaSuitBattlePic::   INCBIN "gfx/player/lava_suitb.pic"
 ScubaSuitBattlePicSW:: INCBIN "gfx/player/scuba_suitb_big.pic"
 ScubaSuitBattlePic::   INCBIN "gfx/player/scuba_suitb.pic"
+
+
+SECTION "Pics 12", ROMX ; Aironfaar mod sprites
+
+GoroRaichuPicFront:: INCBIN "gfx/pokemon/front/goro_raichu.pic"
+GoroRaichuPicBack:: INCBIN "gfx/pokemon/back/goro_raichub.pic"
+GoroRaichuPicBackSW:: INCBIN "gfx/pokemon/back_sw/goro_raichub.pic"
+KaijuNidorinaPicFront:: INCBIN "gfx/pokemon/front/kaiju_nidorina.pic"
+KaijuNidorinoPicFront:: INCBIN "gfx/pokemon/front/kaiju_nidorino.pic"
+KaijuNidorinoaPicBack:: INCBIN "gfx/pokemon/back/kaiju_nidorinoab.pic"
+KaijuNidorinoaPicBackSW:: INCBIN "gfx/pokemon/back_sw/kaiju_nidorinoab.pic"
+KaijuNidoqueenPicFront:: INCBIN "gfx/pokemon/front/kaiju_nidoqueen.pic"
+KaijuNidokingPicFront:: INCBIN "gfx/pokemon/front/kaiju_nidoking.pic"
+KaijuNidomonarchPicBack:: INCBIN "gfx/pokemon/back/kaiju_nidomonarchb.pic"
+KaijuNidomonarchPicBackSW:: INCBIN "gfx/pokemon/back_sw/kaiju_nidomonarchb.pic"
 
 
 SECTION "Type Icons", ROMX
