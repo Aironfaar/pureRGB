@@ -631,6 +631,7 @@ ScubaSuitBattlePic::   INCBIN "gfx/player/scuba_suitb.pic"
 
 SECTION "Pics 12", ROMX ; Aironfaar mod sprites
 
+PoweredHaunterPicFront:: INCBIN "gfx/pokemon/front/powered_haunter.pic"
 GoroRaichuPicFront:: INCBIN "gfx/pokemon/front/goro_raichu.pic"
 GoroRaichuPicBack:: INCBIN "gfx/pokemon/back/goro_raichub.pic"
 GoroRaichuPicBackSW:: INCBIN "gfx/pokemon/back_sw/goro_raichub.pic"
