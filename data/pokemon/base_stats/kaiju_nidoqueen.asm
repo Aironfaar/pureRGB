@@ -8,8 +8,8 @@
 	db 45 ; catch rate
 	db 194 ; base exp
 
-	INCBIN "gfx/pokemon/front_alt/kaiju_nidoqueen.pic", 0, 1 ; sprite dimensions
-	dw KaijuNidoqueenPicFront, KaijuNidomonarchPicBack
+	INCBIN "gfx/pokemon/front/kaiju_nidoqueen.pic", 0, 1 ; sprite dimensions
+	dw KaijuNidoqueenPicFront, KaijuNidomonarchPicBackSW
 
 	db TACKLE, GROWL, STOMP, NO_MOVE ; level 1 learnset
 	db GROWTH_MEDIUM_SLOW ; growth rate
@@ -67,7 +67,7 @@
 	db BANK(KaijuNidoqueenPicFront)
 	db 0
 	db BANK(KaijuNidomonarchPicBack)
-	db BANK(KaijuNidomonarchPicBack)
+	db BANK(KaijuNidomonarchPicBackSW)
 
 	dw 0, KaijuNidomonarchPicBack
 

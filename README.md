@@ -72,15 +72,17 @@ Others are simply modifications to my personal taste:
 - Caterpie, Metapod, Weedle, Kakuna and Magikarp are back to being unable to learn any TMs and HMs.
 
 ## Credits
-Vortyne - Creator of pureRGB, which this is a modification of
+[Vortyne](https://github.com/Vortyne) - Creator of pureRGB, which this is a modification of
+
+[RockBlackHorn](https://linktr.ee/BlackHornWorkshop) - A friend and artist who strayed from his usual NSFW bara creations to help me out; creator of the high resolution [variant Raichu](https://github.com/Aironfaar/pureRGB/tree/main/gfx/pokemon/back_sw/goro_raichub.png), [variant Nidorina and Nidorino](https://github.com/Aironfaar/pureRGB/tree/main/gfx/pokemon/back_sw/kaiju_nidorinoab.png), and [variant Nidoqueen and Nidoking](https://github.com/Aironfaar/pureRGB/tree/main/gfx/pokemon/back_sw/kaiju_nidomonarchb.png) back sprites
 
 Helix Chamber - [Published their fan-made sprite reconstructions](https://x.com/helixchamber/status/1158772044533813250), some of which I used in this project (more specific credits below)
 
-@catstorm26 - Creator of the [variant Nidorina](https://github.com/Aironfaar/pureRGB/tree/main/gfx/pokemon/front_alt/kaiju_nidorina.png) and [variant Nidoqueen](https://github.com/Aironfaar/pureRGB/tree/main/gfx/pokemon/front_alt/kaiju_nidoqueen.png) sprites; these sprites were originally intended as a reconstruction of a Nidoran or Nidorino/Nidorina protoype, and a reconstruction of the scrapped "Gyaōn", respectively
+[@catstorm26](https://x.com/catstorm26) - Creator of the [variant Nidorina](https://github.com/Aironfaar/pureRGB/tree/main/gfx/pokemon/front/kaiju_nidorina.png) and [variant Nidoqueen](https://github.com/Aironfaar/pureRGB/tree/main/gfx/pokemon/front/kaiju_nidoqueen.png) sprites; these sprites were originally intended as a reconstruction of a Nidoran or Nidorino/Nidorina protoype, and a reconstruction of the scrapped "Gyaōn", respectively
 
-@RacieBeep - Creator of the [variant Nidorino](https://github.com/Aironfaar/pureRGB/tree/main/gfx/pokemon/front_alt/kaiju_nidorino.png), [variant Nidoking](https://github.com/Aironfaar/pureRGB/tree/main/gfx/pokemon/front_alt/kaiju_nidoking.png) and [variant Raichu](https://github.com/Aironfaar/pureRGB/tree/main/gfx/pokemon/front_alt/goro_raichu.png) sprites; these sprites were originally intended as a reconstruction of a Nidoran or Nidorino/Nidorina protoype, a reconstruction of the scrapped "Gyaōn", and a reconstruction of the scrapped "Gorochu", respectively
+[@RacieBeep](https://x.com/raciebeep) - Creator of the [variant Nidorino](https://github.com/Aironfaar/pureRGB/tree/main/gfx/pokemon/front/kaiju_nidorino.png), [variant Nidoking](https://github.com/Aironfaar/pureRGB/tree/main/gfx/pokemon/front/kaiju_nidoking.png) and [variant Raichu](https://github.com/Aironfaar/pureRGB/tree/main/gfx/pokemon/front/goro_raichu.png) sprites; these sprites were originally intended as a reconstruction of a Nidoran or Nidorino/Nidorina protoype, a reconstruction of the scrapped "Gyaōn", and a reconstruction of the scrapped "Gorochu", respectively
 
-Of course, Vortyne's original credits are relevant to this project as well, although these are not written from my own perspective:
+Of course, Vortyne's original credits are relevant to this project as well, so I've copied them over:
 
 Jojobear13 - Tons of code snippets and help via the shinpokered romhack codebase, direct support regarding the pokemon yellow gbc enhancements porting
 
