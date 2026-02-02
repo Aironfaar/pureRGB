@@ -18,7 +18,7 @@ MapHSPointers:
 	dw NoHS
 	dw NoHS
 	dw Route2HS
-	dw NoHS
+	dw Route3HS ; Aironfaar mod: was NoHS
 	dw Route4HS
 	dw Route5HS
 	dw Route6HS
@@ -705,6 +705,8 @@ CinnabarLabTradeRoomHS:
     db CINNABAR_LAB_TRADE_ROOM, CINNABARLABTRADEROOM_SCIENTIST2, HIDE
     db CINNABAR_LAB_TRADE_ROOM, CINNABARLABTRADEROOM_SCIENTIST3, HIDE
     db CINNABAR_LAB_TRADE_ROOM, CINNABARLABTRADEROOM_SCIENTIST4, HIDE
+Route3HS:
+	db ROUTE_3, ROUTE3_ITEM1, SHOW
 ;;; Aironfaar mod end
 	db $FF, $01, SHOW ; end
 	assert_table_length NUM_EXTRA_HS_OBJECTS + 1
