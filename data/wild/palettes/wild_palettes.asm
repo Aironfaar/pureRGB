@@ -25,11 +25,11 @@ WildPalettePointers:
 	dw SeaRoutesWildPalettes   ; CINNABAR_ISLAND
 	dw DefaultPalettes         ; INDIGO_PLATEAU
 	dw DefaultPalettes         ; unused
-	dw Route1WildPalettes      ; Aironfaar mod
-	dw Route2WildPalettes      ; Aironfaar mod
+	dw Route1WildPalettes      ; ROUTE_1 ; Aironfaar mod
+	dw Route2WildPalettes      ; ROUTE_2 ; Aironfaar mod
 	dw DefaultPalettes         ; ROUTE_3
-	dw DefaultPalettes         ; ROUTE_4
-	dw Route5WildPalettes         ; ROUTE_5
+	dw Route4WildPalettes      ; ROUTE_4 ; Aironfaar mod
+	dw DefaultPalettes         ; ROUTE_5 ; Aironfaar mod
 	dw Route6WildPalettes         ; ROUTE_6
 	dw Route7WildPalettes         ; ROUTE_7
 	dw DefaultPalettes         ; ROUTE_8

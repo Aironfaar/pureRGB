@@ -6,10 +6,10 @@ Route5WildMons:
 	db 10, ODDISH
 	db 12, FARFETCHD
 	db 15, ODDISH
-	db 16, BULBASAUR
-	db 16, BULBASAUR
-	db 14, CHANSEY
-	db 16, CHANSEY
+	db 15, BULBASAUR ; Aironfaar mod
+	db 15, SQUIRTLE ; Aironfaar mod
+	db 15, CHARMANDER ; Aironfaar mod
+	db 15, CHARMANDER ; Aironfaar mod
 	end_grass_wildmons
 
 	def_water_wildmons 0 ; encounter rate

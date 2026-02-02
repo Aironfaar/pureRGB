@@ -8,8 +8,8 @@ Route25WildMons:
 	db 12, ABRA
 	db 14, BELLSPROUT
 	db 10, METAPOD
-	db  7, PINSIR
-	db  8, PINSIR
+	db  7, MR_MIME ; Aironfaar mod
+	db  8, MR_MIME ; Aironfaar mod
 	end_grass_wildmons
 
 	def_water_wildmons 7 ; encounter rate

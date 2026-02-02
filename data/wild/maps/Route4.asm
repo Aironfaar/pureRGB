@@ -6,10 +6,10 @@ Route4WildMons:
 	db  6, SANDSHREW
 	db  8, SANDSHREW
 	db 10, SANDSHREW
-	db 12, SQUIRTLE
-	db 12, SQUIRTLE
-	db  8, PIDGEOTTO
-	db 12, PIDGEOTTO
+	db  8, PIDGEOTTO ; Aironfaar mod
+	db 12, PIDGEOTTO ; Aironfaar mod
+	db 12, CHANSEY ; Aironfaar mod
+	db 14, CHANSEY ; Aironfaar mod
 	end_grass_wildmons
 
 	def_water_wildmons 4 ; encounter rate
