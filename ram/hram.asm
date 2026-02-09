@@ -295,15 +295,16 @@ hPlayerXCoord:: db
 
 NEXTU
 
-; $00 = bag full
-; $01 = got item
-; $80 = didn't meet required number of owned mons
-; $FF = player cancelled
-hOaksAideResult::
-hOaksAideRequirement:: ; required number of owned mons
-	db
+;;; Aironfaar mod START: new behavior of Oak's Aides in the field
+; EventFlags: bitflag that denotes which mons have been turned in to Oak's Aide so far
+; - least significant bit: 1 if EVENT_GOT_<HM05/ITEMFINDER/BOOSTER_CHIP> is set, else 0 (expected to be 0, but relevant for ChangeFlags)
+; - next more significant bit: 1 if EVENT_TURNED_IN_<MON> is set, else 0
+; RewardItem: same as before, item constant of reward item
+; ChangeFlags: bitflag that shares the layout of EventFlags; denotes which events will have to be set after OaksAideScript returns
+hOaksAideEventFlags:: db
 hOaksAideRewardItem:: db
-hOaksAideNumMonsOwned:: db
+hOaksAideChangeFlags:: db
+;;; Aironfaar mod END
 
 NEXTU
 hVendingMachineItem:: db

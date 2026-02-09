@@ -1206,24 +1206,107 @@ OaksLabRivalLeaveItAllToMeText:
 	text_far _OaksLabRivalLeaveItAllToMeText
 	text_end
 
-OaksLabScientist1Text: ; Aironfaar mod
+;;; Aironfaar mod start: give the aides different things to say
+OaksLabScientist1Text:
 	text_asm
 	ld hl, .Text
 	rst _PrintText
 	rst TextScriptEnd
 
 .Text:
-	text_far _OaksLabScientist1Text ; Aironfaar mod
+	text_far _OaksLabScientistSeelText
 	text_end
+;;; Aironfaar mod end
 
-;;; Aironfaar mod start: give the aides different things to say
+;;; Aironfaar mod start: give this scientist a useful task
 OaksLabScientist2Text:
 	text_asm
-	ld hl, .Text
+	CheckEvent EVENT_GOT_BOOSTER_CHIP
+	jr z, .notDone
+	CheckEvent EVENT_BOOSTER_CHIP_ACTIVE
+	jr z, .boosterChipNotActive
+	ld hl, .RemoveBoosterText
+	rst _PrintText
+	call YesNoChoice
+	ld a, [wCurrentMenuItem]
+	and a
+	jr nz, .noUninstall
+	lb bc, BOOSTER_CHIP, 1
+	call GiveItem
+	jr nc, .bagFull
+	ResetEvent EVENT_BOOSTER_CHIP_ACTIVE
+	callfar RemoveBoosterChipSounds ; finds this function in scripts/Route15Gate2F.asm
+	ld hl, .DoneText
+	jr .endPrint
+.bagFull
+	ld hl, .NoRoomText
+	jr .endPrint
+.noUninstall
+	ld hl, .NoUninstallText
+	jr .endPrint
+.boosterChipNotActive
+	ld hl, .ThanksText
+.endPrint
 	rst _PrintText
 	rst TextScriptEnd
+.notDone
+	ld hl, .IntroText
+	rst _PrintText
+	CheckEvent EVENT_GOT_ITEMFINDER
+	jr z, .checkHM05
+	ld hl, .Route15Text
+	jr .endPrint
+.checkHM05
+	CheckEvent EVENT_GOT_HM05
+	jr z, .checkJourneyProgress
+	ld hl, .Route11Text
+	jr .endPrint
+.checkJourneyProgress
+	CheckEvent EVENT_BEAT_MISTY
+	jr z, .checkGotPokedex
+	ld hl, .Route2Text
+	jr .endPrint
+.checkGotPokedex
+	CheckEvent EVENT_GOT_POKEDEX
+	jr z, .important
+	ld hl, .NotYetText
+	jr .endPrint
+.important
+	ld hl, .ImportantText
+	jr .endPrint
 
-.Text:
-	text_far _OaksLabScientist2Text
+.RemoveBoosterText:
+	text_far _Route15GateUpstairsRemoveBoosterText
+	text_end
+.DoneText:
+	text_far _Route15GateUpstairsDoneText
+	sound_get_item_1
+	text_end
+.NoRoomText:
+	text_far _PewterGymTM34NoRoomText
+	text_end
+.NoUninstallText:
+	text_far _Route15GateUpstarsFairEnoughText
+	text_end
+.ThanksText:
+	text_far _OaksLabScientistFieldResearchThanksText
+	text_end
+.IntroText:
+	text_far _OaksLabScientistFieldResearchIntroText
+	text_end
+.Route15Text:
+	text_far _OaksLabScientistFieldResearchRoute15Text
+	text_end
+.Route11Text:
+	text_far _OaksLabScientistFieldResearchRoute11Text
+	text_end
+.Route2Text:
+	text_far _OaksLabScientistFieldResearchRoute2Text
+	text_end
+.NotYetText:
+	text_far _OaksLabScientistFieldResearchNotYetText
+	text_end
+.ImportantText:
+	text_far _OaksLabScientistFieldResearchImportantText
 	text_end
 ;;; Aironfaar mod end

@@ -24,7 +24,6 @@ INCLUDE "text/SilphCo2F.asm"
 INCLUDE "text/SilphCo3F.asm"
 INCLUDE "text/SilphCo4F.asm"
 INCLUDE "text/CinnabarVolcano.asm"
-INCLUDE "text/InGameTrades_3.asm" ; Aironfaar mod
 
 
 SECTION "Text 2", ROMX
@@ -56,7 +55,6 @@ INCLUDE "text/LoreleisRoom.asm"
 INCLUDE "text/BrunosRoom.asm"
 INCLUDE "text/AgathasRoom.asm"
 INCLUDE "text/RockTunnelB1F.asm"
-INCLUDE "text/InGameTrades_1.asm" ; Aironfaar mod
 
 
 SECTION "Text 3", ROMX
@@ -92,7 +90,7 @@ INCLUDE "text/RockTunnelPokecenter.asm"
 INCLUDE "text/RockTunnel1F.asm"
 INCLUDE "text/PowerPlant.asm"
 INCLUDE "text/Route11Gate1F.asm"
-INCLUDE "text/Route11Gate2F.asm"
+; Aironfaar mod: moved text/Route11Gate2F.asm to Text 14
 INCLUDE "text/DiglettsCaveRoute11.asm"
 INCLUDE "text/Route12Gate1F.asm"
 INCLUDE "text/Route12Gate2F.asm"
@@ -141,7 +139,6 @@ INCLUDE "text/CinnabarLabTradeRoom.asm"
 INCLUDE "text/FuchsiaMeetingRoom.asm"
 INCLUDE "text/SSAnneKitchen.asm"
 INCLUDE "text/SaffronAbandonedBuilding.asm"
-INCLUDE "text/InGameTrades_2.asm" ; Aironfaar mod
 
 SECTION "Text 6", ROMX
 
@@ -152,7 +149,7 @@ INCLUDE "data/text/text_3.asm"
 
 INCLUDE "text/RedsHouse1F.asm"
 INCLUDE "text/BluesHouse.asm"
-INCLUDE "text/OaksLab.asm"
+; Aironfaar mod: text/OaksLab.asm moved to Text 14
 INCLUDE "text/pokedex_ratings.asm"
 INCLUDE "text/ViridianPokecenter.asm"
 INCLUDE "text/ViridianMart.asm"
@@ -298,6 +295,16 @@ INCLUDE "text/OptionsInfoText.asm"
 SECTION "Text 13", ROMX
 INCLUDE "text/PokemonTowerCatacombs.asm"
 INCLUDE "text/ErikAndSara.asm"
+
+;;; Aironfaar mod START: new section for my additions and changed files that got too large
+SECTION "Text 14", ROMX
+
+INCLUDE "text/OaksLab.asm"
+INCLUDE "text/Route11Gate2F.asm"
+INCLUDE "text/InGameTrades_1.asm"
+INCLUDE "text/InGameTrades_2.asm"
+INCLUDE "text/InGameTrades_3.asm"
+;;; Aironfaar mod END
 
 SECTION "Pokédex Text", ROMX
 

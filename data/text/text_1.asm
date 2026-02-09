@@ -95,68 +95,81 @@ _NoMoreRoomForItemText::
 	line "items!"
 	done
 
-_OaksAideHiText::
-	text "Hi! Remember me?"
-	line "I'm PROF.OAK's"
-	cont "AIDE!"
-
-	para "If you caught @"
-	text_decimal hOaksAideRequirement, 1, 3
-	text_start
-	line "kinds of #MON,"
-	cont "I'm supposed to"
-	cont "give you this"
-	cont "@"
-	text_ram wOaksAideRewardItemName
-	text "!"
-
-	para "So, <PLAYER>! Have"
-	line "you caught at"
-	cont "least @"
-	text_decimal hOaksAideRequirement, 1, 3
-	text " kinds of"
-	cont "#MON?"
-	done
-
-_OaksAideUhOhText::
-	text "Let's see<...>"
-	line "Uh-oh! You have"
-	cont "caught only @"
-	text_decimal hOaksAideNumMonsOwned, 1, 3
-	text_start
-	cont "kinds of #MON!"
-
-	para "You need @"
-	text_decimal hOaksAideRequirement, 1, 3
-	text " kinds"
-	line "if you want the"
-	cont "@"
-	text_ram wOaksAideRewardItemName
-	text "."
-	done
-
-_OaksAideComeBackText::
-	text "Oh. I see."
-
-	para "When you get @"
-	text_decimal hOaksAideRequirement, 1, 3
-	text_start
-	line "kinds, come back"
-	cont "for @"
-	text_ram wOaksAideRewardItemName
-	text "."
-	done
-
-_OaksAideHereYouGoText::
-	text "Great! You have"
-	line "caught @"
-	text_decimal hOaksAideNumMonsOwned, 1, 3
-	text " kinds"
-	cont "of #MON!"
-	cont "Congratulations!"
-
-	para "Here you go!"
+;;; Aironfaar mod START: new Oak's Aide behavior
+_OaksAideGreetingText::
+	text "Hi <PLAYER>!"
+	line "I'm one of"
+	cont "PROF.OAK's AIDEs,"
+	cont "working in the"
+	cont "field!"
 	prompt
+; then: if not preparing, selection menu "Explain!", "Can I help?", "Take this.", "See you!"
+
+_OaksAidePreparingText::
+	text "But I'm busy"
+	line "preparing my"
+	cont "research project."
+	prompt
+
+; "Tell me more!": aide-specific CurrentResearchText, then
+_OaksAideHelpMeText::
+	text "If you assist me,"
+	line "you'll get this"
+	cont "@"
+	text_ram wOaksAideRewardItemName
+	text "."
+	prompt
+
+; "See you later!" and canceling help
+_OaksAideComeBackText::
+	text "Alright. I'll be"
+	line "here."
+	prompt
+
+; "Can I help?"
+_OaksAideNeedMonsText::
+	text "I need to study"
+	line "certain #MON."
+	
+	para "Use your #DEX"
+	line "to learn in which"
+	cont "AREAs they live."
+	
+	para "Please catch and"
+	line "bring them to me."
+	prompt
+; then aide-specific <PokemonName>Text with DisplayPokedex spliced in
+
+; when providing a mon
+_OaksAideWhichMonText::
+	text "Splendid! Which"
+	line "#MON is it?"
+	prompt
+
+_OaksAideAppreciateAssistanceText::
+	text "Thank you for"
+	line "your hard work!"
+	prompt
+
+; when research is done
+_OaksAideDoneText::
+	text "Due to your"
+	line "contributions, my"
+	cont "work here is"
+	cont "already done."
+	cont "Thank you!"
+
+	para "Here's the item I"
+	line "promised."
+	prompt
+
+; when offering the wrong mon
+_OaksAideIncorrectMonText::
+	text "That's not a"
+	line "#MON I need to"
+	cont "study right now."
+	done
+;;; Aironfaar mod END
 
 _OaksAideGotItemText::
 	text "<PLAYER> got the"

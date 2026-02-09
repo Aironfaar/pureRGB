@@ -492,3 +492,12 @@ SaveFileUpdaterMenu::
 	dw TwoOptionMenu
 	db "Before v2.6.0"
 	next "Original Game@"
+
+;;; Aironfaar mod START
+OaksAideResponseMenu::
+	dw FourOptionMenu
+	db "Explain!"
+	next "Can I help?"
+	next "Take this."
+	next "See you!@"
+;;; Aironfaar mod END

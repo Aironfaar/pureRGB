@@ -17,6 +17,7 @@ Some of the modifications are supposed to make certain mono type runs go a bit m
 
 Others are simply modifications to my personal taste:
 - The Pokédex now uses meters and kilograms instead of feet and pounds.
+- Prof. Oak's aides now require specific pokémon for their field research instead of checking your pokédex progress before they give you HM05, the Itemfinder, and the Booster Chip, respectively. This is mainly to help mono runs acquire these items without giving them out for free, but I also liked the flavor of it better.
 - Gyarados can now learn Fly.
 - Splash is now a signature move for Magikarps of level 20 or higher, as well as for Gyarados. The Move Mystic will tell you more. In turn, Magikarp and Gyarados now need more EXP to level up. To make sure that Gyarados can be encountered in the wild with Splash, they now know Splash at level 1.
 - Cursed Gengar now has different stats. The Dark and Light Channeler that inflict and remove the curse will inform you of the exact stat changes. To emphasize the new stat spread of Cursed Gengar, Gastly, Haunter and Gengar now learn Poison Gas instead of Filthy Slam at level 41. They can still learn Filthy Slam via TM.

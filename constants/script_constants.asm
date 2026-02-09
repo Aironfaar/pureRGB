@@ -62,8 +62,4 @@ DEF NUM_NPC_TRADES EQU const_value
 ;;; Aironfaar mod end
 DEF NUM_TRADE_DIALOGSETS EQU const_value
 
-; OaksAideScript results
-DEF OAKS_AIDE_BAG_FULL        EQU $00
-DEF OAKS_AIDE_GOT_ITEM        EQU $01
-DEF OAKS_AIDE_NOT_ENOUGH_MONS EQU $80
-DEF OAKS_AIDE_REFUSED         EQU $ff
+; Aironfaar mod: changed how Oak's Aides work, so removed OaksAideScript results as they are no longer needed

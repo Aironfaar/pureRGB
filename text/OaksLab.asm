@@ -358,22 +358,90 @@ _OaksLabRivalLeaveItAllToMeText::
 	cont "<PLAYER>! Hahaha!"
 	done
 
-_OaksLabScientist1Text:: ; Aironfaar mod
+;;; Aironfaar mod start: give this scientist a useful task
+_OaksLabScientistFieldResearchIntroText::
 	text "I study #MON as"
 	line "PROF.OAK's AIDE."
+	
+	para "My job is the"
+	line "coordination of"
+	cont "field research."
+	prompt
+
+_OaksLabScientistFieldResearchImportantText::
+	text "It's important"
+	line "work!"
 	done
 
+_OaksLabScientistFieldResearchNotYetText::
+	text "We might ask you"
+	line "for assistance"
+	cont "later. But for"
+	cont "now, better focus"
+	cont "on your journey!"
+	done
+
+_OaksLabScientistFieldResearchRoute2Text::
+	text "In ROUTE 2, on"
+	line "the path around"
+	cont "VIRIDIAN FOREST,"
+	cont "one of my fellow"
+	cont "AIDEs could use"
+	cont "your help."
+	done
+
+_OaksLabScientistFieldResearchRoute11Text::
+	text "Another AIDE"
+	line "conducts research"
+	cont "toward the east"
+	cont "of ROUTE 11. Why"
+	cont "don't you go see"
+	cont "what he's doing?"
+	done
+
+_OaksLabScientistFieldResearchRoute15Text::
+	text "We are close to a"
+	line "breakthrough on"
+	cont "ROUTE 15, east of"
+	cont "FUCHSIA CITY!"
+	cont "We'd greatly"
+	cont "appreciate your"
+	cont "continued aid."
+	done
+
+_OaksLabScientistFieldResearchThanksText::
+	text "For now, there is"
+	line "no ongoing field"
+	cont "research."
+
+	para "Thank you for"
+	line "your prolific"
+	cont "contributions!"
+
+	para "Should you want"
+	line "to remove the"
+	cont "BOOSTER CHIP"
+	cont "after installing"
+	cont "it, speak to me"
+	cont "or my colleague"
+	cont "in ROUTE 15."
+	done
+;;; Aironfaar mod end
+
 ;;; Aironfaar mod start: new text acknowledges a peculiarity brought on by other changes and provides an explanation
-_OaksLabScientist2Text::
+_OaksLabScientistSeelText::
 	text "Did you know?"
+	
 	para "A narrow tunnel"
 	line "connects the"
 	cont "bodies of water"
 	cont "of Route 22 and"
 	cont "Route 23."
+	
 	para "Young SEEL born in"
 	line "Route 23 like to"
 	cont "pass through it."
+	
 	para "Sometimes, you can"
 	line "see them sunbathe"
 	cont "in Route 22!"
