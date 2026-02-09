@@ -6,8 +6,8 @@ Route11WildMons:
 	db 10, DROWZEE
 	db 13, DROWZEE
 	db 14, DROWZEE
-	db 15, SCYTHER
-	db 16, SCYTHER
+	db 15, PINSIR ; Aironfaar mod
+	db 16, PINSIR ; Aironfaar mod
 	db 11, TAUROS
 	db 15, TAUROS
 	end_grass_wildmons

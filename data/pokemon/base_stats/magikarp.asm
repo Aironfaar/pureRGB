@@ -11,7 +11,7 @@
 	dw MagikarpPicFront, MagikarpPicBackSW
 
 	db TACKLE, BUBBLE, SPLASH, NO_MOVE ; level 1 learnset
-	db GROWTH_MEDIUM_SLOW ; growth rate
+	db GROWTH_SLOW ; growth rate ; Aironfaar mod
 
 	; tm/hm learnset
 	tmhm ; Aironfaar mod: return to inability to learn TMs and HMs - this feels too iconic to change

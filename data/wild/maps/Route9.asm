@@ -6,8 +6,8 @@ Route9WildMons:
 	db 19, ONIX
 	db 18, MAGMAR
 	db 19, MAGMAR
-	db 14, CHARMANDER
-	db 15, CHARMANDER
+	db 14, GEODUDE ; Aironfaar mod
+	db 15, GEODUDE ; Aironfaar mod
 	db 20, MAGMAR
 	db 21, MAGMAR
 	end_grass_wildmons

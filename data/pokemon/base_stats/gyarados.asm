@@ -11,7 +11,7 @@
 	dw GyaradosPicFront, GyaradosPicBackSW
 
 	db TACKLE, BUBBLE, SPLASH, BITE ; level 1 learnset ; Aironfaar mod
-	db GROWTH_MEDIUM_SLOW ; growth rate
+	db GROWTH_SLOW ; growth rate ; Aironfaar mod
 
 	; tm/hm learnset
 	tmhm \

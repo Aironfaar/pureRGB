@@ -26,6 +26,9 @@ DEF ITEM_VIRIDIAN_FOREST_BEFORE_LAST_BEND   EQU POTION 			; 2 of them
 ; Pewter City
 DEF ITEM_PEWTER_CITY_NORTHWEST_CORNER_NEW   EQU X_SPECIAL		; 2 of them
 
+; Route 3 ; Aironfaar mod
+DEF ITEM_ROUTE_3_EEK_TOUCH_TRAINER_NEW      EQU THUNDER_STONE   ; Aironfaar mod
+
 ; Mt Moon
 DEF ITEM_MT_MOON_1F_LEFT_UP_FROM_ENTRANCE   EQU POTION 			; 3 of them
 DEF ITEM_MT_MOON_1F_RIGHT_FROM_ENTRANCE     EQU POTION 			; 3 of them
@@ -48,7 +51,7 @@ DEF ITEM_SS_ANNE_B1F_ROOMS                  EQU MAX_POTION		; 2 of them
 
 ; Route 2
 DEF ITEM_ROUTE_2_SOUTH1                     EQU HP_UP
-DEF ITEM_ROUTE_2_SOUTH2                     EQU THUNDER_STONE
+DEF ITEM_ROUTE_2_SOUTH2                     EQU RARE_CANDY		; Aironfaar mod: was THUNDER_STONE, replaced by new placement on Route 3
 
 ; Rock Tunnel
 DEF ITEM_ROCK_TUNNEL_B1F_WEST_NEW           EQU HP_UP			; 3 of them

@@ -24,6 +24,7 @@ Route3_TextPointers:
 	dw_const Route3Youngster4Text,    TEXT_ROUTE3_YOUNGSTER4
 	dw_const Route3Youngster5Text,    TEXT_ROUTE3_YOUNGSTER5
 	dw_const Route3CooltrainerF3Text, TEXT_ROUTE3_COOLTRAINER_F3
+	dw_const PickUpItemText,          TEXT_ROUTE3_ITEM1 ; Aironfaar mod
 	dw_const Route3SignText,          TEXT_ROUTE3_SIGN
 
 Route3TrainerHeaders:

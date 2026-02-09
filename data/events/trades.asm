@@ -11,7 +11,7 @@ TradeMons:
 	; Aironfaar mod: doesn't matter, switched it all up
 ;;; Aironfaar mod start
 	db PIDGEOTTO,  JYNX,       TRADE_DIALOGSET_LOLA,      "Lola@@@@@@@" ; cerulean city
-	db CHANSEY,    ELECTABUZZ, TRADE_DIALOGSET_LIGHTYEAR, "Lightyear@@" ; vermilion city
+	db LICKITUNG,  ELECTABUZZ, TRADE_DIALOGSET_LIGHTYEAR, "Lightyear@@" ; vermilion city
 	db TAUROS,     TANGELA,    TRADE_DIALOGSET_DISCOMBOB, "Discombob@@" ; ss anne
 	db BULBASAUR,  BULBASAUR,  TRADE_DIALOGSET_BULBERT,   "Bulbert@@@@" ; route 2
 	db SQUIRTLE,   SQUIRTLE,   TRADE_DIALOGSET_MIRTLE,    "Mirtle@@@@@" ; route 5

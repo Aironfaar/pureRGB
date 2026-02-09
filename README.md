@@ -18,7 +18,7 @@ Some of the modifications are supposed to make certain mono type runs go a bit m
 Others are simply modifications to my personal taste:
 - The Pokédex now uses meters and kilograms instead of feet and pounds.
 - Gyarados can now learn Fly.
-- Splash is now a signature move for Magikarps of level 20 or higher, as well as for Gyarados. The Move Mystic will tell you more. To make sure that Gyarados can be encountered in the wild with Splash, they now know Splash at level 1.
+- Splash is now a signature move for Magikarps of level 20 or higher, as well as for Gyarados. The Move Mystic will tell you more. In turn, Magikarp and Gyarados now need more EXP to level up. To make sure that Gyarados can be encountered in the wild with Splash, they now know Splash at level 1.
 - Cursed Gengar now has different stats. The Dark and Light Channeler that inflict and remove the curse will inform you of the exact stat changes. To emphasize the new stat spread of Cursed Gengar, Gastly, Haunter and Gengar now learn Poison Gas instead of Filthy Slam at level 41. They can still learn Filthy Slam via TM.
 - Wild Missingno. are diversified. Before the change, catching one of them felt like a cheat since they were all already at level 120. Now, they appear at levels 1 to 120, and due to additions of TM moves (which it could learn already anyway) to its natural learnset, every level of wild Missingno. has a different moveset.
 - Some encounter tables have been touched upon for nitpicky reasons, like wondering how a horse, flaming or not, could live in the rugged terrain of a volcanic mountain.

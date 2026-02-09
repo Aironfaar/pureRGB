@@ -2,9 +2,9 @@ Route22WildMons:
 	def_grass_wildmons 40 ; encounter rate
 	db  3, NIDORAN_M
 	db  3, NIDORAN_F
-	db  4, MEOWTH
+	db  4, GROWLITHE ; Aironfaar mod
 	db  4, DODUO ; Aironfaar mod
-	db  2, MEOWTH
+	db  3, RATTATA ; Aironfaar mod
 	db  2, SPEAROW
 	db  3, SPEAROW ; Aironfaar mod
 	db  5, SEEL ; Aironfaar mod

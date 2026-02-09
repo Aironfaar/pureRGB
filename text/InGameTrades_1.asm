@@ -42,7 +42,7 @@ _WannaTradeLightyearText::
 	line "I'd admittedly"
 	cont "prefer something"
 	cont "mellow, like a"
-	cont "CHANSEY."
+	cont "LICKITUNG."
 	para "Hey, how about we"
 	line "trade?"
 	done
