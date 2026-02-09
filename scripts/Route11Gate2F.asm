@@ -17,28 +17,59 @@ Route11Gate2FYoungsterText:
 
 Route11Gate2FOaksAideText:
 	text_asm
-	CheckEvent EVENT_GOT_ITEMFINDER, 1
-	jr c, .got_item
-	ld a, 20 ; PureRGBnote: CHANGED: itemfinder caught pokemon requirement lowered to 20 pokemon.
-	ldh [hOaksAideRequirement], a
-	ld a, ITEMFINDER
-	ldh [hOaksAideRewardItem], a
-	ld [wNamedObjectIndex], a
-	call GetItemName
-	ld h, d
-	ld l, e
-	ld de, wOaksAideRewardItemName
-	ld bc, ITEM_NAME_LENGTH
-	rst _CopyData
-	predef OaksAideScript
-	ldh a, [hOaksAideResult]
-	dec a ; OAKS_AIDE_GOT_ITEM?
-	jr nz, .no_item
-	SetEvent EVENT_GOT_ITEMFINDER
-.got_item
+	CheckEvent EVENT_GOT_ITEMFINDER
+	jr z, .needItem
 	ld hl, .ItemfinderDescriptionText
 	rst _PrintText
-.no_item
+	rst TextScriptEnd
+.needItem
+	ld a, ITEMFINDER
+	ldh [hOaksAideRewardItem], a
+	xor a
+	ldh [hOaksAideChangeFlags], a
+	ld b, 2
+	CheckEventHL EVENT_TURNED_IN_FARFETCHD
+	jr z, .needFarfetchd
+	add b
+.needFarfetchd
+	sla b
+	CheckEventHL EVENT_TURNED_IN_PIKACHU
+	jr z, .needPikachu
+	add b
+.needPikachu
+	sla b
+	CheckEventHL EVENT_TURNED_IN_PINSIR
+	jr z, .needPinsir
+	add b
+.needPinsir
+	sla b
+	CheckEventHL EVENT_TURNED_IN_MAGIKARP
+	jr z, .needMagikarp
+	add b
+.needMagikarp
+	ldh [hOaksAideEventFlags], a	
+	predef OaksAideScript
+	ldh a, [hOaksAideChangeFlags]
+	bit 0, a
+	jr z, .stillNeedItem
+	SetEvent EVENT_GOT_ITEMFINDER
+.stillNeedItem
+	bit 1, a
+	jr z, .noChangeFarfetchd
+	SetEvent EVENT_TURNED_IN_FARFETCHD
+.noChangeFarfetchd
+	bit 2, a
+	jr z, .noChangePikachu
+	SetEvent EVENT_TURNED_IN_PIKACHU
+.noChangePikachu
+	bit 3, a
+	jr z, .noChangePinsir
+	SetEvent EVENT_TURNED_IN_PINSIR
+.noChangePinsir
+	bit 4, a
+	jr z, .noChangeMagikarp
+	SetEvent EVENT_TURNED_IN_MAGIKARP
+.noChangeMagikarp
 	rst TextScriptEnd
 
 .ItemfinderDescriptionText:

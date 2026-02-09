@@ -404,8 +404,12 @@
 	const EVENT_BEAT_ROUTE_2_TRAINER_0
 	const EVENT_BEAT_ROUTE_2_TRAINER_1
 	const EVENT_BEAT_ROUTE_2_TRAINER_2
+	const EVENT_TURNED_IN_MEOWTH		; Aironfaar mod
+	const EVENT_TURNED_IN_VENONAT		; Aironfaar mod
+	const EVENT_TURNED_IN_ZUBAT			; Aironfaar mod
+	const EVENT_TURNED_IN_EXEGGCUTE		; Aironfaar mod
 
-	; pureRGBnote: ~5 bits of unused event space
+	; pureRGBnote: 0 bits of space ; Aironfaar mod: was ~5 bits of unused event space (which should've been marked as 4!)
 
 ; Route 3 events
 	const_next $3E0
@@ -564,7 +568,11 @@ DEF FLAG_JIGGLE_TOGGLE EQU const_value
 	const EVENT_BEAT_ROUTE_11_TRAINER_7
 	const EVENT_BEAT_ROUTE_11_TRAINER_8
 	const EVENT_BEAT_ROUTE_11_TRAINER_9
-	const_skip 4
+	; const_skip 4 ; Aironfaar mod
+	const EVENT_TURNED_IN_FARFETCHD ; Aironfaar mod
+	const EVENT_TURNED_IN_PIKACHU ; Aironfaar mod
+	const EVENT_TURNED_IN_PINSIR ; Aironfaar mod
+	const EVENT_TURNED_IN_MAGIKARP ; Aironfaar mod
 	const EVENT_GOT_ITEMFINDER
 
 	; pureRGBnote: 0 bits of space
@@ -636,8 +644,10 @@ DEF FLAG_JIGGLE_TOGGLE EQU const_value
 	const EVENT_BEAT_ROUTE_15_TRAINER_7
 	const EVENT_BEAT_ROUTE_15_TRAINER_8
 	const EVENT_BEAT_ROUTE_15_TRAINER_9
+	const EVENT_TURNED_IN_CHANSEY ; Aironfaar mod
+	const EVENT_TURNED_IN_RHYDON ; Aironfaar mod
 
-	; pureRGbnote: 5 bits of unused space
+	; pureRGbnote: 3 bits of unused space ; Aironfaar mod: used to be 5 bits of unused space
 
 ; Route 16 events
 	const_next $4C0

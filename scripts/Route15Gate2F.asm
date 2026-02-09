@@ -11,23 +11,7 @@ Route15Gate2F_TextPointers:
 Route15Gate2FOaksAideText:
 	text_asm
 	CheckEvent EVENT_GOT_BOOSTER_CHIP
-	jr nz, .got_item
-	ld a, 80
-	ldh [hOaksAideRequirement], a
-	ld a, BOOSTER_CHIP
-	ldh [hOaksAideRewardItem], a
-	ld [wNamedObjectIndex], a
-	call GetItemName
-	ld hl, wNameBuffer
-	ld de, wOaksAideRewardItemName
-	ld bc, ITEM_NAME_LENGTH
-	rst _CopyData
-	predef OaksAideScript
-	ldh a, [hOaksAideResult]
-	cp OAKS_AIDE_GOT_ITEM
-	jr nz, .no_item
-	SetEvent EVENT_GOT_BOOSTER_CHIP
-.got_item
+	jr z, .needItem
 	CheckEvent EVENT_BOOSTER_CHIP_ACTIVE
 	jr z, .boosterChipNotActive
 	ld hl, Route15GateUpstairsRemoveBoosterText
@@ -42,20 +26,48 @@ Route15Gate2FOaksAideText:
 	ResetEvent EVENT_BOOSTER_CHIP_ACTIVE
 	call RemoveBoosterChipSounds
 	ld hl, Route15GateUpstairsDoneText
-	rst _PrintText
-	jr .no_item
+	jr .endPrint
 .bagFull
 	ld hl, Route15GateUpstairsNoRoomText
-	rst _PrintText
-	jr .no_item
+	jr .endPrint
 .noUninstall
 	ld hl, Route15GateUpstairsNoUninstallText
-	rst _PrintText
-	jr .no_item
+	jr .endPrint
 .boosterChipNotActive
 	ld hl, BoosterChipText
+.endPrint
 	rst _PrintText
-.no_item
+	rst TextScriptEnd
+.needItem
+	ld a, BOOSTER_CHIP
+	ldh [hOaksAideRewardItem], a
+	xor a
+	ldh [hOaksAideChangeFlags], a
+	ld b, 2
+	CheckEventHL EVENT_TURNED_IN_CHANSEY
+	jr z, .needChansey
+	add b
+.needChansey
+	sla b
+	CheckEventHL EVENT_TURNED_IN_RHYDON
+	jr z, .needRhydon
+	add b
+.needRhydon
+	ldh [hOaksAideEventFlags], a	
+	predef OaksAideScript
+	ldh a, [hOaksAideChangeFlags]
+	bit 0, a
+	jr z, .stillNeedItem
+	SetEvent EVENT_GOT_BOOSTER_CHIP
+.stillNeedItem
+	bit 1, a
+	jr z, .noChangeChansey
+	SetEvent EVENT_TURNED_IN_CHANSEY
+.noChangeChansey
+	bit 2, a
+	jr z, .noChangeRhydon
+	SetEvent EVENT_TURNED_IN_RHYDON
+.noChangeRhydon
 	rst TextScriptEnd
 
 RemoveBoosterChipSounds:
@@ -77,7 +89,6 @@ RemoveBoosterChipSounds:
 	rst _PlaySound
 	ld c, 30
 	jp PlayDefaultMusic
-	
 
 BoosterChipText:
 	text_far _Route15Gate2FOaksAideBoosterChipText
@@ -101,7 +112,7 @@ Route15GateUpstairsRemoveBoosterText:
 	text_end
 
 Route15GateUpstairsNoUninstallText:
-	text_far _FossilGuyDenied
+	text_far _Route15GateUpstarsFairEnoughText
 	text_end
 
 Route15GateUpstairsDoneText:

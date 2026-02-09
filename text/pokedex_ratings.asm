@@ -23,8 +23,11 @@ _DexRatingText_Own0To9::
 _DexRatingText_Own10To19::
 	text "You're on the"
 	line "right track!"
-	cont "Get a FLASH HM"
-	cont "from my AIDE!"
+;;; Aironfaar mod start
+	cont "Have you met my"
+	cont "AIDEs in the"
+	cont "field yet?"
+;;; Aironfaar mod end
 	done
 
 _DexRatingText_Own20To29::
@@ -37,8 +40,13 @@ _DexRatingText_Own20To29::
 _DexRatingText_Own30To39::
 	text "Good, you're"
 	line "trying hard!"
-	cont "Get an ITEMFINDER"
-	cont "from my AIDE!"
+;;; Aironfaar mod start
+	cont "If you help with"
+	cont "my AIDEs' field"
+	cont "research, they"
+	cont "will help you"
+	cont "in turn!"
+;;; Aironfaar mod end
 	done
 
 _DexRatingText_Own40To49::
@@ -61,16 +69,27 @@ _DexRatingText_Own60To69::
 
 _DexRatingText_Own70To79::
 	text "Looking good!"
-	line "Go find my AIDE"
-	cont "when you get 80!"
+;;; Aironfaar mod start
+	line "You probably have"
+	cont "a lot of #MON"
+	cont "by now that you"
+	cont "need to train so"
+	cont "they can evolve."
+;;; Aironfaar mod end
 	done
 
 _DexRatingText_Own80To89::
-	text "You finally got at"
-	line "least 80 species!"
-	cont "Be sure to get a"
-	cont "BOOSTER CHIP from"
-	cont "my AIDE!"
+;;; Aironfaar mod start
+	text "You finally got"
+	line "past the halfway"
+	cont "point!"
+	cont "The BOOSTER CHIP"
+	cont "that my AIDEs are"
+	cont "developing should"
+	cont "help a lot with"
+	cont "your #MON's"
+	cont "training!"
+;;; Aironfaar mod end
 	done
 
 _DexRatingText_Own90To99::
