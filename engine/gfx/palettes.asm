@@ -472,7 +472,7 @@ NonMonCustomPalettes:
 	db -1
 
 SpecialMonCustomPalettes:
-	db HARDENED_ONIX, PAL_BLACKMON, PAL_BLUEMON
+	db HARDENED_ONIX, PAL_0F, PAL_REDBAR ; Aironfaar mod: was PAL_BLACKMON, PAL_BLUEMON
 	db WINTER_DRAGONAIR, PAL_BLUEMON, PAL_0F
 	db -1
 ;;;;;

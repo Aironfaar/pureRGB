@@ -8,7 +8,7 @@
 	db 173 ; base exp
 
 	INCBIN "gfx/pokemon/front/weezing.pic", 0, 1 ; sprite dimensions
-	dw WeezingPicFront, WeezingPicBackSW
+	dw FloatingWeezingPicFront, WeezingPicBackSW ; Aironfaar mod
 
 	db TACKLE, SMOG, NO_MOVE, NO_MOVE ; level 1 learnset
 	db GROWTH_MEDIUM_FAST ; growth rate
@@ -43,7 +43,7 @@
 	FLASH
 	; end
 
-	db BANK(WeezingPicFront)
+	db BANK(FloatingWeezingPicFront) ; Aironfaar mod
 	db 0
 	db BANK(WeezingPicBack)
 	db BANK(WeezingPicBackSW)

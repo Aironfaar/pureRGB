@@ -199,8 +199,7 @@ ClefablePicFront::     INCBIN "gfx/pokemon/front/clefable.pic"
 ClefablePicBackSW::    INCBIN "gfx/pokemon/back_sw/clefableb.pic"
 GoldeenPicFront::      INCBIN "gfx/pokemon/front/goldeen.pic"
 GoldeenPicBackSW::     INCBIN "gfx/pokemon/back_sw/goldeenb.pic"
-MagnemitePicFront::    INCBIN "gfx/pokemon/front/magnemite.pic"
-MagnemitePicBackSW::   INCBIN "gfx/pokemon/back_sw/magnemiteb.pic"
+; moved MagnemitePicFront and MagnemitePicBackSW to Pics 12
 MetapodPicFront::      INCBIN "gfx/pokemon/front/metapod.pic"
 MetapodPicBackSW::     INCBIN "gfx/pokemon/back_sw/metapodb.pic"
 HitmonchanPicFront::  INCBIN "gfx/pokemon/front/hitmonchan.pic"
@@ -631,6 +630,13 @@ ScubaSuitBattlePic::   INCBIN "gfx/player/scuba_suitb.pic"
 
 SECTION "Pics 12", ROMX ; Aironfaar mod sprites
 
+MagnemitePicFront::    INCBIN "gfx/pokemon/front/magnemite.pic"
+MagnemitePicBackSW::   INCBIN "gfx/pokemon/back_sw/magnemiteb.pic"
+FloatingMagnetonPicFront:: INCBIN "gfx/pokemon/front/floating_magneton.pic"
+FloatingMagnetonPicBackSW:: INCBIN "gfx/pokemon/back_sw/floating_magnetonb.pic"
+FloatingWeezingPicFront:: INCBIN "gfx/pokemon/front/floating_weezing.pic"
+HardenedOnixPicFront:: INCBIN "gfx/pokemon/front/hardened_onix.pic"
+HardenedOnixPicBackSW:: INCBIN "gfx/pokemon/back_sw/hardened_onixb.pic"
 PoweredHaunterPicFront:: INCBIN "gfx/pokemon/front/powered_haunter.pic"
 GoroRaichuPicFront:: INCBIN "gfx/pokemon/front/goro_raichu.pic"
 GoroRaichuPicBack:: INCBIN "gfx/pokemon/back/goro_raichub.pic"
