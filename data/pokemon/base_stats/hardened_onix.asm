@@ -9,7 +9,7 @@
 	db 108 ; base exp
 
 	INCBIN "gfx/pokemon/front/onix.pic", 0, 1 ; sprite dimensions
-	dw OnixPicFront, OnixPicBackSW
+	dw HardenedOnixPicFront, HardenedOnixPicBackSW ; Aironfaar mod
 
 	db TACKLE, SCREECH, HARDEN, NO_MOVE ; level 1 learnset
 	db GROWTH_FAST ; growth rate
@@ -51,10 +51,10 @@
 	STRENGTH
 	; end
 
-	db BANK(OnixPicFront)
-	db BANK(OnixPicFrontAlt)
+	db BANK(HardenedOnixPicFront) ; Aironfaar mod
+	db 0 ; Aironfaar mod
 	db BANK(OnixPicBack)
-	db BANK(OnixPicBackSW)
+	db BANK(HardenedOnixPicBackSW) ; Aironfaar mod
 
-	dw OnixPicFrontAlt, OnixPicBack
+	dw 0, OnixPicBack ; Aironfaar mod
 
