@@ -75,9 +75,11 @@ Others are simply modifications to my personal taste:
 ## Credits
 [Vortyne](https://github.com/Vortyne) - Creator of pureRGB, which this is a modification of
 
+Elaszat - A friend and the biggest Pokémon fan I know, whose feedback helped me make a bunch of decisions for this modification; he's also a hobbyist author and posts his short stories on [r/Ctoa](https://www.reddit.com/r/Ctoa)
+
 [RockBlackHorn](https://linktr.ee/BlackHornWorkshop) - A friend and artist who strayed from his usual NSFW bara creations to help me out; creator of the high resolution [variant Raichu](https://github.com/Aironfaar/pureRGB/tree/main/gfx/pokemon/back_sw/goro_raichub.png), [variant Nidorina and Nidorino](https://github.com/Aironfaar/pureRGB/tree/main/gfx/pokemon/back_sw/kaiju_nidorinoab.png), and [variant Nidoqueen and Nidoking](https://github.com/Aironfaar/pureRGB/tree/main/gfx/pokemon/back_sw/kaiju_nidomonarchb.png) back sprites
 
-Helix Chamber - [Published their fan-made sprite reconstructions](https://x.com/helixchamber/status/1158772044533813250), some of which I used in this project (more specific credits below)
+[Helix Chamber](https://helixchamber.com) - [Published their fan-made sprite reconstructions](https://x.com/helixchamber/status/1158772044533813250), some of which I used in this project (more specific credits below)
 
 [@catstorm26](https://x.com/catstorm26) - Creator of the [variant Nidorina](https://github.com/Aironfaar/pureRGB/tree/main/gfx/pokemon/front/kaiju_nidorina.png) and [variant Nidoqueen](https://github.com/Aironfaar/pureRGB/tree/main/gfx/pokemon/front/kaiju_nidoqueen.png) sprites; these sprites were originally intended as a reconstruction of a Nidoran or Nidorino/Nidorina protoype, and a reconstruction of the scrapped "Gyaōn", respectively
 
