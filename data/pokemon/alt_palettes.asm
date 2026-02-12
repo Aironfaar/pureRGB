@@ -137,7 +137,7 @@ AltMonsterPalettes: ; pokemon have alternate palettes depending on where you enc
 	db PAL_CYANMON   ; DITTO
 	db PAL_WHITEMON  ; EEVEE
 	db PAL_0F   ; VAPOREON
-	db PAL_REDMON ; JOLTEON
+	db PAL_MEWMON ; JOLTEON ; Aironfaar mod: was PAL_REDMON
 	db PAL_CYANMON    ; FLAREON
 	db PAL_WHITEMON   ; PORYGON
 	db PAL_BLUEGREENMON   ; OMANYTE

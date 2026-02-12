@@ -472,6 +472,7 @@ NonMonCustomPalettes:
 	db -1
 
 SpecialMonCustomPalettes:
+	db GORO_RAICHU, PAL_REDMON, PAL_CYANMON ; Aironfaar mod: different palettes for new Raichu variant
 	db HARDENED_ONIX, PAL_0F, PAL_REDBAR ; Aironfaar mod: was PAL_BLACKMON, PAL_BLUEMON
 	db WINTER_DRAGONAIR, PAL_BLUEMON, PAL_0F
 	db -1
