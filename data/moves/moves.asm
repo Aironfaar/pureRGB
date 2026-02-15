@@ -20,14 +20,14 @@ Moves:
 	move MEGA_PUNCH,   FLINCH_SIDE_EFFECT2,        100, FIGHTING,     100, 20
 	move PAY_DAY,      PAY_DAY_EFFECT,              60, NORMAL,       100, 20
 	move FIRE_PUNCH,   BURN_SIDE_EFFECT1,           75, FIRE,         100, 15
-	move ICE_PUNCH,    FREEZE_SIDE_EFFECT1,          75, ICE,          100, 15
+	move ICE_PUNCH,    FREEZE_SIDE_EFFECT1,         75, ICE,          100, 15
 	move THUNDERPUNCH, PARALYZE_SIDE_EFFECT1,       75, ELECTRIC,     100, 15
 	move SCRATCH,      NO_ADDITIONAL_EFFECT,        40, NORMAL,       100, 35
 	move VICEGRIP,     PARALYZE_SIDE_EFFECT2,       75, BUG,          100, 30
 	move GUILLOTINE,   OHKO_EFFECT,                  1, NORMAL,        30,  5 ; Aironfaar mod: changed back to NORMAL type to re-establish one type immunity for every OHKO move
 	move RAZOR_WIND,   HEAL_EFFECT,                  0, FLYING,       100, 10 ; -> ROOST
 	move SWORDS_DANCE, ATTACK_UP2_EFFECT,            0, FIRE,         100, 30
-	move CUT,          ATTACK_UP_SIDE_EFFECT,       60, BUG,          100, 10 ; Aironfaar mod: decreased BP, but added +Attack side effect
+	move CUT,          NO_ADDITIONAL_EFFECT,        70, BUG,          100, 20 ; Aironfaar mod: high crit ratio
 	move GUST,         NO_ADDITIONAL_EFFECT,        40, FLYING,       100, 35
 	move WING_ATTACK,  NO_ADDITIONAL_EFFECT,        50, FLYING,       100, 35 ; priority move
 	move WHIRLWIND,    CONFUSION_BIG_SIDE_EFFECT,  110, FLYING,        85, 10
@@ -70,8 +70,8 @@ Moves:
 	move WATER_GUN,    NO_ADDITIONAL_EFFECT,        40, WATER,        100, 25
 	move HYDRO_PUMP,   NO_ADDITIONAL_EFFECT,       120, WATER,         90,  5
 	move SURF,         NO_ADDITIONAL_EFFECT,        95, WATER,        100, 15
-	move ICE_BEAM,     FREEZE_SIDE_EFFECT1,          95, ICE,          100, 10
-	move BLIZZARD,     FREEZE_SIDE_EFFECT1,         120, ICE,           85,  5 ; TODO: 90
+	move ICE_BEAM,     FREEZE_SIDE_EFFECT1,         95, ICE,          100, 10
+	move BLIZZARD,     FREEZE_SIDE_EFFECT1,        120, ICE,           85,  5 ; TODO: 90
 	move PSYBEAM,      CONFUSION_BIG_SIDE_EFFECT,   75, PSYCHIC_TYPE, 100, 20 ; Aironfaar mod: increased BP and confusion chance
 	move BUBBLEBEAM,   SPEED_DOWN_SIDE_EFFECT,      65, WATER,        100, 20
 	move AURORA_BEAM,  ATTACK_DOWN_SIDE_EFFECT,     65, ICE,          100, 20

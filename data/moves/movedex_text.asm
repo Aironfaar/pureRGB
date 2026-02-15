@@ -159,7 +159,7 @@ _CutDexEntry::
 	next "with a claw, barb"
 	next "tooth, wing, etc.@"
 
-	text_call _GenericRaisesAttack1StageText ; Aironfaar mod
+	text_call _GenericOftenLandsCriticalHitsText ; Aironfaar mod
 
 	bage "Usable outside"
 	next "battle to cut down"

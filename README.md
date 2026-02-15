@@ -34,8 +34,8 @@ Others are simply modifications to my personal taste:
   - Six new trades have been introduced to the game, two of which require you to be the champion.
 - There is now a Move Reminder in the Daycare.
 - Learnsets have been touched: Except for the new variants of Nidorina, Nidoqueen, Nidorino and Nidoking, which forget moves that are no longer part of their learnset upon evolving from Nidoran F/M and learn the moves that replaced them, all evolved pokémon can learn their previous forms' moves either by level or TM/HM. If you evolve your pokémon the moment it becomes possible, you will neither miss a move nor lose out entirely on something that the previous form could learn. If all else fails, the Move Reminder can help.
-- Some moves have been changed:
-  - Cut: BP 70 -> 60, gives +1 Attack
+- Some moves have been changed (based on Vortyne's changes):
+  - Cut: PP 30 -> 20, now has high critical hit chance
   - Dig: BP 80 -> 130, ACC 100 -> 95, PP 10 -> 5
   - Doubleslap: ACC 85 -> 100
   - Dragon Rage: 10% chance to make target flinch
