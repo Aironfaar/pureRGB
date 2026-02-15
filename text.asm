@@ -301,9 +301,7 @@ SECTION "Text 14", ROMX
 
 INCLUDE "text/OaksLab.asm"
 INCLUDE "text/Route11Gate2F.asm"
-INCLUDE "text/InGameTrades_1.asm"
-INCLUDE "text/InGameTrades_2.asm"
-INCLUDE "text/InGameTrades_3.asm"
+INCLUDE "text/InGameTrades.asm"
 ;;; Aironfaar mod END
 
 SECTION "Pokédex Text", ROMX
