@@ -13,7 +13,9 @@ _GenericNoAdditionalEffectText::
 _KarateChopDexEntry::
 	text "A martial arts"
 	next "vertical chop"
-	next "with hand or paw."
+	next "with hand or paw.@"
+
+	text_call _Generic10PercentConfusionText ; Aironfaar mod
 	; fall through
 _GenericOftenLandsCriticalHitsText::
 	bage "Often lands"
@@ -73,7 +75,9 @@ _PayDayDexEntry::
 _FirePunchDexEntry::
 	text "Punches the foe"
 	next "with a burning"
-	next "fist."
+	next "fist.@"
+
+	text_call _GenericOftenLandsCriticalHitsText ; Aironfaar mod
 	; fall through
 _Generic10PercentBurnText::
 	bage "10% chance of"
@@ -83,7 +87,9 @@ _Generic10PercentBurnText::
 _IcePunchDexEntry::
 	text "Punches the foe"
 	next "with a freezing"
-	next "fist."
+	next "fist.@"
+
+	text_call _GenericOftenLandsCriticalHitsText ; Aironfaar mod
 
 	bage "10% chance of"
 	next "freezing the foe"
@@ -93,7 +99,9 @@ _IcePunchDexEntry::
 _ThunderPunchDexEntry::
 	text "Zaps the foe with"
 	next "an electrically"
-	next "charged fist."
+	next "charged fist.@"
+
+	text_call _GenericOftenLandsCriticalHitsText ; Aironfaar mod
 	; fall through
 _Generic10PercentParalysisText::
 	bage "10% chance of"
@@ -786,6 +794,8 @@ _RazorLeafDexEntry::
 	next "sharp leaves are"
 	next "hurled at foe.@"
 
+	text_call _Generic10PercentFlinchText ; Aironfaar mod
+	text_end ; Aironfaar mod
 	text_jump _GenericOftenLandsCriticalHitsText
 
 _SolarbeamDexEntry::
