@@ -844,6 +844,10 @@ MoveMysticMonsList:
 	dw GolemMoveMysticText
 	db HYPNO, DEX_HYPNO
 	dw HypnoMoveMysticText
+;;; Aironfaar mod start: add Kingler to Move Mystic selection list
+	db KINGLER, DEX_KINGLER
+	dw KinglerMoveMysticText
+;;; Aironfaar mod end
 	db HITMONLEE, DEX_HITMONLEE
 	dw HitmonleeMoveMysticText
 	db HITMONCHAN, DEX_HITMONCHAN
@@ -940,12 +944,16 @@ WigglytuffMoveMysticText::
 	text_far _WigglytuffMoveMysticText
 	text_end
 
-;;; Aironfaar mod start: get Magikarp and Gyarados info text
+;;; Aironfaar mod start: get Magikarp, Gyarados and Kingler info text
 MagikarpMoveMysticText::
 	text_far _MagikarpMoveMysticText
 	text_end
 
 GyaradosMoveMysticText::
 	text_far _GyaradosMoveMysticText
+	text_end
+
+KinglerMoveMysticText::
+	text_far _KinglerMoveMysticText
 	text_end
 ;;; Aironfaar mod end
