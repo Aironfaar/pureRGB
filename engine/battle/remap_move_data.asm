@@ -13,6 +13,10 @@ CheckRemapMoveData::
 	cp -1
 	jr z, .donePokemonCheck
 	ld a, d
+	cp VOLCANIC_MAGMAR
+	jr nz, .notVolcanicMagmar
+	ld a, MAGMAR ; treat VOLCANIC_MAGMAR as MAGMAR when checking for signature moves
+.notVolcanicMagmar
 	cp [hl]
 	ret nz
 .donePokemonCheck
