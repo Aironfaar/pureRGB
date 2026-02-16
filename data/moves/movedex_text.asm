@@ -225,13 +225,13 @@ _BindDexEntry::
 _SlamDexEntry::
 	text "Slams the foe"
 	next "with a dirty tail"
-	next "leg, arm, etc.@"
+	next "leg, arm, etc." ; Aironfaar mod
 
 	bage "20% chance of"
 	next "badly poison-"
-	next "ing the foe"
+	next "ing the foe.@" ; Aironfaar mod
 
-	text_jump _GenericBadlyPoisonedText
+	text_jump _GenericBadlyPoisonedText ; Aironfaar mod
 
 
 _VineWhipDexEntry::
@@ -620,9 +620,9 @@ _PsybeamDexEntry::
 	next "of the <user> is"
 	next "focused into a"
 	
-	bage "strange beam."
+	bage "strange beam.@" ; Aironfaar mod
 	
-    text_jump _Generic30PercentConfusionText
+    text_jump _Generic30PercentConfusionText ; Aironfaar mod
 
 _BubblebeamDexEntry::
 	text "A jet of bubbles"
@@ -794,9 +794,9 @@ _RazorLeafDexEntry::
 	next "sharp leaves are"
 	next "hurled at foe.@"
 
-	text_call _Generic10PercentFlinchText ; Aironfaar mod
+	text_call _GenericOftenLandsCriticalHitsText ; Aironfaar mod
 	text_end ; Aironfaar mod
-	text_jump _GenericOftenLandsCriticalHitsText
+	text_jump _Generic10PercentFlinchText ; Aironfaar mod
 
 _SolarbeamDexEntry::
 	text "Focuses sunlight"
@@ -971,9 +971,9 @@ _GenericBadlyPoisonedText::
 _ConfusionDexEntry::
 	text "Uses psychic"
 	next "powers to confuse"
-	next "the foe's mind.@"
+	next "the foe's mind." ; Aironfaar mod
 	; fall through
-_Generic10PercentConfusionText::
+_Generic10PercentConfusionText:: ; Aironfaar mod
 	bage "Causes confusion"
 	next "10% of the time"
 	dex
