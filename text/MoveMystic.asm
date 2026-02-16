@@ -138,6 +138,12 @@ _GyaradosMoveMysticText::
 	text_start
 	line "lethal leviathan."
 	prompt
+
+_KinglerMoveMysticText::
+	text_start
+	line "crested"
+	cont "crustacean."
+	prompt
 ;;; Aironfaar mod end
 
 _MoveMysticMasterOfMoveText::

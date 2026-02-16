@@ -13,6 +13,10 @@ CheckRemapMoveData::
 	cp -1
 	jr z, .donePokemonCheck
 	ld a, d
+	cp VOLCANIC_MAGMAR
+	jr nz, .notVolcanicMagmar
+	ld a, MAGMAR ; treat VOLCANIC_MAGMAR as MAGMAR when checking for signature moves
+.notVolcanicMagmar
 	cp [hl]
 	ret nz
 .donePokemonCheck
@@ -66,8 +70,8 @@ GetMoveRemapData2:
 
 ; byte 1 = move
 ; byte 2 = required pokemon for modifier or -1 for any pokemon
-; byte 4 = modified power or -1 if no change or -2 if the move uses a modifier function
-; byte 3 = modified accuracy or 0 if no accuracy change, or which modifier function to use if previous byte was -2
+; byte 3 = modified power or -1 if no change or -2 if the move uses a modifier function
+; byte 4 = modified accuracy or 0 if no accuracy change, or which modifier function to use if previous byte was -2
 RemappableMoves::
 	db SING, -1, -2, 1
 	db DOUBLESLAP, -1, -2, 0
@@ -81,15 +85,16 @@ RemappableMoves::
 	db ROCK_SLIDE, GOLEM, 110, 0
 	db HI_JUMP_KICK, HITMONLEE, 160, 0
 	db COMET_PUNCH, HITMONCHAN, 90, 0
-	db THUNDERPUNCH, ELECTABUZZ, 105, 0
-	db FIRE_PUNCH, MAGMAR, 105, 0
-	db ICE_PUNCH, JYNX, 105, 0
+	db THUNDERPUNCH, ELECTABUZZ, 85, 0
+	db FIRE_PUNCH, MAGMAR, 85, 0
+	db ICE_PUNCH, JYNX, 85, 0
 	db HYPNOSIS, HYPNO, -1, 85 percent
 	db DRAGON_RAGE, DRAGONITE, 100, 0
 	db WATERFALL, SEAKING, 160, 0
 	db DIZZY_PUNCH, KANGASKHAN, 130, 0
 	db LICK, LICKITUNG, 70, 0
 	db SPIKE_CANNON, OMASTAR, 70, 0
+	db CRABHAMMER, KINGLER, 120, 0 ; Aironfaar mod
 	db -1
 
 ModifierFuncs:

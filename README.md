@@ -20,6 +20,7 @@ Others are simply modifications to my personal taste:
 - Prof. Oak's aides now require specific pokémon for their field research instead of checking your pokédex progress before they give you HM05, the Itemfinder, and the Booster Chip, respectively. This is mainly to help mono runs acquire these items without giving them out for free, but I also liked the flavor of it better.
 - Gyarados can now learn Fly.
 - Splash is now a signature move for Magikarps of level 20 or higher, as well as for Gyarados. The Move Mystic will tell you more. In turn, Magikarp and Gyarados now need more EXP to level up. To make sure that Gyarados can be encountered in the wild with Splash, they now know Splash at level 1.
+- Crabhammer is now a signature move with increased BP of Kingler.
 - Cursed Gengar now has different stats. The Dark and Light Channeler that inflict and remove the curse will inform you of the exact stat changes. To emphasize the new stat spread of Cursed Gengar, Gastly, Haunter and Gengar now learn Poison Gas instead of Filthy Slam at level 41. They can still learn Filthy Slam via TM.
 - Wild Missingno. are diversified. Before the change, catching one of them felt like a cheat since they were all already at level 120. Now, they appear at levels 1 to 120, and due to additions of TM moves (which it could learn already anyway) to its natural learnset, every level of wild Missingno. has a different moveset.
 - Some encounter tables have been touched upon for nitpicky reasons, like wondering how a horse, flaming or not, could live in the rugged terrain of a volcanic mountain.
@@ -34,20 +35,26 @@ Others are simply modifications to my personal taste:
   - Six new trades have been introduced to the game, two of which require you to be the champion.
 - There is now a Move Reminder in the Daycare.
 - Learnsets have been touched: Except for the new variants of Nidorina, Nidoqueen, Nidorino and Nidoking, which forget moves that are no longer part of their learnset upon evolving from Nidoran F/M and learn the moves that replaced them, all evolved pokémon can learn their previous forms' moves either by level or TM/HM. If you evolve your pokémon the moment it becomes possible, you will neither miss a move nor lose out entirely on something that the previous form could learn. If all else fails, the Move Reminder can help.
-- Some moves have been changed (based on Vortyne's changes):
-  - Cut: PP 30 -> 20, now has high critical hit chance
+- Some moves have been changed as listed below, going off of Vortyne's changes:
+  - Crabhammer: BP 90 -> 80, ACC 95 -> 90, signature move of Kingler (refer to Move Mystic in Saffron City for details)
+  - Cut: PP 30 -> 20, high critical hit chance
   - Dig: BP 80 -> 130, ACC 100 -> 95, PP 10 -> 5
   - Doubleslap: ACC 85 -> 100
   - Dragon Rage: 10% chance to make target flinch
   - Filthy Slam: 20% chance to badly poison the target
+  - Fire Punch: BP 75 -> 55, PP 15 -> 20, high critical hit chance, adjusted Magmar's signature move stats
   - Fly: BP 90 -> 130, ACC 100 -> 95, PP 15 -> 5
   - Guillotine: Type BUG -> NORMAL
   - Horn Drill: Type NORMAL -> FIGHTING
+  - Ice Punch: BP 75 -> 55, PP 15 -> 20, high critical hit chance, adjusted Jynx's signature move stats
+  - Karate Chop: BP 50 -> 60, PP 25 -> 20, 10% chance to confuse target
   - Pin Missile: BP 18 -> 20
   - Psybeam: BP 65 -> 75, confusion chance 10% -> 30%
+  - Razor Leaf: PP 25 -> 20, 10% chance to make target flinch
   - Splash: Type NORMAL -> FLYING, signature move of Gyarados and Level 20+ Magikarp (refer to Move Mystic in Saffron City for details)
   - Stomp: Type NORMAL -> GROUND
   - Strength: 33% chance for -1 Defense
+  - Thunderpunch: BP 75 -> 55, PP 15 -> 20, high critical hit chance, adjusted Electabuzz's signature move stats
 - 20 TMs have been added, most to reintroduce previously available TMs, some to add new moves to the TM pool.
   - TM 51: Teleport
   - TM 52: Softboiled
