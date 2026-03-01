@@ -128,8 +128,8 @@
 	const DUGTRIO            ; $76
 	const VENOMOTH           ; $77
 	const DEWGONG            ; $78
-	const_skip               ; $79
-	const_skip               ; $7A
+	const KAIJU_NIDORINA     ; $7A ; Aironfaar mod
+	const KAIJU_NIDORINO     ; $79 ; Aironfaar mod
 	const CATERPIE           ; $7B
 	const METAPOD            ; $7C
 	const BUTTERFREE         ; $7D
@@ -166,10 +166,10 @@
 	const_skip               ; $9C
 	const GOLDEEN            ; $9D
 	const SEAKING            ; $9E
-	const KAIJU_NIDORINA     ; $9F ; Aironfaar mod
-	const KAIJU_NIDOQUEEN    ; $A0 ; Aironfaar mod
-	const KAIJU_NIDORINO     ; $A1 ; Aironfaar mod
-	const KAIJU_NIDOKING     ; $A2 ; Aironfaar mod
+	const_skip               ; $9F
+	const_skip               ; $A0
+	const_skip               ; $A1
+	const_skip               ; $A2
 	const PONYTA             ; $A3
 	const RAPIDASH           ; $A4
 	const RATTATA            ; $A5

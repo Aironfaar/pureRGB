@@ -645,10 +645,6 @@ KaijuNidorinaPicFront:: INCBIN "gfx/pokemon/front/kaiju_nidorina.pic"
 KaijuNidorinoPicFront:: INCBIN "gfx/pokemon/front/kaiju_nidorino.pic"
 KaijuNidorinoaPicBack:: INCBIN "gfx/pokemon/back/kaiju_nidorinoab.pic"
 KaijuNidorinoaPicBackSW:: INCBIN "gfx/pokemon/back_sw/kaiju_nidorinoab.pic"
-KaijuNidoqueenPicFront:: INCBIN "gfx/pokemon/front/kaiju_nidoqueen.pic"
-KaijuNidokingPicFront:: INCBIN "gfx/pokemon/front/kaiju_nidoking.pic"
-KaijuNidomonarchPicBack:: INCBIN "gfx/pokemon/back/kaiju_nidomonarchb.pic"
-KaijuNidomonarchPicBackSW:: INCBIN "gfx/pokemon/back_sw/kaiju_nidomonarchb.pic"
 
 
 SECTION "Type Icons", ROMX

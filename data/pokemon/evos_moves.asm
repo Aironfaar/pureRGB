@@ -133,8 +133,8 @@ EvosMovesPointerTable:
 	dw DugtrioEvosMoves
 	dw VenomothEvosMoves
 	dw DewgongEvosMoves
-	dw NothingEvosMoves
-	dw NothingEvosMoves
+	dw KaijuNidorinaEvosMoves ; Aironfaar mod
+	dw KaijuNidorinoEvosMoves ; Aironfaar mod
 	dw CaterpieEvosMoves
 	dw MetapodEvosMoves
 	dw ButterfreeEvosMoves
@@ -171,10 +171,10 @@ EvosMovesPointerTable:
 	dw NothingEvosMoves
 	dw GoldeenEvosMoves
 	dw SeakingEvosMoves
-	dw KaijuNidorinaEvosMoves ; Aironfaar mod
-	dw KaijuNidoqueenEvosMoves ; Aironfaar mod
-	dw KaijuNidorinoEvosMoves ; Aironfaar mod
-	dw KaijuNidokingEvosMoves ; Aironfaar mod
+	dw NothingEvosMoves
+	dw NothingEvosMoves
+	dw NothingEvosMoves
+	dw NothingEvosMoves
 	dw PonytaEvosMoves
 	dw RapidashEvosMoves
 	dw RattataEvosMoves
@@ -565,11 +565,8 @@ NidoqueenEvosMoves:
 	db 54, SUBMISSION
 	db 0
 
-;;; Aironfaar mod start: new Nidorina and Nidoqueen variant
+;;; Aironfaar mod start: new Nidorina variant
 KaijuNidorinaEvosMoves:
-; Evolutions
-	db EVOLVE_LEVEL, 36, KAIJU_NIDOQUEEN
-KaijuNidoqueenEvosMoves:
 ; Evolutions
 	db 0
 ; Learnset
@@ -622,11 +619,8 @@ NidokingEvosMoves:
 	db 54, POISON_GAS
 	db 0
 
-;;; Aironfaar mod start: new Nidorino and Nidoking variant
+;;; Aironfaar mod start: new Nidorino variant
 KaijuNidorinoEvosMoves:
-; Evolutions
-	db EVOLVE_LEVEL, 36, KAIJU_NIDOKING
-KaijuNidokingEvosMoves:
 ; Evolutions
 	db 0
 ; Learnset

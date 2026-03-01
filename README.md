@@ -13,7 +13,7 @@ Some of the modifications are supposed to make certain mono type runs go a bit m
 - Seel is now Water/Ice instead of Ice. This was the only somewhat reasonable way to provide a proper Ice type pokémon before reaching Pewter City. You can disable this change at the usual Type Changer NPC.
 - Three new Dragon types have been added as variants of existing pokémon. There are new texts in the game that hint at them, but they are:
   - Using a Moon Stone, Pikachu can now be evolved into a Raichu variant of Electric/Dragon type.
-  - Using a Moon Stone, Nidoran F and Nidoran M can now be evolved into Nidorina and Nidorino variants with different base stats and learnsets. These variants evolve into Nidoqueen and Nidoking variants at level 36, which, instead of Poison/Ground types, are Poison/Dragon types.
+  - Using a Moon Stone, Nidoran F and Nidoran M can now be evolved into Nidorina and Nidorino variants with different base stats and learnsets. These variants are incapable of evolving further, but rival Nidoqueen and Nidoking in power and are Poison/Dragon type.
 
 Others are simply modifications to my personal taste:
 - The Pokédex now uses meters and kilograms instead of feet and pounds.
@@ -34,7 +34,7 @@ Others are simply modifications to my personal taste:
   - The trades on Cinnabar Island are now only accessible once you become the champion of the Pokémon League. In turn, the pokémon you receive in these trades are much more interesting.
   - Six new trades have been introduced to the game, two of which require you to be the champion.
 - There is now a Move Reminder in the Daycare.
-- Learnsets have been touched: Except for the new variants of Nidorina, Nidoqueen, Nidorino and Nidoking, which forget moves that are no longer part of their learnset upon evolving from Nidoran F/M and learn the moves that replaced them, all evolved pokémon can learn their previous forms' moves either by level or TM/HM. If you evolve your pokémon the moment it becomes possible, you will neither miss a move nor lose out entirely on something that the previous form could learn. If all else fails, the Move Reminder can help.
+- Learnsets have been touched: Except for the new variants of Nidorina and Nidorino, which forget moves that are no longer part of their learnset upon evolving from Nidoran F/M and learn the moves that replaced them, all evolved pokémon can learn their previous forms' moves either by level or TM/HM. If you evolve your pokémon the moment it becomes possible, you will neither miss a move nor lose out entirely on something that the previous form could learn. If all else fails, the Move Reminder can help.
 - Some moves have been changed as listed below, going off of Vortyne's changes:
   - Crabhammer: BP 90 -> 80, ACC 95 -> 90, signature move of Kingler (refer to Move Mystic in Saffron City for details)
   - Cut: PP 30 -> 20, high critical hit chance
@@ -58,8 +58,8 @@ Others are simply modifications to my personal taste:
 - 20 TMs have been added, most to reintroduce previously available TMs, some to add new moves to the TM pool.
   - TM 51: Teleport
   - TM 52: Softboiled
-  - TM 53: Recover
-  - TM 54: Rest (new)
+  - TM 53: Recover (new)
+  - TM 54: Rest
   - TM 55: Mimic
   - TM 56: Metronome
   - TM 57: Fissure
@@ -84,13 +84,13 @@ Others are simply modifications to my personal taste:
 
 Elaszat - A friend and the biggest Pokémon fan I know, whose feedback helped me make a bunch of decisions for this modification; he's also a hobbyist author and posts his short stories on [r/Ctoa](https://www.reddit.com/r/Ctoa)
 
-[RockBlackHorn](https://linktr.ee/BlackHornWorkshop) - A friend and artist who strayed from his usual NSFW bara creations to help me out; creator of the high resolution [variant Raichu](https://github.com/Aironfaar/pureRGB/tree/main/gfx/pokemon/back_sw/goro_raichub.png), [variant Nidorina and Nidorino](https://github.com/Aironfaar/pureRGB/tree/main/gfx/pokemon/back_sw/kaiju_nidorinoab.png), and [variant Nidoqueen and Nidoking](https://github.com/Aironfaar/pureRGB/tree/main/gfx/pokemon/back_sw/kaiju_nidomonarchb.png) back sprites
+[RockBlackHorn](https://linktr.ee/BlackHornWorkshop) - A friend and artist who strayed from his usual NSFW bara creations to help me out; creator of the high resolution [variant Raichu](https://github.com/Aironfaar/pureRGB/tree/main/gfx/pokemon/back_sw/goro_raichub.png) and [variant Nidorina and Nidorino](https://github.com/Aironfaar/pureRGB/tree/main/gfx/pokemon/back_sw/kaiju_nidorinoab.png) back sprites
 
 [Helix Chamber](https://helixchamber.com) - [Published their fan-made sprite reconstructions](https://x.com/helixchamber/status/1158772044533813250), some of which I used in this project (more specific credits below)
 
-[@catstorm26](https://x.com/catstorm26) - Creator of the [variant Nidorina](https://github.com/Aironfaar/pureRGB/tree/main/gfx/pokemon/front/kaiju_nidorina.png) and [variant Nidoqueen](https://github.com/Aironfaar/pureRGB/tree/main/gfx/pokemon/front/kaiju_nidoqueen.png) sprites; these sprites were originally intended as a reconstruction of a Nidoran or Nidorino/Nidorina protoype, and a reconstruction of the scrapped "Gyaōn", respectively
+[@catstorm26](https://x.com/catstorm26) - Creator of the [variant Nidorina](https://github.com/Aironfaar/pureRGB/tree/main/gfx/pokemon/front/kaiju_nidorina.png) sprite; this sprite was originally intended as a reconstruction of a Nidoran or Nidorino/Nidorina protoype
 
-[@RacieBeep](https://x.com/raciebeep) - Creator of the [variant Nidorino](https://github.com/Aironfaar/pureRGB/tree/main/gfx/pokemon/front/kaiju_nidorino.png), [variant Nidoking](https://github.com/Aironfaar/pureRGB/tree/main/gfx/pokemon/front/kaiju_nidoking.png) and [variant Raichu](https://github.com/Aironfaar/pureRGB/tree/main/gfx/pokemon/front/goro_raichu.png) sprites; these sprites were originally intended as a reconstruction of a Nidoran or Nidorino/Nidorina protoype, a reconstruction of the scrapped "Gyaōn", and a reconstruction of the scrapped "Gorochu", respectively
+[@RacieBeep](https://x.com/raciebeep) - Creator of the [variant Nidorino](https://github.com/Aironfaar/pureRGB/tree/main/gfx/pokemon/front/kaiju_nidorino.png) and [variant Raichu](https://github.com/Aironfaar/pureRGB/tree/main/gfx/pokemon/front/goro_raichu.png) sprites; these sprites were originally intended as a reconstruction of a Nidoran or Nidorino/Nidorina protoype and a reconstruction of the scrapped "Gorochu", respectively
 
 Of course, Vortyne's original credits are relevant to this project as well, so I've copied them over:
 

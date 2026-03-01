@@ -432,8 +432,8 @@ ConversionAttackTable:
 	db SOLARBEAM             ; DUGTRIO            
 	db CONVERT_TRI_BUG       ; VENOMOTH           
 	db CONVERT_WATER         ; DEWGONG            
-	db 0               ; $79
-	db 0               ; $7A
+	db EARTHQUAKE            ; KAIJU_NIDORINA	; Aironfaar mod
+	db EARTHQUAKE            ; KAIJU_NIDORINO	; Aironfaar mod
 	db CONVERT_TRI_BUG       ; CATERPIE           
 	db CONVERT_TRI_BUG       ; METAPOD            
 	db SPIKE_CANNON          ; BUTTERFREE         
@@ -469,11 +469,11 @@ ConversionAttackTable:
 	db EARTHQUAKE            ; TENTACRUEL         
 	db 0               ; $9C
 	db CONVERT_WATER         ; GOLDEEN            
-	db CONVERT_WATER         ; SEAKING            
-	db EARTHQUAKE            ; KAIJU_NIDORINA	; Aironfaar mod
-	db EARTHQUAKE            ; KAIJU_NIDOQUEEN	; Aironfaar mod
-	db EARTHQUAKE            ; KAIJU_NIDORINO	; Aironfaar mod
-	db EARTHQUAKE            ; KAIJU_NIDOKING	; Aironfaar mod
+	db CONVERT_WATER         ; SEAKING
+	db 0               ; $9F
+	db 0               ; $A0
+	db 0               ; $A1
+	db 0               ; $A2
 	db SURF                  ; PONYTA             
 	db SURF                  ; RAPIDASH           
 	db DIZZY_PUNCH           ; RATTATA            

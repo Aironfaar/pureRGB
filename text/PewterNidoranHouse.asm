@@ -57,9 +57,11 @@ _PewterNidoranHouseKaijuNidoExpositionText::
 	cont "into contact with"
 	cont "a MOON STONE, it"
 	cont "evolves early."
-	para "It turns sterile"
-	line "and androgynous,"
-	cont "but develops"
-	cont "draconic traits."
+	para "It turns sterile,"
+	line "androgynous and"
+	cont "unable to further"
+	cont "evolve, but"
+	cont "develops draconic"
+	cont "powers."
 	done
 ;;; Aironfaar mod end

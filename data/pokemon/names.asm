@@ -120,8 +120,8 @@ MonsterNames::
 	db "DUGTRIO@@@"
 	db "VENOMOTH@@"
 	db "DEWGONG@@@"
-	db "MISSINGNO."
-	db "MISSINGNO."
+	db "NIDORINA@@" ; Kaiju Nidorina ; Aironfaar mod
+	db "NIDORINO@@" ; Kaiju Nidorino ; Aironfaar mod
 	db "CATERPIE@@"
 	db "METAPOD@@@"
 	db "BUTTERFREE"
@@ -158,10 +158,10 @@ MonsterNames::
 	db "MISSINGNO."
 	db "GOLDEEN@@@"
 	db "SEAKING@@@"
-	db "NIDORINA@@" ; Kaiju Nidorina ; Aironfaar mod
-	db "NIDOQUEEN@" ; Kaiju Nidoqueen ; Aironfaar mod
-	db "NIDORINO@@" ; Kaiju Nidorino ; Aironfaar mod
-	db "NIDOKING@@" ; Kaiju Nidoking ; Aironfaar mod
+	db "MISSINGNO."
+	db "MISSINGNO."
+	db "MISSINGNO."
+	db "MISSINGNO."
 	db "PONYTA@@@@"
 	db "RAPIDASH@@"
 	db "RATTATA@@@"

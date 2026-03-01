@@ -80,9 +80,7 @@ NonDexPokemonSpecies:
 	db VOLCANIC_MAGMAR
 	db GORO_RAICHU ; Aironfaar mod
 	db KAIJU_NIDORINA ; Aironfaar mod
-	db KAIJU_NIDOQUEEN ; Aironfaar mod
 	db KAIJU_NIDORINO ; Aironfaar mod
-	db KAIJU_NIDOKING ; Aironfaar mod
 	db -1
 	
 UncompressMonSprite::
