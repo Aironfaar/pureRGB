@@ -3,14 +3,14 @@
 	db  79,  83, 100,  78,  85
 	;   hp  atk  def  spd  spc
 
-	db WATER, WATER ; type
+	db WATER, ELECTRIC ; type ; Aironfaar mod
 	db 45 ; catch rate
 	db 210 ; base exp
 
 	INCBIN "gfx/pokemon/front/blastoise.pic", 0, 1 ; sprite dimensions
 	dw BlastoisePicFront, BlastoisePicBackSW
 
-	db TACKLE, TAIL_WHIP, NO_MOVE, NO_MOVE ; level 1 learnset
+	db TACKLE, TAIL_WHIP, THUNDERPUNCH, NO_MOVE ; level 1 learnset ; Aironfaar mod
 	db GROWTH_MEDIUM_SLOW ; growth rate
 
 	; tm/hm learnset
@@ -29,6 +29,8 @@
 	THUNDERPUNCH,\
 	ROLLING_KICK,\
 	BARRIER,\
+	THUNDERBOLT,\ ; Aironfaar mod
+	THUNDER,\ ; Aironfaar mod
 	EARTHQUAKE,\
 	CRABHAMMER,\
 	DIG,\
@@ -39,6 +41,7 @@
 	SLAM,\ ; FILTHY SLAM
 	KARATE_CHOP,\
 	LIGHT_SCREEN,\
+	THUNDER_WAVE,\ ; Aironfaar mod
 	GLARE,\
 	SUBSTITUTE,\
 	REST,\ ; Aironfaar mod

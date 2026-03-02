@@ -364,7 +364,7 @@ ChampArenaBrockMoveset:
 	db ROCK_SLIDE
 	db EARTHQUAKE
 	db MIRROR_MOVE
-	db MEGA_KICK
+	db MEGA_PUNCH ; Aironfaar mod: was MEGA_KICK, which was replaced by MEGA_PUNCH in the Golem line's learnset
 	; kangaskhan
 	db DIZZY_PUNCH
 	db COMET_PUNCH

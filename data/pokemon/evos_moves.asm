@@ -1085,12 +1085,13 @@ GeodudeEvosMoves:
 	db 16, ROCK_THROW
 	db 19, DEFENSE_CURL
 	db 21, SELFDESTRUCT
+	db 23, KARATE_CHOP ; Aironfaar mod: added
 	db 28, ROCK_SLIDE
 	db 31, BARRAGE
 	db 34, GLARE
 	db 39, EARTHQUAKE
 	db 46, EXPLOSION
-	db 52, MEGA_KICK
+	db 52, MEGA_PUNCH ; Aironfaar mod: was MEGA_KICK
 	db 60, FISSURE
 	db 65, MIRROR_MOVE
 	db 0
@@ -1108,12 +1109,13 @@ GolemEvosMoves:
 	db 16, ROCK_THROW
 	db 19, DEFENSE_CURL
 	db 21, SELFDESTRUCT
+	db 23, KARATE_CHOP ; Aironfaar mod: added
 	db 28, ROCK_SLIDE
 	db 31, BARRAGE
 	db 34, GLARE
 	db 39, EARTHQUAKE
 	db 46, EXPLOSION
-	db 52, MEGA_KICK
+	db 52, MEGA_PUNCH ; Aironfaar mod: was MEGA_KICK
 	db 60, FISSURE
 	db 65, MIRROR_MOVE
 	db 0
