@@ -1080,6 +1080,19 @@ PokedexToIndex:
 	; converts the Pokédex number at [wPokedexNum] to an index
 	push bc
 	push hl
+;;; Aironfaar mod start: temporary fix
+	push de
+	ld a, [wPokedexNum]
+	ld hl, TemporaryFixList
+	ld de, 2
+	call IsInArray
+	pop de
+	jr nc, .start
+	inc hl
+	ld a, [hl]
+	jr .done
+.start
+;;; Aironfaar mod end
 	ld a, [wPokedexNum]
 	ld b, a
 	ld c, 0
@@ -1092,10 +1105,19 @@ PokedexToIndex:
 	jr nz, .loop
 
 	ld a, c
+.done ; Aironfaar mod: part of temporary fix
 	ld [wPokedexNum], a
 	pop hl
 	pop bc
 	ret
+
+TemporaryFixList: ; Aironfaar mod: list that contains mons whose variant forms broke the above function due to their position in PokedexOrder compared to the original mon. Permanent fixes/TODO: Reorder pokemon_constants? Some sort of variant mon dex?
+	db DEX_VENUSAUR, VENUSAUR
+	db DEX_CHARIZARD, CHARIZARD
+	db DEX_BLASTOISE, BLASTOISE
+	db DEX_NIDORINA, NIDORINA
+	db DEX_NIDORINO, NIDORINO
+	db -1
 
 IndexToPokedex:
 	; converts the index number at [wPokedexNum] to a Pokédex number
