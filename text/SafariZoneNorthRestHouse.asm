@@ -18,10 +18,18 @@ _SafariZoneNorthRestHouseSafariZoneWorkerText::
 
 _SafariZoneNorthRestHouseGentlemanText::
 	text "My EEVEE evolved"
-	line "into FLAREON!"
+	line "into FLAREON." ; Aironfaar mod: less shouting, please (. was !)
 
 	para "But, a friend's"
 	line "EEVEE turned into"
-	cont "a VAPOREON!"
-	cont "I wonder why?"
+	cont "a VAPOREON." ; Aironfaar mod: as above
+;;; Aironfaar mod start: modify EEVEE stone evolution text (the other one in Cinnabar was repurposed)
+	para "We must have used"
+	line "different stones"
+	cont "to evolve them."
+	
+	para "I wonder what"
+	line "else EEVEE can"
+	cont "evolve into!"
+;;; Aironfaar mod end
 	done
