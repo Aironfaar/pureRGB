@@ -96,7 +96,7 @@ WildPalettePointers:
 	dw DefaultPalettes
 	dw DefaultPalettes
 	dw DefaultPalettes ;rock tunnel 1f
-	dw AllAltPalettes ;power plant ; Aironfaar mod
+	dw PowerPlantWildPalettes ; Aironfaar mod
 	dw DefaultPalettes
 	dw DefaultPalettes
 	dw DefaultPalettes

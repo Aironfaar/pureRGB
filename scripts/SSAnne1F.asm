@@ -18,7 +18,7 @@ SSAnne1FSailorText:
 ;;; Aironfaar mod start
 SSAnne1FLittleBoyText:
     text_asm
-	ld a, TRADE_FOR_DISCOMBOB
+	ld a, TRADE_FOR_PIKABLU
 	ld [wWhichTrade], a
 	predef DoInGameTradeDialogue
 	rst TextScriptEnd

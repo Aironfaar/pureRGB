@@ -73,8 +73,8 @@ _AfterTradeLightyearText::
 	cont "trainer like you."
 	done
 
-; TANGELA Discombob
-_WannaTradeDiscombobText::
+; PIKACHU PIKABLU
+_WannaTradePikabluText::
     text "I want a TAUROS"
 	line "from Route 11,"
 	cont "but my parents"
@@ -82,23 +82,30 @@ _WannaTradeDiscombobText::
 	
 	para "Will you trade"
 	line "with me for my"
-	cont "TANGELA?"
+	cont "PIKABLU?"
+	
+	para "That's a super"
+	line "rare variant of"
+	cont "PIKACHU that many"
+	cont "think is bogus,"
+	cont "but it's real!"
+	cont "Pinky swear!"
 	done
 
-_NoTradeDiscombobText::
+_NoTradePikabluText::
 	text "Man, being stuck"
 	line "on this ship"
 	cont "really sucks<...>"
 	done
 
-; WrongMon for Discombob: Hey, then NoTradeDiscombobText
+; WrongMon for Pikablu: Hey, then NoTradePikabluText
 
-_ThanksDiscombobText::
+_ThanksPikabluText::
     text "YEEHAW!"
 	line "Thanks!"
 	done
 
-_AfterTradeDiscombobText::
+_AfterTradePikabluText::
     text "I'll practice"
 	line "riding TAUROS to"
 	cont "become a cowboy"
