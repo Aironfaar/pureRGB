@@ -78,9 +78,14 @@ NonDexPokemonSpecies:
 	db SPIRIT_THE_MAW
 	db WINTER_DRAGONAIR
 	db VOLCANIC_MAGMAR
-	db GORO_RAICHU ; Aironfaar mod
-	db KAIJU_NIDORINA ; Aironfaar mod
-	db KAIJU_NIDORINO ; Aironfaar mod
+;;; Aironfaar mod start: new variant mons
+	db GORO_RAICHU
+	db KAIJU_NIDORINA
+	db KAIJU_NIDORINO
+	db STONE_VENUSAUR
+	db STONE_CHARIZARD
+	db STONE_BLASTOISE
+;;; Aironfaar mod end
 	db -1
 	
 UncompressMonSprite::

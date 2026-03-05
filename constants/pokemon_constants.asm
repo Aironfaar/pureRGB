@@ -86,9 +86,9 @@
 	const DITTO              ; $4C
 	const MEOWTH             ; $4D
 	const KRABBY             ; $4E
-	const_skip               ; $4F
-	const_skip               ; $50
-	const_skip               ; $51
+	const STONE_VENUSAUR     ; $4F ; Aironfaar mod
+	const STONE_CHARIZARD    ; $50 ; Aironfaar mod
+	const STONE_BLASTOISE    ; $51 ; Aironfaar mod
 	const VULPIX             ; $52
 	const NINETALES          ; $53
 	const PIKACHU            ; $54

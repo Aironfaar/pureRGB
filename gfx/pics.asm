@@ -645,6 +645,15 @@ KaijuNidorinaPicFront:: INCBIN "gfx/pokemon/front/kaiju_nidorina.pic"
 KaijuNidorinoPicFront:: INCBIN "gfx/pokemon/front/kaiju_nidorino.pic"
 KaijuNidorinoaPicBack:: INCBIN "gfx/pokemon/back/kaiju_nidorinoab.pic"
 KaijuNidorinoaPicBackSW:: INCBIN "gfx/pokemon/back_sw/kaiju_nidorinoab.pic"
+StoneVenusaurPicFront:: INCBIN "gfx/pokemon/front/stone_venusaur.pic"
+StoneVenusaurPicBack:: INCBIN "gfx/pokemon/back/stone_venusaurb.pic"
+StoneVenusaurPicBackSW:: INCBIN "gfx/pokemon/back_sw/stone_venusaurb.pic"
+StoneCharizardPicFront:: INCBIN "gfx/pokemon/front/stone_charizard.pic"
+StoneCharizardPicBack:: INCBIN "gfx/pokemon/back/stone_charizardb.pic"
+StoneCharizardPicBackSW:: INCBIN "gfx/pokemon/back_sw/stone_charizardb.pic"
+StoneBlastoisePicFront:: INCBIN "gfx/pokemon/front/stone_blastoise.pic"
+StoneBlastoisePicBack:: INCBIN "gfx/pokemon/back/stone_blastoiseb.pic"
+StoneBlastoisePicBackSW:: INCBIN "gfx/pokemon/back_sw/stone_blastoiseb.pic"
 
 
 SECTION "Type Icons", ROMX

@@ -517,7 +517,7 @@ ChampArenaRivalMoveset2:
 	db HYDRO_PUMP
 	db WITHDRAW
 	db COUNTER ; DRAIN_PUNCH
-	db ICE_BEAM
+	db ICE_PUNCH ; Aironfaar mod: was ICE_BEAM, which was removed from Blastoise's TM moves
 
 ChampArenaRivalMoveset3:
 	; zapdos
@@ -644,7 +644,7 @@ EliteFourRivalMoveset2:
 	; blastoise
 	db WITHDRAW
 	db COUNTER ; DRAIN PUNCH
-	db ICE_BEAM
+	db ICE_PUNCH ; Aironfaar mod: was ICE_BEAM, which was removed from Blastoise's TM moves
 	db HYDRO_PUMP
 
 EliteFourRivalMoveset3:

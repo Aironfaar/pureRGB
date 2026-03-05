@@ -78,9 +78,9 @@ MonsterNames::
 	db "DITTO@@@@@"
 	db "MEOWTH@@@@"
 	db "KRABBY@@@@"
-	db "MISSINGNO."
-	db "MISSINGNO."
-	db "MISSINGNO."
+	db "VENUSAUR@@" ; Stone Venusaur ; Aironfaar mod
+	db "CHARIZARD@" ; Stone Charizard ; Aironfaar mod
+	db "BLASTOISE@" ; Stone Blastoise ; Aironfaar mod
 	db "VULPIX@@@@"
 	db "NINETALES@"
 	db "PIKACHU@@@"

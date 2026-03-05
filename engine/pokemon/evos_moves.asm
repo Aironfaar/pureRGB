@@ -453,11 +453,20 @@ ForceLearnMoveOnEvolution: ; Aironfaar mod: made more general (used to be Eeveel
 	cp VENUSAUR
 	ld b, SLAM ; FILTHY SLAM
 	jr z, .forceLearnMove
+	cp STONE_VENUSAUR
+	ld b, SKULL_BASH
+	jr z, .forceLearnMove
 	cp CHARIZARD
 	ld b, WING_ATTACK
 	jr z, .forceLearnMove
+	cp STONE_CHARIZARD
+	ld b, FIRE_PUNCH
+	jr z, .forceLearnMove
 	cp BLASTOISE
 	ld b, THUNDERPUNCH
+	jr z, .forceLearnMove
+	cp STONE_BLASTOISE
+	ld b, ICE_PUNCH
 	jr z, .forceLearnMove
 ;;; Aironfaar mod end
 	cp FLAREON

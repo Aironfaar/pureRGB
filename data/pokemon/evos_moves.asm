@@ -91,9 +91,9 @@ EvosMovesPointerTable:
 	dw NothingEvosMoves ; Aironfaar mod: Ditto (used to have a learnset of its own)
 	dw MeowthEvosMoves
 	dw KrabbyEvosMoves
-	dw NothingEvosMoves
-	dw NothingEvosMoves
-	dw NothingEvosMoves
+	dw StoneVenusaurEvosMoves ; Aironfaar mod
+	dw StoneCharizardEvosMoves ; Aironfaar mod
+	dw StoneBlastoiseEvosMoves ; Aironfaar mod
 	dw VulpixEvosMoves
 	dw NinetalesEvosMoves
 	dw PikachuEvosMoves
@@ -241,10 +241,25 @@ MissingnoEvosMoves:
 BulbasaurEvosMoves:
 ; Evolutions
 	db EVOLVE_LEVEL, 16, IVYSAUR
+	db 0
+; Learnset
+	db 7, LEECH_SEED
+	db 11, VINE_WHIP
+	db 14, POISONPOWDER
+	db 18, STUN_SPORE
+	db 21, CONSTRICT ; STATIC SNAG
+	db 25, RAZOR_LEAF
+	db 33, SLEEP_POWDER
+	db 38, GROWTH
+	db 45, SOLARBEAM
+	db 0
+
 IvysaurEvosMoves:
 ; Evolutions
+	db EVOLVE_ITEM, FIRE_STONE, 1, STONE_VENUSAUR ; Aironfaar mod
 	db EVOLVE_LEVEL, 32, VENUSAUR
-VenusaurEvosMoves:
+VenusaurEvosMoves: ; Aironfaar mod: learns FILTHY SLAM upon evolving
+StoneVenusaurEvosMoves: ; Aironfaar mod: learns SKULL BASH upon evolving
 ; Evolutions
 	db 0
 ; Learnset
@@ -262,10 +277,26 @@ VenusaurEvosMoves:
 CharmanderEvosMoves:
 ; Evolutions
 	db EVOLVE_LEVEL, 16, CHARMELEON
+	db 0
+; Learnset
+	db 7, LEER
+	db 9, EMBER
+	db 12, FURY_SWIPES ; DUST CLAW
+	db 15, SMOKESCREEN
+	db 18, KINESIS ; FIREWALL
+	db 23, RAGE
+	db 26, TAKE_DOWN ; HEAT RUSH
+	db 30, SLASH
+	db 38, FLAMETHROWER
+	db 46, FIRE_SPIN
+	db 0
+
 CharmeleonEvosMoves:
 ; Evolutions
+	db EVOLVE_ITEM, WATER_STONE, 1, STONE_CHARIZARD ; Aironfaar mod
 	db EVOLVE_LEVEL, 36, CHARIZARD
-CharizardEvosMoves:
+CharizardEvosMoves: ; Aironfaar mod: learns WING ATTACK upon evolving
+StoneCharizardEvosMoves: ; Aironfaar mod: learns FIRE PUNCH upon evolving
 ; Evolutions
 	db 0
 ; Learnset
@@ -284,10 +315,25 @@ CharizardEvosMoves:
 SquirtleEvosMoves:
 ; Evolutions
 	db EVOLVE_LEVEL, 16, WARTORTLE
+	db 0
+; Learnset
+	db 8, BUBBLE
+	db 11, LIGHT_SCREEN
+	db 14, WATER_GUN
+	db 18, BITE
+	db 23, GLARE
+	db 28, WITHDRAW
+	db 33, COUNTER ; DRAIN PUNCH
+	db 35, SKULL_BASH
+	db 42, HYDRO_PUMP
+	db 0
+
 WartortleEvosMoves:
 ; Evolutions
+	db EVOLVE_ITEM, LEAF_STONE, 1, STONE_BLASTOISE ; Aironfaar mod
 	db EVOLVE_LEVEL, 36, BLASTOISE
-BlastoiseEvosMoves:
+BlastoiseEvosMoves: ; Aironfaar mod: learns THUNDERPUNCH upon evolving
+StoneBlastoiseEvosMoves: ; Aironfaar mod: learns ICE PUNCH upon evolving
 ; Evolutions
 	db 0
 ; Learnset

@@ -78,9 +78,9 @@ PokedexOrder:
 	db DEX_DITTO
 	db DEX_MEOWTH
 	db DEX_KRABBY
-	db 0 ; MISSINGNO.
-	db 0 ; MISSINGNO.
-	db 0 ; MISSINGNO.
+	db DEX_VENUSAUR ; Stone Venusaur ; Aironfaar mod
+	db DEX_CHARIZARD ; Stone Charizard ; Aironfaar mod
+	db DEX_BLASTOISE ; Stone Blastoise ; Aironfaar mod
 	db DEX_VULPIX
 	db DEX_NINETALES
 	db DEX_PIKACHU
