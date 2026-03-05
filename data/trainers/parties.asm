@@ -239,7 +239,7 @@ PokemaniacData:
 ; Safari Zone North
 	db 44, LAPRAS, GOLEM, PERSIAN, 0 ; NEWx
 ; Safari Zone West
-	db 45, PORYGON, BLASTOISE, VICTREEBEL, 0 ; NEWx
+	db 45, PORYGON, STONE_BLASTOISE, VICTREEBEL, 0 ; NEWx ; Aironfaar mod: was regular BLASTOISE
 
 SuperNerdData:
 ; Mt. Moon 1F
@@ -374,7 +374,7 @@ SwimmerData:
 ; Route 21
 	db 52, ELECTRODE, TENTACRUEL, 0
 	db 55, STARMIE, 0
-	db 52, SEADRA, CHARIZARD, 0
+	db 52, SEADRA, STONE_CHARIZARD, 0 ; Aironfaar mod: was regular CHARIZARD
 	db 50, GOLBAT, BEEDRILL, KINGLER, 0
 
 CueBallData:
@@ -557,7 +557,7 @@ ChiefData:
 
 ScientistData:
 ; Mansion 2F
-	db 53, VENUSAUR, STARMIE, 0
+	db 53, STONE_VENUSAUR, STARMIE, 0 ; Aironfaar mod: was regular VENUSAUR
 ; Silph Co. 2F
 	db 43, PARASECT, PORYGON, MAGMAR, FLOATING_WEEZING, 0 ; Aironfaar mod: was regular WEEZING
 	db 44, FLAREON, STARMIE, MAGNETON, 0 
@@ -632,10 +632,10 @@ RocketData:
 	db 46, CLOYSTER, DUGTRIO, 0
 	db 43, GOLBAT, SANDSLASH, POLIWRATH, RATICATE, HITMONCHAN, 0
 ; Silph Co. 3F
-	db 45, RATICATE, HYPNO, CHARIZARD, 0
+	db 45, RATICATE, HYPNO, STONE_CHARIZARD, 0 ; Aironfaar mod: was regular CHARIZARD
 ; Silph Co. 4F
 	db 46, ARCANINE, GENGAR, 0
-	db 44, GOLEM, JOLTEON, BLASTOISE, 0
+	db 44, GOLEM, JOLTEON, STONE_BLASTOISE, 0 ; Aironfaar mod: was regular BLASTOISE
 ; Silph Co. 5F
 	db 49, POWERED_HAUNTER, 0 ; Aironfaar mod: was regular GENGAR
 	db 49, SNORLAX, 0
@@ -669,7 +669,7 @@ CooltrainerMData:
 ; Victory Road 1F
 	db 54, BEEDRILL, SANDSLASH, GOLDUCK, CHARIZARD, 0
 ; Safari Zone East
-	db $FE, 44, FARFETCHD, 44 + 128, VENOMOTH, 44, VENUSAUR, 0 ; NEWx
+	db $FE, 44, FARFETCHD, 44 + 128, VENOMOTH, 44, STONE_VENUSAUR, 0 ; NEWx ; Aironfaar mod: was regular VENUSAUR
 ; Safari Zone North
 	db $FE, 46 + 128, PINSIR, 46, KANGASKHAN, 0 ; NEWx
 ; Pokemon Mansion B1F
