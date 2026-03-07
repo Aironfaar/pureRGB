@@ -1,6 +1,7 @@
 ; {stat}_(UP|DOWN)(1|2) means that the move raises the user's (or lowers the target's) corresponding stat modifier by 1 (or 2) stages
 ; {status condition}_SIDE_EFFECT means that the move has a side chance of causing that condition
 ; {status condition}_EFFECT means that the move causes the status condition every time it hits the target
+; Aironfaar mod: {status condition}_QUICK_EFFECT means that the move is guaranteed to cause the status condition if the move is used on the attacker's first turn after deployment in combat
 
 ; MoveEffectPointerTable indexes (see data/moves/effects_pointers.asm)
 	const_def
@@ -39,7 +40,7 @@
 	const SLEEP_EFFECT               ; $20
 	const POISON_SIDE_EFFECT2        ; $21
 	const BURN_SIDE_EFFECT2          ; $22
-	const SPEED_UP_SIDE_EFFECT       ; $23 ; PureRGBnote: ADDED: new effect, used in meditate
+	const SPEED_UP_SIDE_EFFECT       ; $23 ; PureRGBnote: ADDED: new effect, used in meditate ; Aironfaar mod: and Quick Attack
 	const PARALYZE_SIDE_EFFECT2      ; $24
 	const FLINCH_SIDE_EFFECT2        ; $25
 	const OHKO_EFFECT                ; $26 moves like Horn Drill
@@ -99,4 +100,6 @@
 	const ACID_ARMOR_EFFECT          ; $5A ; PureRGBnote: ADDED: new effect, does light screen and reflect in one move
 	const EXPLODE_RECOIL_EFFECT      ; $5B ; PureRGBnote: ADDED: new effect, selfdestruct/explosion base effect, changes at lower health to EXPLODE_EFFECT
 	const CONVERSION_EFFECT          ; $5C ; PureRGBnote: ADDED: new effect, used with conversion
+	const FLINCH_QUICK_EFFECT      ; $5D ; Aironfaar mod: new effect, used in Sonicboom and Comet Punch
+	const CONFUSION_QUICK_EFFECT   ; $5E ; Aironfaar mod: new effect, used in Flash and Wing Attack
 DEF NUM_MOVE_EFFECTS EQU const_value - 1

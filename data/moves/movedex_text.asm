@@ -44,12 +44,20 @@ _Generic2To5HitsText::
 _CometPunchDexEntry::
 	text "Delivers a"
 	next "lightning speed"
-	next "punch."
+	next "punch.@"
+;;; Aironfaar mod start
+	text_call _GenericPriorityAttackPowerIncreaseText
 	; fall through
-_GenericAlwaysGoesFirstText::
-	bage "Always goes"
-	next "first"
+_GenericAlwaysGoesFirstQuickFlinchText::
+	bage "Always goes first."
+	next "If it's the <user>'s"
+	next "1st turn out in"
+
+	bage "battle, this move"
+	next "will make the foe"
+	next "flinch"
 	dex
+;;; Aironfaar mod end
 
 _MegaPunchDexEntry::
 	text "A titanic punch"
@@ -188,8 +196,19 @@ _WingAttackDexEntry::
 	text "Strikes and slaps"
 	next "the foe with"
 	next "wings.@"
+;;; Aironfaar mod start
+	text_call _GenericPriorityAttackPowerIncreaseText
+	; fall through
+_GenericAlwaysGoesFirstQuickConfusionText::
+	bage "Always goes first."
+	next "If it's the <user>'s"
+	next "1st turn out in"
 
-	text_jump _GenericAlwaysGoesFirstText
+	bage "battle, this move"
+	next "will confuse the"
+	next "foe for 2 turns"
+	dex
+;;; Aironfaar mod end
 
 _WhirlwindDexEntry::
 	text "A massive tornado"
@@ -486,16 +505,12 @@ _SupersonicDexEntry::
 _SonicboomDexEntry::
 	text "A loud sonic bang"
 	next "generates a "
-	next "shockwave."
-
-	bage "Always goes first."
-	next "If it's the <user>'s"
-	next "1st turn out in"
-
-	bage "battle, this move"
-	next "will make the foe"
-	next "flinch"
-	dex
+	next "shockwave.@"
+;;; Aironfaar mod start
+	text_call _GenericPriorityAttackPowerIncreaseText
+	text_end
+	text_jump _GenericAlwaysGoesFirstQuickFlinchText
+;;; Aironfaar mod end
 
 _DisableDexEntry::
 	text "The <user> mentally"
@@ -793,10 +808,11 @@ _RazorLeafDexEntry::
 	text "A flurry of razor"
 	next "sharp leaves are"
 	next "hurled at foe.@"
-
-	text_call _GenericOftenLandsCriticalHitsText ; Aironfaar mod
-	text_end ; Aironfaar mod
-	text_jump _Generic10PercentFlinchText ; Aironfaar mod
+;;; Aironfaar mod start
+	text_call _GenericOftenLandsCriticalHitsText
+	text_end
+	text_jump _Generic10PercentFlinchText
+;;; Aironfaar mod end
 
 _SolarbeamDexEntry::
 	text "Focuses sunlight"
@@ -1007,7 +1023,7 @@ _MeditateDexEntry::
 
 	bage "Raises ATTACK,"
 	next "SPECIAL, and"
-	next "SPEED. (+1 Each)"
+	next "SPEED. (+1 each)"
 	dex
 
 _AgilityDexEntry::
@@ -1027,8 +1043,14 @@ _AgilityDexEntry::
 _QuickAttackDexEntry::
 	text "A super fast"
 	next "lunging attack.@"
+;;; Aironfaar mod start
+	text_call _GenericPriorityAttackPowerIncreaseText
 
-	text_jump _GenericAlwaysGoesFirstText
+	bage "Always goes first."
+	next "Raises the <user>'s"
+	next "SPEED. (+1 SPEED)"
+	dex
+;;; Aironfaar mod end
 
 _RageDexEntry::
 	text "The <user> releases"
@@ -1252,7 +1274,7 @@ _BideDexEntry::
 
 	bage "Raises ATTACK"
 	next "and DEFENSE."
-	next "(+1 Each)"
+	next "(+1 each)"
 	dex
 
 _MetronomeDexEntry::
@@ -1389,8 +1411,10 @@ _SwiftDexEntry::
 
 	bage "Nicknamed"
 	next "“Speed Star”"
-	next "by trainers."
-
+	next "by trainers.@" ; Aironfaar mod
+	
+	text_call _GenericPriorityAttackPowerIncreaseText ; Aironfaar mod
+	
 	bage "Always goes"
 	next "first and"
 	next "never misses"
@@ -1456,7 +1480,7 @@ _KinesisDexEntry::
 	next "If the <user> is at"
 	next "least level 50,"
 
-	bage "power raises by 60"
+	bage "power rises by 60" ; Aironfaar mod: typo correction
 	next "points each hit to"
 	next "maximum 140 power"
 	dex
@@ -1568,9 +1592,14 @@ _TransformDexEntry::
 	next "(Except HP)"
 
 	bage "Lasts until the"
-	next "end of battle.@"
-
-	text_jump _GenericAlwaysGoesFirstText
+	next "end of battle." ; Aironfaar mod
+;;; Aironfaar mod start: moved from others
+	; fall through
+_GenericAlwaysGoesFirstText::
+	bage "Always goes"
+	next "first"
+	dex
+;;; Aironfaar mod end
 
 _BubbleDexEntry::
 	text "Blows a bubble"
@@ -1606,10 +1635,11 @@ _FlashDexEntry::
 	bage "Usually caused"
 	next "by a powerful"
 	next "electric arc.@"
-
-	text_call _GenericAlwaysGoesFirstText
+;;; Aironfaar mod start
+	text_call _GenericPriorityAttackPowerIncreaseText
 	text_end
-	text_jump _Generic10PercentFlinchText
+	text_jump _GenericAlwaysGoesFirstQuickConfusionText
+;;; Aironfaar mod end
 
 _PsywaveDexEntry::
 	text "A small psychic"
@@ -1720,7 +1750,7 @@ _SharpenDexEntry::
 
 	bage "Raises ATTACK"
 	next "and ACCURACY."
-	next "(+1 Each)"
+	next "(+1 each)"
 	dex
 
 _ConversionDexEntry::
@@ -1803,3 +1833,15 @@ _StruggleDexEntry::
 	next "Does heavy recoil"
 	next "to the <user>"
 	dex
+
+;;; Aironfaar mod start
+_GenericPriorityAttackPowerIncreaseText::
+	bage "If the <user> is at"
+	next "least level 20,"
+	next "power rises by 10,"
+	
+	bage "and by another 10"
+	next "if the <user> is at"
+	next "least level 30"
+	dex
+;;; Aironfaar mod end

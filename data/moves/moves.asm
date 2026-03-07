@@ -14,9 +14,9 @@ Moves:
 ; Characteristics of each move.
 	table_width MOVE_LENGTH
 	move POUND,        NO_ADDITIONAL_EFFECT,        40, NORMAL,       100, 35
-	move KARATE_CHOP,  CONFUSION_SIDE_EFFECT,       60, FIGHTING,     100, 20 ; high crit ratio ; Aironfaar mod: BP increased, PP decreased, secondary effect added
+	move KARATE_CHOP,  CONFUSION_SIDE_EFFECT,       60, FIGHTING,     100, 20 ; high crit ratio ; Aironfaar mod: BP increased, PP reduced, secondary effect added
 	move DOUBLESLAP,   TWO_TO_FIVE_ATTACKS_EFFECT,  15, NORMAL,       100, 10 ; Aironfaar mod: ACC increased
-	move COMET_PUNCH,  NO_ADDITIONAL_EFFECT,        60, FIGHTING,     100, 15 ; priority move
+	move COMET_PUNCH,  FLINCH_QUICK_EFFECT,         40, FIGHTING,     100, 15 ; priority move ; Aironfaar mod: BP reduced, flinches target if used as attacker's first move after switching in, has increased BP when used by mon of level 20/30+
 	move MEGA_PUNCH,   FLINCH_SIDE_EFFECT2,        100, FIGHTING,     100, 20
 	move PAY_DAY,      PAY_DAY_EFFECT,              60, NORMAL,       100, 20
 	move FIRE_PUNCH,   BURN_SIDE_EFFECT1,           55, FIRE,         100, 20 ; Aironfaar mod: high crit rate, BP reduced, PP increased
@@ -29,9 +29,9 @@ Moves:
 	move SWORDS_DANCE, ATTACK_UP2_EFFECT,            0, FIRE,         100, 30
 	move CUT,          NO_ADDITIONAL_EFFECT,        70, BUG,          100, 20 ; Aironfaar mod: high crit ratio
 	move GUST,         NO_ADDITIONAL_EFFECT,        40, FLYING,       100, 35
-	move WING_ATTACK,  NO_ADDITIONAL_EFFECT,        50, FLYING,       100, 35 ; priority move
+	move WING_ATTACK,  CONFUSION_QUICK_EFFECT,      40, FLYING,       100, 15 ; priority move ; Aironfaar mod: BP reduced, PP reduced, confuses target if used as attacker's first move after switching in, has increased BP when used by mon of level 20/30+
 	move WHIRLWIND,    CONFUSION_BIG_SIDE_EFFECT,  110, FLYING,        85, 10
-	move FLY,          FLY_EFFECT,                 130, FLYING,        95,  5 ; Aironfaar mod: BP increased, ACC and PP decreased
+	move FLY,          FLY_EFFECT,                 130, FLYING,        95,  5 ; Aironfaar mod: BP increased, ACC and PP reduced
 	move BIND,         TRAPPING_EFFECT,             25, ROCK,          85, 15
 	move SLAM,         POISON_SIDE_EFFECT1,         80, POISON,       100, 20 ; -> FILTHY SLAM ; Aironfaar mod: added chance to badly poison target
 	move VINE_WHIP,    NO_ADDITIONAL_EFFECT,        40, GRASS,        100, 15 
@@ -61,7 +61,7 @@ Moves:
 	move ROAR,         ATTACK_DOWN_SIDE_EFFECT,     40, DRAGON,       100, 20
 	move SING,         SLEEP_EFFECT,                 0, NORMAL,        55, 15
 	move SUPERSONIC,   CONFUSION_EFFECT,             0, NORMAL,        55, 20
-	move SONICBOOM,    FLINCH_SIDE_EFFECT1,         50, GHOST,        100, 15 ; priority move
+	move SONICBOOM,    FLINCH_QUICK_EFFECT,         40, GHOST,        100, 15 ; priority move, flinches target if used as attacker's first move after switching in ; Aironfaar mod: BP reduced, has increased BP when used by mon of level 20/30+
 	move DISABLE,      DISABLE_EFFECT,               0, NORMAL,        85, 20
 	move ACID,         DEFENSE_DOWN_SIDE_EFFECT,    50, POISON,       100, 30
 	move EMBER,        BURN_SIDE_EFFECT1,           40, FIRE,         100, 25
@@ -71,7 +71,7 @@ Moves:
 	move HYDRO_PUMP,   NO_ADDITIONAL_EFFECT,       120, WATER,         90,  5
 	move SURF,         NO_ADDITIONAL_EFFECT,        95, WATER,        100, 15
 	move ICE_BEAM,     FREEZE_SIDE_EFFECT1,         95, ICE,          100, 10
-	move BLIZZARD,     FREEZE_SIDE_EFFECT1,        120, ICE,           85,  5 ; TODO: 90
+	move BLIZZARD,     FREEZE_SIDE_EFFECT1,        120, ICE,           90,  5
 	move PSYBEAM,      CONFUSION_BIG_SIDE_EFFECT,   75, PSYCHIC_TYPE, 100, 20 ; Aironfaar mod: increased BP and confusion chance
 	move BUBBLEBEAM,   SPEED_DOWN_SIDE_EFFECT,      65, WATER,        100, 20
 	move AURORA_BEAM,  ATTACK_DOWN_SIDE_EFFECT,     65, ICE,          100, 20
@@ -103,14 +103,14 @@ Moves:
 	move ROCK_THROW,   NO_ADDITIONAL_EFFECT,        50, ROCK,         100, 15
 	move EARTHQUAKE,   NO_ADDITIONAL_EFFECT,       100, GROUND,       100, 10
 	move FISSURE,      OHKO_EFFECT,                  1, GROUND,        30,  5
-	move DIG,          CHARGE_EFFECT,              130, GROUND,        95,  5 ; Aironfaar mod: BP increased, ACC and PP decreased
+	move DIG,          CHARGE_EFFECT,              130, GROUND,        95,  5 ; Aironfaar mod: BP increased, ACC and PP reduced
 	move TOXIC,        POISON_EFFECT,                0, POISON,        90, 10
 	move CONFUSION,    CONFUSION_SIDE_EFFECT,       50, PSYCHIC_TYPE, 100, 25
 	move PSYCHIC_M,    SPECIAL_DOWN_SIDE_EFFECT,    90, PSYCHIC_TYPE, 100, 10
 	move HYPNOSIS,     SLEEP_EFFECT,                 0, PSYCHIC_TYPE,  60, 20
 	move MEDITATE,     ATTACK_SPECIAL_SPEED_UP1,     0, PSYCHIC_TYPE, 100, 15 
 	move AGILITY,      SPEED_UP2_EFFECT,             0, PSYCHIC_TYPE, 100, 30
-	move QUICK_ATTACK, NO_ADDITIONAL_EFFECT,        40, NORMAL,       100, 30 ; priority move
+	move QUICK_ATTACK, SPEED_UP_SIDE_EFFECT,        40, NORMAL,       100, 15 ; priority move ; Aironfaar mod: PP reduced, SPD +1, has increased BP when used by mon of level 20/30+
 	move RAGE,         ATTACK_UP_SIDE_EFFECT,       60, DRAGON,       100, 20
 	move TELEPORT,     TELEPORT_EFFECT,              0, PSYCHIC_TYPE, 100, 20
 	move NIGHT_SHADE,  NO_ADDITIONAL_EFFECT,        65, GHOST,        100, 20  
@@ -141,7 +141,7 @@ Moves:
 	move FIRE_BLAST,   BURN_SIDE_EFFECT2,          120, FIRE,          85,  5
 	move WATERFALL,    FLINCH_SIDE_EFFECT2,         80, WATER,        100, 15
 	move CLAMP,        TRAPPING_EFFECT,             25, WATER,         85, 15
-	move SWIFT,        SWIFT_EFFECT,                60, ICE,          100, 20 ; priority move
+	move SWIFT,        SWIFT_EFFECT,                35, ICE,          100, 15 ; priority move ; Aironfaar mod: BP reduced, PP reduced, has increased BP when used by mon of level 20/30+
 	move SKULL_BASH,   JUMP_KICK_EFFECT,           100, ROCK,          90, 10
 	move SPIKE_CANNON, TWO_OR_THREE_ATTACKS_EFFECT, 42, ROCK,         100, 10
 	move CONSTRICT,    PARALYZE_SIDE_EFFECT2,       75, ELECTRIC,     100, 20 ; -> STATIC SNAG
@@ -160,7 +160,7 @@ Moves:
 	move BUBBLE,       SPEED_DOWN_SIDE_EFFECT,      20, WATER,        100, 30
 	move DIZZY_PUNCH,  CONFUSION_BIG_SIDE_EFFECT,   90, FIGHTING,     100, 10
 	move SPORE,        SLEEP_EFFECT,                 0, GRASS,        100, 15
-	move FLASH,        FLINCH_SIDE_EFFECT1,         60, ELECTRIC,     100, 15 ; priority move
+	move FLASH,        CONFUSION_QUICK_EFFECT,      35, ELECTRIC,     100, 15 ; priority move ; Aironfaar mod: BP reduced, flinches target if used as attacker's first move after switching in, has increased BP when used by mon of level 20/30+
 	move PSYWAVE,      SPECIAL_DOWN_SIDE_EFFECT,    30, PSYCHIC_TYPE, 100, 20
 	move SPLASH,       SPLASH_EFFECT,                0, FLYING,       100, 40 ; Aironfaar mod: Splash is now FLYING type (now also signature move for Gyarados and L20+ Magikarp)
 	move ACID_ARMOR,   ACID_ARMOR_EFFECT,            0, POISON,       100, 20 ; combined reflect and light screen effects in one move

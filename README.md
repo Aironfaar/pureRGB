@@ -36,11 +36,13 @@ Others are simply modifications to my personal taste:
 - There is now a Move Reminder in the Daycare.
 - Learnsets have been touched: Except for the new variants of Nidorina and Nidorino, which forget moves that are no longer part of their learnset upon evolving from Nidoran F/M and learn the moves that replaced them, all evolved pokémon can learn their previous forms' moves either by level or TM/HM. If you evolve your pokémon the moment it becomes possible, you will neither miss a move nor lose out entirely on something that the previous form could learn. If all else fails, the Move Reminder can help.
 - Some moves have been changed as listed below, going off of Vortyne's changes:
+  - Comet Punch: BP 60 -> 40, BP 50 if user is level 20-29, BP 60 if user is level 30+, makes target flinch if it's the user's first turn out in battle
   - Crabhammer: BP 90 -> 80, ACC 95 -> 90, signature move of Kingler (refer to Move Mystic in Saffron City for details)
   - Cut: PP 30 -> 20, high critical hit chance
   - Dig: BP 80 -> 130, ACC 100 -> 95, PP 10 -> 5
   - Doubleslap: ACC 85 -> 100
   - Dragon Rage: 10% chance to make target flinch
+  - Flash: BP 60 -> 35, BP 45 if user is level 20-29, BP 55 if user is level 30+, confuses target for 2 turns if it's the user's first turn out in battle
   - Filthy Slam: 20% chance to badly poison the target
   - Fire Punch: BP 75 -> 55, PP 15 -> 20, high critical hit chance, adjusted Magmar's signature move stats
   - Fly: BP 90 -> 130, ACC 100 -> 95, PP 15 -> 5
@@ -50,11 +52,15 @@ Others are simply modifications to my personal taste:
   - Karate Chop: BP 50 -> 60, PP 25 -> 20, 10% chance to confuse target
   - Pin Missile: BP 18 -> 20
   - Psybeam: BP 65 -> 75, confusion chance 10% -> 30%
+  - Quick Attack: PP 30 -> 15, BP 50 if user is level 20-29, BP 60 if user is level 30+, increases user's Speed
   - Razor Leaf: PP 25 -> 20, 10% chance to make target flinch
+  - Sonicboom: BP 50 -> 40, BP 50 if user is level 20-29, BP 60 if user is level 30+
   - Splash: Type NORMAL -> FLYING, signature move of Gyarados and Level 20+ Magikarp (refer to Move Mystic in Saffron City for details)
   - Stomp: Type NORMAL -> GROUND
   - Strength: 33% chance for -1 Defense
+  - Swift: BP 60 -> 35, PP 20 -> 15, BP 45 if user is level 20-29, BP 55 if user is level 30+
   - Thunderpunch: BP 75 -> 55, PP 15 -> 20, high critical hit chance, adjusted Electabuzz's signature move stats
+  - Wing Attack: BP 50 -> 40, PP 35 -> 15, BP 50 if user is level 20-29, BP 60 if user is level 30+, confuses target for 2 turns if it's the user's first turn out in battle
 - 20 TMs have been added, most to reintroduce previously available TMs, some to add new moves to the TM pool.
   - TM 51: Teleport
   - TM 52: Softboiled
