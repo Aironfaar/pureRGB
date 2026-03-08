@@ -35,7 +35,7 @@ MoveEffectPointerTable:
 	dw SleepEffect               ; SLEEP_EFFECT
 	dw PoisonEffect              ; POISON_SIDE_EFFECT2
 	dw FreezeBurnParalyzeEffect  ; BURN_SIDE_EFFECT2
-	dw NULL                      ; SPEED_UP_SIDE_EFFECT
+	dw StatUpSideEffect          ; SPEED_UP_SIDE_EFFECT ; Aironfaar mod: used in Quick Attack
 	dw FreezeBurnParalyzeEffect  ; PARALYZE_SIDE_EFFECT2
 	dw FlinchSideEffect          ; FLINCH_SIDE_EFFECT2
 	dw OneHitKOEffect            ; OHKO_EFFECT
@@ -93,4 +93,6 @@ MoveEffectPointerTable:
 	dw ReflectLightScreenEffect  ; ACID_ARMOR_EFFECT
 	dw ExplodeRecoilEffect       ; EXPLODE_RECOIL_EFFECT
 	dw ConversionEffect          ; CONVERSION_EFFECT
+	dw FlinchSideEffect          ; FLINCH_QUICK_EFFECT ; Aironfaar mod: used in Sonicboom and Comet Punch
+	dw ConfusionQuickEffect      ; CONFUSION_QUICK_EFFECT ; Aironfaar mod: used in Flash and Wing Attack
 	assert_table_length NUM_MOVE_EFFECTS

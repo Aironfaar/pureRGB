@@ -78,6 +78,14 @@ RemappableMoves::
 	db EXPLOSION, -1, -2, 2
 	db SELFDESTRUCT, -1, -2, 2
 	db KINESIS, -1, -2, 3 ; FIREWALL
+;;; Aironfaar mod start: streamline priority move BP
+	db QUICK_ATTACK, -1, -2, 4
+	db COMET_PUNCH, -1, -2, 4
+	db WING_ATTACK, -1, -2, 4
+	db FLASH, -1, -2, 4
+	db SWIFT, -1, -2, 4
+	db SONICBOOM, -1, -2, 4
+;;; Aironfaar mod end
 	db POISON_STING, BEEDRILL, 45, 0
 	db TWINEEDLE, BEEDRILL, 65, 0 
 	db ACID, ARBOK, 100, 0
@@ -102,6 +110,7 @@ ModifierFuncs:
 	dw SingModifier
 	dw ExplosionSelfdestructModifier
 	dw FirewallModifier
+	dw PriorityMoveBPModifier ; Aironfaar mod
 
 CheckIfAsleep::
 	ldh a, [hWhoseTurn]
@@ -232,6 +241,33 @@ FirewallModifier:
 	pop af
 	ld [bc], a
 	ret
+
+;;; Aironfaar mod start
+PriorityMoveBPModifier:
+	call GetMoveRemapData
+	ld d, 35
+	cp FLASH
+	jr z, .special
+	cp SWIFT
+	jr z, .special
+	ld d, 40
+.special
+	ld a, 19
+	cp e
+	ret nc
+	ld a, 29
+	cp e
+	ld a, d
+	jr nc, .skip
+	add 10
+.skip
+	add 10
+	push af
+	call GetMoveRemapData2
+	pop af
+	ld [bc], a
+	ret
+;;; Aironfaar mod end
 
 ; input d = which pokemon
 GetRemappedMoveAndPowerFromPokemon::

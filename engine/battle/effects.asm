@@ -1185,10 +1185,11 @@ FlinchSideEffect:
 	ld de, wEnemyMoveEffect
 	ld bc, wEnemyMoveNum
 .flinchSideEffect
-	ld a, [bc]
-	cp SONICBOOM
-	jr z, .sonicBoom
+;;; Aironfaar mod start: handle Sonicboom and Comet Punch special effect
 	ld a, [de]
+	cp FLINCH_QUICK_EFFECT
+	jr z, .flinchQuickEffect
+;;; Aironfaar mod end
 	cp FLINCH_SIDE_EFFECT1
 	ld b, 10 percent + 1 ; chance of flinch (FLINCH_SIDE_EFFECT1)
 	jr z, .gotEffectChance
@@ -1201,7 +1202,7 @@ FlinchSideEffect:
 	set FLINCHED, [hl] ; set mon's status to flinching
 	jp ClearHyperBeam
 ;;;;; PureRGBnote: ADDED: sonic boom always flinches if it's used the first turn a pokemon is out
-.sonicBoom
+.flinchQuickEffect ; Aironfaar mod: now named after new effect constant
 	ldh a, [hWhoseTurn]
 	and a
 	ld a, [wPlayerTurnCount]
@@ -1365,6 +1366,19 @@ ConfusionBigSideEffect: ; PureRGBnote: ADDED: confusion effect that has a 30% ch
 	ret nc
 	jr ConfusionSideEffectSuccess
 
+;;; Aironfaar mod start: new confusion effect that is guaranteed to apply if used on the first turn the attacker is in combat, but fails otherwise
+ConfusionQuickEffect:
+	ldh a, [hWhoseTurn]
+	and a
+	ld a, [wPlayerTurnCount]
+	jr z, .gotTurn
+	ld a, [wEnemyTurnCount]
+.gotTurn
+	cp 1 ; the count will be 1 on first turn mon is out
+	ret nz
+	jr ConfusionSideEffectSuccess
+;;; Aironfaar mod end
+
 ConfusionEffect:
 	call CheckTargetSubstitute
 	jr nz, ConfusionEffectFailed
@@ -1388,12 +1402,20 @@ ConfusionSideEffectSuccess:
 	jr nz, ConfusionEffectFailed
 	set CONFUSED, [hl] ; mon is now confused
 	push af
+;;; Aironfaar mod start: confusion quick effect always causes two rounds of confusion
+	cp CONFUSION_QUICK_EFFECT
+	ld a, 3
+	jr z, .skipRandom
+;;; Aironfaar mod end
 	call BattleRandom
 	and $3
 	inc a
 	inc a
+.skipRandom ; Aironfaar mod
 	ld [bc], a ; confusion status will last 2-5 turns
 	pop af
+	cp CONFUSION_QUICK_EFFECT ; Aironfaar mod: handle new confusion effect
+	jr z, .done ; Aironfaar mod
 ;;;;;;;;;; PureRGBnote: ADDED: confusion effect that has a 30% chance of applying confusion
 	cp CONFUSION_BIG_SIDE_EFFECT
 	jr z, .done
@@ -1410,6 +1432,8 @@ BecameConfusedText:
 	text_end
 
 ConfusionEffectFailed:
+	cp CONFUSION_QUICK_EFFECT ; Aironfaar mod
+	ret z ; Aironfaar mod
 	cp CONFUSION_BIG_SIDE_EFFECT
 	ret z
 	cp CONFUSION_SIDE_EFFECT

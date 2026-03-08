@@ -84,9 +84,9 @@ CryData::
 	mon_cry SFX_CRY_0E, $FF, $FF ; Ditto
 	mon_cry SFX_CRY_19, $77, $10 ; Meowth
 	mon_cry SFX_CRY_20, $20, $E0 ; Krabby
-	mon_cry SFX_CRY_22, $FF, $40 ; MissingNo.
-	mon_cry SFX_CRY_00, $00, $00 ; MissingNo.
-	mon_cry SFX_CRY_0E, $E0, $60 ; MissingNo.
+	mon_cry SFX_CRY_08, $00, $C0 ; Stone Venusaur ; Aironfaar mod
+	mon_cry SFX_CRY_23, $00, $80 ; Stone Charizard ; Aironfaar mod
+	mon_cry SFX_CRY_1D, $00, $80 ; Stone Blastoise ; Aironfaar mod
 	mon_cry SFX_CRY_24, $4F, $10 ; Vulpix
 	mon_cry SFX_CRY_24, $88, $60 ; Ninetales
 	mon_cry SFX_CRY_0F, $EE, $01 ; Pikachu
@@ -126,8 +126,8 @@ CryData::
 	mon_cry SFX_CRY_0B, $2A, $10 ; Dugtrio
 	mon_cry SFX_CRY_1A, $29, $80 ; Venomoth
 	mon_cry SFX_CRY_0C, $23, $FF ; Dewgong
-	mon_cry SFX_CRY_00, $00, $00 ; MissingNo.
-	mon_cry SFX_CRY_00, $00, $00 ; MissingNo.
+	mon_cry SFX_CRY_01, $4F, $E0 ; Kaiju Nidorina ; Aironfaar mod
+	mon_cry SFX_CRY_00, $32, $C0 ; Kaiju Nidorino ; Aironfaar mod
 	mon_cry SFX_CRY_16, $80, $20 ; Caterpie
 	mon_cry SFX_CRY_1C, $CC, $01 ; Metapod
 	mon_cry SFX_CRY_16, $77, $40 ; Butterfree
@@ -164,10 +164,10 @@ CryData::
 	mon_cry SFX_CRY_1C, $3D, $FF ; MissingNo. ; black fog
 	mon_cry SFX_CRY_16, $80, $40 ; Goldeen
 	mon_cry SFX_CRY_16, $10, $FF ; Seaking
-	mon_cry SFX_CRY_01, $4F, $E0 ; Kaiju Nidorina ; Aironfaar mod
-	mon_cry SFX_CRY_0A, $23, $80 ; Kaiju Nidoqueen ; Aironfaar mod
-	mon_cry SFX_CRY_00, $32, $C0 ; Kaiju Nidorino ; Aironfaar mod
-	mon_cry SFX_CRY_09, $06, $80 ; Kaiju Nidoking ; Aironfaar mod
+	mon_cry SFX_CRY_00, $00, $00 ; MissingNo.
+	mon_cry SFX_CRY_00, $00, $00 ; MissingNo.
+	mon_cry SFX_CRY_00, $00, $00 ; MissingNo.
+	mon_cry SFX_CRY_00, $00, $00 ; MissingNo.
 	mon_cry SFX_CRY_25, $00, $80 ; Ponyta
 	mon_cry SFX_CRY_25, $20, $C0 ; Rapidash
 	mon_cry SFX_CRY_22, $00, $80 ; Rattata

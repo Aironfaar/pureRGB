@@ -364,7 +364,7 @@ ChampArenaBrockMoveset:
 	db ROCK_SLIDE
 	db EARTHQUAKE
 	db MIRROR_MOVE
-	db MEGA_KICK
+	db MEGA_PUNCH ; Aironfaar mod: was MEGA_KICK, which was replaced by MEGA_PUNCH in the Golem line's learnset
 	; kangaskhan
 	db DIZZY_PUNCH
 	db COMET_PUNCH
@@ -517,7 +517,7 @@ ChampArenaRivalMoveset2:
 	db HYDRO_PUMP
 	db WITHDRAW
 	db COUNTER ; DRAIN_PUNCH
-	db ICE_BEAM
+	db ICE_PUNCH ; Aironfaar mod: was ICE_BEAM, which was removed from Blastoise's TM moves
 
 ChampArenaRivalMoveset3:
 	; zapdos
@@ -644,7 +644,7 @@ EliteFourRivalMoveset2:
 	; blastoise
 	db WITHDRAW
 	db COUNTER ; DRAIN PUNCH
-	db ICE_BEAM
+	db ICE_PUNCH ; Aironfaar mod: was ICE_BEAM, which was removed from Blastoise's TM moves
 	db HYDRO_PUMP
 
 EliteFourRivalMoveset3:

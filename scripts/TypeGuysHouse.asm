@@ -263,7 +263,8 @@ TypeGuysHouseTypeGuyText:
 	text_end
 
 PokemonTypeGuyList::
-	db 24 ; Aironfaar mod: added Seel
+	db 28 ; Aironfaar mod: added Blastoise, Geodude, Graveler, Golem and Seel
+	db BLASTOISE ; Aironfaar mod
 	db BUTTERFREE
 	db FEAROW
 	db SANDSHREW
@@ -271,6 +272,9 @@ PokemonTypeGuyList::
 	db NINETALES
 	db GOLDUCK
 	db VICTREEBEL
+	db GEODUDE ; Aironfaar mod
+	db GRAVELER ; Aironfaar mod
+	db GOLEM ; Aironfaar mod
 	db PONYTA
 	db RAPIDASH
 	db DODUO

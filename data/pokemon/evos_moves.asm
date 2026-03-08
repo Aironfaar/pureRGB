@@ -91,9 +91,9 @@ EvosMovesPointerTable:
 	dw NothingEvosMoves ; Aironfaar mod: Ditto (used to have a learnset of its own)
 	dw MeowthEvosMoves
 	dw KrabbyEvosMoves
-	dw NothingEvosMoves
-	dw NothingEvosMoves
-	dw NothingEvosMoves
+	dw StoneVenusaurEvosMoves ; Aironfaar mod
+	dw StoneCharizardEvosMoves ; Aironfaar mod
+	dw StoneBlastoiseEvosMoves ; Aironfaar mod
 	dw VulpixEvosMoves
 	dw NinetalesEvosMoves
 	dw PikachuEvosMoves
@@ -133,8 +133,8 @@ EvosMovesPointerTable:
 	dw DugtrioEvosMoves
 	dw VenomothEvosMoves
 	dw DewgongEvosMoves
-	dw NothingEvosMoves
-	dw NothingEvosMoves
+	dw KaijuNidorinaEvosMoves ; Aironfaar mod
+	dw KaijuNidorinoEvosMoves ; Aironfaar mod
 	dw CaterpieEvosMoves
 	dw MetapodEvosMoves
 	dw ButterfreeEvosMoves
@@ -171,10 +171,10 @@ EvosMovesPointerTable:
 	dw NothingEvosMoves
 	dw GoldeenEvosMoves
 	dw SeakingEvosMoves
-	dw KaijuNidorinaEvosMoves ; Aironfaar mod
-	dw KaijuNidoqueenEvosMoves ; Aironfaar mod
-	dw KaijuNidorinoEvosMoves ; Aironfaar mod
-	dw KaijuNidokingEvosMoves ; Aironfaar mod
+	dw NothingEvosMoves
+	dw NothingEvosMoves
+	dw NothingEvosMoves
+	dw NothingEvosMoves
 	dw PonytaEvosMoves
 	dw RapidashEvosMoves
 	dw RattataEvosMoves
@@ -241,10 +241,25 @@ MissingnoEvosMoves:
 BulbasaurEvosMoves:
 ; Evolutions
 	db EVOLVE_LEVEL, 16, IVYSAUR
+	db 0
+; Learnset
+	db 7, LEECH_SEED
+	db 11, VINE_WHIP
+	db 14, POISONPOWDER
+	db 18, STUN_SPORE
+	db 21, CONSTRICT ; STATIC SNAG
+	db 25, RAZOR_LEAF
+	db 33, SLEEP_POWDER
+	db 38, GROWTH
+	db 45, SOLARBEAM
+	db 0
+
 IvysaurEvosMoves:
 ; Evolutions
+	db EVOLVE_ITEM, FIRE_STONE, 1, STONE_VENUSAUR ; Aironfaar mod
 	db EVOLVE_LEVEL, 32, VENUSAUR
-VenusaurEvosMoves:
+VenusaurEvosMoves: ; Aironfaar mod: learns FILTHY SLAM upon evolving
+StoneVenusaurEvosMoves: ; Aironfaar mod: learns SKULL BASH upon evolving
 ; Evolutions
 	db 0
 ; Learnset
@@ -262,10 +277,26 @@ VenusaurEvosMoves:
 CharmanderEvosMoves:
 ; Evolutions
 	db EVOLVE_LEVEL, 16, CHARMELEON
+	db 0
+; Learnset
+	db 7, LEER
+	db 9, EMBER
+	db 12, FURY_SWIPES ; DUST CLAW
+	db 15, SMOKESCREEN
+	db 18, KINESIS ; FIREWALL
+	db 23, RAGE
+	db 26, TAKE_DOWN ; HEAT RUSH
+	db 30, SLASH
+	db 38, FLAMETHROWER
+	db 46, FIRE_SPIN
+	db 0
+
 CharmeleonEvosMoves:
 ; Evolutions
+	db EVOLVE_ITEM, WATER_STONE, 1, STONE_CHARIZARD ; Aironfaar mod
 	db EVOLVE_LEVEL, 36, CHARIZARD
-CharizardEvosMoves:
+CharizardEvosMoves: ; Aironfaar mod: learns WING ATTACK upon evolving
+StoneCharizardEvosMoves: ; Aironfaar mod: learns FIRE PUNCH upon evolving
 ; Evolutions
 	db 0
 ; Learnset
@@ -284,10 +315,25 @@ CharizardEvosMoves:
 SquirtleEvosMoves:
 ; Evolutions
 	db EVOLVE_LEVEL, 16, WARTORTLE
+	db 0
+; Learnset
+	db 8, BUBBLE
+	db 11, LIGHT_SCREEN
+	db 14, WATER_GUN
+	db 18, BITE
+	db 23, GLARE
+	db 28, WITHDRAW
+	db 33, COUNTER ; DRAIN PUNCH
+	db 35, SKULL_BASH
+	db 42, HYDRO_PUMP
+	db 0
+
 WartortleEvosMoves:
 ; Evolutions
+	db EVOLVE_ITEM, LEAF_STONE, 1, STONE_BLASTOISE ; Aironfaar mod
 	db EVOLVE_LEVEL, 36, BLASTOISE
-BlastoiseEvosMoves:
+BlastoiseEvosMoves: ; Aironfaar mod: learns THUNDERPUNCH upon evolving
+StoneBlastoiseEvosMoves: ; Aironfaar mod: learns ICE PUNCH upon evolving
 ; Evolutions
 	db 0
 ; Learnset
@@ -565,11 +611,8 @@ NidoqueenEvosMoves:
 	db 54, SUBMISSION
 	db 0
 
-;;; Aironfaar mod start: new Nidorina and Nidoqueen variant
+;;; Aironfaar mod start: new Nidorina variant
 KaijuNidorinaEvosMoves:
-; Evolutions
-	db EVOLVE_LEVEL, 36, KAIJU_NIDOQUEEN
-KaijuNidoqueenEvosMoves:
 ; Evolutions
 	db 0
 ; Learnset
@@ -622,11 +665,8 @@ NidokingEvosMoves:
 	db 54, POISON_GAS
 	db 0
 
-;;; Aironfaar mod start: new Nidorino and Nidoking variant
+;;; Aironfaar mod start: new Nidorino variant
 KaijuNidorinoEvosMoves:
-; Evolutions
-	db EVOLVE_LEVEL, 36, KAIJU_NIDOKING
-KaijuNidokingEvosMoves:
 ; Evolutions
 	db 0
 ; Learnset
@@ -1091,12 +1131,13 @@ GeodudeEvosMoves:
 	db 16, ROCK_THROW
 	db 19, DEFENSE_CURL
 	db 21, SELFDESTRUCT
+	db 23, KARATE_CHOP ; Aironfaar mod: added
 	db 28, ROCK_SLIDE
 	db 31, BARRAGE
 	db 34, GLARE
 	db 39, EARTHQUAKE
 	db 46, EXPLOSION
-	db 52, MEGA_KICK
+	db 52, MEGA_PUNCH ; Aironfaar mod: was MEGA_KICK
 	db 60, FISSURE
 	db 65, MIRROR_MOVE
 	db 0
@@ -1114,12 +1155,13 @@ GolemEvosMoves:
 	db 16, ROCK_THROW
 	db 19, DEFENSE_CURL
 	db 21, SELFDESTRUCT
+	db 23, KARATE_CHOP ; Aironfaar mod: added
 	db 28, ROCK_SLIDE
 	db 31, BARRAGE
 	db 34, GLARE
 	db 39, EARTHQUAKE
 	db 46, EXPLOSION
-	db 52, MEGA_KICK
+	db 52, MEGA_PUNCH ; Aironfaar mod: was MEGA_KICK
 	db 60, FISSURE
 	db 65, MIRROR_MOVE
 	db 0

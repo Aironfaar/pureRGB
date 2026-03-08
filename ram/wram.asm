@@ -2437,7 +2437,8 @@ wWhichDungeonWarp:: db
 
 wUnusedCardKeyGateID:: db ; unused save file byte?
 
-	ds 8 ; unused save file 8 bytes
+	ds 4 ; unused save file 4 bytes ; Aironfaar mod: used to be ds 8
+wPkmnTypeRemapFlags:: ds 4 ; flag array for changing pokemon back to their original types. 0 = new typing, 1 = old typing ; Aironfaar mod: used to be further down and ds 3
 
 ; bit 0: using Strength outside of battle
 ; bit 1: set by IsSurfingAllowed when surfing's allowed, but the caller resets it after checking the result
@@ -2592,7 +2593,7 @@ wTrainerHeaderPtr:: dw
 wBillsGardenVisitor:: 
 wBillsGardenPreviousVisitors:: ds 3 ; PureRGBnote: ADDED: used to track the last 3 visitors at bills garden to make randomization less annoying
 
-wPkmnTypeRemapFlags:: ds 3 ; flag array for changing pokemon back to their original types. 0 = new typing, 1 = old typing
+	ds 3 ; Aironfaar mod: used to be wPkmnTypeRemapFlags, moved further up to make space for more type changes
 
 ; the trainer the player must face after getting a wrong answer in the Cinnabar
 ; gym quiz

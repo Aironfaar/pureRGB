@@ -31,10 +31,40 @@ _CinnabarLabMetronomeRoomScientist1TM35NoRoomText::
 	done
 
 _CinnabarLabMetronomeRoomScientist2Text::
-	text "EEVEE can evolve"
-	line "into 1 of 3 kinds"
-	cont "of #MON."
+;;; Aironfaar mod start: a guy in Safari Zone already talks about evolving Eevee into different forms, so repurpose this scientist's dialogue to introduce the starter stone evolutions
+	text "Just as certain"
+	line "#MON species"
+	cont "have become"
+	cont "extinct, some"
+	cont "evolutionary"
+	cont "paths have"
+	cont "disappeared or"
+	cont "changed over"
+	cont "time."
+	
+	para "For example, pre-"
+	line "industrialization"
+	cont "era BLASTOISE"
+	cont "looked much more"
+	cont "like WARTORTLE,"
+	cont "but with time,"
+	cont "its body took on"
+	cont "aspects of modern"
+	cont "technology!"
+	
+	para "It's theorized"
+	line "that prehistoric"
+	cont "forms of VENUSAUR"
+	cont "and CHARIZARD"
+	cont "were different as"
+	cont "well."
+	
+	para "Maybe evolution"
+	line "stones can unlock"
+	cont "such ancient"
+	cont "potential<...>"
 	done
+;;; Aironfaar mod end
 
 _CinnabarLabMetronomeRoomPCText::
 	text "There's an e-mail"

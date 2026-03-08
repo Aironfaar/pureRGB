@@ -275,7 +275,7 @@ InGameTradeTextPointers:
 ;;; Aironfaar mod start: new trades, new tables and table contents
 	dw TradeTextPointers1  ; JYNX Lola
 	dw TradeTextPointers2  ; ELECTABUZZ Lightyear
-	dw TradeTextPointers3  ; TANGELA Discombob
+	dw TradeTextPointers3  ; PIKACHU PIKABLU
 	dw TradeTextPointers4  ; BULBASAUR Bulbert
 	dw TradeTextPointers5  ; SQUIRTLE Mirtle
 	dw TradeTextPointers6  ; CHARMANDER Mandy
@@ -308,11 +308,11 @@ TradeTextPointers2:
 
 TradeTextPointers3:
 	table_width 2
-	dw WannaTradeDiscombobText
-	dw NoTradeDiscombobText
-	dw WrongMonDiscombobText
-	dw ThanksDiscombobText
-	dw AfterTradeDiscombobText
+	dw WannaTradePikabluText
+	dw NoTradePikabluText
+	dw WrongMonPikabluText
+	dw ThanksPikabluText
+	dw AfterTradePikabluText
 	assert_table_length NUM_TRADE_TEXTS
 
 TradeTextPointers4:
@@ -486,28 +486,28 @@ AfterTradeLightyearText:
     text_far _AfterTradeLightyearText
 	text_end
 
-WannaTradeDiscombobText:
-    text_far _WannaTradeDiscombobText
+WannaTradePikabluText:
+    text_far _WannaTradePikabluText
 	text_end
 
-NoTradeDiscombobText:
-    text_far _NoTradeDiscombobText
+NoTradePikabluText:
+    text_far _NoTradePikabluText
 	text_end
 
-WrongMonDiscombobText:
+WrongMonPikabluText:
     text_asm
 	ld hl, WrongMonHeyText
 	rst _PrintText
-	ld hl, NoTradeDiscombobText
+	ld hl, NoTradePikabluText
 	rst _PrintText
 	rst TextScriptEnd
 
-ThanksDiscombobText:
-    text_far _ThanksDiscombobText
+ThanksPikabluText:
+    text_far _ThanksPikabluText
 	text_end
 
-AfterTradeDiscombobText:
-	text_far _AfterTradeDiscombobText
+AfterTradePikabluText:
+	text_far _AfterTradePikabluText
 	text_end
 
 WannaTradeStarterText:

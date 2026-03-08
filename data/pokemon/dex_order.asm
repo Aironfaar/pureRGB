@@ -78,9 +78,9 @@ PokedexOrder:
 	db DEX_DITTO
 	db DEX_MEOWTH
 	db DEX_KRABBY
-	db 0 ; MISSINGNO.
-	db 0 ; MISSINGNO.
-	db 0 ; MISSINGNO.
+	db DEX_VENUSAUR ; Stone Venusaur ; Aironfaar mod
+	db DEX_CHARIZARD ; Stone Charizard ; Aironfaar mod
+	db DEX_BLASTOISE ; Stone Blastoise ; Aironfaar mod
 	db DEX_VULPIX
 	db DEX_NINETALES
 	db DEX_PIKACHU
@@ -120,8 +120,8 @@ PokedexOrder:
 	db DEX_DUGTRIO
 	db DEX_VENOMOTH
 	db DEX_DEWGONG
-	db 0 ; MISSINGNO.
-	db 0 ; MISSINGNO.
+	db DEX_NIDORINA ; Kaiju Nidorina ; Aironfaar mod
+	db DEX_NIDORINO ; Kaiju Nidorino ; Aironfaar mod
 	db DEX_CATERPIE
 	db DEX_METAPOD
 	db DEX_BUTTERFREE
@@ -158,10 +158,10 @@ PokedexOrder:
 	db 0 ; MISSINGNO.
 	db DEX_GOLDEEN
 	db DEX_SEAKING
-	db DEX_NIDORINA ; Kaiju Nidorina ; Aironfaar mod
-	db DEX_NIDOQUEEN ; Kaiju Nidoqueen ; Aironfaar mod
-	db DEX_NIDORINO ; Kaiju Nidorino ; Aironfaar mod
-	db DEX_NIDOKING ; Kaiju Nidoking ; Aironfaar mod
+	db 0 ; MISSINGNO.
+	db 0 ; MISSINGNO.
+	db 0 ; MISSINGNO.
+	db 0 ; MISSINGNO.
 	db DEX_PONYTA
 	db DEX_RAPIDASH
 	db DEX_RATTATA

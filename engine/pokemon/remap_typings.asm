@@ -1,6 +1,7 @@
 ; PureRGBnote: ADDED: code for remapping typings of pokenon to their original ones if desired.
 
 OriginalTypings:
+db BLASTOISE, WATER, WATER ; Aironfaar mod
 db BUTTERFREE, BUG, FLYING
 db FEAROW, NORMAL, FLYING
 db SANDSHREW, GROUND, GROUND
@@ -8,6 +9,9 @@ db SANDSLASH, GROUND, GROUND
 db NINETALES, FIRE, FIRE
 db GOLDUCK, WATER, WATER
 db VICTREEBEL, GRASS, POISON
+db GEODUDE, ROCK, GROUND ; Aironfaar mod
+db GRAVELER, ROCK, GROUND ; Aironfaar mod
+db GOLEM, ROCK, GROUND ; Aironfaar mod
 db PONYTA, FIRE, FIRE
 db RAPIDASH, FIRE, FIRE
 db DODUO, NORMAL, FLYING

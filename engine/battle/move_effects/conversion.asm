@@ -339,7 +339,7 @@ ConversionAttackTable:
 	db EARTHQUAKE            ; GASTLY             
 	db SPIKE_CANNON          ; SCYTHER            
 	db CONVERT_WATER         ; STARYU             
-	db CONVERT_WATER         ; BLASTOISE          
+	db SOLARBEAM             ; BLASTOISE ; Aironfaar mod: Blastoise changed to Water/Electric         
 	db PSYCHIC_M               ; PINSIR             
 	db CONVERT_TRI_GRASS     ; TANGELA            
 	db POISON_GAS            ; TORCHED
@@ -350,7 +350,7 @@ ConversionAttackTable:
 	db CONVERT_TRI_FLYING    ; PIDGEY             
 	db CONVERT_WATER         ; SLOWPOKE           
 	db TWINEEDLE             ; KADABRA            
-	db MEGA_DRAIN            ; GRAVELER           
+	db SURF                  ; GRAVELER ; Aironfaar mod: Graveler changed to Rock/Fighting         
 	db DIZZY_PUNCH           ; CHANSEY            
 	db PSYCHIC_M             ; MACHOKE            
 	db CONVERT_MR_MIME       ; MR_MIME  
@@ -360,7 +360,7 @@ ConversionAttackTable:
 	db CONVERT_TRI_BUG       ; PARASECT           
 	db CONVERT_WATER         ; PSYDUCK            
 	db TWINEEDLE             ; DROWZEE            
-	db MEGA_DRAIN            ; GOLEM              
+	db SURF                  ; GOLEM ; Aironfaar mod: Golem changed to Rock/Fighting
 	db PSYCHIC_M             ; IRRADIATED        
 	db SPIKE_CANNON          ; MAGMAR
 	db EARTHQUAKE            ; VOLCANIC_MAGMAR
@@ -432,8 +432,8 @@ ConversionAttackTable:
 	db SOLARBEAM             ; DUGTRIO            
 	db CONVERT_TRI_BUG       ; VENOMOTH           
 	db CONVERT_WATER         ; DEWGONG            
-	db 0               ; $79
-	db 0               ; $7A
+	db EARTHQUAKE            ; KAIJU_NIDORINA	; Aironfaar mod
+	db EARTHQUAKE            ; KAIJU_NIDORINO	; Aironfaar mod
 	db CONVERT_TRI_BUG       ; CATERPIE           
 	db CONVERT_TRI_BUG       ; METAPOD            
 	db SPIKE_CANNON          ; BUTTERFREE         
@@ -469,18 +469,18 @@ ConversionAttackTable:
 	db EARTHQUAKE            ; TENTACRUEL         
 	db 0               ; $9C
 	db CONVERT_WATER         ; GOLDEEN            
-	db CONVERT_WATER         ; SEAKING            
-	db EARTHQUAKE            ; KAIJU_NIDORINA	; Aironfaar mod
-	db EARTHQUAKE            ; KAIJU_NIDOQUEEN	; Aironfaar mod
-	db EARTHQUAKE            ; KAIJU_NIDORINO	; Aironfaar mod
-	db EARTHQUAKE            ; KAIJU_NIDOKING	; Aironfaar mod
+	db CONVERT_WATER         ; SEAKING
+	db 0               ; $9F
+	db 0               ; $A0
+	db 0               ; $A1
+	db 0               ; $A2
 	db SURF                  ; PONYTA             
 	db SURF                  ; RAPIDASH           
 	db DIZZY_PUNCH           ; RATTATA            
 	db DIZZY_PUNCH           ; RATICATE           
 	db PSYCHIC_M             ; NIDORINO           
 	db PSYCHIC_M             ; NIDORINA           
-	db MEGA_DRAIN            ; GEODUDE            
+	db SURF                  ; GEODUDE ; Aironfaar mod: Geodude changed to Rock/Fighting
 	db DIZZY_PUNCH           ; PORYGON            
 	db THUNDERBOLT           ; AERODACTYL         
 	db RAZOR_LEAF            ; HARDENED_ONIX      
@@ -525,8 +525,12 @@ SecondaryConversionMagneton:
 
 ; for some pokemon if they have their original typings, we need to tweak what conversion will use
 ConversionTypeRemapTable:
+	db BLASTOISE, CONVERT_WATER ; Aironfaar mod
 	db FEAROW, CONVERT_TRI_FLYING
 	db VICTREEBEL, CONVERT_GRASS_POISON
+	db GEODUDE, MEGA_DRAIN ; Aironfaar mod
+	db GRAVELER, MEGA_DRAIN ; Aironfaar mod
+	db GOLEM, MEGA_DRAIN ; Aironfaar mod
 	db DODUO, CONVERT_TRI_FLYING
 	db DODRIO, CONVERT_TRI_FLYING
 	db SEADRA, SOLARBEAM

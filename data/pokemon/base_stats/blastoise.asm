@@ -3,17 +3,17 @@
 	db  79,  83, 100,  78,  85
 	;   hp  atk  def  spd  spc
 
-	db WATER, WATER ; type
+	db WATER, ELECTRIC ; type ; Aironfaar mod
 	db 45 ; catch rate
 	db 210 ; base exp
 
 	INCBIN "gfx/pokemon/front/blastoise.pic", 0, 1 ; sprite dimensions
 	dw BlastoisePicFront, BlastoisePicBackSW
 
-	db TACKLE, TAIL_WHIP, NO_MOVE, NO_MOVE ; level 1 learnset
+	db TACKLE, TAIL_WHIP, THUNDERPUNCH, NO_MOVE ; level 1 learnset ; Aironfaar mod
 	db GROWTH_MEDIUM_SLOW ; growth rate
 
-	; tm/hm learnset
+	; tm/hm learnset ; Aironfaar mod: removed ICE_BEAM and BLIZZARD to differentiate from Variant Blastoise, got Thunderbolt and Thunder instead
 	tmhm \
 	ICE_PUNCH,\
 	TOXIC,\
@@ -22,13 +22,13 @@
 	DOUBLE_EDGE,\
 	BUBBLEBEAM,\
 	AURORA_BEAM,\
-	ICE_BEAM,\
-	BLIZZARD,\
 	HYPER_BEAM,\
 	AMNESIA,\
 	THUNDERPUNCH,\
 	ROLLING_KICK,\
 	BARRIER,\
+	THUNDERBOLT,\ ; Aironfaar mod
+	THUNDER,\ ; Aironfaar mod
 	EARTHQUAKE,\
 	CRABHAMMER,\
 	DIG,\

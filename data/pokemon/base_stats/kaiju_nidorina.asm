@@ -1,12 +1,12 @@
 ;;; Aironfaar mod: new variant mon
 	db DEX_NIDORINA ; pokedex id
 
-	db  70,  55,  62,  56,  67
+	db  90,  75,  82,  76,  87
 	;   hp  atk  def  spd  spc
 
-	db POISON, POISON ; type
-	db 120 ; catch rate
-	db 117 ; base exp
+	db POISON, DRAGON ; type
+	db 45 ; catch rate
+	db 194 ; base exp
 
 	INCBIN "gfx/pokemon/front/kaiju_nidorina.pic", 0, 1 ; sprite dimensions
 	dw KaijuNidorinaPicFront, KaijuNidorinoaPicBackSW
@@ -16,6 +16,8 @@
 
 	; tm/hm learnset
 	tmhm \
+	ICE_PUNCH,\
+	FIRE_PUNCH,\
 	TOXIC,\
 	BODY_SLAM,\
 	SLASH,\
@@ -24,14 +26,22 @@
 	AURORA_BEAM,\
 	ICE_BEAM,\
 	BLIZZARD,\
+	HYPER_BEAM,\
+	THUNDERPUNCH,\
 	ROLLING_KICK,\
 	BARRIER,\
+	SOLARBEAM,\
+	DRAGON_RAGE,\
 	THUNDERBOLT,\
 	THUNDER,\
+	EARTHQUAKE,\
 	DIG,\
+	KINESIS,\ ; FIREWALL
 	REFLECT,\
 	BIDE,\
 	BARRAGE,\
+	FIRE_BLAST,\
+	FLAMETHROWER,\
 	SLAM,\ ; FILTHY SLAM
 	KARATE_CHOP,\
 	LOVELY_KISS,\
@@ -42,9 +52,14 @@
 	SUBSTITUTE,\
 	REST,\
 	MIMIC,\
+	FISSURE,\
+	WHIRLWIND,\
+	TRI_ATTACK,\
 	HEADBUTT,\
+	PAY_DAY,\
 	SUBMISSION,\
 	CUT,\
+	SURF,\
 	STRENGTH,\
 	FLASH
 	; end

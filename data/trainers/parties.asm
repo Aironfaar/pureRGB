@@ -86,7 +86,7 @@ YoungsterData:
 	db 17, GROWLITHE, SLOWPOKE, 0 ; PureRGBnote: level 17 slowpoke ensures mew glitch still works
 	db 18, EKANS, SANDSHREW, 0 
 ; SS Anne 1F Rooms
-	db 22, KAIJU_NIDORINO, 0 ; Aironfaar mod: was regular NIDORINO
+	db 22, NIDORINO, 0
 ; Route 11
 	db 21, GRIMER, KRABBY, 0
 	db 19, SANDSHREW, BUTTERFREE, 0 
@@ -139,7 +139,7 @@ LassData:
 ; SS Anne 2F Rooms
 	db 21, NIDORAN_F, PIKACHU, GOLDEEN, 0
 ; Route 8
-	db 28, NIDORAN_F, NIDORINA, 0 
+	db 28, NIDORAN_F, KAIJU_NIDORINA, 0 ; Aironfaar mod: was regular NIDORINA (making this trainer stronger)
 	db 26, MEOWTH, FARFETCHD, EEVEE, 0 
 	db 25, ARBOK, SLOWPOKE, VULPIX, MEOWTH, PIKACHU, 0 
 	db 28, CLEFAIRY, CLEFAIRY, CLEFABLE, 0 
@@ -207,13 +207,13 @@ JrTrainerFData:
 	db 37, RAICHU, VILEPLUME, BUTTERFREE, WIGGLYTUFF, CLEFABLE, 0
 	db 41, NIDOQUEEN, WIGGLYTUFF, 0
 	db 39, KANGASKHAN, PERSIAN, CLEFABLE, PIDGEOT, 0
-	db 40, STARMIE, KAIJU_NIDOQUEEN, CHANSEY, 0 ; Aironfaar mod: was regular NIDOQUEEN
+	db 40, STARMIE, KAIJU_NIDORINA, CHANSEY, 0 ; Aironfaar mod: was regular NIDOQUEEN
 ; Route 20
 	db 52, WIGGLYTUFF, SEAKING, 0
 ; Rock Tunnel 1F
 	db 28, BELLSPROUT, CLEFAIRY, 0 
 	db 27, MEOWTH, ODDISH, ZUBAT, 0 
-	db 26, BELLSPROUT, KAIJU_NIDORINA, ABRA, IVYSAUR, 0 ; Aironfaar mod: was regular NIDORINA
+	db 26, BELLSPROUT, NIDORINA, ABRA, IVYSAUR, 0
 ; Route 15
 	db 40, VILEPLUME, CHANSEY, CLEFABLE, 0 
 	db 42, TANGELA, RAICHU, 0 
@@ -239,7 +239,7 @@ PokemaniacData:
 ; Safari Zone North
 	db 44, LAPRAS, GOLEM, PERSIAN, 0 ; NEWx
 ; Safari Zone West
-	db 45, PORYGON, BLASTOISE, VICTREEBEL, 0 ; NEWx
+	db 45, PORYGON, STONE_BLASTOISE, VICTREEBEL, 0 ; NEWx ; Aironfaar mod: was regular BLASTOISE
 
 SuperNerdData:
 ; Mt. Moon 1F
@@ -341,7 +341,7 @@ FisherData:
 ; SS Anne 2F Rooms
 	db 21, GOLDEEN, TENTACOOL, SEEL, 0
 ; SS Anne B1F Rooms
-	db 21, SHELLDER, STARYU, KAIJU_NIDORINA, 0 ; Aironfaar mod: was regular NIDORINA
+	db 21, SHELLDER, STARYU, NIDORINA, 0
 ; Route 12
 	db 27, GOLDEEN, POLIWAG, TANGELA, 0
 	db 27, TENTACOOL, TAUROS, 0 
@@ -374,7 +374,7 @@ SwimmerData:
 ; Route 21
 	db 52, ELECTRODE, TENTACRUEL, 0
 	db 55, STARMIE, 0
-	db 52, SEADRA, CHARIZARD, 0
+	db 52, SEADRA, STONE_CHARIZARD, 0 ; Aironfaar mod: was regular CHARIZARD
 	db 50, GOLBAT, BEEDRILL, KINGLER, 0
 
 CueBallData:
@@ -478,7 +478,7 @@ JugglerData:
 TamerData:
 ; Fuchsia Gym
 	db 43, SANDSLASH, ARBOK, 0
-	db 42, VENUSAUR, KAIJU_NIDOQUEEN, ARBOK, 0 ; Aironfaar mod: was regular NIDOQUEEN
+	db 42, VENUSAUR, KAIJU_NIDORINA, ARBOK, 0 ; Aironfaar mod: was regular NIDOQUEEN
 ; Viridian Gym
 	db 58, RHYDON, 0
 	db 55, ARBOK, TAUROS, 0
@@ -489,14 +489,14 @@ TamerData:
 ; Route 5
 	db 17, DITTO, SEEL, DRATINI, 0 ; NEWx
 ; Route 12
-	db 28, HORSEA, KAIJU_NIDORINO, 0 ; NEWx ; Aironfaar mod: was regular NIDORINO
+	db 28, HORSEA, KAIJU_NIDORINO, 0 ; NEWx ; Aironfaar mod: was regular NIDORINO (making this trainer stronger)
 ; Route 18
 	db 42, KINGLER, SNORLAX, 0 ; NEWx
 
 BirdKeeperData:
 ; Route 13
 	db 41, GOLBAT, SCYTHER, 0
-	db 37, FEAROW, KAIJU_NIDOKING, DEWGONG, PIDGEOT, DODRIO, 0 ; Aironfaar mod: was regular NIDOKING
+	db 37, FEAROW, KAIJU_NIDORINO, DEWGONG, PIDGEOT, DODRIO, 0 ; Aironfaar mod: was regular NIDOKING
 	db 38, FEAROW, FARFETCHD, DUGTRIO, MACHAMP, 0 
 ; Route 14
 	db 49, FARFETCHD, 0
@@ -557,7 +557,7 @@ ChiefData:
 
 ScientistData:
 ; Mansion 2F
-	db 53, VENUSAUR, STARMIE, 0
+	db 53, STONE_VENUSAUR, STARMIE, 0 ; Aironfaar mod: was regular VENUSAUR
 ; Silph Co. 2F
 	db 43, PARASECT, PORYGON, MAGMAR, FLOATING_WEEZING, 0 ; Aironfaar mod: was regular WEEZING
 	db 44, FLAREON, STARMIE, MAGNETON, 0 
@@ -632,10 +632,10 @@ RocketData:
 	db 46, CLOYSTER, DUGTRIO, 0
 	db 43, GOLBAT, SANDSLASH, POLIWRATH, RATICATE, HITMONCHAN, 0
 ; Silph Co. 3F
-	db 45, RATICATE, HYPNO, CHARIZARD, 0
+	db 45, RATICATE, HYPNO, STONE_CHARIZARD, 0 ; Aironfaar mod: was regular CHARIZARD
 ; Silph Co. 4F
 	db 46, ARCANINE, GENGAR, 0
-	db 44, GOLEM, JOLTEON, BLASTOISE, 0
+	db 44, GOLEM, JOLTEON, STONE_BLASTOISE, 0 ; Aironfaar mod: was regular BLASTOISE
 ; Silph Co. 5F
 	db 49, POWERED_HAUNTER, 0 ; Aironfaar mod: was regular GENGAR
 	db 49, SNORLAX, 0
@@ -647,7 +647,7 @@ RocketData:
 	db 46, EXEGGUTOR, KINGLER, 0
 	db 46, RAICHU, SANDSLASH, 0
 ; Silph Co. 8F
-	db 43, RATICATE, KAIJU_NIDOKING, PRIMEAPE, RAPIDASH, 0 ; Aironfaar mod: was regular NIDOKING
+	db 43, RATICATE, KAIJU_NIDORINO, PRIMEAPE, RAPIDASH, 0 ; Aironfaar mod: was regular NIDOKING
 	db 45, HITMONLEE, GOLBAT, POWERED_HAUNTER, 0 ; Aironfaar mod: was regular GENGAR
 ; Silph Co. 9F
 	db 45, VENOMOTH, HITMONCHAN, MAROWAK, 0
@@ -669,7 +669,7 @@ CooltrainerMData:
 ; Victory Road 1F
 	db 54, BEEDRILL, SANDSLASH, GOLDUCK, CHARIZARD, 0
 ; Safari Zone East
-	db $FE, 44, FARFETCHD, 44 + 128, VENOMOTH, 44, VENUSAUR, 0 ; NEWx
+	db $FE, 44, FARFETCHD, 44 + 128, VENOMOTH, 44, STONE_VENUSAUR, 0 ; NEWx ; Aironfaar mod: was regular VENUSAUR
 ; Safari Zone North
 	db $FE, 46 + 128, PINSIR, 46, KANGASKHAN, 0 ; NEWx
 ; Pokemon Mansion B1F
@@ -784,7 +784,7 @@ ChannelerData:
 ; Celadon City Hotel
 	db 30, JYNX, GASTLY, 0 ; NEWx
 ; Pokemon Mansion 2F
-	db 53, POWERED_HAUNTER, GENGAR, HYPNO, 0 ; NEWx ; Aironfaar mod: was regular HAUNTER (meaning this is an upgrade to the team)
+	db 53, POWERED_HAUNTER, GENGAR, HYPNO, 0 ; NEWx ; Aironfaar mod: was regular HAUNTER (making this trainer stronger)
 ; Unused
 	db 23, MEW, MEW, 0 
 	db 24, MEW, 0 

@@ -7,21 +7,23 @@ I don't provide ips files for patching, but you can build this modified version 
 ## Fork Changes
 First, a bit of a disclaimer: If you play my modded version of pureRGB, create a new save file for it. I didn't update the save import feature to my particular changes, so something might break if you try anyway. Also, as long as I play pureRGB myself, I'll try to keep things updated in a way that will avoid issues, but I started this project mostly to satisfy my curiosity whether I could learn to make the changes I wanted, so keeping it up-to-date isn't a high priority for me. With that out of the way…
 
-Some of the modifications are supposed to make certain mono type runs go a bit more smoothly:
+Some of the modifications are supposed to make mono type runs smoother especially for certain underrepresented types, or more fun through increased variety:
 - Arcanine, Parasect and Venusaur can now learn Surf. With this change, it is possible to cover all of Flash, Cut, Strength, Fly or Dig, and Surf with mono type teams.
 - You can now find at least one pokémon of each type before reaching Pewter City. One of them requires interaction with a new NPC, the others are out there in the wild.
-- Seel is now Water/Ice instead of Ice. This was the only somewhat reasonable way to provide a proper Ice type pokémon before reaching Pewter City. You can disable this change at the usual Type Changer NPC.
-- Three new Dragon types have been added as variants of existing pokémon. There are new texts in the game that hint at them, but they are:
-  - Using a Moon Stone, Pikachu can now be evolved into a Raichu variant of Electric/Dragon type.
-  - Using a Moon Stone, Nidoran F and Nidoran M can now be evolved into Nidorina and Nidorino variants with different base stats and learnsets. These variants evolve into Nidoqueen and Nidoking variants at level 36, which, instead of Poison/Ground types, are Poison/Dragon types.
+- Seel is now Water/Ice instead of Water. This was the only somewhat reasonable way to provide a proper Ice type pokémon before reaching Pewter City. You can disable this change at the usual Type Changer NPC.
+- Six new stone evolutions have been added as variants of existing pokémon. Each of them have different sprites and variance in their learnsets, and half even have different base stats. There are new texts in the game that hint at them, but they are:
+  - Pikachu (Moon Stone) -> Electric/Dragon Raichu
+  - Nidoran M/F (Moon Stone) -> Poison/Dragon Nidorino/Nidorina
+  - Ivysaur (Fire Stone) -> Grass/Rock Venusaur
+  - Charmeleon (Water Stone) -> Fire/Dragon Charizard
+  - Wartortle (Leaf Stone) -> Ice/Ghost Blastoise
+- Cursed Gengar now has different stats. The Dark and Light Channeler that inflict and remove the curse will inform you of the exact stat changes. To emphasize the new stat spread of Cursed Gengar, Gastly, Haunter and Gengar now learn Poison Gas instead of Filthy Slam at level 41. They can still learn Filthy Slam via TM.
+- Prof. Oak's aides now require specific pokémon for their field research instead of checking your pokédex progress before they give you HM05, the Itemfinder, and the Booster Chip, respectively.
 
 Others are simply modifications to my personal taste:
 - The Pokédex now uses meters and kilograms instead of feet and pounds.
-- Prof. Oak's aides now require specific pokémon for their field research instead of checking your pokédex progress before they give you HM05, the Itemfinder, and the Booster Chip, respectively. This is mainly to help mono runs acquire these items without giving them out for free, but I also liked the flavor of it better.
 - Gyarados can now learn Fly.
-- Splash is now a signature move for Magikarps of level 20 or higher, as well as for Gyarados. The Move Mystic will tell you more. In turn, Magikarp and Gyarados now need more EXP to level up. To make sure that Gyarados can be encountered in the wild with Splash, they now know Splash at level 1.
-- Crabhammer is now a signature move with increased BP of Kingler.
-- Cursed Gengar now has different stats. The Dark and Light Channeler that inflict and remove the curse will inform you of the exact stat changes. To emphasize the new stat spread of Cursed Gengar, Gastly, Haunter and Gengar now learn Poison Gas instead of Filthy Slam at level 41. They can still learn Filthy Slam via TM.
+- Magikarp and Gyarados now need more EXP to level up. To make sure that Gyarados can be encountered in the wild with Splash, they now know Splash at level 1.
 - Wild Missingno. are diversified. Before the change, catching one of them felt like a cheat since they were all already at level 120. Now, they appear at levels 1 to 120, and due to additions of TM moves (which it could learn already anyway) to its natural learnset, every level of wild Missingno. has a different moveset.
 - Some encounter tables have been touched upon for nitpicky reasons, like wondering how a horse, flaming or not, could live in the rugged terrain of a volcanic mountain.
 - All unevolved and non-evolving pokémon except Zapdos, Articuno, Moltres, Mewtwo, Mew and the fossil pokémon can now be encountered in the wild in either palette somewhere in the world. This means you can catch them all in whichever palette you like best. To facilitate this, some encounter tables have been changed, in particular the entire Safari Zone.
@@ -34,32 +36,38 @@ Others are simply modifications to my personal taste:
   - The trades on Cinnabar Island are now only accessible once you become the champion of the Pokémon League. In turn, the pokémon you receive in these trades are much more interesting.
   - Six new trades have been introduced to the game, two of which require you to be the champion.
 - There is now a Move Reminder in the Daycare.
-- Learnsets have been touched: Except for the new variants of Nidorina, Nidoqueen, Nidorino and Nidoking, which forget moves that are no longer part of their learnset upon evolving from Nidoran F/M and learn the moves that replaced them, all evolved pokémon can learn their previous forms' moves either by level or TM/HM. If you evolve your pokémon the moment it becomes possible, you will neither miss a move nor lose out entirely on something that the previous form could learn. If all else fails, the Move Reminder can help.
+- Learnsets have been touched: Except for the new variants of Nidorina and Nidorino, which forget moves that are no longer part of their learnset upon evolving from Nidoran F/M and learn the moves that replaced them, all evolved pokémon can learn their previous forms' moves either by level or TM/HM. If you evolve your pokémon the moment it is able to, you will neither miss a move nor lose out entirely on something that the previous form could learn. If all else fails, the Move Reminder can help.
 - Some moves have been changed as listed below, going off of Vortyne's changes:
+  - Comet Punch: BP 60 -> 40, BP 50 if user is level 20-29, BP 60 if user is level 30+, makes target flinch if it's the user's first turn out in battle
   - Crabhammer: BP 90 -> 80, ACC 95 -> 90, signature move of Kingler (refer to Move Mystic in Saffron City for details)
   - Cut: PP 30 -> 20, high critical hit chance
   - Dig: BP 80 -> 130, ACC 100 -> 95, PP 10 -> 5
   - Doubleslap: ACC 85 -> 100
   - Dragon Rage: 10% chance to make target flinch
+  - Flash: BP 60 -> 35, BP 45 if user is level 20-29, BP 55 if user is level 30+, confuses target for 2 turns if it's the user's first turn out in battle
   - Filthy Slam: 20% chance to badly poison the target
-  - Fire Punch: BP 75 -> 55, PP 15 -> 20, high critical hit chance, adjusted Magmar's signature move stats
+  - Fire Punch: BP 75 -> 55, PP 15 -> 20, high critical hit chance, also adjusted Magmar's signature move stats
   - Fly: BP 90 -> 130, ACC 100 -> 95, PP 15 -> 5
   - Guillotine: Type BUG -> NORMAL
   - Horn Drill: Type NORMAL -> FIGHTING
-  - Ice Punch: BP 75 -> 55, PP 15 -> 20, high critical hit chance, adjusted Jynx's signature move stats
+  - Ice Punch: BP 75 -> 55, PP 15 -> 20, high critical hit chance, also adjusted Jynx's signature move stats
   - Karate Chop: BP 50 -> 60, PP 25 -> 20, 10% chance to confuse target
   - Pin Missile: BP 18 -> 20
   - Psybeam: BP 65 -> 75, confusion chance 10% -> 30%
+  - Quick Attack: PP 30 -> 15, BP 50 if user is level 20-29, BP 60 if user is level 30+, increases user's Speed
   - Razor Leaf: PP 25 -> 20, 10% chance to make target flinch
+  - Sonicboom: BP 50 -> 40, BP 50 if user is level 20-29, BP 60 if user is level 30+
   - Splash: Type NORMAL -> FLYING, signature move of Gyarados and Level 20+ Magikarp (refer to Move Mystic in Saffron City for details)
   - Stomp: Type NORMAL -> GROUND
   - Strength: 33% chance for -1 Defense
-  - Thunderpunch: BP 75 -> 55, PP 15 -> 20, high critical hit chance, adjusted Electabuzz's signature move stats
+  - Swift: BP 60 -> 35, PP 20 -> 15, BP 45 if user is level 20-29, BP 55 if user is level 30+
+  - Thunderpunch: BP 75 -> 55, PP 15 -> 20, high critical hit chance, also adjusted Electabuzz's signature move stats
+  - Wing Attack: BP 50 -> 40, PP 35 -> 15, BP 50 if user is level 20-29, BP 60 if user is level 30+, confuses target for 2 turns if it's the user's first turn out in battle
 - 20 TMs have been added, most to reintroduce previously available TMs, some to add new moves to the TM pool.
   - TM 51: Teleport
   - TM 52: Softboiled
-  - TM 53: Recover
-  - TM 54: Rest (new)
+  - TM 53: Recover (new)
+  - TM 54: Rest
   - TM 55: Mimic
   - TM 56: Metronome
   - TM 57: Fissure
@@ -84,13 +92,15 @@ Others are simply modifications to my personal taste:
 
 Elaszat - A friend and the biggest Pokémon fan I know, whose feedback helped me make a bunch of decisions for this modification; he's also a hobbyist author and posts his short stories on [r/Ctoa](https://www.reddit.com/r/Ctoa)
 
-[RockBlackHorn](https://linktr.ee/BlackHornWorkshop) - A friend and artist who strayed from his usual NSFW bara creations to help me out; creator of the high resolution [variant Raichu](https://github.com/Aironfaar/pureRGB/tree/main/gfx/pokemon/back_sw/goro_raichub.png), [variant Nidorina and Nidorino](https://github.com/Aironfaar/pureRGB/tree/main/gfx/pokemon/back_sw/kaiju_nidorinoab.png), and [variant Nidoqueen and Nidoking](https://github.com/Aironfaar/pureRGB/tree/main/gfx/pokemon/back_sw/kaiju_nidomonarchb.png) back sprites
+[RockBlackHorn](https://linktr.ee/BlackHornWorkshop) - A friend and artist who strayed from his usual NSFW bara creations to help me out; creator of the high resolution [variant Venusaur](https://github.com/Aironfaar/pureRGB/tree/main/gfx/pokemon/back_sw/stone_venusaurb.png), [variant Charizard](https://github.com/Aironfaar/pureRGB/tree/main/gfx/pokemon/back_sw/stone_charizardb.png), [variant Blastoise](https://github.com/Aironfaar/pureRGB/tree/main/gfx/pokemon/back_sw/stone_blastoiseb.png), [variant Raichu](https://github.com/Aironfaar/pureRGB/tree/main/gfx/pokemon/back_sw/goro_raichub.png) and [variant Nidorina and Nidorino](https://github.com/Aironfaar/pureRGB/tree/main/gfx/pokemon/back_sw/kaiju_nidorinoab.png) back sprites
 
 [Helix Chamber](https://helixchamber.com) - [Published their fan-made sprite reconstructions](https://x.com/helixchamber/status/1158772044533813250), some of which I used in this project (more specific credits below)
 
-[@catstorm26](https://x.com/catstorm26) - Creator of the [variant Nidorina](https://github.com/Aironfaar/pureRGB/tree/main/gfx/pokemon/front/kaiju_nidorina.png) and [variant Nidoqueen](https://github.com/Aironfaar/pureRGB/tree/main/gfx/pokemon/front/kaiju_nidoqueen.png) sprites; these sprites were originally intended as a reconstruction of a Nidoran or Nidorino/Nidorina protoype, and a reconstruction of the scrapped "Gyaōn", respectively
+[@catstorm26](https://x.com/catstorm26) - Creator of the [variant Nidorina](https://github.com/Aironfaar/pureRGB/tree/main/gfx/pokemon/front/kaiju_nidorina.png) sprite; this sprite was originally intended as a reconstruction of a Nidoran or Nidorino/Nidorina protoype
 
-[@RacieBeep](https://x.com/raciebeep) - Creator of the [variant Nidorino](https://github.com/Aironfaar/pureRGB/tree/main/gfx/pokemon/front/kaiju_nidorino.png), [variant Nidoking](https://github.com/Aironfaar/pureRGB/tree/main/gfx/pokemon/front/kaiju_nidoking.png) and [variant Raichu](https://github.com/Aironfaar/pureRGB/tree/main/gfx/pokemon/front/goro_raichu.png) sprites; these sprites were originally intended as a reconstruction of a Nidoran or Nidorino/Nidorina protoype, a reconstruction of the scrapped "Gyaōn", and a reconstruction of the scrapped "Gorochu", respectively
+[@RacieBeep](https://x.com/raciebeep) - Creator of the [variant Venusaur](https://github.com/Aironfaar/pureRGB/tree/main/gfx/pokemon/front/stone_venusaur.png), [variant Charizard](https://github.com/Aironfaar/pureRGB/tree/main/gfx/pokemon/front/stone_charizard.png), [variant Nidorino](https://github.com/Aironfaar/pureRGB/tree/main/gfx/pokemon/front/kaiju_nidorino.png) and [variant Raichu](https://github.com/Aironfaar/pureRGB/tree/main/gfx/pokemon/front/goro_raichu.png) sprites; these sprites were originally intended as reconstructions of various scrapped pokémon: the scrapped pokémon #095, the scrapped "Gyaōn", a Nidoran or Nidorino/Nidorina protoype, and the scrapped "Gorochu", respectively
+
+[@loumilouminosus](https://hirespokemon.tumblr.com) - Creator of the [variant Blastoise](https://github.com/Aironfaar/pureRGB/tree/main/gfx/pokemon/front/stone_blastoise.png) sprite; this sprite was originally intended as a reconstruction of a prototype of Wartortle's evolution
 
 Of course, Vortyne's original credits are relevant to this project as well, so I've copied them over:
 

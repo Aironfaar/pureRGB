@@ -236,8 +236,8 @@ Evolution_PartyMonLoop: ; loop over party mons
 	ld [wPokedexNum], a
 	xor a
 	ld [wMonDataLocation], a
-	call EeveelutionForceLearnMove ; PureRGBnote: ADDED: Force eeveelutions to learn a move on evolution
-	call KaijuNidoForceReplaceMove ; Aironfaar mod: upon evolving to Kaiju Nidorino or Kaiju Nidorina, the mon forcefully forgets Poison Sting and Horn Attack/Dust Claw to replace them with Smog and Roar, respectively
+	call ForceLearnMoveOnEvolution ; PureRGBnote: ADDED: Force eeveelutions to learn a move on evolution ; Aironfaar mod: made more general and added other evolutions
+	call ForceReplaceMoveOnEvolution ; Aironfaar mod: upon evolving to Kaiju Nidorino or Kaiju Nidorina, the mon forcefully forgets Poison Sting and Horn Attack/Dust Claw to replace them with Smog and Roar, respectively
 ;;;;;;;;;; shinpokerednote: FIXED: fixing skip move-learn on level-up evolution
 	ld a, [wIsInBattle]
 	and a
@@ -446,9 +446,29 @@ LearnMoveFromLevelUp:
 	ret
 
 ; PureRGBnote: ADDED: used to force the eeveelutions to learn a specific move on evolution so this move cannot be missed
-EeveelutionForceLearnMove:
+ForceLearnMoveOnEvolution: ; Aironfaar mod: made more general (used to be EeveelutionForceLearnMove) and added more cases. TODO: use a list to provide mon and move IDs
 	push bc
 	ld a, [wPokedexNum] ; species
+;;; Aironfaar mod start: starters learn new moves at final evolution, too
+	cp VENUSAUR
+	ld b, SLAM ; FILTHY SLAM
+	jr z, .forceLearnMove
+	cp STONE_VENUSAUR
+	ld b, SKULL_BASH
+	jr z, .forceLearnMove
+	cp CHARIZARD
+	ld b, WING_ATTACK
+	jr z, .forceLearnMove
+	cp STONE_CHARIZARD
+	ld b, FIRE_PUNCH
+	jr z, .forceLearnMove
+	cp BLASTOISE
+	ld b, THUNDERPUNCH
+	jr z, .forceLearnMove
+	cp STONE_BLASTOISE
+	ld b, ICE_PUNCH
+	jr z, .forceLearnMove
+;;; Aironfaar mod end
 	cp FLAREON
 	ld b, EMBER
 	jr z, .forceLearnMove
@@ -477,7 +497,8 @@ EeveelutionForceLearnMove:
 	ret
 
 ;;; Aironfaar mod start: This function, called upon evolution of a mon, forces Kaiju Nidorina and Kaiju Nidorino to forget Posion Sting and Dust Claw/Horn Attack upon evolving, replacing them with Smog and Roar to limit them to the Kaiju learnsets.
-KaijuNidoForceReplaceMove:
+; TODO: make more general and use list to provide mon and move IDs
+ForceReplaceMoveOnEvolution:
 	push bc
 	ld a, [wPokedexNum]
 	cp KAIJU_NIDORINA

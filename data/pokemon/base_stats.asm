@@ -167,10 +167,11 @@ INCLUDE "data/pokemon/base_stats/spirit_irradiated.asm"
 INCLUDE "data/pokemon/base_stats/spirit_the_maw.asm"
 INCLUDE "data/pokemon/base_stats/winter_dragonair.asm"
 INCLUDE "data/pokemon/base_stats/volcanic_magmar.asm"
-;;; Aironfaar mod start: new dragon variants
+;;; Aironfaar mod start: new variants
 INCLUDE "data/pokemon/base_stats/goro_raichu.asm"
 INCLUDE "data/pokemon/base_stats/kaiju_nidorina.asm"
-INCLUDE "data/pokemon/base_stats/kaiju_nidoqueen.asm"
 INCLUDE "data/pokemon/base_stats/kaiju_nidorino.asm"
-INCLUDE "data/pokemon/base_stats/kaiju_nidoking.asm"
+INCLUDE "data/pokemon/base_stats/stone_venusaur.asm"
+INCLUDE "data/pokemon/base_stats/stone_charizard.asm"
+INCLUDE "data/pokemon/base_stats/stone_blastoise.asm"
 ;;; Aironfaar mod end

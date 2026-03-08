@@ -1,16 +1,17 @@
+;;; Aironfaar mod: new variant mon
 	db DEX_CHARIZARD ; pokedex id
 
 	db  78,  84,  78, 100,  85
 	;   hp  atk  def  spd  spc
 
-	db FIRE, FLYING ; type
+	db FIRE, DRAGON ; type
 	db 45 ; catch rate
 	db 209 ; base exp
 
-	INCBIN "gfx/pokemon/front/charizard.pic", 0, 1 ; sprite dimensions
-	dw CharizardPicFront, CharizardPicBackSW
+	INCBIN "gfx/pokemon/front/stone_charizard.pic", 0, 1 ; sprite dimensions
+	dw StoneCharizardPicFront, StoneCharizardPicBackSW
 
-	db SCRATCH, GROWL, WING_ATTACK, NO_MOVE ; level 1 learnset ; Aironfaar mod
+	db SCRATCH, GROWL, FIRE_PUNCH, NO_MOVE ; level 1 learnset
 	db GROWTH_MEDIUM_SLOW ; growth rate
 
 	; tm/hm learnset
@@ -30,6 +31,7 @@
 	DRAGON_RAGE,\
 	EARTHQUAKE,\
 	DIG,\
+	MEGA_DRAIN,\
 	KINESIS,\ ; FIREWALL
 	SWORDS_DANCE,\
 	REFLECT,\
@@ -40,25 +42,24 @@
 	FLAMETHROWER,\
 	SLAM,\ ; FILTHY SLAM
 	KARATE_CHOP,\
-	SKY_ATTACK,\
 	LIGHT_SCREEN,\
 	GLARE,\
 	SUBSTITUTE,\
-	REST,\ ; Aironfaar mod
-	MIMIC,\ ; Aironfaar mod
-	FISSURE,\ ; Aironfaar mod
-	WHIRLWIND,\ ; Aironfaar mod
-	RAGE,\ ; Aironfaar mod
+	SOFTBOILED,\
+	REST,\
+	MIMIC,\
+	EGG_BOMB,\
+	RAGE,\
 	CUT,\
-	FLY,\
+	SURF,\
 	STRENGTH,\
 	FLASH
 	; end
 
-	db BANK(CharizardPicFront)
+	db BANK(StoneCharizardPicFront)
 	db 0
-	db BANK(CharizardPicBack)
-	db BANK(CharizardPicBackSW)
+	db BANK(StoneCharizardPicBack)
+	db BANK(StoneCharizardPicBackSW)
 
-	dw 0, CharizardPicBack
+	dw 0, StoneCharizardPicBack
 
